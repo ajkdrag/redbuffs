@@ -1,7 +1,7 @@
 ---
 title: Posts
 draft: false
-tags:
+tags: []
 ---
 
 A collection of technical articles aka *buffs*. Don't forget to react and comment :)

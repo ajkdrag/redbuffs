@@ -1,7 +1,8 @@
 ---
-title: Matrix Multiplication
+title: Matrix Multiplication interpretations
 draft: false
 tags:
+  - type/post
   - topic/linear-algebra
 ---
 

@@ -4,6 +4,7 @@ draft: false
 tags:
   - topic/cross-entropy
   - topic/nll-loss
+  - type/post
 ---
 
 If we have some output predictions (logits) from a model for a given classification task with `C` classes, we can evaluate against the target class id using NLL loss.
