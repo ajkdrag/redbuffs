@@ -2,8 +2,8 @@
 title: Negative Log Likelihood loss
 draft: false
 tags:
-  - cross-entropy
-  - nll-loss
+  - topic/cross-entropy
+  - topic/nll-loss
 ---
 
 If we have some output predictions (logits) from a model for a given classification task with `C` classes, we can evaluate against the target class id using NLL loss.
@@ -38,7 +38,6 @@ val_2 = F.nll_loss(ll, target_class_id)
 print(val_1, val_2) # tensor(0.5389) tensor(0.5389) 
 torch.isclose(val_1, val_2) # torch.tensor(True)
 ```
-
 
 
 <div style="text-align: center;">

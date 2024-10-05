@@ -2,7 +2,7 @@
 title: Matrix Multiplication
 draft: false
 tags:
-  - linear-algebra
+  - topic/linear-algebra
 ---
 
 One of the basic operations in linear algebra is matrix multiplication $C_{m\times{p}}=A_{m\times{n}}B_{n\times{p}}$. There are multiple ways to interpret mat-mul apart from the rather conventional *dot product of rows of $A$ with columns of $B$*.
