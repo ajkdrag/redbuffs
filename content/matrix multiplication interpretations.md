@@ -2,6 +2,7 @@
 title: Matrix Multiplication
 draft: false
 tags:
+  - linear-algebra
 ---
 
 One of the basic operations in linear algebra is matrix multiplication $C_{m\times{p}}=A_{m\times{n}}B_{n\times{p}}$. There are multiple ways to interpret mat-mul apart from the rather conventional *dot product of rows of $A$ with columns of $B$*.
@@ -60,3 +61,7 @@ AB&=\begin{bmatrix}ae+bg & af+bh\\ce+dg & cf+dh\end{bmatrix}\\
 $$
 
 Thus, $AB$ can be written as the sum of the corresponding *column-row outer products*.
+
+<div style="text-align: center;">
+  <a href="https://www.buymeacoffee.com/ajkdrag" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 128px !important;"></a>
+</div>
