@@ -12,6 +12,11 @@
   text-align: center;
 }
 
+h2 {
+  margin-bottom: 1.2em;
+  text-decoration: underline var(--secondary);
+}
+
 .popover-hint > ul.tags {
   display: block;
   text-align: center;
@@ -20,6 +25,10 @@
 
 .katex { 
     line-height: 0px; 
-    font-size: 20px;
+    font-size: 1.1em;
+    color: var(--dark);
 }
 
+strong, em {
+  color: var(--textHighlight) !important;
+}
