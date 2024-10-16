@@ -1,5 +1,8 @@
 @use "./base.scss";
 
+$textDcThick: 0.05rem;
+$textUnOffset: 0.25em;
+
 // style page-title
 .page-title a{
   font-size: 2rem;
@@ -11,13 +14,13 @@
 }
 
 // center images
-// TODO: resize them as per resolution
 .centerImg, img {
   display: block;
   margin: 0em auto;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
   opacity: 0.8;
+  max-width: 80%;
 }
 
 // keep 100% opacity for bmac image
@@ -55,6 +58,9 @@ h1 {
 h2, a, a.internal {
   background: none;
   text-decoration: underline var(--highlight);
+  text-decoration-thickness: $textDcThick;
+  text-underline-offset: $textUnOffset;
+  text-decoration-skip-ink: auto;
 }
 
 
