@@ -1,34 +1,98 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// style page-title
+.page-title a{
+  font-size: 2rem;
+  background-color: var(--highlight);
+  border: 2px solid var(--highlight);
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  color: rgb(230, 228, 217);
+}
+
+// center images
+// TODO: resize them as per resolution
 .centerImg, img {
   display: block;
   margin: 0em auto;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
+  opacity: 0.8;
 }
 
+// keep 100% opacity for bmac image
+.external > img {
+  opacity: 1;
+}
+
+// center page titles, mins to read and tags
 .content-meta, h1 {
   text-align: center;
 }
 
-h2 {
-  margin-bottom: 1.2em;
-  text-decoration: underline var(--secondary);
-}
-
 .popover-hint > ul.tags {
-  display: block;
-  text-align: center;
-  list-style-type: none; /* Remove bullet points */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem; // This adds space between tags
+  padding: 0; // Remove default padding
+  margin-top: 1rem; // Add space above the tags
+  margin-bottom: 2rem; // Add space below the tags
 }
 
+// increase page title font size
+h1 {
+  font-size: 2rem; // Adjust this value as needed
+}
+
+// improve readability of LaTeX equations
 .katex { 
-    line-height: 0px; 
-    font-size: 1.1em;
-    color: var(--dark);
+  font-size: 1.1em;
+  line-height: 1.2;
 }
 
-strong, em {
-  color: var(--textHighlight) !important;
+// underline h2 tags
+h2, a {
+  text-decoration: underline var(--highlight);
 }
+
+// style toc 
+button#toc {
+  border: 1px solid var(--lightgray);
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+}
+
+
+
+div#toc-content {
+  margin-left: 1rem;
+}
+
+
+// styling internal alias and internal links
+a.internal.alias{
+  color: rgb(230, 228, 217);
+  padding: 0 0.2rem;
+}
+
+// styling tags
+a.internal.tag-link{
+  color: rgb(230, 228, 217);
+}
+
+
+
+// style bmac button
+.bmac-script {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+

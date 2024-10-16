@@ -4,7 +4,12 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [
+    Component.PageTitle(),
+    Component.Search(),
+    Component.Darkmode(),
+
+  ],
   afterBody: [
     Component.Comments({
       provider: 'giscus',
@@ -30,23 +35,20 @@ export const sharedPageComponents: SharedLayout = {
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [
-    Component.Breadcrumbs(),
+  beforeBody: [ 
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.DesktopOnly(Component.TableOfContents()),
   ],
   left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    // Component.MobileOnly(Component.Spacer()),
+    // Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
+    // Component.DesktopOnly(Component.TableOfContents()),
+    // Component.Backlinks(),
+    // Component.Graph(),
   ],
 }
 
@@ -54,11 +56,11 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    // Component.PageTitle(),
+    // Component.MobileOnly(Component.Spacer()),
+    // Component.Search(),
+    // Component.Darkmode(),
+    // Component.DesktopOnly(Component.Explorer()),
   ],
   right: [],
 }
