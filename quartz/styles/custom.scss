@@ -51,10 +51,12 @@ h1 {
   line-height: 1.2;
 }
 
-// underline h2 tags
-h2, a {
+// underline h2 tags and links
+h2, a, a.internal {
+  background: none;
   text-decoration: underline var(--highlight);
 }
+
 
 // style toc 
 button#toc {
@@ -68,24 +70,14 @@ button#toc {
 
 }
 
-
-
 div#toc-content {
   margin-left: 1rem;
-}
-
-
-// styling internal alias and internal links
-a.internal.alias{
-  color: rgb(230, 228, 217);
-  padding: 0 0.2rem;
 }
 
 // styling tags
 a.internal.tag-link{
   color: rgb(230, 228, 217);
 }
-
 
 
 // style bmac button
