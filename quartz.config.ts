@@ -25,7 +25,7 @@ const config: QuartzConfig = {
       typography: {
         header: "Nunito",
         body: "AR One Sans",
-        code: "IBM Plex Mono",
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
