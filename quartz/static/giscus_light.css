@@ -1,0 +1,136 @@
+/* giscus_light.css */
+
+main {
+  --color-prettylights-syntax-comment: #878580;
+  --color-prettylights-syntax-constant: #1c1b1a;
+  --color-prettylights-syntax-entity: #1c1b1a;
+  --color-prettylights-syntax-storage-modifier-import: #343331;
+  --color-prettylights-syntax-entity-tag: #dc143c;
+  --color-prettylights-syntax-keyword: #dc143c;
+  --color-prettylights-syntax-string: #1c1b1a;
+  --color-prettylights-syntax-variable: #dc143c;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #dc143c;
+  --color-prettylights-syntax-invalid-illegal-text: #e6e4d9;
+  --color-prettylights-syntax-invalid-illegal-bg: #dc143c;
+  --color-prettylights-syntax-carriage-return-text: #e6e4d9;
+  --color-prettylights-syntax-carriage-return-bg: #dc143c;
+  --color-prettylights-syntax-string-regexp: #1c1b1a;
+  --color-prettylights-syntax-markup-list: #343331;
+  --color-prettylights-syntax-markup-heading: #1c1b1a;
+  --color-prettylights-syntax-markup-italic: #343331;
+  --color-prettylights-syntax-markup-bold: #343331;
+  --color-prettylights-syntax-markup-deleted-text: #dc143c;
+  --color-prettylights-syntax-markup-deleted-bg: #f88379;
+  --color-prettylights-syntax-markup-inserted-text: #1c1b1a;
+  --color-prettylights-syntax-markup-inserted-bg: #cecdcc;
+  --color-prettylights-syntax-markup-changed-text: #dc143c;
+  --color-prettylights-syntax-markup-changed-bg: #f88379;
+  --color-prettylights-syntax-markup-ignored-text: #e6e4d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1c1b1a;
+  --color-prettylights-syntax-meta-diff-range: #1c1b1a;
+  --color-prettylights-syntax-brackethighlighter-angle: #878580;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #878580;
+  --color-prettylights-syntax-constant-other-reference-link: #1c1b1a;
+  --color-btn-text: #343331;
+  --color-btn-bg: #e6e4d9;
+  --color-btn-border: #cecdcc;
+  --color-btn-shadow: 0 1px 0 #cecdcc;
+  --color-btn-inset-shadow: inset 0 1px 0 #ffffff40;
+  --color-btn-hover-bg: #cecdcc;
+  --color-btn-hover-border: #878580;
+  --color-btn-active-bg: #cecdcc;
+  --color-btn-active-border: #878580;
+  --color-btn-selected-bg: #cecdcc;
+  --color-btn-primary-text: #e6e4d9;
+  --color-btn-primary-bg: #dc143c;
+  --color-btn-primary-border: #878580;
+  --color-btn-primary-shadow: 0 1px 0 #87858033;
+  --color-btn-primary-inset-shadow: inset 0 1px 0 #ffffff26;
+  --color-btn-primary-hover-bg: #dc143c;
+  --color-btn-primary-hover-border: #343331;
+  --color-btn-primary-selected-bg: #dc143c;
+  --color-btn-primary-selected-shadow: inset 0 1px 0 #34333133;
+  --color-btn-primary-disabled-text: #e6e4d9cc;
+  --color-btn-primary-disabled-bg: #f88379;
+  --color-btn-primary-disabled-border: #cecdcc;
+  --color-action-list-item-default-hover-bg: #cecdcc80;
+  --color-segmented-control-bg: #cecdcc;
+  --color-segmented-control-button-bg: #e6e4d9;
+  --color-segmented-control-button-selected-border: #878580;
+  --color-fg-default: #343331;
+  --color-fg-muted: #878580;
+  --color-fg-subtle: #878580;
+  --color-canvas-default: #e6e4d9;
+  --color-canvas-overlay: #e6e4d9;
+  --color-canvas-inset: #cecdcc;
+  --color-canvas-subtle: #cecdcc;
+  --color-border-default: #cecdcc;
+  --color-border-muted: #cecdcc;
+  --color-neutral-muted: #87858033;
+  --color-accent-fg: #dc143c;
+  --color-accent-emphasis: #dc143c;
+  --color-accent-muted: #f8837980;
+  --color-accent-subtle: #f88379;
+  --color-success-fg: #1c1b1a;
+  --color-attention-fg: #dc143c;
+  --color-attention-muted: #f8837980;
+  --color-attention-subtle: #f88379;
+  --color-danger-fg: #dc143c;
+  --color-danger-muted: #f8837980;
+  --color-danger-subtle: #f88379;
+  --color-primer-shadow-inset: inset 0 1px 0 #cecdcc66;
+  --color-scale-gray-1: #cecdcc;
+  --color-scale-red-1: #f88379;
+
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-red-1);
+}
+
+main .pagination-loader-container {
+  background-image: url(https://github.com/images/modules/pulls/progressive-disclosure-line.svg);
+}
+
+main .gsc-loading-image {
+  background-image: url(https://github.githubassets.com/images/mona-loading-default.gif);
+}
+
+.gsc-comments {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.gsc-comments-count, .gsc-comments-count-separator {
+  color: var(--color-fg-muted);
+}
+
+.gsc-reply-box {
+  border-radius: 8px;
+}
+
+.gsc-comment-box-textarea {
+  font-family: "Nunito Sans", sans-serif;
+  border-color: var(--color-border-default);
+}
+
+.gsc-comment-box-buttons {
+  background-color: var(--color-canvas-subtle);
+}
+
+.gsc-comment-box-buttons button {
+  font-family: "Nunito", sans-serif;
+}
+
+.gsc-reactions-button {
+  font-family: "Nunito", sans-serif;
+}
+
+.gsc-social-reaction-summary-item {
+  background-color: var(--color-canvas-subtle);
+}
+
+.gsc-timeline {
+  border-color: var(--color-border-muted);
+}
+
+.gsc-timeline-line {
+  background-color: var(--color-border-muted);
+}

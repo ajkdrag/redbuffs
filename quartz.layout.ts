@@ -29,9 +29,9 @@ export const sharedPageComponents: SharedLayout = {
         category: "Announcements",
         // from data-category-id
         categoryId: "DIC_kwDOM7w1Rs4CjFPn",
-        themeUrl: "https://raw.githubusercontent.com/rea1shane/giscus-theme/refs/heads/main",
-        lightTheme: "light",
-        darkTheme: "dark",
+        themeUrl: "https://ajkdrag.in/static",
+        lightTheme: "giscus_light",
+        darkTheme: "giscus_dark",
       },
     }),
   ],

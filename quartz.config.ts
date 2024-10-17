@@ -53,31 +53,6 @@ const config: QuartzConfig = {
           textHighlight: "rgb(220, 20, 60)", // markdown highlighted text bg
         },
       },
-      // colors: {
-      //   lightMode: {
-      //     light: "#faf8f8",
-      //     lightgray: "#e5e5e5",
-      //     gray: "#b8b8b8",
-      //     darkgray: "#4e4e4e",
-      //     dark: "#2b2b2b",
-      //     secondary: "#284b63",
-      //     tertiary: "#84a59d",
-      //     highlight: "rgba(143, 159, 169, 0.15)",
-      //     textHighlight: "#fff23688",
-      //   },
-      //   darkMode: {
-      //     light: "#0a0705",
-      //     lightgray: "#993833",
-      //     gray: "#ab94a3",
-      //     darkgray: "#f9e8e8",
-      //     dark: "#fff",
-      //     secondary: "#a35656",
-      //     tertiary: "#993833",
-      //     highlight: "rgba(122, 162, 247, 0.2)", // Translucent secondary color
-      //     textHighlight: "#a35656",
-      //     calloutColor: "#f89838"
-      //   },
-      // },
     },
   },
   plugins: {

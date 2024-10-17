@@ -13,15 +13,18 @@ const changeTheme = (e: CustomEventMap["themechange"]) => {
     {
       giscus: {
         setConfig: {
-          theme: getThemeName(theme),
+          theme: getThemeUrl(getThemeName(theme)),
         },
       },
     },
-    getThemeUrl(),
+    "https://giscus.app",
   )
 }
 
-const getThemeName = (theme: "light" | "dark") => {
+const getThemeName = (theme: string) => {
+  if (theme !== "dark" && theme !== "light") {
+    return theme
+  }
   const giscusContainer = document.querySelector(".giscus") as GiscusElement
   if (!giscusContainer) {
     return theme
@@ -31,12 +34,12 @@ const getThemeName = (theme: "light" | "dark") => {
   return theme === "dark" ? darkGiscus : lightGiscus
 }
 
-const getThemeUrl = () => {
+const getThemeUrl = (theme: string) => {
   const giscusContainer = document.querySelector(".giscus") as GiscusElement
   if (!giscusContainer) {
-    return "https://giscus.app"
+    return `https://giscus.app/themes/${theme}.css`
   }
-  return giscusContainer.dataset.themeUrl ?? "https://giscus.app"
+  return `${giscusContainer.dataset.themeUrl ?? "https://giscus.app/themes"}/${theme}.css`
 }
 
 type GiscusElement = Omit<HTMLElement, "dataset"> & {
@@ -78,7 +81,7 @@ document.addEventListener("nav", () => {
 
   const theme = document.documentElement.getAttribute("saved-theme")
   if (theme) {
-    giscusScript.setAttribute("data-theme", theme)
+    giscusScript.setAttribute("data-theme", getThemeUrl(getThemeName(theme)))
   }
 
   giscusContainer.appendChild(giscusScript)
