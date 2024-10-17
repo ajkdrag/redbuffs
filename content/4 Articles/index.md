@@ -3,4 +3,4 @@
 ---
 
 
-A collection of technical articles. Don't forget to react and comment :)
+A collection of technical articles. Likes and comments appreciated :)
