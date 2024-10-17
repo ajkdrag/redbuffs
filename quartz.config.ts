@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins";
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "redbuffs",
+    pageTitle: "𖤍 ",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -41,7 +41,7 @@ const config: QuartzConfig = {
         },
         darkMode: {
           light: "rgb(16, 15, 15)", // background
-          lightgray: "rgb(52, 51, 49)", // borders
+          lightgray: "rgb(28, 27, 26)", // borders
           gray: "rgb(87, 86, 83)", // graph links, heavier borders
           darkgray: "rgb(206, 205, 195)", // body text
           dark: "rgb(230, 228, 217)", // header text and icons

@@ -1,28 +1,35 @@
-import { PageLayout, SharedLayout } from "./quartz/cfg"
-import * as Component from "./quartz/components"
+import { PageLayout, SharedLayout } from "./quartz/cfg";
+import * as Component from "./quartz/components";
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
-    Component.PageTitle(),
+    Component.PageTitle(), 
     Component.Search(),
+    Component.SocialIcon({
+      platform: "GitHub",
+      url: "https://github.com/ajkdrag",
+    }),
+    Component.SocialIcon({
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/in/altamash-khan-7183681b8",
+    }),
     Component.Darkmode(),
-
   ],
   afterBody: [
     Component.Comments({
-      provider: 'giscus',
+      provider: "giscus",
       options: {
         // from data-repo
-        repo: 'ajkdrag/redbuffs',
+        repo: "ajkdrag/redbuffs",
         // from data-repo-id
-        repoId: 'R_kgDOM7w1Rg',
+        repoId: "R_kgDOM7w1Rg",
         // from data-category
-        category: 'Announcements',
+        category: "Announcements",
         // from data-category-id
-        categoryId: 'DIC_kwDOM7w1Rs4CjFPn',
-      }
+        categoryId: "DIC_kwDOM7w1Rs4CjFPn",
+      },
     }),
   ],
   footer: Component.Footer({
@@ -31,11 +38,11 @@ export const sharedPageComponents: SharedLayout = {
       LinkedIn: "https://www.linkedin.com/in/altamash-khan-7183681b8",
     },
   }),
-}
+};
 
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
-  beforeBody: [ 
+  beforeBody: [
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
@@ -50,11 +57,15 @@ export const defaultContentPageLayout: PageLayout = {
     // Component.Backlinks(),
     // Component.Graph(),
   ],
-}
+};
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+  ],
   left: [
     // Component.PageTitle(),
     // Component.MobileOnly(Component.Spacer()),
@@ -63,4 +74,4 @@ export const defaultListPageLayout: PageLayout = {
     // Component.DesktopOnly(Component.Explorer()),
   ],
   right: [],
-}
+};
