@@ -24,7 +24,8 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Nunito",
-        body: "AR One Sans",
+        // body: "AR One Sans",
+        body: "Nunito Sans",
         code: "Fira Code",
       },
       colors: {

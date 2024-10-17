@@ -4,6 +4,12 @@ $textDcThick: 0.05rem;
 $textUnOffset: 0.25em;
 
 
+// image contrast and brightness adjustments
+:root[saved-theme="dark"]#quartz-body img {
+  background-color: white;
+  filter: brightness(0.85) contrast(1.1);
+}
+
 // styling codeblocks
 pre {
     border: 4px solid var(--highlight);
@@ -23,7 +29,7 @@ pre {
 
 // style page-title
 .page-title a{
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: var(--highlight);
   border: 2px solid var(--highlight);
   border-radius: 0.5rem;
@@ -63,7 +69,7 @@ pre {
 
 // increase page title font size
 h1 {
-  font-size: 2rem; // Adjust this value as needed
+  font-size: 1.8rem; // Adjust this value as needed
 }
 
 // improve readability of LaTeX equations

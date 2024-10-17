@@ -29,13 +29,15 @@ export const sharedPageComponents: SharedLayout = {
         category: "Announcements",
         // from data-category-id
         categoryId: "DIC_kwDOM7w1Rs4CjFPn",
+        themeUrl: "https://raw.githubusercontent.com/rea1shane/giscus-theme/refs/heads/main",
+        lightTheme: "light",
+        darkTheme: "dark",
       },
     }),
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/ajkdrag",
-      LinkedIn: "https://www.linkedin.com/in/altamash-khan-7183681b8",
+      Source: "https://github.com/ajkdrag/redbuffs",
     },
   }),
 };
