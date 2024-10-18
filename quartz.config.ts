@@ -41,11 +41,14 @@ const config: QuartzConfig = {
           textHighlight: "rgb(220, 20, 60)",
         },
         darkMode: {
-          light: "rgb(16, 15, 15)", // background
+          // light: "rgb(16, 15, 15)", // background
+          light: "black", // background
           lightgray: "rgb(28, 27, 26)", // borders
           gray: "rgb(87, 86, 83)", // graph links, heavier borders
-          darkgray: "rgb(206, 205, 195)", // body text
-          dark: "rgb(230, 228, 217)", // header text and icons
+          // darkgray: "rgb(206, 205, 195)", // body text
+          darkgray: "#d2d5db", // body text
+          // dark: "rgb(230, 228, 217)", // header text and icons
+          dark: "#e5e7eb",
           secondary: "rgb(230, 228, 217)", // link color, curr graph node
           tertiary: "rgb(128, 0, 32)", // hover states, visited graph nodes
 

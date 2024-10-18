@@ -4,20 +4,56 @@ $textDcThick: 0.05rem;
 $textUnOffset: 0.25em;
 
 
-// image contrast and brightness adjustments
-:root[saved-theme="dark"]#quartz-body img {
-  background-color: white;
-  filter: brightness(0.85) contrast(1.1);
+// headings
+h3 {
+  font-size: 1.28rem;
 }
+
+h1[id]>a[href^=\#], h2[id]>a[href^=\#], h3[id]>a[href^=\#], h4[id]>a[href^=\#], h5[id]>a[href^=\#], h6[id]>a[href^=\#] {
+    opacity: 0.1;
+    margin: 0 .1rem;
+}
+
+// lists
+@media (max-width: 800px) {
+  li {
+    margin-block-start: 0.8rem;
+  }
+}
+
+// left-right padding of content
+.page>#quartz-body {
+    padding: 0 1.5rem;
+}
+
+// font-size p
+p, li {
+  font-size: clamp(1rem, 1vw + .625rem, 1.15rem);
+  line-height: clamp(1.4rem, 5vw, 1.8rem);
+}
+
+
+// style strong and italics
+strong, em {
+  color: var(--dark);
+  font-weight: bolder;
+}
+
 
 // styling codeblocks
 pre {
-    border: 4px solid var(--highlight);
-    border-radius: 5px;
+    border: 1px solid var(--darkgray);
     background: var(--lightgray);
-    border-top: none;
-    border-bottom: none;
-    border-right: none;
+}
+
+pre>code {
+  font-size: clamp(0.7rem, 1vw + 0.5rem, 0.9rem);
+}
+
+code {
+  font-size: clamp(0.7rem, 1vw + 0.5rem, 0.9rem);
+  line-height: 1.25rem;
+  padding: 0.01rem 0.25rem;
 }
 
 // lower padding at top on mobile
@@ -76,6 +112,7 @@ h1 {
 .katex { 
   font-size: 1.1em;
   line-height: 1.2;
+  margin: 1em 0;
 }
 
 // underline h2 tags and links
@@ -95,7 +132,7 @@ button#toc {
   padding: 0.2rem 0.5rem;
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 
 }
