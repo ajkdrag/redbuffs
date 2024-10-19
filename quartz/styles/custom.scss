@@ -4,9 +4,24 @@ $textDcThick: 0.05rem;
 $textUnOffset: 0.25em;
 
 
+// style right sidebar common elements
+.right.sidebar {
+  .spacer {
+    flex: none;
+    margin-top: 3rem;
+  }
+}
+
+// readable content meta
+.content-meta {
+  color: #777777;
+}
+
+
 // headings
 h3 {
   font-size: 1.28rem;
+  color: var(--darkgray);
 }
 
 h1[id]>a[href^=\#], h2[id]>a[href^=\#], h3[id]>a[href^=\#], h4[id]>a[href^=\#], h5[id]>a[href^=\#], h6[id]>a[href^=\#] {
@@ -51,7 +66,7 @@ pre>code {
 }
 
 code {
-  font-size: clamp(0.7rem, 1vw + 0.5rem, 0.9rem);
+  font-size: clamp(0.8rem, 1vw + 0.55rem, 1.0rem);
   line-height: 1.25rem;
   padding: 0.01rem 0.25rem;
 }
@@ -115,8 +130,8 @@ h1 {
   margin: 1em 0;
 }
 
-// underline h2 tags and links
-h2, a, a.internal {
+// style links
+a, a.internal {
   background: none;
   text-decoration: underline var(--highlight);
   text-decoration-thickness: $textDcThick;
@@ -124,21 +139,9 @@ h2, a, a.internal {
   text-decoration-skip-ink: auto;
 }
 
-
-// style toc 
-button#toc {
-  border: 1px solid var(--lightgray);
-  border-radius: 5px;
-  padding: 0.2rem 0.5rem;
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-}
-
-div#toc-content {
-  margin-left: 1rem;
+.external-icon {
+  height: 1ex;
+  margin: 0 0.15em;
 }
 
 // styling tags
@@ -146,6 +149,31 @@ a.internal.tag-link{
   color: rgb(230, 228, 217);
 }
 
+// styling toc
+div#toc-content {
+  margin-left: 1rem;
+
+  a {
+    text-decoration: none;
+    font-size: 0.8em
+  }
+
+  li {
+    line-height: 1.25;
+  }
+}
+
+// styling backlinks
+.backlinks {
+  a {
+    // text-decoration: none;
+    font-size: 0.8em
+  }
+
+  li {
+    line-height: 1.25;
+  }
+}
 
 // style bmac button
 .bmac-script {

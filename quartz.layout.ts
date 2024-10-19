@@ -48,15 +48,15 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
-    Component.DesktopOnly(Component.TableOfContents()),
   ],
   left: [
     // Component.MobileOnly(Component.Spacer()),
     // Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    // Component.DesktopOnly(Component.TableOfContents()),
-    // Component.Backlinks(),
+    Component.DesktopOnly(Component.Spacer()),
+    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Backlinks(),
     // Component.Graph(),
   ],
 };
