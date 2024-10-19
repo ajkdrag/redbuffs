@@ -4,6 +4,16 @@
 $textDcThick: 0.05rem;
 $textUnOffset: 0.25em;
 
+// testing custom css
+header {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  background: #ffeaea;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 
 // style right sidebar common elements
 .right.sidebar {
@@ -183,7 +193,7 @@ div#toc-content {
 .backlinks {
   a {
     // text-decoration: none;
-    font-size: 0.8em
+    font-size: 1em
   }
 
   li {
