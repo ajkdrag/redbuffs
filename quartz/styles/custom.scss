@@ -50,7 +50,7 @@ tbody, p, li {
   margin-block-start: 0.4em;
 
   @media all and ($mobile) {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6em;
     margin-block-start: 0.5em;
   }
@@ -58,9 +58,10 @@ tbody, p, li {
 
 
 // style strong and italics
-strong, em {
-  color: var(--darkgray);
-  font-weight: bolder;
+.page article p > strong,
+.page article p > em {
+    color: var(--secondary);
+    font-weight: bolder;
 }
 
 
@@ -142,6 +143,7 @@ h1 {
 // style links
 a, a.internal {
   background: none;
+  text-decoration: none;
   text-decoration: underline var(--highlight);
   -webkit-text-decoration: underline;
   text-decoration-thickness: $textDcThick;
@@ -152,6 +154,10 @@ a, a.internal {
 .external-icon {
   height: 1ex;
   margin: 0 0.15em;
+
+  h2 & {
+    display: none;
+  }
 }
 
 // styling tags
