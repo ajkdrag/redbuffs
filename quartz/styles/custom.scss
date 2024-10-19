@@ -1,3 +1,4 @@
+@use "./variables.scss" as *;
 @use "./base.scss";
 
 $textDcThick: 0.05rem;
@@ -46,12 +47,19 @@ tbody, p, li {
   font-size: clamp(1rem, 1vw + .625rem, 1.15rem);
   // line-height: clamp(1.48rem, 5vw, 1.8rem);
   line-height: 1.5em;
+  margin-block-start: 0.4em;
+
+  @media all and ($mobile) {
+    font-size: 15px;
+    line-height: 1.6em;
+    margin-block-start: 0.5em;
+  }
 }
 
 
 // style strong and italics
 strong, em {
-  color: var(--dark);
+  color: var(--darkgray);
   font-weight: bolder;
 }
 
@@ -73,7 +81,7 @@ code {
 }
 
 // lower padding at top on mobile
-@media (max-width: 800px) {
+@media all and ($mobile) {
   .page>#quartz-body .sidebar.left {
     padding-top: 1rem;
   }
