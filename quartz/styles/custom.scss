@@ -42,9 +42,10 @@ h1[id]>a[href^=\#], h2[id]>a[href^=\#], h3[id]>a[href^=\#], h4[id]>a[href^=\#], 
 }
 
 // font-size p
-p, li {
+tbody, p, li {
   font-size: clamp(1rem, 1vw + .625rem, 1.15rem);
-  line-height: clamp(1.4rem, 5vw, 1.8rem);
+  // line-height: clamp(1.48rem, 5vw, 1.8rem);
+  line-height: 1.5em;
 }
 
 
@@ -134,6 +135,7 @@ h1 {
 a, a.internal {
   background: none;
   text-decoration: underline var(--highlight);
+  -webkit-text-decoration: underline;
   text-decoration-thickness: $textDcThick;
   text-underline-offset: $textUnOffset;
   text-decoration-skip-ink: auto;
