@@ -155,7 +155,7 @@ a, a.internal {
   background: none;
   text-decoration: none;
   text-decoration: underline var(--highlight);
-  -webkit-text-decoration: underline;
+  -webkit-text-decoration: underline var(--highlight);
   text-decoration-thickness: $textDcThick;
   text-underline-offset: $textUnOffset;
   text-decoration-skip-ink: auto;
