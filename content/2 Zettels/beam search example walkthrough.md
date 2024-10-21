@@ -14,15 +14,23 @@ In this example, the beam size is set to 2, and the maximum output sequence leng
 
 Moving to time step 2, the algorithm expands each of these initial tokens by considering all possible next tokens $\hat{y}_2 \in V$. It computes the probabilities:
 
-$$P(A, \hat{y}_2 \mid \mathbf{c}) = P(A \mid \mathbf{c})\cdot P(\hat{y}_2 \mid A, \mathbf{c})$$
-$$P(C, \hat{y}_2 \mid \mathbf{c}) = P(C \mid \mathbf{c})\cdot P(\hat{y}_2 \mid C, \mathbf{c})$$
+$$
+P(A, \hat{y}_2 \mid \mathbf{c}) = P(A \mid \mathbf{c})\cdot P(\hat{y}_2 \mid A, \mathbf{c})
+$$
+$$
+P(C, \hat{y}_2 \mid \mathbf{c}) = P(C \mid \mathbf{c})\cdot P(\hat{y}_2 \mid C, \mathbf{c})
+$$
 
 From these *ten possibilities*, it selects the *two sequences* with the highest probabilities, shown in the diagram as $AB$ and $CE$.
 
 At the final time step 3, the process repeats. For each of the two sequences from step 2, it computes:
 
-$$P(A, B, \hat{y}_3 \mid \mathbf{c}) = P(A, B \mid \mathbf{c})\cdot P(\hat{y}_3 \mid A, B, \mathbf{c})$$
-$$P(C, E, \hat{y}_3 \mid \mathbf{c}) = P(C, E \mid \mathbf{c})\cdot P(\hat{y}_3 \mid C, E, \mathbf{c})$$
+$$
+P(A, B, \hat{y}_3 \mid \mathbf{c}) = P(A, B \mid \mathbf{c})\cdot P(\hat{y}_3 \mid A, B, \mathbf{c})
+$$
+$$
+P(C, E, \hat{y}_3 \mid \mathbf{c}) = P(C, E \mid \mathbf{c})\cdot P(\hat{y}_3 \mid C, E, \mathbf{c})
+$$
 
 Again, it selects the two highest probability sequences, resulting in $ABD$ and $CED$ as the final candidates and choose the one which maximizes the following score:
 $$

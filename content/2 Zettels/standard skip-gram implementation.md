@@ -17,16 +17,16 @@ class SkipGram_Model(nn.Module):
 	def __init__(self, vocab_size: int):  
         super(SkipGram_Model, self).__init__()  
         self.embeddings = nn.Embedding(  
-        num_embeddings=vocab_size,  
+            num_embeddings=vocab_size,  
             embedding_dim=EMBED_DIMENSION  
         )  
         self.linear = nn.Linear(  
             in_features=EMBED_DIMENSION,  
             out_features=vocab_size,  
         )  
-    
-	def forward(self, x):  
-		x = self.embeddings(x)  
-		x = self.linear(x)  
+	  
+	def forward(self, x):
+        x = self.embeddings(x)  
+        x = self.linear(x)  
 		return x
 ```

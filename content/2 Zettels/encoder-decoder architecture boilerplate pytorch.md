@@ -20,6 +20,7 @@ class Encoder(nn.Module):
 ```
 
 The decoder interface has an additional `init_state` method to convert the encoder output (`enc_all_outputs`) into the encoded state.
+
 > To generate a variable-length sequence token by token, every time the decoder may map an input (e.g., the generated token at the previous time step) and the encoded state into an output token at the current time step.
 
 ```python

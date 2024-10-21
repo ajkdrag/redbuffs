@@ -9,7 +9,7 @@ Links:
 
 In [[3 Topics/word2vec\|word2vec]], we aim to get good [[word embeddings\|word embeddings]] by using local contextual information in sentences. The prior here is: words close to each other in sentences have similar meanings, and are also close in the vector space compared to other words. Let's take a sentence:
 $$
-\text{The \textcolor{yellow}{cat} \textcolor{cyan}{sat} \textcolor{yellow}{on} the mat}
+\text{The \textcolor{orange}{cat} \textcolor{skyblue}{sat} \textcolor{orange}{on} the mat}
 $$
 Here, for $m=1$, let's choose our center word to be `sat`, so contexts are `{cat, on}`. Let's look at the design choices and training process in the skip-gram algorithm:
 

@@ -15,7 +15,9 @@ Key points:
 
 The co-occurrence probability ratio is defined as:
 
-$$ \frac{p_{ij}}{p_{ik}} = \frac{P(w_j | w_i)}{P(w_k | w_i)} $$
+$$ 
+\frac{p_{ij}}{p_{ik}} = \frac{P(w_j | w_i)}{P(w_k | w_i)}
+$$
 
 Where:
 - $w_i$ is the center word
@@ -23,7 +25,9 @@ Where:
 
 In terms of co-occurrence counts:
 
-$$ p_{ij} = P(w_j | w_i) = \frac{X_{ij}}{X_i} $$
+$$
+p_{ij} = P(w_j | w_i) = \frac{X_{ij}}{X_i}
+$$
 
 Where:
 - $X_{ij}$ is the number of times word $j$ appears in the context of word $i$
@@ -31,11 +35,15 @@ Where:
 
 Therefore, the ratio can be expressed as:
 
-$$ \frac{p_{ij}}{p_{ik}} = \frac{X_{ij}/X_i}{X_{ik}/X_i} = \frac{X_{ij}}{X_{ik}} $$
+$$
+\frac{p_{ij}}{p_{ik}} = \frac{X_{ij}/X_i}{X_{ik}/X_i} = \frac{X_{ij}}{X_{ik}}
+$$
 
 The goal is to design a function $f$ that approximates this ratio:
 
-$$ f(\mathbf{u}_j, \mathbf{u}_k, \mathbf{v}_i) \approx \frac{p_{ij}}{p_{ik}} $$
+$$
+f(\mathbf{u}_j, \mathbf{u}_k, \mathbf{v}_i) \approx \frac{p_{ij}}{p_{ik}}
+$$
 
 Where $\mathbf{u}$ and $\mathbf{v}$ are word vectors.
 

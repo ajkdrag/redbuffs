@@ -16,6 +16,10 @@ This is pretty much the sum of [[log likelihood\|log likelihood]] values, with e
 Additionally, since `log` gives negative value and we want to maximize our log prob, naively the model will *prefer* shorter sentences. To overcome this potential problem, we *normalize by number of words* in sequence hypothesis. Mathematically, we have the normalizing factor as $\frac{1}{L^\alpha}$ with $\alpha \approx 0.75$. 
 
 > [!Example]
-> $L=4, \alpha=0.75 \implies \frac{1}{L^\alpha}=0.35$
-> $L=8, \alpha=0.75 \implies \frac{1}{L^\alpha}=0.21$. 
+> $$
+> L=4, \alpha=0.75 \implies \frac{1}{L^\alpha}=0.35
+> $$
+> $$
+> L=8, \alpha=0.75 \implies \frac{1}{L^\alpha}=0.21
+> $$ 
 Since our log probs are negative, this results in **penalization of shorter sentences**.
