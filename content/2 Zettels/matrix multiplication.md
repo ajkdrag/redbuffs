@@ -28,7 +28,7 @@ $$
 B=\begin{bmatrix}-1 & 0 & 0\\0 & 0 & 1\\0 & 1 & 0\end{bmatrix}
 $$
 
-## Rows $\times$ Matrix
+## Rows x Matrix
 $AB$ can also be viewed as multiplying each *row* of $A$ by the matrix $B$ on the *right*. Multiplying a row vector by a matrix on the right produces another row vector. Each row of $A$ specifies a linear combination of rows of $B$ to produce rows of $C$. So, if we want to rearrange the rows of a matrix, multiply it by another matrix on the **left**.
 
 ### Example
@@ -44,10 +44,10 @@ The key to this perspective is to observe:
 - A column times a row vector, sometimes denoted $xy^T$ , is an [[outer product\|outer product]] and produces a **rank-$1$** matrix (as the matrix has one independent vector and others are multiples of it).
 So, from this perspective, we could write: 
 $$
-\begin{align}
+\begin{align*}
 AB&=\sum_{k=1}^{3}\text{(column k of A)(row k of B)}\\
 &=\sum_{k=1}^3A[:,k]B[k,:]^T
-\end{align}
+\end{align*}
 $$
 
 ### Example
