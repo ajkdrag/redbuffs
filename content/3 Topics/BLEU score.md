@@ -15,8 +15,8 @@ Calculation steps:
   - Calculate the [[2 Zettels/precision of n-grams in BLEU\|precision of n-grams in BLEU]] i.e. $p_n$ values
   - Do the weighted sum of log probs, followed by exponentiation, which is very similar to [[geometric mean average precision\|geometric mean average precision]]:
 	$$
-		 \begin{align*}
-& \exp\left(\sum_{n=1}^N w_n \log p_n\right) \\
+	\begin{align*}
+    & \exp\left(\sum_{n=1}^N w_n \log p_n\right) \\
 	&= \prod_{n=1}^N p_n^{w_n} \\
 	&= (p_1)^{\frac{1}{1}} \cdot (p_2)^{\frac{1}{2}} \cdot (p_3)^{\frac{1}{3}} \cdot (p_4)^{\frac{1}{4}}
 	\end{align*}
