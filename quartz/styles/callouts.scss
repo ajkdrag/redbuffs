@@ -38,6 +38,13 @@
     --bg: var(--calloutBg);
     --callout-icon: var(--callout-icon-note);
   }
+  
+  &[data-callout="topics"] {
+    --color: transparent;
+    --border: unset;
+    --bg: unset;
+    --callout-icon: unset;
+  }
 
   &[data-callout="abstract"] {
     --color: #00b0ff;
