@@ -3,6 +3,10 @@
 ---
 
 
+> [!Topics]
+> - [[matrices\|matrices]]
+> - [[linear algebra\|linear algebra]]
+
 One of the basic operations in linear algebra is matrix multiplication
 $$
 C_{m\times{p}}=A_{m\times{n}}B_{n\times{p}}

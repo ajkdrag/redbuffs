@@ -1,7 +1,11 @@
 ---
-{"publish":true,"tags":["type/post","topic/pytorch-internals"],"path":"4 Articles/Embedding vs Linear layer in PyTorch.md","permalink":"/4-articles/embedding-vs-linear-layer-in-py-torch/","PassFrontmatter":true}
+{"publish":true,"tags":["type/post"],"path":"4 Articles/Embedding vs Linear layer in PyTorch.md","permalink":"/4-articles/embedding-vs-linear-layer-in-py-torch/","PassFrontmatter":true}
 ---
 
+
+> [!Topics]
+> - [[pytorch-internals\|pytorch-internals]]
+> - [[word embeddings\|word embeddings]]
 
 Embedding layers are at the heart of almost every NLP architecture since the past decade. We are all familiar with `nn.Linear` layers. Turns out, `nn.Embedding` is simply a lookup table.
 
