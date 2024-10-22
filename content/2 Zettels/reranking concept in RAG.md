@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[RAG\|RAG]] | [[reranking techniques\|reranking techniques]]
-Links:
+
+> [!Topics]
+> - [[RAG\|RAG]]
+> - [[reranking techniques\|reranking techniques]]
 
 **Without Reranking**:
 - Initial retrieval → Select top-K chunks for final context
@@ -14,3 +16,5 @@ Links:
 - Initial retrieval → Rerank top-N chunks → Select top-K chunks for final context
 - Here N > K, so more likely to get relevant chunks in that group
 - Reranking helps to get relevant chunks in the top-K selection process
+
+## Related

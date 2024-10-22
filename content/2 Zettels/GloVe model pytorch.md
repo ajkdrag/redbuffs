@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[GloVe\|GloVe]]
-Links:
+
+> [!Topics]
+> - [[GloVe\|GloVe]]
 
 Very straightforward to implement, if one refers the [[2 Zettels/GloVe objective function\|GloVe objective function]]
 
@@ -45,3 +46,5 @@ class GloVe(nn.Module):
 
 Notice that we set `sparse=True` when creating the embeddings, as the gradient update is sparse by nature. In `forward(...)`, the average batch loss is returned.
 The final word embeddings are obtained by summing `weight` and `weight_tilde`.
+
+## Related

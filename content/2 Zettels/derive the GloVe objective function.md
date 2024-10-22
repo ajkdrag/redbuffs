@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[GloVe\|GloVe]] | [[loss functions\|loss functions]] 
-Links:
+
+> [!Topics]
+> - [[GloVe\|GloVe]]
+> - [[loss functions\|loss functions]]
 
 Building on the [[2 Zettels/GloVe interpretation through co-occurrence ratios\|GloVe interpretation through co-occurrence ratios]], the objective function can be derived as follows:
 
@@ -51,3 +53,5 @@ $$
 Where $f(x_{ij})$ is a [[2 Zettels/weighting function in GloVe\|weighting function in GloVe]] and $V$ is the vocabulary size.
 
 This objective function aims to learn word vectors that capture the relationships between words as expressed by their co-occurrence statistics in the corpus.
+
+## Related

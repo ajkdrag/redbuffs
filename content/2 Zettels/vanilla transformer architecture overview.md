@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/transformer\|transformer]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/transformer\|transformer]]
 
 Transformers use a network architecture that relies on [[attention mechanism\|attention mechanism]] to *weigh the influence of different input parts on each output part*. The original paper designed the architecture as:
 
@@ -21,3 +22,5 @@ The key components are:
 - [[layer normalization\|layer normalization]]: Normalization technique to stabilize gradients.
 
 Applications: Machine translation, text summarization, NER, Question answering, text generation, chatbots, computer vision and more.
+
+## Related

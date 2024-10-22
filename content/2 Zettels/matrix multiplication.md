@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[linear algebra\|linear algebra]] | [[matrices\|matrices]]
-Links:
+
+> [!Topics]
+> - [[linear algebra\|linear algebra]]
+> - [[matrices\|matrices]]
 
 One of the basic operations in linear algebra is matrix multiplication
 $$
@@ -70,3 +72,5 @@ AB&=\begin{bmatrix}ae+bg & af+bh\\ce+dg & cf+dh\end{bmatrix}\\
 $$
 
 Thus, $AB$ can be written as the sum of the corresponding *column-row* **outer products**.
+
+## Related

@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[loss functions\|loss functions]] | [[cross-entropy\|cross-entropy]]
-Links:
+
+> [!Topics]
+> - [[loss functions\|loss functions]]
+> - [[cross-entropy\|cross-entropy]]
 
 If we have some output predictions (logits) from a model for a given classification task with `C` classes, we can evaluate against the target class id using NLL loss.
 ```python
@@ -36,3 +38,5 @@ val_2 = F.nll_loss(ll, target_class_id)
 print(val_1, val_2) # tensor(0.5389) tensor(0.5389) 
 torch.isclose(val_1, val_2) # torch.tensor(True)
 ```
+
+## Related

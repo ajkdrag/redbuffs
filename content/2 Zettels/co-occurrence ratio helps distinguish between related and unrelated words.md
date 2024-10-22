@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[GloVe\|GloVe]]
-Links:
+
+> [!Topics]
+> - [[GloVe\|GloVe]]
 
 The ratio of co-occurrence probabilities in GloVe provides an intuitive way to capture relationships between words. This can be illustrated using the example of "ice" and "steam" as center words, with various context words.
 
@@ -41,3 +42,5 @@ GloVe uses these ratios to learn word vectors that preserve these relationships 
 $$
 f(\mathbf{u}_j, \mathbf{u}_k, {\mathbf{v}}_i) \approx \frac{p_{ij}}{p_{ik}}
 $$
+
+## Related

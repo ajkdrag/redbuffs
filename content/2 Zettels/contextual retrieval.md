@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[RAG\|RAG]]
-Links:
+
+> [!Topics]
+> - [[RAG\|RAG]]
 
 In [[2 Zettels/contextual retrieval vs standard RAG\|standard RAG]], documents are chunked and this can result in [[2 Zettels/vanilla RAG problems\|loss of context]]. A preprocessing step can be used where an LLM can create contexts for the chunks.
 > [!example]
@@ -24,3 +25,5 @@ Answer only with the succinct context and nothing else.
 ```
 
 Anthropic reports that this technique reduced the top-20 [[2 Zettels/chunk retrieval failure rate\|chunk retrieval failure rate]] by ==35% (5.7% → 3.7%)== consistentently across domains: codebases, fiction, ArXiv papers, Science Papers.
+
+## Related

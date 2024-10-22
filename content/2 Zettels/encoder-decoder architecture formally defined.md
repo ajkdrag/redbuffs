@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]
 
 The encoder takes variable length inputs and creates encoded representations aka *hidden states* for them. Mathematically, we can write a recurrence as:
 $$
@@ -26,3 +27,5 @@ Normally, the decoder hidden state $s_t$ is passed on to some output operation s
 $$
 \hat{y}_t = \text{softmax}(s_t W + b) \in [0, 1]^{|V|}
 $$
+
+## Related

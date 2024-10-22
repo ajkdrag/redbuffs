@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[matrices\|matrices]] | [[GloVe\|GloVe]]
-Links:
+
+> [!Topics]
+> - [[matrices\|matrices]]
+> - [[GloVe\|GloVe]]
 
 If we count all cooccurring pairs in one scan, we will likely run out of memory, as the number of distinct (word `i` index, word `j` index) pairs can be enormous. Let’s say the vocabulary has 100,000 distinct tokens. If we count all pairs in one scan, the number of distinct pairs can be as large as $10^{10}$. Instead, we can count all pairs in 10 scans:
 
@@ -24,3 +26,5 @@ Also, when we create the vocabulary with the most frequent tokens, the index of 
 
 **Cons**
 - Runtime will also increase (if not parallelized)
+
+## Related

@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]
 
 The encoder takes variable-length sequences as input `X`. The implementation will be provided by any model that inherits this base `Encoder` class.
 
@@ -53,3 +54,5 @@ class EncoderDecoder(nn.Module):
         # Return decoder output only
         return self.decoder(dec_X, dec_state)[0]
 ```
+
+## Related

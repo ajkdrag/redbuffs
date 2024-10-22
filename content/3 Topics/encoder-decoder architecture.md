@@ -3,8 +3,6 @@
 ---
 
 
-Topics:
-Links: [[seq2seq modelling\|seq2seq modelling]]
 
 > Composed of an encoder (which compresses the input) and a decoder (which decompresses the compressed input). 
 
@@ -14,3 +12,6 @@ Encoder-decoder architectures can handle inputs and outputs that both consist of
 
 > [!note]
 > This architecture is not just used for *sequence transduction* tasks (i.e. language translation, summarization, image captioning etc). Example: [[variational autoencoder\|variational autoencoder]] which is used in computer vision, but has an encoder-decoder architecture.
+
+## Related
+- [[seq2seq modelling\|seq2seq modelling]]

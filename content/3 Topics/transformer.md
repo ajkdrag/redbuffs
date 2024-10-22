@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[LLM\|LLM]]
-Links: [[BERT\|BERT]] | [[3 Topics/GPT\|GPT]]
+
+> [!Topics]
+> - [[LLM\|LLM]]
 
 A groundbreaking architecture in deep learning, introduced in 2017 by Vaswani et al. It has revolutionized natural language processing and has found applications in various domains *beyond text processing*.
 
@@ -17,3 +18,7 @@ The model consists of two main parts: an encoder and a decoder. The encoder proc
 - They have shown superior performance on many language tasks.
 
 Despite their power, Transformers also have limitations. They can be computationally expensive, especially for very long sequences and are data hungry.
+
+## Related
+- [[BERT\|BERT]]
+- [[3 Topics/GPT\|GPT]]

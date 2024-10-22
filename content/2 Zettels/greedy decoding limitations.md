@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/greedy decoding\|greedy decoding]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/greedy decoding\|greedy decoding]]
 
 > Locally optimal choices may lead to suboptimal overall sequences. Greedy decoding is *fast*, but if we put aside efficiency for a minute, it might seem more reasonable to search for the _most likely sequence_, i.e. maximize:
 > $$
@@ -25,3 +26,5 @@ Links:
 ![|480](https://res.cloudinary.com/dcameztw9/image/upload/v1728132902/tl7frqqf4m5seffj7fu2.png)
 
 In above case, greedy will pick `The nice woman` since the probs are `0.5 x 0.4 = 0.2`, instead of picking `The dog has` whose probs will be `0.4 x 0.9 = 0.36` (globally better).
+
+## Related

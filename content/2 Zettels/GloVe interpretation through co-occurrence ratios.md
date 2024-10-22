@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[GloVe\|GloVe]]
-Links:
+
+> [!Topics]
+> - [[GloVe\|GloVe]]
 
 GloVe (Global Vectors for Word Representation) is a method for creating word embeddings that can be interpreted through the lens of word co-occurrence probabilities.
 
@@ -48,3 +49,5 @@ $$
 Where $\mathbf{u}$ and $\mathbf{v}$ are word vectors.
 
 This interpretation helps us to [[2 Zettels/derive the GloVe objective function\|derive the GloVe objective function]].
+
+## Related

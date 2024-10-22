@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/skip-gram\|skip-gram]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/skip-gram\|skip-gram]]
 
 The skip-gram model in [[3 Topics/word2vec\|word2vec]] is fundamentally based on a probabilistic view of word-context relationships. Let's build this view from the ground up with few basic assumptions: 
 
@@ -46,3 +47,5 @@ The formulation ensures that the probability of selecting a particular context w
 > Computing the denominator (normalization term) is expensive as it sums over all context words. Some solutions are: 
 > - [[skip-gram with heirarchical softmax\|skip-gram with heirarchical softmax]]: Use a binary tree structure to reduce computation
 > - [[skip-gram with negative sampling\|skip-gram with negative sampling]]: Use $k$ negative samples instead of all contexts
+
+## Related

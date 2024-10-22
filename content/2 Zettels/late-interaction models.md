@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[neural information retrieval\|neural information retrieval]] | [[ColBERT\|ColBERT]]
-Links:
+
+> [!Topics]
+> - [[neural information retrieval\|neural information retrieval]]
+> - [[ColBERT\|ColBERT]]
 
 > Finds a sweet spot between [[2 Zettels/representation-based similarity\|no-interaction]] and [[2 Zettels/all-to-all interaction\|all-to-all interaction]] modelling. 
 
@@ -18,3 +20,5 @@ Since the query-document interaction happens late after embeddings have been obt
 	- Expressiveness via query-document interaction
 	- Computational benefits of offline document representation
 	- Avoids information bottleneck of single embeddings
+
+## Related

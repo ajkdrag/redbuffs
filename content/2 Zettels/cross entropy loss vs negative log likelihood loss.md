@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[loss functions\|loss functions]] | [[cross-entropy\|cross-entropy]]
-Links:
+
+> [!Topics]
+> - [[loss functions\|loss functions]]
+> - [[cross-entropy\|cross-entropy]]
 
 In the case of **classification**, [[2 Zettels/cross-entropy loss formula\|cross-entropy loss]] (CE) function in Pytorch is equivalent to a combination of Log+Softmax and [[2 Zettels/negative log likelihood loss in pytorch\|negative log likelihood loss in pytorch]] (NLL).
 
@@ -38,3 +40,5 @@ print(torch.isclose(ce_loss, nll_loss)) # tensor(True)
 Differences:
 - `CrossEntropyLoss` can take probability vector (can be one-hot encoded) as input as well as just the target class id, while `NLLLoss` strictly takes only target class id as input
 - This means we can't use [[label smoothing\|label smoothing]] with `NLLLoss`
+
+## Related

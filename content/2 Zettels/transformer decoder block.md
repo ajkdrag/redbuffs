@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/transformer\|transformer]]
-Links: [[2 Zettels/transformer encoder block\|transformer encoder block]] | [[3 Topics/GPT\|GPT]]
+
+> [!Topics]
+> - [[3 Topics/transformer\|transformer]]
 
 Responsible for generating output sequences based on the *encoded inputs* and *previously generated outputs*.
 
@@ -31,3 +32,7 @@ Responsible for generating output sequences based on the *encoded inputs* and *p
 > - Use cross attention to *focus* on relevant encoded inputs (from encoder block)
 > - Generates `chat` considering all prev outputs (`Le`) and the encoded inputs
 > - Generation continues until `eos` (end of sentence) token
+
+## Related
+- [[2 Zettels/transformer encoder block\|transformer encoder block]]
+- [[3 Topics/GPT\|GPT]]

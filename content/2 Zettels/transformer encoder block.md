@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/transformer\|transformer]]
-Links: [[2 Zettels/transformer decoder block\|transformer decoder block]] | [[BERT\|BERT]]
+
+> [!Topics]
+> - [[3 Topics/transformer\|transformer]]
 
 Vanilla transformers have the Encoder and the Decoder blocks. Both elements harness the power of [[self-attention\|self-attention]] mechanisms to intricately process data, significantly enhancing the model's proficiency in handling sequential information. The encoder's primary function is to encode input sequences, transforming raw data into context-aware representations.
 
@@ -30,3 +31,7 @@ Vanilla transformers have the Encoder and the Decoder blocks. Both elements har
 > - Passing through feed-forward layers for further processing
 > 
 > The output of the encoder is a series of context-rich representations that can be used by a [[2 Zettels/transformer decoder block\|transformer decoder block]] or for other downstream tasks.
+
+## Related
+- [[2 Zettels/transformer decoder block\|transformer decoder block]]
+- [[BERT\|BERT]]

@@ -4,8 +4,9 @@
 
 
 
-Topics: [[3 Topics/BLEU score\|BLEU score]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/BLEU score\|BLEU score]]
 
 Here's the formula for BLEU:
 $$
@@ -18,3 +19,5 @@ where:
 	- The weights determine the contribution of each n-gram size to the overall score. A common choice for these weights is $w_n = \frac{1}{n}$ which rewards higher n-grams since they are more challenging to match
 	- Expanding the `exp`, it turns out we are doing ${p_n}^{w_n}$ ([[2 Zettels/relation of BLEU score with GMAP\|math explanation]]). If we fix $p_n$, this value will be larger for higher $n$
 - $N$ is the maximum n-gram size considered (typically 4)
+
+## Related

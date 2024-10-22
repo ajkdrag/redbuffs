@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[GloVe\|GloVe]]
-Links:
+
+> [!Topics]
+> - [[GloVe\|GloVe]]
 
 In the [[2 Zettels/GloVe objective function\|GloVe objective function]], we have a weighting function which should have the following properties:
 
@@ -31,3 +32,5 @@ x_{\text{max}} &: \text{a hyperparameter, typically set to 100} \\
 $$
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1727693779/o90jtvgwy4ifzp8qxe8i.png)
+
+## Related

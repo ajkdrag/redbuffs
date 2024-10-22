@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[reranking techniques\|reranking techniques]]
-Links: [[cross-encoders\|cross-encoders]] | [[ColBERT\|ColBERT]] | [[3 Topics/GPT\|GPT]] | [[2 Zettels/reranking concept in RAG\|reranking concept in RAG]]
+
+> [!Topics]
+> - [[reranking techniques\|reranking techniques]]
 
 |Model|Type|Performance|Cost|Example|
 |---|---|---|---|---|
@@ -13,3 +14,9 @@ Links: [[cross-encoders\|cross-encoders]] | [[ColBERT\|ColBERT]] | [[3 Topics/GP
 |LLM|Open source|Great|High|RankZephyr, RankT5|
 |LLM API|Private|Best|Very High|GPT, Claude|
 |Rerank API|Private|Great|Medium|Cohere, Mixedbread, Jina|
+
+## Related
+- [[cross-encoders\|cross-encoders]]
+- [[ColBERT\|ColBERT]]
+- [[3 Topics/GPT\|GPT]]
+- [[2 Zettels/reranking concept in RAG\|reranking concept in RAG]]

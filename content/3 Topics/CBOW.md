@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/word2vec\|word2vec]]
-Links: [[3 Topics/skip-gram\|skip-gram]]
+
+> [!Topics]
+> - [[3 Topics/word2vec\|word2vec]]
 
 Continuous Bag of Words (CBOW) is an algorithm belonging to the word2vec family, for learning fixed-size [[word embeddings\|word embeddings]] of words in a vocabulary. The modelling is very similar to [[2 Zettels/vanilla skip-gram spelled out\|standard skip-gram]], only difference being in *how we feed the data*.
 
@@ -25,3 +26,6 @@ If we use a neural network for modelling our "black-box":
 - For window size $m$, we can do a sliding window over our sentences and give `(context_1, context_2, ..., context_2m, center)` word tuples as input to model. Input `(2, 4, 0)` indicates 3rd, 5th being context words and 1st being center word
 - We get average embeddings of context words, calculate our $\text{softmax-ed-values}$ vector and pick out the 1st value, i.e. `0.3`. We want to *maximize* this, i.e. minimize `-0.3`. During implementation, we use [[2 Zettels/cross-entropy loss formula\|cross-entropy loss]] with `0` as target class index
 - Use [[gradient descent\|gradient descent]] and backprop to train over this loss and refine our embeddings
+
+## Related
+- [[3 Topics/skip-gram\|skip-gram]]

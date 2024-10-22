@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[word embeddings\|word embeddings]]
-Links: [[2 Zettels/qualitative approaches to evaluating word embeddings\|qualitative approaches to evaluating word embeddings]]
+
+> [!Topics]
+> - [[word embeddings\|word embeddings]]
 
 There are broadly 2 ways: **Extrinsic** and **Intrinsic** evaluation.
 
@@ -20,3 +21,6 @@ In Intrinsic evaluation, we have 2 subclasses:
 	- High correlation indicates that our embeddings are good and match human judgements
 	- This approach is very *subjective* since humans are used for `SET 1`
 	- GloVe 42B model performs very well in this, with 75.9% correlation
+
+## Related
+- [[2 Zettels/qualitative approaches to evaluating word embeddings\|qualitative approaches to evaluating word embeddings]]

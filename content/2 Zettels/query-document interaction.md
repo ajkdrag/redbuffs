@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[neural information retrieval\|neural information retrieval]]
-Links:
+
+> [!Topics]
+> - [[neural information retrieval\|neural information retrieval]]
 
 This is another approach in Neural IR, where there is direct interaction with query terms and document terms. When we say *terms*, we mean their tokenized representations which can be word or subword level.
 > [!example]
@@ -18,3 +19,5 @@ This is another approach in Neural IR, where there is direct interaction with qu
     - Hard to use in production
 
 
+
+## Related

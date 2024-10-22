@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[linear algebra\|linear algebra]] | [[distance metrics\|distance metrics]]
-Links:
+
+> [!Topics]
+> - [[linear algebra\|linear algebra]]
+> - [[distance metrics\|distance metrics]]
 
 The dot product is the simplest way to compare two vectors. 
 $$
@@ -19,3 +21,5 @@ $$
 > Dot product values are unbounded, whereas, for cosine similarity, the value ranges from -1 (completely opposite) to 1 (identical direction). It's not affected by vector magnitude, only direction matters.
 
 In practice, for many NLP tasks, **cosine similarity is often preferred** because it allows for comparing the semantic similarity of words or documents regardless of their frequency or embedding magnitude. However, in some cases where the magnitude carries important information, dot product might be more appropriate.
+
+## Related

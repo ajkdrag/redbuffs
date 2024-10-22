@@ -4,8 +4,9 @@
 
 
 
-Topics: [[3 Topics/skip-gram\|skip-gram]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/skip-gram\|skip-gram]]
 
 In [[3 Topics/word2vec\|word2vec]], we aim to get good [[word embeddings\|word embeddings]] by using local contextual information in sentences. The prior here is: words close to each other in sentences have similar meanings, and are also close in the vector space compared to other words. Let's take a sentence:
 $$
@@ -39,3 +40,5 @@ Here, for $m=1$, let's choose our center word to be `sat`, so contexts are `{cat
    - Involves additional modifications to basic skip-gram model
 
 The model is simple, composed of two [[2 Zettels/similarity of nn.Embedding and nn.Linear in Pytorch\|embedding or linear]] matrices. Data points are shuffled, batched, and fed to the model for training, with each word getting a chance to be both center and context (except at text boundaries).
+
+## Related

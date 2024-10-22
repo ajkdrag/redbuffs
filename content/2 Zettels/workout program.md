@@ -4,8 +4,9 @@
 
 
 
-Topics: [[fitness\|fitness]]
-Links:
+
+> [!Topics]
+> - [[fitness\|fitness]]
 
 ## Day 1: Push + HIIT
 
@@ -108,3 +109,5 @@ Links:
 - 10 min warm-up: Sun salutations
 - 45 min flexibility work: warrior poses, triangle, pigeon, cobra, child's pose, balance poses
 - 5 min cool-down: Savasana
+
+## Related

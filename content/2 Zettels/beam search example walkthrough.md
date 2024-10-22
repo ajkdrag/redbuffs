@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/beam search\|beam search]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/beam search\|beam search]]
 
 Let's take the case of machine translation using [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]] where the output vocabulary $V$ consists of five elements: ${A, B, C, D, E}$, with one representing the end-of-sequence token.
 
@@ -38,3 +39,5 @@ $$
 $$
 
 The above score is just [[log likelihood\|log likelihood]], but with the additional [[2 Zettels/beam search normalization factor\|beam search normalization factor]].
+
+## Related

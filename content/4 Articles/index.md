@@ -1,5 +1,5 @@
 ---
-{"title":"Posts","publish":true,"tags":null,"path":"4 Articles/index.md","permalink":"/4-articles/index/","PassFrontmatter":true}
+{"title":"Articles","publish":true,"tags":null,"path":"4 Articles/index.md","permalink":"/4-articles/index/","PassFrontmatter":true}
 ---
 
 

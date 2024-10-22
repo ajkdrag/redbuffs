@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[pytorch-internals\|pytorch-internals]]
-Links:
+
+> [!Topics]
+> - [[pytorch-internals\|pytorch-internals]]
 
 If we apply `log` and `softmax` separately, when the output of softmax becomes very close to zero, then log would yield negative infinity.
 
@@ -22,3 +23,5 @@ torch.log(torch.exp(x)) # tensor([-inf, 0.])
 ```
 
 In above example, we expect log and exp to cancel each other out and get `x`, but we actually get `[-inf, 0.0]`.
+
+## Related

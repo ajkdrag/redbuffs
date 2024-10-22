@@ -4,8 +4,10 @@
 
 
 
-Topics: [[loss functions\|loss functions]] | [[cross-entropy\|cross-entropy]]
-Links:
+
+> [!Topics]
+> - [[loss functions\|loss functions]]
+> - [[cross-entropy\|cross-entropy]]
 
 $$
 \begin{align*}
@@ -20,3 +22,5 @@ $$
 $$
 
 The outer summation over the N samples (or mini-batch) can either be sum (like above) or average. This is governed by the param `reduction` in PyTorch. This formula can be used for [[multi-class classification\|multi-class classification]] as well as [[multi-label classification\|multi-label classification]], but in Pytorch, `nn.CrossEntropyLoss` is used for multi-class since it applies softmax internally, while `nn.BCEWithLogitsLoss` is used for mult-label since it applies sigmoid internally.
+
+## Related

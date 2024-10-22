@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[3 Topics/word2vec\|word2vec]] | [[3 Topics/skip-gram\|skip-gram]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/word2vec\|word2vec]]
+> - [[3 Topics/skip-gram\|skip-gram]]
 
 In standard skip-gram (without negative sampling), we typically have 2 weight matrics $W$ and $W'$. One can use one embedding layer and a linear layer for this:
 
@@ -30,3 +32,5 @@ class SkipGram_Model(nn.Module):
         x = self.linear(x)  
 		return x
 ```
+
+## Related

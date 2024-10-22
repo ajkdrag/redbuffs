@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/beam search\|beam search]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/beam search\|beam search]]
 
 In beam search with beam size $k$, we finally get $k$ sequences, out of which we pick one which maximizes the following score:
 $$
@@ -23,3 +24,5 @@ Additionally, since `log` gives negative value and we want to maximize our log p
 > L=8, \alpha=0.75 \implies \frac{1}{L^\alpha}=0.21
 > $$ 
 Since our log probs are negative, this results in **penalization of shorter sentences**.
+
+## Related

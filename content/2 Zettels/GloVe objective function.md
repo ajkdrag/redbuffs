@@ -3,8 +3,10 @@
 ---
 
 
-Topics: [[GloVe\|GloVe]] | [[loss functions\|loss functions]]
-Links:
+
+> [!Topics]
+> - [[GloVe\|GloVe]]
+> - [[loss functions\|loss functions]]
 
 It aims to make the dot product of word vectors (plus biases) approximate the logarithm of the words' co-occurrence count.
 
@@ -24,3 +26,5 @@ $$
 - Working with very large numbers (like raw co-occurrence counts) can lead to numerical instability in computations. The log transformation helps mitigate this issue
 - Treats the target and context words **symmetrically**. This is reflected in the objective function where $w_i$ and $\tilde{w}_j$ play similar roles
 - $f(\cdot)$ is the [[2 Zettels/weighting function in GloVe\|weighting function in GloVe]] and plays an important role in stabilizing training
+
+## Related

@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/BLEU score\|BLEU score]]
-Links:
+
+> [!Topics]
+> - [[3 Topics/BLEU score\|BLEU score]]
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1728369357/jdklgdnl9monuosjeeua.png)
 
@@ -21,3 +22,5 @@ Thus $p_2$ will be out of all bigrams in $\hat{Y}$, how many exist in $Y$. In th
 
 > [!Warning]
 > $p_1=4/5$ instead of $5/5$, because we **cap the duplicates** by their number of occurrences in the ground truth. `cat` occurred twice in $\hat{Y}$, but only once in $Y$, so we only count it once.
+
+## Related

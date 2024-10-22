@@ -3,8 +3,9 @@
 ---
 
 
-Topics: [[3 Topics/word2vec\|word2vec]]
-Links: [[3 Topics/CBOW\|CBOW]]
+
+> [!Topics]
+> - [[3 Topics/word2vec\|word2vec]]
 
 Skip-gram is an algorithm belonging to the word2vec family, for learning fixed-size [[word embeddings\|word embeddings]] of words in a vocabulary. The prior for skip-gram comes from the [[2 Zettels/distributional hypothesis\|distributional hypothesis]] concept from 1950s. Simply put, it is the following:
 
@@ -31,3 +32,6 @@ There are variations of [[2 Zettels/vanilla skip-gram spelled out\|standard skip
 - [[skip-gram neural net variations\|skip-gram neural net variations]]
 - [[skip-gram with negative sampling\|skip-gram with negative sampling]]
 - [[skip-gram with heirarchical softmax\|skip-gram with heirarchical softmax]]
+
+## Related
+- [[3 Topics/CBOW\|CBOW]]

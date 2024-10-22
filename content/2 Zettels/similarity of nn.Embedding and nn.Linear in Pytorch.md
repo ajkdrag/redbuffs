@@ -4,8 +4,10 @@
 
 
 
-Topics: [[pytorch-internals\|pytorch-internals]] | [[word embeddings\|word embeddings]]
-Links:
+
+> [!Topics]
+> - [[pytorch-internals\|pytorch-internals]]
+> - [[word embeddings\|word embeddings]]
 
 `nn.Embedding` is nothing but a lookup table.
 
@@ -47,3 +49,5 @@ torch.allclose(res_linear, res_emb) # True
 ```
 
 Thus, we see `nn.Embedding` and `nn.Linear` (without bias term) work the same.
+
+## Related
