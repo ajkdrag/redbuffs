@@ -19,7 +19,7 @@ Responsible for generating output sequences based on the *encoded inputs* and *p
 ![|480](https://res.cloudinary.com/dcameztw9/image/upload/v1727800255/yrmisfizk8xg50twe9rw.png)
 
 **Key features**:
-- [[auto-regressive property\|auto-regressive property]]: Generates outputs sequentially, one element at a time.
+- [[2 Zettels/auto-regressive property\|auto-regressive property]]: Generates outputs sequentially, one element at a time.
 - [[masked self-attention\|masked self-attention]]: Prevents *attending* to future positions, maintaining the auto-regressive property. 
 	- During training, we have access to future generations as well, but by masking those indices, we prevent the model from *cheating*.
 - [[cross-attention\|cross-attention]]: Allows the decoder to focus on relevant parts of the encoded inputs.

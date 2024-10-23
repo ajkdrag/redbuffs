@@ -12,17 +12,18 @@ $$
 P(x_1, x_2, ..., x_n) = P(x_1) \times P(x_3 \mid x_1,x_2) \times \ldots \times P(x_n \mid x_1,...,x_{n₋1})
 $$
 
-Common Applications:
+```
+Input: The cat sits on
+
+Step 1: The cat sits on → the 
+Step 2: The cat sits on the → mat
+```
+
+**Common Applications**
 - Language Models (like [[3 Topics/GPT\|GPT]])
 - Time Series Prediction
 - Speech Generation
 - Music Generation
-
-> [!Example]
-> **Input**: `The cat sits on`
-> **Step 1**: Predict `the` based on `The cat sits on`
-> **Step 2**: Predict `mat` based on `The cat sits on the`
-> **Result**: `The cat sits on the mat`
 
 This property is well suited for generative tasks, but can be slow (one output at a time) and suffer from error accumulation.
 
