@@ -41,10 +41,6 @@ export default ((opts?: SocialIconOptions) => {
       width: 20px;
       height: 20px;
     }
-    
-    .social-icon:hover {
-      color: var(--secondary);
-    }
   `
 
   return SocialIcon

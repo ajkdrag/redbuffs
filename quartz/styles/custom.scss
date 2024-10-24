@@ -1,8 +1,8 @@
 @use "./variables.scss" as *;
 @use "./base.scss";
 
-$textDcThick: 0.05rem;
-$textUnOffset: 0.25em;
+$textDcThick: 0.1rem;
+$textUnOffset: 0.2em;
 
 
 // styling topics
@@ -37,12 +37,11 @@ $textUnOffset: 0.25em;
       // Style the links inside topic items
       a {
         display: inline-block;
-        background-color: var(--highlight);
+        background-color: var(--tertiary);
         color: rgb(230, 228, 217);
         padding: 0.2rem 0.8rem;
         border-radius: 8px;
         text-decoration: none;
-        font-size: 0.9rem;
         
         // Hide the external icon SVG
         svg {
@@ -52,8 +51,13 @@ $textUnOffset: 0.25em;
         // Hide the popover
         .popover {
           display: none;
-        }
-        
+        } 
+      }
+
+      a:hover {
+          background-color: var(--highlight);
+          color: var(--light);
+          padding: 0.25rem 0.85rem;
       }
     }
   }
@@ -67,6 +71,10 @@ header {
   background: var(--lightgray);
   padding: 10px;
   border-radius: 10px;
+
+  a:hover {
+    color: var(--highlight);
+  }
 }
 
 
@@ -156,11 +164,11 @@ code {
 // style page-title
 .page-title a{
   font-size: 1.8rem;
-  background-color: var(--highlight);
-  border: 2px solid var(--highlight);
+  background-color: var(--tertiary);
   border-radius: 0.5rem;
   padding: 0 0.5rem;
   color: rgb(230, 228, 217);
+  text-decoration: none;
 }
 
 // center images
@@ -169,8 +177,9 @@ code {
   margin: 0em auto;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
-  opacity: 0.8;
+  opacity: 0.95;
   max-width: 80%;
+  border: 2px solid var(--lightgray);
 }
 
 // keep 100% opacity for bmac image
@@ -208,12 +217,22 @@ h1 {
 // style links
 a, a.internal {
   background: none;
-  text-decoration: none;
   text-decoration: underline var(--highlight);
   -webkit-text-decoration: underline var(--highlight);
   text-decoration-thickness: $textDcThick;
   text-underline-offset: $textUnOffset;
   text-decoration-skip-ink: auto;
+}
+
+article {
+  & a:hover{
+    background-color: var(--highlight);
+    color: var(--light);
+    padding-left: 0.2rem;
+    padding-right: 0.3rem;
+    border-radius: 0.2rem;
+  }
+
 }
 
 .external-icon {
@@ -236,7 +255,7 @@ div#toc-content {
 
   a {
     text-decoration: none;
-    font-size: 0.8em
+    font-size: 0.8em;
   }
 
   li {
@@ -245,17 +264,17 @@ div#toc-content {
 }
 
 // styling backlinks
-.backlinks {
-  a {
-    // text-decoration: none;
-    font-size: 1em
-  }
-
-  li {
-    line-height: 1.25;
-  }
-}
-
+// .backlinks {
+//   a {
+//     // text-decoration: none;
+//     font-size: 1em
+//   }
+//
+//   li {
+//     line-height: 1.25;
+//   }
+// }
+//
 // style bmac button
 .bmac-script {
   display: flex;

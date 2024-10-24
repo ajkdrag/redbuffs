@@ -73,10 +73,6 @@ a {
   transition: color 0.2s ease;
   color: var(--secondary);
 
-  &:hover {
-    color: var(--tertiary) !important;
-  }
-
   &.internal {
     text-decoration: none;
     background-color: var(--highlight);
