@@ -17,15 +17,5 @@ In this kind of Neural IR, the model takes all query and document terms, and giv
     - High computational cost
     - Difficult to use in production
 
-
-
-```handdrawn-ink
-{
-	"versionAtEmbed": "0.2.6",
-	"filepath": "0 Admin/02 Attachments/Ink/Drawing/2024.10.23 - 21.03pm.drawing"
-}
-```
-
-
 ## Related
 - [[2 Zettels/cross-encoders for reranking in RAG\|cross-encoders for reranking in RAG]]
