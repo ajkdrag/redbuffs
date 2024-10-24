@@ -8,7 +8,8 @@
 
 Encoder-decoder architectures can handle inputs and outputs that both consist of **variable-length sequences** and thus are suitable for sequence-to-sequence problems such as machine translation. The encoder takes a variable-length sequence as input and transforms it into a state with a fixed shape. The decoder maps the encoded state of a fixed shape to a variable-length sequence.
 
-![](https://res.cloudinary.com/dcameztw9/image/upload/v1727957417/wcfzqt7h71o8vufbgi0k.png)
+![](https://res.cloudinary.com/dcameztw9/image/upload/v1729777337/encoder-decoder%20architecture-xy18od.webp)
+
 
 > [!note]
 > This architecture is not just used for *sequence transduction* tasks (i.e. language translation, summarization, image captioning etc). Example: [[variational autoencoder\|variational autoencoder]] which is used in computer vision, but has an encoder-decoder architecture.
