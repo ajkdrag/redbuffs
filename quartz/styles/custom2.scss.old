@@ -1,0 +1,285 @@
+@use "./variables.scss" as *;
+@use "./base.scss";
+
+$textDcThick: 0.1rem;
+$textUnOffset: 0.2em;
+
+
+// styling topics
+
+.callout[data-callout="topics"] {
+  // Hide the callout title
+  .callout-title {
+    display: none;
+  }
+
+  // Style the content container
+  .callout-content {
+    padding: 1rem;
+    
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 0;
+      display: inline-block;
+      white-space: nowrap;
+      margin: 0;
+      overflow-wrap: normal;
+      
+      // Style the links inside topic items
+      a {
+        display: inline-block;
+        background-color: var(--tertiary);
+        color: rgb(230, 228, 217);
+        padding: 0.2rem 0.8rem;
+        border-radius: 8px;
+        text-decoration: none;
+        
+        // Hide the external icon SVG
+        svg {
+          display: none;
+        }
+        
+        // Hide the popover
+        .popover {
+          display: none;
+        } 
+      }
+
+      a:hover {
+          background-color: var(--highlight);
+          color: var(--light);
+          padding: 0.25rem 0.85rem;
+      }
+    }
+  }
+}
+
+// testing custom css
+header {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  background: var(--lightgray);
+  padding: 10px;
+  border-radius: 10px;
+
+  a:hover {
+    color: var(--highlight);
+  }
+}
+
+
+// style right sidebar common elements
+.right.sidebar {
+  .spacer {
+    flex: none;
+    margin-top: 3rem;
+  }
+}
+
+// readable content meta
+.content-meta {
+  color: #777777;
+}
+
+
+// headings
+h3 {
+  font-size: 1.28rem;
+  color: var(--darkgray);
+}
+
+h1[id]>a[href^=\#], h2[id]>a[href^=\#], h3[id]>a[href^=\#], h4[id]>a[href^=\#], h5[id]>a[href^=\#], h6[id]>a[href^=\#] {
+    opacity: 0.1;
+    margin: 0 .1rem;
+}
+
+// lists
+@media (max-width: 800px) {
+  li {
+    margin-block-start: 0.8rem;
+  }
+}
+
+// left-right padding of content
+.page>#quartz-body {
+    padding: 0 1.5rem;
+}
+
+// font-size p
+tbody, p, li {
+  font-size: clamp(1rem, 1vw + .625rem, 1.15rem);
+  // line-height: clamp(1.48rem, 5vw, 1.8rem);
+  line-height: 1.5em;
+  margin-block-start: 0.4em;
+
+  @media all and ($mobile) {
+    font-size: 14px;
+    line-height: 1.6em;
+    margin-block-start: 0.5em;
+  }
+}
+
+
+// style strong and italics
+.page article p > strong,
+.page article p > em {
+    color: var(--secondary);
+    font-weight: bolder;
+}
+
+
+// styling codeblocks
+pre {
+    border: 1px solid var(--darkgray);
+    background: var(--lightgray);
+}
+
+pre>code {
+  font-size: clamp(0.7rem, 1vw + 0.5rem, 0.9rem);
+}
+
+code {
+  font-size: clamp(0.8rem, 1vw + 0.55rem, 1.0rem);
+  line-height: 1.25rem;
+  padding: 0.01rem 0.25rem;
+}
+
+// lower padding at top on mobile
+@media all and ($mobile) {
+  .page>#quartz-body .sidebar.left {
+    padding-top: 1rem;
+  }
+}
+
+// style page-title
+.page-title a{
+  font-size: 1.8rem;
+  background-color: var(--tertiary);
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  color: rgb(230, 228, 217);
+  text-decoration: none;
+}
+
+// center images
+.centerImg, img {
+  display: block;
+  margin: 0em auto;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+  opacity: 0.95;
+  max-width: 80%;
+  border: 2px solid var(--lightgray);
+}
+
+// keep 100% opacity for bmac image
+.external > img {
+  opacity: 1;
+}
+
+// center page titles, mins to read and tags
+.content-meta, h1 {
+  text-align: center;
+}
+
+.popover-hint > ul.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem; // This adds space between tags
+  padding: 0; // Remove default padding
+  margin-top: 1rem; // Add space above the tags
+  margin-bottom: 2rem; // Add space below the tags
+}
+
+// increase page title font size
+h1 {
+  font-size: 1.8rem; // Adjust this value as needed
+}
+
+// improve readability of LaTeX equations
+.katex { 
+  font-size: 1.1em;
+  line-height: 1.2;
+  margin: 1em 0;
+}
+
+// style links
+a, a.internal {
+  background: none;
+  text-decoration: underline var(--highlight);
+  -webkit-text-decoration: underline var(--highlight);
+  text-decoration-thickness: $textDcThick;
+  text-underline-offset: $textUnOffset;
+  text-decoration-skip-ink: auto;
+}
+
+article {
+  & a:hover{
+    background-color: var(--highlight);
+    color: var(--light);
+    padding-left: 0.2rem;
+    padding-right: 0.3rem;
+    border-radius: 0.2rem;
+  }
+
+}
+
+.external-icon {
+  height: 1ex;
+  margin: 0 0.15em;
+
+  h2 & {
+    display: none;
+  }
+}
+
+// styling tags
+a.internal.tag-link{
+  color: rgb(230, 228, 217);
+}
+
+// styling toc
+div#toc-content {
+  margin-left: 1rem;
+
+  a {
+    text-decoration: none;
+    font-size: 0.8em;
+  }
+
+  li {
+    line-height: 1.25;
+  }
+}
+
+// styling backlinks
+// .backlinks {
+//   a {
+//     // text-decoration: none;
+//     font-size: 1em
+//   }
+//
+//   li {
+//     line-height: 1.25;
+//   }
+// }
+//
+// style bmac button
+.bmac-script {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+

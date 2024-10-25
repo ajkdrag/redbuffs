@@ -10,4 +10,7 @@ private/
 .replit
 replit.nix
 repo.txt
+plugins.txt
+styles.txt
+components.txt
 symcontent

@@ -34,6 +34,7 @@ export const sharedPageComponents: SharedLayout = {
         darkTheme: "giscus_dark",
       },
     }),
+    Component.Backlinks(),
   ],
   footer: Component.Footer({
     links: {
@@ -56,7 +57,6 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.DesktopOnly(Component.Spacer()),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
     // Component.Graph(),
   ],
 };
