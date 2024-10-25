@@ -75,7 +75,8 @@
   }
 }
 
-a:hover .popover,
+a:hover 
+.popover,
 .popover:hover {
   animation: dropin 0.3s ease;
   animation-fill-mode: forwards;

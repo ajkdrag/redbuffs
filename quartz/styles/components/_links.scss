@@ -1,0 +1,42 @@
+@use "../variables.scss" as quartz;
+@use "../abstracts/spacing";
+@use "../abstracts/mixins";
+@use "../abstracts/theme";
+
+a {
+  color: var(--secondary);
+  transition: all theme.$transition-fast ease;
+
+  &:hover {
+    color: var(--tertiary);
+  }
+
+  &.external {
+    text-decoration: underline;
+    -webkit-text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.2em;
+    text-decoration-skip-ink: auto;
+  }
+
+  &.internal {
+    background: theme.$bg-light-mix;
+    padding: 0.1em 0.3em;
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--highlight);
+      color: var(--tertiary);
+    }
+  }
+}
+
+// External link icon
+.external-icon {
+  height: 1ex;
+  margin: 0 0.15em;
+  
+  h2 & {
+    display: none;
+  }
+}

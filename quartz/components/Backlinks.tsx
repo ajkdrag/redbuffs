@@ -27,7 +27,7 @@ const Backlinks: QuartzComponent = ({
                 <div class="truncate">
                   <a
                     href={resolveRelative(fileData.slug!, f.slug!)}
-                    class="internal" data-title={f.frontmatter?.title}
+                    class="internal" title={f.frontmatter?.title}
                   >
                     {f.frontmatter?.title}
                   </a>

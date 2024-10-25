@@ -1,0 +1,52 @@
+@use "../variables.scss" as quartz;
+@use "../abstracts/spacing";
+@use "../abstracts/mixins";
+@use "../abstracts/theme";
+
+footer {
+  margin: 4rem 0 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lightgray);
+  
+  p {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin: 0;
+    
+    a {
+      color: var(--secondary);
+      font-weight: 600;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      transition: all theme.$transition-fast ease;
+      
+      &:hover {
+        color: var(--tertiary);
+        background: var(--highlight);
+      }
+    }
+  }
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    
+    li a {
+      color: var(--gray);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
+      transition: all theme.$transition-fast ease;
+      
+      &:hover {
+        color: var(--tertiary);
+        background: var(--highlight);
+      }
+    }
+  }
+}

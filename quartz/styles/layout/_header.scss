@@ -1,0 +1,48 @@
+@use "../variables.scss" as quartz;
+@use "../abstracts/spacing";
+@use "../abstracts/mixins";
+@use "../abstracts/theme";
+
+.article-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.content-meta {
+  text-align: center;
+  color: var(--gray);
+  margin: 0 auto 2rem;
+  
+  span {
+    &:not(:last-child)::after {
+      content: "•";
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+// Page title (site title in header)
+.page-title {
+  a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark);
+    background: none;
+    transition: color theme.$transition-fast ease;
+    
+    &:hover {
+      color: var(--tertiary);
+    }
+  }
+}
+
+// Main content width control
+.popover-hint {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @media all and (#{quartz.$mobile}) {
+    padding: 0 1.5rem;
+  }
+}

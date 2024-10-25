@@ -1,0 +1,12 @@
+@forward "../variables.scss" as quartz-*; 
+
+$spacing-unit: 1rem;
+$spacing-map: (
+  "xxs": $spacing-unit * 0.25,
+  "xs": $spacing-unit * 0.5,
+  "sm": $spacing-unit,
+  "md": $spacing-unit * 1.5,
+  "lg": $spacing-unit * 2,
+  "xl": $spacing-unit * 3,
+  "xxl": $spacing-unit * 4,
+);

@@ -1,0 +1,86 @@
+@use "../variables.scss" as quartz;
+@use "../abstracts/spacing";
+@use "../abstracts/mixins";
+@use "../abstracts/theme";
+
+.callout {
+  border: 2px solid var(--border);
+  background-color: var(--bg);
+  border-radius: 5px;
+  padding: 0 1rem;
+  overflow-y: hidden;
+  transition: max-height theme.$transition-medium ease;
+  box-sizing: border-box;
+
+  & > .callout-content > :first-child {
+    margin-top: 0;
+  }
+
+  --callout-color: var(--dark);
+  --callout-bg: var(--lightgray);
+
+  &[data-callout] {
+    --color: var(--callout-color);
+    --border: var(--secondary);
+    --bg: var(--callout-bg);
+  }
+  
+  // Hide title and styles if it's a topics callout
+  &[data-callout="topics"] {
+    --color: transparent;
+    --border: unset;
+    --bg: unset;
+    
+    .callout-title {
+      display: none;
+    }
+
+    .callout-content {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        
+        li {
+          margin: 0;
+          padding: 0;
+        }
+
+        li > a.internal {
+            @include mixins.card-base;
+            text-decoration: none;
+            background: theme.$bg-light-mix;
+        }
+      }
+    }
+  }
+
+  // Collapsible functionality
+  &.is-collapsed {
+    & > .callout-title > .fold-callout-icon {
+      transform: rotateZ(-90deg);
+    }
+  }
+}
+
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1rem 0;
+  color: var(--color);
+
+  & .fold-callout-icon {
+    transition: transform theme.$transition-fast ease;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  & > .callout-title-inner > p {
+    color: var(--color);
+    margin: 0;
+  }
+}

@@ -44,17 +44,45 @@ const config: QuartzConfig = {
           highlight: "rgba(184, 0, 31, 0.15)", // Link hovers, selections
           textHighlight: "rgb(220, 20, 60)",
         },
+        // darkMode: {
+        //   light: "#1A1E23",          // Dark mode background
+        //   lightgray: "#2A394F",      // Borders in dark mode
+        //   gray: "#788896",           // Subtle text in dark mode
+        //   darkgray: "#E8E6D7",       // Main text in dark mode
+        //   dark: "#FCFAEE",           // Headings in dark mode
+        //   secondary: "#7B9EAF",      // Links in dark mode
+        //   tertiary: "#FF4D6B",       // Highlights in dark mode
+        //   highlight: "rgba(255, 77, 107, 0.15)", // Dark mode highlights
+        //   textHighlight: "rgb(220, 20, 60)",
+        // },
         darkMode: {
-          light: "#1A1E23",          // Dark mode background
-          lightgray: "#2A394F",      // Borders in dark mode
-          gray: "#788896",           // Subtle text in dark mode
-          darkgray: "#E8E6D7",       // Main text in dark mode
-          dark: "#FCFAEE",           // Headings in dark mode
-          secondary: "#7B9EAF",      // Links in dark mode
-          tertiary: "#FF4D6B",       // Highlights in dark mode
-          highlight: "rgba(255, 77, 107, 0.15)", // Dark mode highlights
-          textHighlight: "rgb(220, 20, 60)",
-        },
+          // Background - keeping your dark slate blue-gray
+          light: "#1A1E23",
+
+          // Borders - slightly lighter for better definition
+          lightgray: "#2F4158",  // Brightened from #2A394F
+
+          // Subtle text - increased contrast
+          gray: "#9DC2D5",       // Brightened from #788896
+
+          // Main text - softened from pure white
+          dark: "#ECEADD",   // Softened from #E8E6D7
+
+          // Headings - warmed but not stark white
+          darkgray: "#FCFAEE",       // Softened from #FCFAEE
+
+          // Links - much better contrast
+          secondary: "#A2D6F0",  // Brightened from #7B9EAF
+
+          // Highlights - keeping your accent color
+          tertiary: "#FF4D6B",
+
+          // Background highlights - slightly more visible
+          highlight: "rgba(255, 77, 107, 0.12)",
+
+          // Text highlights
+          textHighlight: "rgba(220, 20, 60, 0.85)", // Added transparency
+        }
       },
     }
 

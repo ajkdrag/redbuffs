@@ -1,0 +1,56 @@
+@use "theme";
+@use "spacing";
+
+// Layout mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 map-get(#{spacing.$spacing-map}, "md");
+}
+
+// Card style mixin used by multiple components
+@mixin card-base {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: theme.$bg-light-mix;
+  transition: all #{theme.$transition-fast} ease;
+  
+  &:hover {
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1.15rem; 
+    background: var(--highlight);
+    color: var(--tertiary);
+  }
+}
+
+// Common header styles
+@mixin header-base {
+  transition: all #{theme.$transition-fast} ease;
+  color: var(--dark);
+  
+  &:hover {
+    cursor: pointer;
+    color: var(--tertiary);
+  }
+
+  &[id] > a[href^="#"] {
+    opacity: 0;
+    background: none;
+    transition: opacity #{theme.$transition-fast} ease;
+    padding: 0 0.5rem;
+    
+    &:hover {
+      opacity: 1;
+      color: var(--secondary);
+    }
+  }
+}

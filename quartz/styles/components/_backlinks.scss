@@ -1,0 +1,65 @@
+// components/_backlinks.scss
+@use "../variables.scss" as quartz;
+@use "../abstracts/spacing";
+@use "../abstracts/mixins";
+@use "../abstracts/theme";
+
+.backlinks {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lightgray);
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.75rem;
+    padding: 0;
+    margin: 0.5rem 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      @include mixins.card-base;
+      width: 100%;
+      box-sizing: border-box;
+      text-decoration: none;
+      display: block;
+      background: theme.$bg-light-mix;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      
+      &:hover {
+        background: var(--highlight);
+        color: var(--tertiary);
+      }
+
+      // External link icon style
+      .external-icon {
+        display: none;  // Hide external icon in backlinks
+      }
+    }
+  }
+
+  // Mobile adjustments
+  @media all and (#{quartz.$mobile}) {
+    margin-top: 3rem;
+    padding: 0 1rem;
+    
+    ul {
+      grid-template-columns: 1fr;  // Stack vertically on mobile
+    }
+  }
+}

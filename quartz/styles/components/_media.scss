@@ -1,0 +1,81 @@
+// components/_media.scss
+@use "../variables.scss" as quartz;
+@use "../abstracts/spacing";
+@use "../abstracts/mixins";
+@use "../abstracts/theme";
+
+img, video, audio {
+  display: block;
+  max-width: 85%;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: theme.$shadow-sm, theme.$shadow-md;
+  border: 1px solid var(--lightgray);
+  transition: all theme.$transition-fast ease;
+
+  &:hover {
+    box-shadow: theme.$shadow-md, theme.$shadow-lg;
+  }
+}
+
+// Full-width PDF embeds
+iframe.pdf {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--lightgray);
+}
+
+// YouTube embeds
+.external-embed.youtube {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: 5px;
+  margin: 1rem 0;
+  box-shadow: theme.$shadow-sm;
+}
+
+// Dark mode adjustments
+:root[saved-theme="dark"] {
+  img, video, audio {
+    box-shadow: theme.$shadow-sm-dark, theme.$shadow-md-dark;
+
+    &:hover {
+      box-shadow: theme.$shadow-md-dark, theme.$shadow-lg-dark;
+    }
+  }
+}
+
+// Image captions
+p > img + em {
+  display: block;
+  text-align: center;
+  transform: translateY(-1rem);
+  color: var(--gray);
+  font-size: 0.9em;
+}
+
+// Buy me a coffee embed (if you use it)
+.bmac-script {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 85%;
+
+  iframe {
+    border: none;
+  }
+}
+
+// Mobile adjustments
+@media all and (#{quartz.$mobile}) {
+  img, video, audio {
+    max-width: 95%;
+    margin: 1.5rem auto;
+  }
+
+  .external-embed.youtube {
+    margin: 0.75rem 0;
+  }
+}
