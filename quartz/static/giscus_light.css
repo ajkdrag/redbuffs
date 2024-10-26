@@ -1,115 +1,71 @@
-/* giscus_light.css */
 main {
-  --color-fg-default: rgb(28, 27, 26);
-  --color-fg-muted: rgb(87, 86, 83);
-  --color-canvas-default: rgb(230, 228, 217);
-  --color-canvas-subtle: rgb(206, 205, 195);
-  --color-border-default: rgb(206, 205, 195);
-  --color-accent-fg: rgb(220, 20, 60);
-  --color-accent-emphasis: rgb(220, 20, 60);
-  --color-accent-subtle: rgba(220, 20, 60, 0.1);
-  
-  /* Add some spacing improvements */
-  --spacing-base: 1rem;
+  /* Comment text colors */
+  --color-fg-default: #384B70;
+  --color-fg-muted: #788896;
+  --color-fg-subtle: #2A394F;
+
+  /* Background colors */
+  --color-canvas-default: #FCFAEE;
+  --color-canvas-overlay: #F7F5E9;
+  --color-canvas-inset: #F9F7EC;
+  --color-canvas-subtle: #F5F3E7;
+
+  /* Borders */
+  --color-border-default: #E8E6D7;
+  --color-border-muted: rgba(232, 230, 215, 0.8);
+
+  /* Button colors */
+  --color-btn-text: #384B70;
+  --color-btn-bg: #FCFAEE;
+  --color-btn-border: #E8E6D7;
+  --color-btn-shadow: 0 1px 2px rgba(42, 57, 79, 0.05);
+  --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  --color-btn-hover-bg: #F7F5E9;
+  --color-btn-hover-border: #507687;
+  --color-btn-active-bg: #F5F3E7;
+  --color-btn-active-border: #B8001F;
+  --color-btn-selected-bg: rgba(184, 0, 31, 0.15);
+
+  /* Primary button */
+  --color-btn-primary-text: #FCFAEE;
+  --color-btn-primary-bg: #507687;
+  --color-btn-primary-border: transparent;
+  --color-btn-primary-shadow: 0 1px 2px rgba(42, 57, 79, 0.1);
+  --color-btn-primary-hover-bg: #B8001F;
+  --color-btn-primary-hover-border: transparent;
+  --color-btn-primary-selected-bg: #B8001F;
+  --color-btn-primary-disabled-bg: rgba(80, 118, 135, 0.6);
+  --color-btn-primary-disabled-text: rgba(252, 250, 238, 0.5);
+
+  /* Accents and states */
+  --color-accent-fg: #507687;
+  --color-accent-emphasis: #B8001F;
+  --color-accent-muted: rgba(80, 118, 135, 0.4);
+  --color-accent-subtle: rgba(184, 0, 31, 0.15);
+}
+
+.gsc-timeline {
+  flex-direction: column-reverse;
 }
 
 .gsc-comments {
   font-family: "Nunito Sans", sans-serif;
   color: var(--color-fg-default);
-  max-width: 100%;
-  padding: calc(var(--spacing-base) * 2) 0;
 }
 
-.gsc-comments-count, 
-.gsc-comments-count-separator {
-  color: var(--color-fg-muted);
-  font-size: 0.9rem;
+.gsc-comments > .gsc-header {
+  order: 1;
 }
 
-.gsc-comment-box {
-  border: 1px solid var(--color-border-default);
-  border-radius: 8px;
-  background-color: var(--color-canvas-default);
-  margin-bottom: var(--spacing-base);
+.gsc-comments > .gsc-comment-box {
+  order: 2;
+  margin-bottom: 1rem;
 }
 
-.gsc-comment-box-textarea {
-  background-color: var(--color-canvas-default);
-  border-color: var(--color-border-default);
-  font-family: "Nunito Sans", sans-serif;
-  padding: calc(var(--spacing-base) * 0.75);
-  min-height: 100px;
-  font-size: 0.95rem;
-}
-
-.gsc-comment-box-buttons {
-  padding: calc(var(--spacing-base) * 0.5);
-}
-
-button.gsc-comment-box-submit {
-  background-color: var(--color-accent-emphasis);
-  color: var(--color-canvas-default);
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  padding: calc(var(--spacing-base) * 0.4) calc(var(--spacing-base) * 0.8);
-  border-radius: 4px;
-}
-
-button.gsc-comment-box-submit:hover {
-  opacity: 0.9;
-}
-
-/* Timeline styles */
-.gsc-timeline {
-  border-color: var(--color-border-default);
-  gap: calc(var(--spacing-base) * 1.5);
-}
-
-.gsc-timeline-line {
-  background-color: var(--color-border-default);
-}
-
-/* Comment styling */
-.gsc-comment {
-  border: 1px solid var(--color-border-default);
-  border-radius: 8px;
-  padding: var(--spacing-base);
-  background-color: var(--color-canvas-default);
-}
-
-.gsc-comment-content {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.gsc-comment-header {
-  margin-bottom: calc(var(--spacing-base) * 0.5);
-}
-
-.gsc-comment-author {
-  color: var(--color-fg-default);
-  font-weight: 600;
-}
-
-.gsc-comment-reactions {
-  margin-top: calc(var(--spacing-base) * 0.75);
+.gsc-comments > .gsc-timeline {
+  order: 3;
 }
 
 .gsc-loading-image {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='rgb(220, 20, 60)' d='M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z'%3E%3CanimateTransform attributeName='transform' dur='0.75s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3C/path%3E%3C/svg%3E");
-}
-
-/* Markdown content inside comments */
-.gsc-comment-content pre {
-  background-color: var(--color-canvas-subtle);
-  border-radius: 4px;
-  padding: calc(var(--spacing-base) * 0.5);
-  margin: calc(var(--spacing-base) * 0.5) 0;
-}
-
-.gsc-comment-content code {
-  background-color: var(--color-canvas-subtle);
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  font-size: 0.9em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='rgba(184, 0, 31, 0.15)' d='M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z'%3E%3CanimateTransform attributeName='transform' dur='0.75s' repeatCount='indefinite' type='rotate' values='0 12 12;360 12 12'/%3E%3C/path%3E%3C/svg%3E");
 }

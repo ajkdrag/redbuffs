@@ -52,14 +52,4 @@
       }
     }
   }
-
-  // Mobile adjustments
-  @media all and (#{quartz.$mobile}) {
-    margin-top: 3rem;
-    padding: 0 1rem;
-    
-    ul {
-      grid-template-columns: 1fr;  // Stack vertically on mobile
-    }
-  }
 }

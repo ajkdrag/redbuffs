@@ -69,7 +69,6 @@ pre {
       &::before {
         content: counter(line);
         counter-increment: line;
-        width: 1.5rem;
         margin-right: 1.5rem;
         display: inline-block;
         text-align: right;
