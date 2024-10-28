@@ -17,9 +17,11 @@
 @use "components/toc";
 @use "components/backlinks";
 @use "components/callouts";
+@use "components/side-panel";
 @use "components/media";
 @use "layout/header";
 @use "layout/footer";
+@use "layout/content";
 
 // Root theme configuration
 :root {

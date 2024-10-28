@@ -35,14 +35,3 @@
     }
   }
 }
-
-// Main content width control
-.popover-hint {
-  max-width: 65ch;
-  margin: 0 auto;
-  padding: 0 1rem;
-  
-  @media all and (#{quartz.$mobile}) {
-    padding: 0 1.5rem;
-  }
-}

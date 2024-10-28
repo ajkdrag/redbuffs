@@ -1,0 +1,38 @@
+@import "../variables";
+
+// Main content width control
+.popover-hint {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @media all and ($mobile) {
+    padding: 0;
+  }
+}
+
+
+.drawer-container {
+  &.desktop-only {
+    .mobile-drawer {
+      position: static;
+      transform: none;
+      width: 100%;
+      height: auto;
+      border: none;
+      overflow: visible;
+      
+      .drawer-content {
+        padding: 0;
+      }
+    }
+
+    .drawer-button {
+      display: none;
+    }
+
+    .navigation {
+      margin-top: 2rem;
+    }
+  }
+}

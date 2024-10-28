@@ -5,7 +5,39 @@ import * as Component from "./quartz/components";
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [
-    Component.PageTitle(), 
+    Component.MobileOnly(Component.SidePanel({
+      profile: {
+        name: "Altamash Khan",
+        bio: "Did the war forge the spear that remained? No. All it did was identify the spear that wouldn't break",
+
+        avatar: "/static/avatar.jpeg"
+      },
+      navigation: {
+        links: [
+          {
+            text: "Articles",
+            link: "/4-Articles/index",
+            icon: "articles",
+          },
+          {
+            text: "Zettels",
+            link: "/2-Zettels/index",
+            icon: "articles",
+          },
+          {
+            text: "Resume",
+            link: "/resume",
+            icon: "resume",
+          },
+          {
+            text: "Contact",
+            link: "/contact",
+            icon: "contact",
+          }
+        ]
+      }
+    })),
+    Component.PageTitle(),
     Component.Search(),
     Component.SocialIcon({
       platform: "GitHub",
@@ -51,8 +83,37 @@ export const defaultContentPageLayout: PageLayout = {
     // Component.TagList(),
   ],
   left: [
-    // Component.MobileOnly(Component.Spacer()),
-    // Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.SidePanel({
+      profile: {
+        name: "Altamash Khan",
+        bio: "Did the war forge the spear that remained? No. All it did was identify the spear that wouldn't break",
+        avatar: "/static/avatar.jpeg"
+      },
+      navigation: {
+        links: [
+          {
+            text: "Articles",
+            link: "/4-Articles/index",
+            icon: "articles",
+          },
+          {
+            text: "Zettels",
+            link: "/2-Zettels/index",
+            icon: "articles",
+          },
+          {
+            text: "Resume",
+            link: "/resume",
+            icon: "resume",
+          },
+          {
+            text: "Contact",
+            link: "/contact",
+            icon: "contact",
+          }
+        ]
+      }
+    })),
   ],
   right: [
     Component.DesktopOnly(Component.Spacer()),

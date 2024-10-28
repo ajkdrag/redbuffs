@@ -1,0 +1,171 @@
+.drawer-container {
+  position: relative;
+  z-index: 100;
+
+  // Mobile drawer button styling
+  .drawer-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.75rem;
+    margin-right: 0.5rem;
+    color: var(--dark);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--highlight);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+    }
+  }
+
+  .panel-container {
+    background: var(--light);
+    
+    // Desktop specific styles
+    &.desktop-only {
+      position: static;
+      padding: 2rem;
+      border: none;
+      height: 100%;
+    }
+
+    // Mobile specific styles
+    &.mobile-only {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 100vh;
+      padding: 2rem 1.5rem;
+      border-right: 1px solid var(--lightgray);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      overflow-y: auto;
+
+      &.open {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .panel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  // Profile section styling
+  .profile {
+    text-align: center;
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      object-fit: cover;
+      border: 2px solid var(--lightgray);
+      padding: 4px;
+      background: var(--light);
+    }
+
+    .name {
+      font-family: var(--headerFont);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 0.75rem 0 0.5rem;
+    }
+
+    .bio {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.4;
+      margin: 0;
+    }
+  }
+
+  // Navigation links styling
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.65rem 1rem;
+      border-radius: 6px;
+      color: var(--darkgray);
+      font-family: var(--headerFont);
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: var(--highlight);
+        color: var(--tertiary);
+        transform: translateX(4px);
+      }
+
+      &.external:hover {
+        transform: translateX(0);
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        color: var(--gray);
+        transition: color 0.2s ease;
+      }
+
+      &:hover .icon {
+        color: var(--tertiary);
+      }
+    }
+  }
+}
+
+// Dark mode adjustments
+:root[saved-theme="dark"] .drawer-container {
+  .panel-container {
+    background: var(--light);
+  }
+
+  .profile .avatar {
+    border-color: var(--lightgray);
+  }
+}
+
+// Overlay for mobile menu
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 90;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.drawer-container.desktop-only .navigation {
+  margin-top: 0;
+}
