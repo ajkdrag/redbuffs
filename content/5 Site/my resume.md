@@ -1,9 +1,6 @@
 ---
-{"tags":["type/page","status/done"],"publish":true,"path":"5 Site/my resume.md","permalink":"/5-site/my-resume/","PassFrontmatter":true}
+{"tags":["type/page","status/done"],"publish":true,"path":"5 Site/my resume.md","permalink":"/5-site/my-resume/","PassFrontmatter":true, "title": "Altamash Khan"}
 ---
-
-
-+917980358948 | Bengaluru | [github.com/ajkdrag](https://github.com/ajkdrag) | altukhan43@gmail.com
 
 ## Work Experience
 
@@ -23,6 +20,3 @@
 - Integrated MLOps (from data versioning to model registration) using AWS Sagemaker, Lambda, S3, and GitHub CI/CD for seamless retraining. Added a Drift monitoring framework built using AWS (Cloudwatch agent, Lambda, Athena, QuickSight) and Kubernetes.
 - Optimized resource allocation in Kubernetes and model compilation to TensorRT, resulting in successfully handling 48 cameras running at 12 fps (every day), supporting 5 DL models in parallel with only 12 GPUs and an end-to-end runtime under 3 seconds.
 - Successfully worked on a POC on NVIDIA Deepstream and TLT for tracking crowd density in theme parks (COVID times) and movement across regions of interest.
-
-
-## Related

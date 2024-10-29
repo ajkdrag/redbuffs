@@ -26,12 +26,12 @@ export const sharedPageComponents: SharedLayout = {
           },
           {
             text: "Resume",
-            link: "/resume",
+            link: "/5-Site/my-resume",
             icon: "resume",
           },
           {
             text: "Contact",
-            link: "/contact",
+            link: "mailto:altukhan43@gmail.com",
             icon: "contact",
           }
         ]
@@ -103,12 +103,12 @@ export const defaultContentPageLayout: PageLayout = {
           },
           {
             text: "Resume",
-            link: "/resume",
+            link: "/5-Site/my-resume",
             icon: "resume",
           },
           {
             text: "Contact",
-            link: "/contact",
+            link: "mailto:altukhan43@gmail.com",
             icon: "contact",
           }
         ]
