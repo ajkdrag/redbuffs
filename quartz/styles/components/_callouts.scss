@@ -50,13 +50,6 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
         scroll-behavior: smooth;
-        mask-image: linear-gradient(
-          to right,
-          transparent,
-          black 2%,
-          black 98%,
-          transparent
-        );
 
         &::-webkit-scrollbar {
           display: none;
