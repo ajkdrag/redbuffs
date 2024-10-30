@@ -38,12 +38,30 @@
     .callout-content {
       ul {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 0.75rem;
         list-style: none;
         padding: 0;
         justify-content: center;
-        
+
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 2%,
+          black 98%,
+          transparent
+        );
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+          
         li {
           margin: 0;
           padding: 0;
@@ -84,3 +102,123 @@
     margin: 0;
   }
 }
+
+
+// styles/components/_callouts.scss 
+// Add this to your existing callouts styling or create a new section
+//
+// .callout[data-callout="topics"] {
+//   border: none;
+//   background: none;
+//   margin: 2rem 0;
+//   padding: 0;
+//
+//   // Hide the default callout title
+//   .callout-title {
+//     display: none;
+//   }
+//
+//   .callout-content {
+//     position: relative;
+//     padding: 0;
+//     width: 100%;
+//     
+//     // Style the list container
+//     ul {
+//       display: flex;
+//       flex-wrap: nowrap; // Prevent wrapping on mobile
+//       gap: 0.75rem;
+//       margin: 0;
+//       padding: 0.5rem;
+//       list-style: none;
+//       overflow-x: auto;
+//       -webkit-overflow-scrolling: touch;
+//       scrollbar-width: none;
+//       -ms-overflow-style: none;
+//       scroll-behavior: smooth;
+//       mask-image: linear-gradient(
+//         to right,
+//         transparent,
+//         black 2%,
+//         black 98%,
+//         transparent
+//       );
+//       
+//       // Hide scrollbar
+//       &::-webkit-scrollbar {
+//         display: none;
+//       }
+//
+//       // Remove default list item styles and ensure horizontal layout
+//       li {
+//         margin: 0;
+//         padding: 0;
+//         flex-shrink: 0; // Prevent shrinking on mobile
+//       }
+//
+//       // Style the topic links
+//       a.internal {
+//         display: inline-flex;
+//         align-items: center;
+//         padding: 0.5rem 1.25rem;
+//         background: color-mix(in srgb, var(--light) 4%, transparent);
+//         border: 1px solid color-mix(in srgb, var(--lightgray) 50%, transparent);
+//         border-radius: 2rem;
+//         color: var(--gray);
+//         font-size: 0.95rem;
+//         white-space: nowrap;
+//         text-decoration: none;
+//         backdrop-filter: blur(8px);
+//         transition: all 0.2s ease;
+//         
+//         &:hover {
+//           background: var(--highlight);
+//           color: var(--tertiary);
+//           border-color: var(--tertiary);
+//           transform: translateY(-1px);
+//         }
+//
+//         // Remove default internal link styling
+//         &.alias {
+//           background: color-mix(in srgb, var(--light) 4%, transparent);
+//           padding: 0.5rem 1.25rem;
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// // Dark mode specific adjustments
+// :root[saved-theme="dark"] .callout[data-callout="topics"] {
+//   .callout-content {
+//     ul {
+//       a.internal {
+//         background: color-mix(in srgb, var(--light) 8%, transparent);
+//         border-color: color-mix(in srgb, var(--lightgray) 15%, transparent);
+//         color: var(--gray);
+//         
+//         &:hover {
+//           background: color-mix(in srgb, var(--tertiary) 15%, transparent);
+//           border-color: var(--tertiary);
+//           color: var(--tertiary);
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// // Mobile optimizations
+// @media (max-width: 800px) {
+//   .callout[data-callout="topics"] {
+//     .callout-content {
+//       ul {
+//         padding: 0.5rem 0; // Reduce padding on mobile
+//         
+//         a.internal {
+//           padding: 0.4rem 1rem; // Slightly smaller padding on mobile
+//           font-size: 0.9rem; // Slightly smaller font on mobile
+//         }
+//       }
+//     }
+//   }
+// }
