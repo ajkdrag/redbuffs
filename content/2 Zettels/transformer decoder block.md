@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/transformer decoder block.md","permalink":"/2-zettels/transformer-decoder-block/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

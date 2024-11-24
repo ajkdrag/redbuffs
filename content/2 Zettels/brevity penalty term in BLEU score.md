@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/brevity penalty term in BLEU score.md","permalink":"/2-zettels/brevity-penalty-term-in-bleu-score/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

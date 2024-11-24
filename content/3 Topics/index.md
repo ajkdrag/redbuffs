@@ -1,5 +1,5 @@
 ---
-{"title":"Topics","publish":true,"tags":null,"path":"3 Topics/index.md","permalink":"/3-topics/index/","PassFrontmatter":true}
+{"title":"Topics","publish":true,"tags":null,"PassFrontmatter":true}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/vanilla transformer architecture overview.md","permalink":"/2-zettels/vanilla-transformer-architecture-overview/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

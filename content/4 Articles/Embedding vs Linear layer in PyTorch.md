@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/post"],"path":"4 Articles/Embedding vs Linear layer in PyTorch.md","permalink":"/4-articles/embedding-vs-linear-layer-in-py-torch/","PassFrontmatter":true}
+{"publish":true,"tags":["type/post"],"PassFrontmatter":true}
 ---
 
 

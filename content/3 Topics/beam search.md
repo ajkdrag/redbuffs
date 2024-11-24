@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/topic"],"path":"3 Topics/beam search.md","permalink":"/3-topics/beam-search/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/topic"],"PassFrontmatter":true}
 ---
 
 

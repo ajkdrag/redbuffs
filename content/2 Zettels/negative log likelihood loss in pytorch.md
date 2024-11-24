@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/negative log likelihood loss in pytorch.md","permalink":"/2-zettels/negative-log-likelihood-loss-in-pytorch/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

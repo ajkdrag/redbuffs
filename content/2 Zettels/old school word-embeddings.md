@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/old school word-embeddings.md","permalink":"/2-zettels/old-school-word-embeddings/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"tags":["type/page","status/done"],"publish":true,"path":"5 Site/my resume.md","permalink":"/5-site/my-resume/","PassFrontmatter":true}
+{"tags":["type/page","status/done"],"publish":true,"title":"Altamash Khan","PassFrontmatter":true}
 ---
 
 I like AI, coding and tech. Contact me at [altukhan43@gmail.com](mailto:altukhan43@gmail.com). Also, check out my [site](https://ajkdrag.in)and [GitHub](https://github.com/ajkdrag)
@@ -46,7 +46,3 @@ I like AI, coding and tech. Contact me at [altukhan43@gmail.com](mailto:altukhan
 - Real Time video analytics recipe, implementing small and large scale object detection from modeling to deployment
 - Dota2 games analysis using PySpark for insights on character picks and matchups
 - More projects available at: [GitHub](https://github.com/ajkdrag)
-
-## Socials and Contact
-- [altukhan43@gmail.com](mailto:altukhan43@gmail.com)
-- [site](https://ajkdrag.in)

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/co-occurrence ratio helps distinguish between related and unrelated words.md","permalink":"/2-zettels/co-occurrence-ratio-helps-distinguish-between-related-and-unrelated-words/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

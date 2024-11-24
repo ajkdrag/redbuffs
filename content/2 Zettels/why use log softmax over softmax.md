@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"path":"2 Zettels/why use log softmax over softmax.md","permalink":"/2-zettels/why-use-log-softmax-over-softmax/","PassFrontmatter":true}
+{"publish":true,"tags":["type/zettel","status/done"],"PassFrontmatter":true}
 ---
 
 

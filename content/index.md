@@ -1,5 +1,5 @@
 ---
-{"title":"⾕","publish":true,"tags":null,"path":"index.md","permalink":"/index/","PassFrontmatter":true}
+{"title":"⾕","publish":true,"tags":null,"PassFrontmatter":true}
 ---
 
 

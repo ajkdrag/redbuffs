@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/when to use cross entropy loss  vs NLL loss.md","permalink":"/2-zettels/when-to-use-cross-entropy-loss-vs-nll-loss/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

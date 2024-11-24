@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["question","status/done","type/zettel"],"path":"2 Zettels/LMSys decontamination.md","permalink":"/2-zettels/lm-sys-decontamination/","PassFrontmatter":true}
+{"publish":true,"tags":["question","status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

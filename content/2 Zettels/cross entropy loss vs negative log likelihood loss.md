@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/cross entropy loss vs negative log likelihood loss.md","permalink":"/2-zettels/cross-entropy-loss-vs-negative-log-likelihood-loss/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

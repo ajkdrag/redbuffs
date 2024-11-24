@@ -1,7 +1,6 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/standard skip-gram implementation.md","permalink":"/2-zettels/standard-skip-gram-implementation/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
-
 
 
 > [!Topics]

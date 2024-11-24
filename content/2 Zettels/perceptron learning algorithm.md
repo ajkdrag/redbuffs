@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"path":"2 Zettels/perceptron learning algorithm.md","permalink":"/2-zettels/perceptron-learning-algorithm/","PassFrontmatter":true}
+{"publish":true,"tags":["type/zettel","status/done"],"PassFrontmatter":true}
 ---
 
 

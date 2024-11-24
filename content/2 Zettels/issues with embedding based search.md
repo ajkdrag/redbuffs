@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["question","status/done","type/zettel"],"path":"2 Zettels/issues with embedding based search.md","permalink":"/2-zettels/issues-with-embedding-based-search/","PassFrontmatter":true}
+{"publish":true,"tags":["question","status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

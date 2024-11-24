@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/similarity of nn.Embedding and nn.Linear in Pytorch.md","permalink":"/2-zettels/similarity-of-nn-embedding-and-nn-linear-in-pytorch/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/topic"],"path":"3 Topics/encoder-decoder architecture.md","permalink":"/3-topics/encoder-decoder-architecture/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/topic"],"PassFrontmatter":true}
 ---
 
 

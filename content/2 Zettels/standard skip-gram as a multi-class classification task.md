@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/standard skip-gram as a multi-class classification task.md","permalink":"/2-zettels/standard-skip-gram-as-a-multi-class-classification-task/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/qualitative approaches to evaluating word embeddings.md","permalink":"/2-zettels/qualitative-approaches-to-evaluating-word-embeddings/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/topic"],"path":"3 Topics/word2vec.md","permalink":"/3-topics/word2vec/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/topic"],"PassFrontmatter":true}
 ---
 
 

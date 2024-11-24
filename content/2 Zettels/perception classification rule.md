@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"path":"2 Zettels/perception classification rule.md","permalink":"/2-zettels/perception-classification-rule/","PassFrontmatter":true}
+{"publish":true,"tags":["type/zettel","status/done"],"PassFrontmatter":true}
 ---
 
 

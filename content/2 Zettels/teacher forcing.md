@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"path":"2 Zettels/teacher forcing.md","permalink":"/2-zettels/teacher-forcing/","PassFrontmatter":true}
+{"publish":true,"tags":["type/zettel","status/done"],"PassFrontmatter":true}
 ---
 
 

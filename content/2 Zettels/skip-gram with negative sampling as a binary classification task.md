@@ -1,8 +1,9 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/skip-gram with negative sampling as a binary classification task.md","permalink":"/2-zettels/skip-gram-with-negative-sampling-as-a-binary-classification-task/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
-
+> [!Topics]
+> - [[3 Topics/skip-gram\|skip-gram]]
 
 In [[skip-gram with negative sampling\|skip-gram with negative sampling]], the problem shifts to a **binary classification** task. Instead of considering all words in the vocabulary, the model only considers a small number of "negative samples" (random words) along with the true context word. For each word-context pair, the model classifies whether it is a **real pair** (true context word) or a **fake pair** (negative sample).
 

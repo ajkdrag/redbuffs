@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/topic"],"path":"3 Topics/greedy decoding.md","permalink":"/3-topics/greedy-decoding/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/topic"],"PassFrontmatter":true}
 ---
 
 

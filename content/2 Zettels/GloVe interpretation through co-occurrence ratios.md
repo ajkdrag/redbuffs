@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/GloVe interpretation through co-occurrence ratios.md","permalink":"/2-zettels/glo-ve-interpretation-through-co-occurrence-ratios/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

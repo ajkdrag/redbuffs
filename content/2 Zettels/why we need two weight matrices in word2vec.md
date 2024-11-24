@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["question","type/zettel","status/done"],"path":"2 Zettels/why we need two weight matrices in word2vec.md","permalink":"/2-zettels/why-we-need-two-weight-matrices-in-word2vec/","PassFrontmatter":true}
+{"publish":true,"tags":["question","type/zettel","status/done"],"PassFrontmatter":true}
 ---
 
 

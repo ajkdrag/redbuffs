@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/probabilistic view of skip-gram algorithm.md","permalink":"/2-zettels/probabilistic-view-of-skip-gram-algorithm/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

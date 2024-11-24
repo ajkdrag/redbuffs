@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["question","status/done","type/zettel"],"path":"2 Zettels/why choose nn.Embedding over nn.Linear.md","permalink":"/2-zettels/why-choose-nn-embedding-over-nn-linear/","PassFrontmatter":true}
+{"publish":true,"tags":["question","status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

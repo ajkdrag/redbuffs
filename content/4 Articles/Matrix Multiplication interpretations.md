@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/post","topic/linear-algebra"],"path":"4 Articles/Matrix Multiplication interpretations.md","permalink":"/4-articles/matrix-multiplication-interpretations/","PassFrontmatter":true}
+{"publish":true,"tags":["type/post","topic/linear-algebra"],"PassFrontmatter":true}
 ---
 
 

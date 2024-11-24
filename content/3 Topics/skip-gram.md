@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/topic"],"path":"3 Topics/skip-gram.md","permalink":"/3-topics/skip-gram/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/topic"],"PassFrontmatter":true}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/memory efficient co-occurrence matrix creation.md","permalink":"/2-zettels/memory-efficient-co-occurrence-matrix-creation/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

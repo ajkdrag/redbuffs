@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"path":"2 Zettels/encoder-decoder architecture boilerplate pytorch.md","permalink":"/2-zettels/encoder-decoder-architecture-boilerplate-pytorch/","PassFrontmatter":true}
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true}
 ---
 
 

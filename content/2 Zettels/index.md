@@ -1,5 +1,5 @@
 ---
-{"title":"Zettels","publish":true,"tags":null,"path":"2 Zettels/index.md","permalink":"/2-zettels/index/","PassFrontmatter":true}
+{"title":"Zettels","publish":true,"tags":null,"PassFrontmatter":true}
 ---
 
 

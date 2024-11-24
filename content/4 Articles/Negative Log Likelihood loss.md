@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["topic/cross-entropy","topic/nll-loss","type/post"],"path":"4 Articles/Negative Log Likelihood loss.md","permalink":"/4-articles/negative-log-likelihood-loss/","PassFrontmatter":true}
+{"publish":true,"tags":["topic/cross-entropy","topic/nll-loss","type/post"],"PassFrontmatter":true}
 ---
 
 
