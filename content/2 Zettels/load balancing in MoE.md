@@ -13,6 +13,7 @@ If all our tokens are sent to just a few popular experts, that will make trainin
 - Expert collapse (some experts never trained)
 
 To mitigate this, an [[2 Zettels/auxiliary loss for load balancing in MoEs\|auxiliary loss for load balancing in MoEs]] is added to encourage giving all experts equal importance. Other techniques include:
+- **Noisy Top-K gating**: Add some noise to the router logits
 - [[2 Zettels/router z-loss\|router z-loss]]
 - Drop tokens exceeding [[2 Zettels/expert capacity\|expert capacity]]
 - **Expert Choice Routing**:  instead of tokens choosing experts, experts choose their most relevant tokens

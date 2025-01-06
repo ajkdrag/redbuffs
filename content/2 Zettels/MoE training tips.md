@@ -18,7 +18,7 @@ Also, few tips:
 - Increase learning rate
 - [[instruction tuning\|instruction tuning]] works well for MoEs
 - Tune for larger (or more number of) tasks
-- Diminishing gains from scaling num experts beyond 256
+- Scaling experts yield better [[2 Zettels/sample efficiency\|sample efficiency]], but diminishing gains beyond 256
 - Stability via [[2 Zettels/expert capacity\|expert capacity]] and [[2 Zettels/load balancing in MoE\|load balancing in MoE]]
 
 > [!Tip] Expert Parallelism

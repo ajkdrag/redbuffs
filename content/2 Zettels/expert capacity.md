@@ -17,10 +17,7 @@ There are a couple of motivations for expert capacity:
 expert_capacity = int((tokens_per_batch / self.num_experts) * self.capacity_factor)
 ```
 
-A **capacity factor** greater than 1 allows each expert to handle a buffer above the evenly distributed share, accommodating imbalances in token assignment. It's value commonly ranges in `[1, 1.25]`. 
-
-If the total tokens allocated to an expert surpass its capacity, the tensor is truncated to match the expert capacity. 
-
+If there are 6 tokens in a batch and we have 3 experts, above implies a capacity of 2 tokens per expert. We also use a [[2 Zettels/capacity factor for load balancing in MoEs\|capacity factor for load balancing in MoEs]]. This is a hyper-param that gives some additional buffer to each expert.
 
 ## Related
 - [[2 Zettels/load balancing in MoE\|load balancing in MoE]]

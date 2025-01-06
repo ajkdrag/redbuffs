@@ -14,7 +14,7 @@ A vanilla approach to penalize imbalanced routing in MoEs.
 This loss ensures that all experts receive a roughly equal number of training examples. 
 
 ```python
-def compute_load_balance_loss(router_probs, num_experts):
+def compute_aux_loss(router_probs, num_experts):
     # Calculate fraction of tokens going to each expert
     expert_usage = router_probs.mean(dim=0)  # [num_experts]
     
@@ -25,6 +25,9 @@ def compute_load_balance_loss(router_probs, num_experts):
     return balance_loss
 ```
 
-In sample code above, `router_probs` are weights generated during [[2 Zettels/token routing\|token routing]]
+In sample code above, `router_probs` are weights generated during [[2 Zettels/token routing\|token routing]].
+
+>[!note]
+> [[cross-entropy\|cross-entropy]] loss forces router to send tokens to better and accurate experts, but the auxiliary loss tries to even out the token routing across experts. We can control their influences by some weighing factors.
 
 ## Related
