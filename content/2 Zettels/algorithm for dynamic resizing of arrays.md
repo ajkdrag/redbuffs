@@ -36,4 +36,8 @@ arr = new_arr;
 
 > [!Note]
 > This algorithm is language agnostic, however, most languages already implement this under the hood (e.g. [[2 Zettels/using vectors in c++\|using vectors in c++]]).
+
+> [!Tip]
+> Reserving capacity by calling `reserve(value)` upfront can improve performance when you know the approximate number of elements you'll need, since we won't need to copy over.
+
 ## Related

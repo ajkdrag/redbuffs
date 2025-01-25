@@ -42,6 +42,6 @@ class Stack:
         return self.top is None  # Return True if the stack is empty, False otherwise
 ```
 
-Here, we're using a Node class to create nodes and linking them together to form a stack. This method allows our stack to be dynamically sized, avoiding the overflow issue we saw when implementing [[2 Zettels/stack using arrays\|stack using arrays]].
+Here, we're using a `Node` class to create nodes and linking them together to form a stack. This method allows our stack to be dynamically sized, avoiding the overflow issue we saw when implementing [[2 Zettels/stack using arrays\|stack using arrays]].
 
 ## Related
