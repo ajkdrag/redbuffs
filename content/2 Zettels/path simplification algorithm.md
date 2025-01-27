@@ -7,7 +7,7 @@
 > - [[string algorithms\|string algorithms]]
 > - [[2 Zettels/stacks\|stacks]]
 
-**Problem Statement**
+### Problem Statement
 Given an absolute file path in a Unix-style file system, simplify it by converting ".." to the previous directory and removing any "." or multiple slashes. The resulting string should represent the shortest absolute path.
 
 ```cpp
