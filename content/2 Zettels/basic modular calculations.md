@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[modular arithmetic\|modular arithmetic]]
+> - modular arithmetic
 
 ```cpp
 int mod_add(int a, int b, int m) {

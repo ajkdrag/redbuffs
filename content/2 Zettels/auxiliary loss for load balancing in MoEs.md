@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
-> - [[loss functions\|loss functions]]
+> - mixture of experts
+> - loss functions
 
 A vanilla approach to penalize imbalanced routing in MoEs.
 
@@ -28,6 +28,6 @@ def compute_aux_loss(router_probs, num_experts):
 In sample code above, `router_probs` are weights generated during [[2 Zettels/token routing\|token routing]].
 
 >[!note]
-> [[cross-entropy\|cross-entropy]] loss forces router to send tokens to better and accurate experts, but the auxiliary loss tries to even out the token routing across experts. We can control their influences by some weighing factors.
+> cross-entropy loss forces router to send tokens to better and accurate experts, but the auxiliary loss tries to even out the token routing across experts. We can control their influences by some weighing factors.
 
 ## Related

@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
+> - mixture of experts
 
 **Pros**
 - Allows for pretraining with less compute

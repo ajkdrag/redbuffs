@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/1-bit LLMs\|1-bit LLMs]]
+> - LLMs
 
 In a [[3 Topics/transformer\|transformer]] block, the feed-forward layer is the most computationally heavy. In 1-bit LLMs, the `nn.Linear` is replaced with a `BitLinear` layer. This layer essentially performs a `RoundClip` operation converting regular float values to -1, 0 or 1.  We also [[2 Zettels/quantize activation functions\|quantize activation functions]] to 8-bit precision in both [[BitNet\|BitNet]] and [[3 Topics/BitNet b1.58\|BitNet b1.58]].
 

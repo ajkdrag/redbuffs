@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/word2vec\|word2vec]]
+> - word2vec
 
 Continuous Bag of Words (CBOW) is an algorithm belonging to the word2vec family, for learning fixed-size [[word embeddings\|word embeddings]] of words in a vocabulary. The modelling is very similar to [[2 Zettels/vanilla skip-gram spelled out\|standard skip-gram]], only difference being in *how we feed the data*.
 

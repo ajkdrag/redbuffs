@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[modular arithmetic\|modular arithmetic]]
+> - modular arithmetic
 
 $$
 \begin{align*}

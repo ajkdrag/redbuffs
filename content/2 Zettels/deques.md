@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[2 Zettels/queues\|queues]]
+> - queues
 
 The name Deque is short for Double Ended Queue, and as the name suggests, it's a Queue where we can add or remove elements from both ends.
 

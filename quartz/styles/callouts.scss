@@ -78,15 +78,15 @@
 
   &[data-callout="question"] {
     --color: #dba642;
-    --border: #dba64244;
-    --bg: #dba64210;
+    --border: #dba642;
+    --bg: #dba642;
     --callout-icon: var(--callout-icon-question);
   }
 
   &[data-callout="warning"] {
-    --color: #db8942;
-    --border: #db894244;
-    --bg: #db894210;
+    --color: #b8001f;
+    --border: #b8001f;
+    --bg: #b8001f;
     --callout-icon: var(--callout-icon-warning);
   }
 

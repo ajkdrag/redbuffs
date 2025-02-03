@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
+> - mixture of experts
 
 In MoEs, a learned gating network (G) is used to generate **routing scores** for all experts, followed by:
 

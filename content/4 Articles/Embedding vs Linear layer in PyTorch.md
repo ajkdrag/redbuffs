@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[pytorch-internals\|pytorch-internals]]
-> - [[word embeddings\|word embeddings]]
+> - pytorch-internals
+> - word embeddings
 
 Embedding layers are at the heart of almost every NLP architecture since the past decade. We are all familiar with `nn.Linear` layers. Turns out, `nn.Embedding` is simply a lookup table.
 

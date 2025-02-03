@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[optimization\|optimization]]
+> - optimization
 
 In machine learning, it is a common practice to take a natural log of the objective function to simplify taking derivatives. For example, softmax has the following probability function:
 $$

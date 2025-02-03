@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[word embeddings\|word embeddings]]
+> - word embeddings
 
 There are a couple of ways to evaluate word embeddings. One is to take few random words (as queries) and find the *k closest words*, using [[cosine similarity\|cosine similarity]], followed by manually verifying if those k words seem reasonable.
 

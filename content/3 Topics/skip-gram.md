@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/word2vec\|word2vec]]
+> - word2vec
 
 Skip-gram is an algorithm belonging to the word2vec family, for learning fixed-size [[word embeddings\|word embeddings]] of words in a vocabulary. The prior for skip-gram comes from the [[2 Zettels/distributional hypothesis\|distributional hypothesis]] concept from 1950s. Simply put, it is the following:
 

@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[oops\|oops]]
-> - [[programming basics\|programming basics]]
+> - oops
+> - programming basics
 
 1. **Public**: anyone can use the public members of a class (least restrictive).
 2. **Protected**: any derived class (child) that inherits from the base class can access the protected members.

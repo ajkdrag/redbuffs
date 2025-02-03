@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
-> - [[optimization\|optimization]]
+> - mixture of experts
+> - optimization
 
 Since [[2 Zettels/MoE fine-tuning is difficult\|MoE fine-tuning is difficult]] (same for training), as they overfit easily, heavy regularization is used. 
 

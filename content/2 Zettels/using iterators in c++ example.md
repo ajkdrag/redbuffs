@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[c++ concepts\|c++ concepts]]
-> - [[2 Zettels/queues\|queues]]
+> - c++ concepts
+> - queues
 
 Given two `1d` vectors, implement an iterator to return their elements alternately. To solve this problem, we can use a queue to alternate between elements from two input lists, maintaining the order of appearance. Each non-empty list is converted into an iterator and added to the queue. The `next()` method retrieves the next element by dequeuing an iterator, extracting its next value, and **re-enqueuing** the iterator if it still has more elements. This ensures that elements from the two lists are accessed alternately, one by one. The `hasNext()` method checks if there are any iterators left in the queue, indicating whether more elements are available.
 

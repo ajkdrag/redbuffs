@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[quantization\|quantization]]
+> - quantization
 
 High precision (32-bit fp) is often wasteful and researchers attempt to convert everything to 16-bit fp or `bfloat16`, but in some cases such as in [[2 Zettels/switch-transformer MoE\|switch-transformer MoE]], model doesn't converge and training is unstable.
 

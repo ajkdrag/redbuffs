@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[2 Zettels/stacks\|stacks]]
-> - [[linked lists\|linked lists]]
+> - stacks
+> - linked lists
 
 ```python
 class Stack:

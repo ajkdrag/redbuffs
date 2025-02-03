@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[decoding strategies\|decoding strategies]]
+> - decoding strategies
 
 A heuristic search algorithm used in sequence generation tasks, such as machine translation or text generation. It provides a trade-off between accuracy and computational cost via the flexible choice of the beam size. E.g. with $\beta=2$, we only keep the first and the second probable sequence at each step and finally pick the sequence that maximizes: 
 $$

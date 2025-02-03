@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[word embeddings\|word embeddings]]
+> - word embeddings
 
 There are broadly 2 ways: **Extrinsic** and **Intrinsic** evaluation.
 

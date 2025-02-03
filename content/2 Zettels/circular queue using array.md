@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[2 Zettels/queues\|queues]]
-> - [[arrays\|arrays]]
+> - queues
+> - arrays
 
 When we `enqueue` (add an element), we add it at the rear and increment the rear pointer. But if we reach the end of our array while enqueueing, instead of declaring an Overflow, we wrap around and continue from the front of the array, as long as there is space.
 

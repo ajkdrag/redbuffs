@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
-> - [[loss functions\|loss functions]]
+> - mixture of experts
+> - loss functions
 
 Router z-loss, introduced in [[2 Zettels/switch-transformer MoE\|switch-transformer MoE]], significantly improves training stability without quality degradation by **penalizing large router logits** i.e., the raw output scores of the gated network aka router (before any `softmax` etc)
 

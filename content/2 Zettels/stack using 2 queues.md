@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[2 Zettels/stacks\|stacks]]
-> - [[2 Zettels/queues\|queues]]
+> - stacks
+> - queues
 
 We use two queues:
 - An active queue (our main storage) `q2`

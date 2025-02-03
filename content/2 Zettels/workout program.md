@@ -6,7 +6,7 @@
 
 
 > [!Topics]
-> - [[fitness\|fitness]]
+> - fitness
 
 ## Day 1: Push + HIIT
 

@@ -27,7 +27,10 @@
   color-scheme: light;
 }
 
-:root[saved-theme="dark"] .darkmode {
+:root[
+  
+
+e="dark"] .darkmode {
   & > #dayIcon {
     display: none;
   }

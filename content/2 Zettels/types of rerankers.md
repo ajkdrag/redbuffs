@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[reranking techniques\|reranking techniques]]
+> - reranking techniques
 
 |Model|Type|Performance|Cost|Example|
 |---|---|---|---|---|

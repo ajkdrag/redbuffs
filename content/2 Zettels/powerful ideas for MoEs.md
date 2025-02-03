@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
+> - mixture of experts
 
 - Instead of [[2 Zettels/token routing\|token routing]], if we do sentence/task routing, it would be powerful and allow us to **extract sub-networks** that can be used to serve specific tasks
     - Extracted model will be smaller, and inference will be faster

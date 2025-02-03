@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[3 Topics/1-bit LLMs\|1-bit LLMs]]
-> - [[2 Zettels/matrix multiplication\|matrix multiplication]]
+> - LLMs
+> - matrix multiplication
 
 In 1-bit LLMs, weights are represented in binary (or ternary in the case of [[3 Topics/BitNet b1.58\|BitNet b1.58]]). This makes the matrix multiplication very simple.
 

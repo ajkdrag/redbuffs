@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[sliding window\|sliding window]]
-> - [[2 Zettels/two pointers technique\|two pointers technique]]
+> - sliding window  
+> - two pointers technique
 
 > [!Question]- Given an array, find the longest subarray where the sum is less than or equal to k
 > - Use the sliding window approach with two pointers `left = right = 0`

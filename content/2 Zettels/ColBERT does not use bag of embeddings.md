@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - [[ColBERT\|ColBERT]]
-> - [[word embeddings\|word embeddings]]
+> - ColBERT
+> - word embeddings
 
 Describing ColBERT as a bag of embeddings needs to be corrected since each token vector is contextualized by the other tokens in the context window. It's not a representation per *unique* token, but one vector representation per token, hence can't use the term *bag*.
 

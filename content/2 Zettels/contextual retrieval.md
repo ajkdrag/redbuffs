@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[RAG\|RAG]]
+> - RAG
 
 In [[2 Zettels/contextual retrieval vs standard RAG\|standard RAG]], documents are chunked and this can result in [[2 Zettels/vanilla RAG problems\|loss of context]]. A preprocessing step can be used where an LLM can create contexts for the chunks.
 > [!example]

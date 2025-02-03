@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - [[reranking techniques\|reranking techniques]]
-> - [[cross-encoders\|cross-encoders]]
+> - reranking techniques
+> - cross-encoders
 
 In typical [[RAG\|RAG]], the retriever has to be efficient for large document collections with millions of entries. However, it might return irrelevant candidates. A [[2 Zettels/reranking concept in RAG\|re-ranker]] based on a Cross-Encoder can substantially improve the final results for the user. 
 > The query and a possible document is passed simultaneously to transformer network, which then outputs a single score between 0 and 1 indicating how relevant the document is for the given query.

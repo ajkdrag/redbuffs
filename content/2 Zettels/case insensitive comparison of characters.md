@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[string algorithms\|string algorithms]]
+> - string algorithms
 
 ```cpp
 bool equalIgnoreCase(char a, char b) {

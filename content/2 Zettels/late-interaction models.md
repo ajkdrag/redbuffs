@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - [[neural information retrieval\|neural information retrieval]]
-> - [[ColBERT\|ColBERT]]
+> - neural information retrieval
+> - ColBERT
 
 > Finds a sweet spot between [[2 Zettels/representation-based similarity\|no-interaction]] and [[2 Zettels/all-to-all interaction\|all-to-all interaction]] modelling. 
 

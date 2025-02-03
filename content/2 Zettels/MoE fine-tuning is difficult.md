@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
-> - [[LLM fine-tuning\|LLM fine-tuning]]
+> - mixture of experts
+> - LLM fine-tuning
 
 Since MoEs comprise of many experts, total number of parameters is larger than the effective number of parameters. During training or fine-tuning, this causes challenges related to overfitting. Some ways to tackle this are via higher regularization:
 - Higher dropout within the experts

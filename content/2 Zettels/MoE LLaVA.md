@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[mixture of experts\|mixture of experts]]
+> - mixture of experts
 > - [[vlm\|vlm]]
 
 > The idea to use MoE tuning with LLaVA architecture

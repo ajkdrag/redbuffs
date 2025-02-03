@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[search algorithms\|search algorithms]]
-> - [[binary search\|binary search]]
+> - search algorithms
+> - binary search
 
 ```python
 def binary_search(arr, x):

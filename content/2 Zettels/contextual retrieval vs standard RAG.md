@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[RAG\|RAG]]
+> - RAG
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1727778752/ufjw57xksniusg2karjz.png)
 

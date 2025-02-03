@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[c++ concepts\|c++ concepts]]
+> - c++ concepts
 
 **cerr** - object of ostream
 - It is used to display error messages

@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[c++ internals\|c++ internals]]
+> - c++ internals
 
 ```cpp
 char arr[] = {'a', 'b', 'c', 'd', 'e', '\0'};

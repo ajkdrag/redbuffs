@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[basic arithmetic\|basic arithmetic]]
+> - basic arithmetic
 
 In programming, we often use `ceil` and `round` functions. A way to do this without calling pre-built functions is to use the formula:
 $$

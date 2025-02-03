@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - [[GloVe\|GloVe]]
-> - [[loss functions\|loss functions]]
+> - GloVe
+> - loss functions
 
 It aims to make the dot product of word vectors (plus biases) approximate the logarithm of the words' co-occurrence count.
 

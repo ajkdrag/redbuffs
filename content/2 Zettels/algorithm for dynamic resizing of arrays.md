@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[memory management\|memory management]]
-> - [[arrays\|arrays]]
+> - memory management
+> - arrays
 
 Under the hood, when dynamic array resizing is done as:
 1. Allocate a new array with larger capacity (usually 1.5x or 2x)

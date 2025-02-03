@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[c++ STL\|c++ STL]]
+> - c++ STL
 
 `vector` is the go-to choice when we need a truly dynamic array in C++. It provides the best balance of functionality and performance while handling memory management automatically.
 

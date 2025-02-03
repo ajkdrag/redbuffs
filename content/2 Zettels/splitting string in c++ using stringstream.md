@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[string algorithms\|string algorithms]]
-> - [[c++ internals\|c++ internals]]
+> - string algorithms
+> - c++ internals
 
 ```cpp
 #include <sstream>

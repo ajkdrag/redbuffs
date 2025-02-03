@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[seq2seq modelling\|seq2seq modelling]]
+> - seq2seq modelling
 
 Teacher forcing is a training technique specifically designed for auto-regressive models, particularly in sequence-to-sequence tasks. 
 

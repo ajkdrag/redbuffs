@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[RAG\|RAG]]
+> - RAG
 
 - During chunking stage, context is destroyed
 - While embedding models excel at capturing semantic relationships, they can miss crucial exact matches

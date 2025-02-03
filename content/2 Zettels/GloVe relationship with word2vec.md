@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - [[GloVe\|GloVe]]
-> - [[3 Topics/word2vec\|word2vec]]
+> - GloVe
+> - word2vec
 
 GloVe can be viewed as a global extension of [[3 Topics/skip-gram\|skip-gram]]. Specifically, it can be seen as applying a co-occurrence count weighted version of the SkipGram loss function. The derivation of this relationship is detailed on the 5th page of [the GloVe paper](https://nlp.stanford.edu/pubs/glove.pdf).
 

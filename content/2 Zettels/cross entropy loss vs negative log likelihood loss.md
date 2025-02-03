@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - [[loss functions\|loss functions]]
-> - [[cross-entropy\|cross-entropy]]
+> - loss functions
+> - cross-entropy
 
 In the case of **classification**, [[2 Zettels/cross-entropy loss formula\|cross-entropy loss]] (CE) function in Pytorch is equivalent to a combination of Log+Softmax and [[2 Zettels/negative log likelihood loss in pytorch\|negative log likelihood loss in pytorch]] (NLL).
 

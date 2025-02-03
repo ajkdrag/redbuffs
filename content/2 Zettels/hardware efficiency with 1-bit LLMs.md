@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/1-bit LLMs\|1-bit LLMs]]
+> - LLMs
 
 For LLMs, in addition to computation, the process of transferring model parameters from DRAM to the memory of an on-chip accelerator (e.g., SRAM) can be expensive during inference. There have been attempts to *enlarge* SRAM to improve throughput, but this introduces significantly higher costs than DRAM.
 

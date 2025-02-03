@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[sequence modelling\|sequence modelling]]
+> - sequence modelling
 
 The auto-regressive property refers to a model's ability to make predictions based on its own previous outputs or historical values. More specifically, an auto-regressive model predicts the current value based on past values in a sequence.
 

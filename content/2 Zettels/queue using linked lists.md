@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - [[2 Zettels/queues\|queues]]
-> - [[linked lists\|linked lists]]
+> - queues
+> - linked lists
 
 ```python
 class Node:
