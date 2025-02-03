@@ -79,9 +79,17 @@
         }
 
         li {
-          margin: 0;
-          padding: 0;
-          background-color: var(--highlight);
+          white-space: nowrap;
+           
+          
+           
+          background:color-mix(in srgb, var(--secondary) 4%, transparent);
+          border-radius: 6px;
+          padding: .5rem 1rem;
+          text-decoration: none;
+          transition: all .2s;
+          display: inline-flex
+      
         }
 
         li > a.internal {

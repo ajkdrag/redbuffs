@@ -47,6 +47,7 @@ ${stylesheet.join("\n\n")}
   --gray: ${theme.colors.lightMode.gray};
   --darkgray: ${theme.colors.lightMode.darkgray};
   --dark: ${theme.colors.lightMode.dark};
+  --secondary: ${theme.colors.lightMode.secondary};
   
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
@@ -64,7 +65,6 @@ ${stylesheet.join("\n\n")}
   --darkgray: ${theme.colors.darkMode.darkgray};
   --dark: ${theme.colors.darkMode.dark};
   --secondary: ${theme.colors.darkMode.secondary};
- 
   --tertiary: ${theme.colors.darkMode.tertiary};
   --highlight: ${theme.colors.darkMode.highlight};
   --textHighlight: ${theme.colors.darkMode.textHighlight};
