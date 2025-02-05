@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - linguistics
-> - |nlp
+> - [[linguistics\|linguistics]]
+> - [[nlp\|nlp]]
 
 > The distributional hypothesis is a linguistic theory that states that words that appear in similar contexts tend to have similar meanings: 
 

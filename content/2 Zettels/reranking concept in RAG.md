@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - RAG
-> - reranking techniques
+> - [[RAG\|RAG]]
+> - [[reranking techniques\|reranking techniques]]
 
 **Without Reranking**:
 - Initial retrieval → Select top-K chunks for final context

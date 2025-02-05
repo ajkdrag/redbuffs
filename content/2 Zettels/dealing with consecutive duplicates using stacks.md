@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - stacks
+> - [[2 Zettels/stacks\|stacks]]
 
 Several problems exist where we are asked to repeatedly remove/count duplicates. Stacks can be used for such tasks. A well-defined problem statement would be:
 

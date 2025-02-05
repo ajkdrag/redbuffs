@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - pytorch-internals
-> - word embeddings
+> - [[pytorch-internals\|pytorch-internals]]
+> - [[word embeddings\|word embeddings]]
 
 `nn.Embedding` and `nn.Linear` essentially [[2 Zettels/similarity of nn.Embedding and nn.Linear in Pytorch\|work the same]] but there are few reasons to prefer `nn.Embedding` for lookup:
 - Implementation is efficient 

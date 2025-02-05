@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - stacks
-> - arrays
+> - [[2 Zettels/stacks\|stacks]]
+> - [[arrays\|arrays]]
 
 ```python
 class Stack:

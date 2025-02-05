@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - word2vec
+> - [[3 Topics/word2vec\|word2vec]]
 
 The original paper on word2vec uses two matrices W and W'. W is used to get embedding for center word and W' is used to get embeddings for all other words (in skip-gram). This raises a question as to why we can't use the same weight matrix W for both.
 

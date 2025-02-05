@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> load balancing
+> - [[2 Zettels/load balancing in MoE\|load balancing in MoE]]
 
 A **capacity factor** greater than 1 allows each expert to handle a buffer above the evenly distributed share, accommodating imbalances in token assignment. If the expert capacity is reached and there's another token to be sent to this expert, we can choose to do the following:
 - drop this token

@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - mixture of experts
+> - [[mixture of experts\|mixture of experts]]
 > - [[load balancing\|load balancing]]
 
 If all our tokens are sent to just a few popular experts, that will make training inefficient. Without load balancing, some experts become overused while others are underutilized, which can lead to:

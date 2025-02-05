@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - word2vec
+> - [[3 Topics/word2vec\|word2vec]]
 
 In word2vec, the context window size $k$ determines how many surrounding words are considered as context. Taking the example of [[3 Topics/skip-gram\|skip-gram]] algo, instead of using a fixed window size, dynamic window size means that for each center word, the window size $k'$ is **randomly sampled** between 1 and $k$ (the maximum window size)
 

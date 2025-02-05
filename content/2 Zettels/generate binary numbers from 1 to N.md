@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - queues
+> - [[2 Zettels/queues\|queues]]
 
 > [!Note]
 > Observe that all natural numbers can be written in the form: `2k` (appending 0 as suffix in binary) and `2k + 1` (appending 1 as suffix in binary).

@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - c++ STL
-> - c++ internals
+> - [[c++ STL\|c++ STL]]
+> - [[c++ internals\|c++ internals]]
 
 Key differences:
 

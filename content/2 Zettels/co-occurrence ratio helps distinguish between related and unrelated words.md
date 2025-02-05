@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - GloVe
+> - [[GloVe\|GloVe]]
 
 The ratio of co-occurrence probabilities in GloVe provides an intuitive way to capture relationships between words. This can be illustrated using the example of "ice" and "steam" as center words, with various context words.
 

@@ -4,9 +4,9 @@
 
 
 > [!Topics]
-> - pytorch-internals 
-> - optimization
-> - quantization
+> - [[pytorch-internals\|pytorch-internals]]
+> - [[optimization\|optimization]]
+> - [[quantization\|quantization]]
 
 The `detach()` trick follows the pattern:
 

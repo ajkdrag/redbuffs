@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - optimization
+> - [[optimization\|optimization]]
 
 A Pareto solution is a set of solutions that are considered the best possible for **multiple objectives at once**. In other words, 
 

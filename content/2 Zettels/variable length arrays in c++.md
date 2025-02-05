@@ -4,9 +4,9 @@
 
 
 > [!Topics]
-> - c++ internals
-> - arrays
-> - memory management
+> - [[c++ internals\|c++ internals]]
+> - [[arrays\|arrays]]
+> - [[memory management\|memory management]]
 
 Typically, in coding contests, we take size of array from input (variable `n`) and then have to create an array of that size, i.e. we don't know the array size during compile time. This creates a need for variable length arrays (VLAs). Usually, we get away by doing:
 

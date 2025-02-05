@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - quantization
-> - optimization
+> - [[quantization\|quantization]]
+> - [[optimization\|optimization]]
 
 STE is a technique used to handle non-differentiable functions in neural networks, particularly useful for training networks with discrete or binary operations.
 

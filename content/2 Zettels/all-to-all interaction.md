@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - neural information retrieval
-> - cross-encoders 
+> - [[neural information retrieval\|neural information retrieval]] 
+> - [[cross-encoders\|cross-encoders]] 
 
 Comprehensive interaction between all elements of query and document
 

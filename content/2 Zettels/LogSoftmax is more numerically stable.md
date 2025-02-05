@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - pytorch-internals
+> - [[pytorch-internals\|pytorch-internals]]
 
 If we apply `log` and `softmax` separately, when the output of softmax becomes very close to zero, then log would yield negative infinity.
 

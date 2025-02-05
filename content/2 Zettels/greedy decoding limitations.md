@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - greedy decoding
+> - [[3 Topics/greedy decoding\|greedy decoding]]
 
 > Locally optimal choices may lead to suboptimal overall sequences. Greedy decoding is *fast*, but if we put aside efficiency for a minute, it might seem more reasonable to search for the _most likely sequence_, i.e. maximize:
 > $$

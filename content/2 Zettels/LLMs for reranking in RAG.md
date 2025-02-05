@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - reranking techniques
+> - [[reranking techniques\|reranking techniques]]
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1727334028/yfxwnfjmy51jicopwnmd.png)
 

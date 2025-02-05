@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - GloVe
+> - [[GloVe\|GloVe]]
 
 Very straightforward to implement, if one refers the [[2 Zettels/GloVe objective function\|GloVe objective function]]
 

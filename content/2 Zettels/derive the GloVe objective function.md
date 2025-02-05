@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - GloVe
-> - loss functions
+> - [[GloVe\|GloVe]]
+> - [[loss functions\|loss functions]]
 
 Building on the [[2 Zettels/GloVe interpretation through co-occurrence ratios\|GloVe interpretation through co-occurrence ratios]], the objective function can be derived as follows:
 

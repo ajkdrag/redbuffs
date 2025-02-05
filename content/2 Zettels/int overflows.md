@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - c++ internals
+> - [[c++ internals\|c++ internals]]
 
 Add some value to `int` or `long` beyond their max capacity, results in the excess offset from the minimum value. 
 

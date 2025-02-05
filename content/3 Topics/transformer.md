@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - LLM
+> - [[LLM\|LLM]]
 
 A groundbreaking architecture in deep learning, introduced in 2017 by Vaswani et al. It has revolutionized natural language processing and has found applications in various domains *beyond text processing*.
 

@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - string algorithms
-> - c++ internals
+> - [[string algorithms\|string algorithms]]
+> - [[c++ internals\|c++ internals]]
 
 ```cpp
 vector<string> split(string s, char delim) {

@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - classical machine learning
-> - optimization
+> - [[classical machine learning\|classical machine learning]]
+> - [[optimization\|optimization]]
 
 The [[2 Zettels/perception classification rule\|perception classification rule]] is defined as:
 $$

@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - word embeddings
-> - neural information retrieval
+> - [[word embeddings\|word embeddings]]
+> - [[neural information retrieval\|neural information retrieval]]
 
 - Single embeddings generated from entire text struggle to represent diverse information in long documents
 - Mathematical limitation: cosine similarity between query and document is average similarity to document tokens #question 

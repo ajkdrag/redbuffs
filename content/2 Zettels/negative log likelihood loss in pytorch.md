@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - loss functions
-> - cross-entropy
+> - [[loss functions\|loss functions]]
+> - [[cross-entropy\|cross-entropy]]
 
 If we have some output predictions (logits) from a model for a given classification task with `C` classes, we can evaluate against the target class id using NLL loss.
 ```python

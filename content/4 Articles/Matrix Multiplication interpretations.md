@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - matrices
-> - linear algebra
+> - [[matrices\|matrices]]
+> - [[linear algebra\|linear algebra]]
 
 One of the basic operations in linear algebra is matrix multiplication
 $$

@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - word embeddings
-> - linear algebra
+> - [[word embeddings\|word embeddings]]
+> - [[linear algebra\|linear algebra]]
 
 Before [[3 Topics/word2vec\|word2vec]] (neural-like methods), word embeddings were based on co-occurrence counts. The matrix was constructred, followed by some [[matrix factorization\|matrix factorization]] approach to get lower-dimensional word embeddings.
 **Advantages**

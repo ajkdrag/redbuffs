@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - geometry
+> - [[geometry\|geometry]]
 
 In coding contests, easy way to obtain `pi` value is by:
 

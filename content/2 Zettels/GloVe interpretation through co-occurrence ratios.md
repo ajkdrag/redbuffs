@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - GloVe
+> - [[GloVe\|GloVe]]
 
 GloVe (Global Vectors for Word Representation) is a method for creating word embeddings that can be interpreted through the lens of word co-occurrence probabilities.
 

@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - binary classification
-> - classical machine learning
+> - [[binary classification\|binary classification]]
+> - [[classical machine learning\|classical machine learning]]
 
 Perceptron is a simple binary classification algorithm. The decision rule can be illustrated with an example:
 

@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - word embeddings
+> - [[word embeddings\|word embeddings]]
 
 Fine-grained embeddings refer to the practice of representing text at a detailed level by generating embeddings (dense vector representations) for individual tokens (words or subword units) _rather than for entire sentences or documents_.
 

@@ -5,7 +5,7 @@
 
 > [!Topics]
 > - [[3 Topics/transformer\|transformer]]
-> - mixture of experts
+> - [[mixture of experts\|mixture of experts]]
 
 A landmark architecture from 2021 by Google, with 1.6T parameters, that like [[2 Zettels/GShard\|GShard]], replaces the FFN layers with MoE layer ⎯ a Switch Transformer layer that takes 2 different tokens as inputs and has 4 experts. During [[2 Zettels/token routing\|token routing]], instead of Top-2, it uses simple single-expert strategy.
 

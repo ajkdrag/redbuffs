@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - LLMs
-> - quantization
+> - [[3 Topics/1-bit LLMs\|1-bit LLMs]]
+> - [[quantization\|quantization]]
 
 In 1-bit LLMs, we deal with binarized model weights ⎯ in [[BitNet\|BitNet]], it's binary `[-1, 1]`, while in [[3 Topics/BitNet b1.58\|BitNet b1.58]], it's ternary `[-1, 0, 1]`. To perform this binarization, few non-differentiable operations such `round()` and `clip()` are employed in the layer. Since these are non-differentiable, we use tricks such as [[2 Zettels/straight through estimators\|straight through estimators]] to approximate the gradient during backpropagation.
 

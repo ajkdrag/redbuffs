@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - reranking techniques
-> - cross-encoders
+> - [[reranking techniques\|reranking techniques]]
+> - [[cross-encoders\|cross-encoders]]
 
 A cross-encoder takes sentence pairs and performs [[binary classification\|binary classification]]. It **does not produce a sentence embedding**, so we can't preprocess docs and create an index or efficiently compare using [[cosine similarity\|cosine similarity]]. 
 

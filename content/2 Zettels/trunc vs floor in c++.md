@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - basic arithmetic
+> - [[basic arithmetic\|basic arithmetic]]
 
 ```cpp
 float x = -3.4;

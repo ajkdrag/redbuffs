@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - GloVe
-> - word embeddings
+> - [[GloVe\|GloVe]]
+> - [[word embeddings\|word embeddings]]
 
 Uses global statistics (similar to [[TF-IDF\|TF-IDF]] and [[latent semantic analysis\|latent semantic analysis]]) such as **word co-ocurrence counts**, to build text representations (aka word [[word embeddings\|word embeddings]]). 
 

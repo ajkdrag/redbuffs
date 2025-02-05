@@ -4,9 +4,9 @@
 
 
 > [!Topics]
-> - programming basics
-> - memory management
-> - competitive programming
+> - [[programming basics\|programming basics]]
+> - [[memory management\|memory management]]
+> - [[competitive programming\|competitive programming]]
 
 ```cpp
 int score = 50;

@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - linear algebra
-> - distance metrics
+> - [[linear algebra\|linear algebra]]
+> - [[distance metrics\|distance metrics]]
 
 The dot product is the simplest way to compare two vectors. 
 $$

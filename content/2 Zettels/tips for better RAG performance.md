@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - RAG
+> - [[RAG\|RAG]]
 
 In Anthropic's article on Contextual RAG, they ran experiments and give these tips:
 - Generate [[2 Zettels/contextual retrieval\|chunks with context]]

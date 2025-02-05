@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - two pointers technique
-> - sorting algorithms
+> - [[2 Zettels/two pointers technique\|two pointers technique]]
+> - [[sorting algorithms\|sorting algorithms]]
 
 > [!Question]- (2Sum) Find two indices in a sorted array where elements sum to target
 > - left starts at `0`, right at `n-1`.

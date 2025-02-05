@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - mixture of experts
-> - model explainability
+> - [[mixture of experts\|mixture of experts]]
+> - [[model explainability\|model explainability]]
 
 In the context of interpretability of experts in MoE, we can observe:
 - **Non-transformer**: More interpretable, clearer specialization

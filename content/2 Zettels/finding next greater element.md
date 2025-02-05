@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - stacks
+> - [[2 Zettels/stacks\|stacks]]
 
 **Problem**
 Given an array, print the Next Greater Element (NGE) for every element.

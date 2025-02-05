@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - mixture of experts
+> - [[mixture of experts\|mixture of experts]]
 
 
 > The expert capacity determines how many tokens each expert is responsible for during the training or inference process. It sets a limit on the number of tokens processed per expert.

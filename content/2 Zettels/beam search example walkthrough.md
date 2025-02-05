@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - Topics/beam search
+> - [[3 Topics/beam search\|beam search]]
 
 Let's take the case of machine translation using [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]] where the output vocabulary $V$ consists of five elements: ${A, B, C, D, E}$, with one representing the end-of-sequence token.
 

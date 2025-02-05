@@ -6,8 +6,8 @@
 
 
 > [!Topics]
-> - loss functions
-> - cross-entropy
+> - [[loss functions\|loss functions]]
+> - [[cross-entropy\|cross-entropy]]
 
 $$
 \begin{align*}

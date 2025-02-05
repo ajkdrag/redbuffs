@@ -48,7 +48,6 @@ ${stylesheet.join("\n\n")}
   --darkgray: ${theme.colors.lightMode.darkgray};
   --dark: ${theme.colors.lightMode.dark};
   --secondary: ${theme.colors.lightMode.secondary};
-  
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
   --textHighlight: ${theme.colors.lightMode.textHighlight};

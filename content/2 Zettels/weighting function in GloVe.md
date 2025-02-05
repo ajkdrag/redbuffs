@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - GloVe
+> - [[GloVe\|GloVe]]
 
 In the [[2 Zettels/GloVe objective function\|GloVe objective function]], we have a weighting function which should have the following properties:
 

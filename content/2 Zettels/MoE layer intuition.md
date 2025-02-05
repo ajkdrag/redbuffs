@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - mixture of experts
+> - [[mixture of experts\|mixture of experts]]
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1731686441/moe-all5th.webp)
 

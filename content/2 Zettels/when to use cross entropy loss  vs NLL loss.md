@@ -5,8 +5,8 @@
 
 
 > [!Topics]
-> - loss functions
-> - cross-entropy
+> - [[loss functions\|loss functions]]
+> - [[cross-entropy\|cross-entropy]]
 
 In PyTorch, this `CrossEntropyLoss` with logits output (logits just means no activation applied) technique is really just [[2 Zettels/cross entropy loss vs negative log likelihood loss\|wrapper code]] around the older `NLLLoss` with `LogSoftmax` technique. When using the newer and simpler approach for [[multi-class classification\|multi-class classification]], you don’t apply any activation to the output and then `CrossEntropyLoss` applies `LogSoftmax` internally. When using the older approach for multi-class classification, you apply `LogSoftmax` to the output and `NLLLoss` assumes you’ve done so.
 

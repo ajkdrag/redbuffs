@@ -4,8 +4,8 @@
 
 
 > [!Topics]
-> - stacks
-> - queues
+> - [[2 Zettels/stacks\|stacks]]
+> - [[2 Zettels/queues\|queues]]
 
 A queue (FIFO) is implemented using two stacks (LIFO) with the following approach:
 - **Stack 1 (`st1`)** temporarily holds new elements when the front stack is non-empty

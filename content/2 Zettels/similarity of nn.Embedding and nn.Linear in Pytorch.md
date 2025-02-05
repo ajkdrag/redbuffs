@@ -6,8 +6,8 @@
 
 
 > [!Topics]
-> - pytorch-internals
-> - word embeddings
+> - [[pytorch-internals\|pytorch-internals]]
+> - [[word embeddings\|word embeddings]]
 
 `nn.Embedding` is nothing but a lookup table.
 

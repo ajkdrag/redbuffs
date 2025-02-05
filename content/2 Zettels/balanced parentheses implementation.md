@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - stacks
+> - [[2 Zettels/stacks\|stacks]]
 
 > [!Hint]-
 >  As we traverse the string, each time we encounter an opening parenthesis '(', '{', or '[', we push it onto the stack. When we find a closing parenthesis ')', '}', or ']', we check if it matches the type of the opening parenthesis at the top of the stack. If it matches, we pop the top element from the stack; if not, or if the stack is empty when we find a closing parenthesis, the string is not balanced, and we return `false`.
