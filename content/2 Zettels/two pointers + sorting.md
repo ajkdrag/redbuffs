@@ -13,13 +13,14 @@
 > - If `sum < target`, increment `left`.
 > - Time: $O(n)$ vs. brute-force $O(n^2)$.
 
-> [!Question]- Deduplicat an array in-place
+> [!Question]- Deduplicate an array in-place
 > - Sort the array $O(n \log n)$.
+> - Uses the concept of [[slow and fast pointers\|slow and fast pointers]]
 > - `slow` pointer tracks the last unique element.
 > - `fast` scans ahead. When `arr[fast] != arr[slow]`, increment `slow` and copy `arr[fast]`.
-> - Time: $O(n)$.
+> - Time: $O(n)$
 
-> [!Question]- (3Sum) Find all triplets `[a, b, c]` such that `a + b + c = 0`
+> [!Question]- [[6 Problems/3Sum\|3Sum]] Find all triplets `[a, b, c]` such that `a + b + c = 0`
 > - Sort the array $O(n \log n)$.
 > - Fix `a = arr[i]`, then use two pointers on the subarray `i+1` to `n-1` to find pairs `(b, c)` such that `b + c = -a`.
 > - Time: $O(n^2)$ vs. brute-force $O(n^3)$.

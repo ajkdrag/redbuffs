@@ -21,7 +21,6 @@ Here we have 3 classes, so 3 logit values and our target is class 1 (classes are
 > The standard `nn.NLLLoss()` in PyTorch does indeed expect integer targets, not continuous probabilities. It's designed for hard classification where each sample belongs to exactly **one class**.
 
 ## Step 1: Convert logits to probabilities
-
 ```python
 probs = F.softmax(logits, dim=0)
 # tensor([0.0964, 0.5834, 0.3202])
@@ -30,7 +29,6 @@ probs = F.softmax(logits, dim=0)
 We see that our target probability is `0.5834`. Ideally we want our probability for the target class to be equal to `1.0`. So we need to *measure* how bad this `0.5834` value is. Taking the log of this basically gives us the *log likelihood*
 
 ## Step 2: Getting the log likelihoods
-
 ```python
 ll = torch.log(probs)
 # tensor([-2.3389, -0.5389, -1.1389])
