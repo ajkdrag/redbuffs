@@ -6,56 +6,31 @@
 .callout {
   border: 2px solid var(--border);
   background-color: var(--bg);
-  box-sizing: border-box;
   border-radius: 5px;
   padding: 0 1rem;
-  transition: max-height 0.3s;
   overflow-y: hidden;
+  transition: max-height theme.$transition-medium ease;
+  box-sizing: border-box;
 
   & > .callout-content > :first-child {
-   
     margin-top: 0;
-    line-height: 1.5;
-    font-size: 0.9em;
   }
+
+  --callout-color: var(--dark);
+  --callout-bg: var(--lightgray);
 
   &[data-callout] {
-    --color: var(--dark);
+    --color: var(--callout-color);
     --border: var(--secondary);
-    --bg: var(--lightgray);
+    --bg: var(--callout-bg);
   }
-
-  // Define unique colors for different callout types
-  &[data-callout="note"] {
-    --color: #00b0ff;
-    --border: #0094ff;
-    --bg: #0a3963;
-  }
-  &[data-callout="question"] {
-    --color: #cacecf;
-    --border: #7a43b5;
-    --bg: #221a2b;
-  }
-
-  &[data-callout="warning"] {
-    --color: #cacecf;
-    --border: #b5910c;
-    --bg: #735b0d
-  }
-
-  &[data-callout="tip"] {
-    --color: #09ad71;
-    --border: #09ad71;
-    --bg: #245543;
-  }
-
-  // Hide title and styles for topics callout
+  
+  // Hide title and styles if it's a topics callout
   &[data-callout="topics"] {
     --color: transparent;
     --border: unset;
     --bg: unset;
-   
-
+    
     .callout-title {
       display: none;
     }
@@ -63,11 +38,13 @@
     .callout-content {
       ul {
         display: flex;
+        // flex-wrap: wrap;
         flex-wrap: nowrap;
         gap: 0.75rem;
         list-style: none;
         padding: 0;
         justify-content: center;
+
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
@@ -77,21 +54,16 @@
         &::-webkit-scrollbar {
           display: none;
         }
-
+          
         li {
-          white-space: nowrap;
-          border-radius: 6px;
-          padding: .5rem 1rem;
-          text-decoration: none;
-          transition: all .2s;
-          display: inline-flex
-      
+          margin: 0;
+          padding: 0;
         }
 
         li > a.internal {
-          @include mixins.card-base;
-          text-decoration: none;
-          background: theme.$bg-light-mix;
+            @include mixins.card-base;
+            text-decoration: none;
+            background: theme.$bg-light-mix;
         }
       }
     }
@@ -121,8 +93,6 @@
   & > .callout-title-inner > p {
     color: var(--color);
     margin: 0;
-    line-height: 1.2;
-    font-size: 0.9em;
   }
 }
 
