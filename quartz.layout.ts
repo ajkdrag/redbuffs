@@ -22,7 +22,7 @@ export const sharedPageComponents: SharedLayout = {
           {
             text: "Zettels",
             link: "/2-Zettels/index",
-            icon: "articles",
+            icon: "github",
           },
           {
             text: "Resume",
@@ -95,21 +95,25 @@ export const defaultContentPageLayout: PageLayout = {
             text: "Articles",
             link: "/4-Articles/index",
             icon: "articles",
+            disabled: false
           },
           {
             text: "Zettels",
             link: "/2-Zettels/index",
-            icon: "articles",
+            icon: "github",
+            disabled: false
           },
           {
             text: "Resume",
             link: "/5-Site/my-resume",
             icon: "resume",
+            disabled: false
           },
           {
             text: "Contact",
             link: "mailto:altukhan43@gmail.com",
             icon: "contact",
+            disabled: false
           }
         ]
       }
@@ -117,7 +121,7 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.DesktopOnly(Component.Spacer()),
-    Component.DesktopOnly(Component.TableOfContents()),
+    
     // Component.Graph(),
   ],
 };

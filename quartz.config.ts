@@ -39,18 +39,18 @@ const config: QuartzConfig = {
           gray: "#788896",           // Subtle text, icons
           darkgray: "#384B70",       // Main text color
           dark: "#2A394F",          // Headings, bold text
-          secondary: "#507687",      // Links, accents
+          secondary: "#a2d6f0",      // Links, accents
           tertiary: "#B8001F",       // Highlights, special elements
           highlight: "rgba(184, 0, 31, 0.15)", // Link hovers, selections
           textHighlight: "rgb(220, 20, 60)",
         },
         darkMode: {
           light: "#1A1E23",
-          lightgray: "#2F4158",
+          lightgray: "#2f4158",
           gray: "#9DC2D5",
           dark: "#ECEADD",
           darkgray: "#FCFAEE",
-          secondary: "#A2D6F0",
+          secondary: "#a2d6f0",
           tertiary: "#FF4D6B",
           highlight: "rgba(255, 77, 107, 0.12)",
           textHighlight: "rgba(220, 20, 60, 0.85)",
