@@ -30,6 +30,8 @@ const icons = {
   contact: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
 }
 
+
+
 export default ((opts: PanelProps) => {
   function SidePanel(props: QuartzComponentProps) {
     const { displayClass } = props
@@ -51,26 +53,30 @@ export default ((opts: PanelProps) => {
           </button>
         )}
 
-        <div class="panel-container">
-          <div class="panel-content">
+        
+                  <div class="panel-content">
             <div class="profile">
               <img src={opts.profile.avatar} alt={opts.profile.name} class="avatar"/>
               <h2 class="name">{opts.profile.name}</h2>
               <p class="bio">{opts.profile.bio}</p>
             </div>
+
+        <div class="panel-container">
+
             
-            <nav class="navigation">
-              {opts.navigation.links.map((link) => (
-                <a 
-                  href={link.link} 
-                  class={link.external ? "nav-link external" : "nav-link internal"}
-                  {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                >
-                  <span class="icon">{icons[link.icon]}</span>
-                  <span class="text">{link.text}</span>
-                </a>
-              ))}
-            </nav>
+        <nav class="navigation">
+  {opts.navigation.links.map((link) => (
+ <a 
+ href={link.link} 
+ class={link.external ? "nav-link external" : "nav-link"} //
+ {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+>
+ <span class="icon">{icons[link.icon]}</span>
+ <span class="text">{link.text}</span>
+</a>
+  ))}
+</nav>
+
           </div>
         </div>
       </div>
@@ -112,123 +118,127 @@ export default ((opts: PanelProps) => {
 
   SidePanel.css = `
     .drawer-container {
-      display: flex;
-      flex-direction: column;
-    }
+  display: flex;
+  flex-direction: column;
+}
 
-    .drawer-button {
-      background: none;
-      border: none;
-      padding: 0.4rem;
-      border-radius: 4px;
-      color: var(--dark);
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-      z-index: 100;
-    }
+.drawer-button:hover {
+  background: var(--highlight);
+}
 
-    .drawer-button:hover {
-      background: var(--highlight);
-    }
+/* Styles Desktop */
+.drawer-container.desktop-only {
+  margin-left: auto; /* Alignement à droite sur les grands écrans */
 
-    /* Desktop styles */
-    .drawer-container.desktop-only {
-      margin-right: 2rem;
+  .panel-container {
+    position: fixed; /* Fixe le panneau à droite */
+    top: 0;
+    right: 0; /* Aligne à droite */
+    width: 250px;
+    height: 100vh;
+    background: var(--light);
+    border-left: 1px solid var(--lightgray);
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+  }
 
-      .panel-container {
-        position: static;
-        transform: none;
-        padding: 0;
-        background: none;
-        border: none;
-      }
-    }
+  .panel-containerr {
+  display: flex;
+  flex-direction: column;
+  background: var(--light);
+  padding: 20px; /* Ajoute un peu de padding pour espacer le contenu */
+}
+}
 
-    /* Mobile styles */
-    .drawer-container.mobile-only {
-      .panel-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: 100vh;
-        background: var(--light);
-        border-right: 1px solid var(--lightgray);
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        z-index: 99;
-        padding: 2rem 1.5rem;
-        overflow-y: auto;
-      }
+/* Styles Mobile */
+.drawer-container.mobile-only {
+  .panel-container {
+    position: fixed;
+    top: 0;
+    right: 0; /* Aligne à droite pour les mobiles */
+    width: 250px;
+    height: 100vh;
+    background: var(--light);
+    border-left: 1px solid var(--lightgray);
+    transform: translateX(100%); /* Hors de l'écran à droite */
+    transition: transform 0.3s ease;
+    z-index: 99;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+  }
 
-      .panel-container.open {
-        transform: translateX(0);
-      }
-    }
+  .panel-container.open {
+    transform: translateX(0); /* Affiche le panneau */
+  }
+}
 
-    .panel-content {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
+/* Contenu du panneau */
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-    .profile {
-      text-align: center;
-    }
+/* Profil */
+.profile {
+  text-align: center;
+}
 
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin: 0 auto 1rem;
-      object-fit: cover;
-    }
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
 
-    .name {
-      font-family: var(--headerFont);
-      font-size: 1.5rem;
-      margin: 1rem 0 0.5rem;
-      color: var(--dark);
-    }
+.name {
+  font-family: var(--headerFont);
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--dark);
+}
 
-    .bio {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      color: var(--gray);
-      margin: 0;
-    }
+.bio {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--gray);
+  margin: 0;
+}
 
-    .navigation {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+/* Navigation */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.75rem;
-      border-radius: 6px;
-      color: var(--dark);
-      font-family: var(--headerFont);
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
+.nav-link {
+background: color-mix(in srgb, var(--secondary) 4%, transparent);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: var(--dark);
+  font-family: var(--headerFont);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
 
-    .nav-link:hover {
-      background: var(--highlight);
-      color: var(--secondary);
-    }
+.nav-link:hover {
+  background: var(--highlight);
+  color: var(--secondary);
+}
 
-    .nav-link .icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      color: inherit;
-    }
+.nav-link .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  color: inherit;
+}
   `
 
   return SidePanel

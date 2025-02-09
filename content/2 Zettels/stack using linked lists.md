@@ -5,7 +5,7 @@
 
 > [!Topics]
 > - [[2 Zettels/stacks\|stacks]]
-> - [[2 Zettels/linked lists\|linked lists]]
+> - [[linked lists\|linked lists]]
 
 ```python
 class Stack:
