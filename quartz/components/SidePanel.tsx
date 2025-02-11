@@ -37,49 +37,57 @@ export default ((opts: PanelProps) => {
     const { displayClass } = props
 
     return (
-      <div class={classNames(displayClass, "drawer-container")}>
-        {/* Only show button for mobile */}
-        {displayClass === "mobile-only" && (
-          <button 
-            class="drawer-button"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-        )}
+<div class={classNames(displayClass, "drawer-container")}>
+  {displayClass === "mobile-only" && (
+    <button 
+      class="drawer-button"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  )}
 
-        
-                  <div class="panel-content">
-            <div class="profile">
-              <img src={opts.profile.avatar} alt={opts.profile.name} class="avatar"/>
-              <h2 class="name">{opts.profile.name}</h2>
-              <p class="bio">{opts.profile.bio}</p>
-            </div>
-
-        <div class="panel-container">
-
-            
-        <nav class="navigation">
-  {opts.navigation.links.map((link) => (
- <a 
- href={link.link} 
- class={link.external ? "nav-link external" : "nav-link"} //
- {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
->
- <span class="icon">{icons[link.icon]}</span>
- <span class="text">{link.text}</span>
-</a>
-  ))}
-</nav>
-
-          </div>
-        </div>
+  <div class="panel-container">
+    
+    {/* En version mobile, affiche le profil DANS panel-container */}
+    {displayClass === "mobile-only" && (
+      <div class="profile">
+        <img src={opts.profile.avatar} alt={opts.profile.name} class="avatar"/>
+        <h2 class="name">{opts.profile.name}</h2>
+        <p class="bio">{opts.profile.bio}</p>
       </div>
+    )}
+
+    <nav class="navigation">
+      {opts.navigation.links.map((link) => (
+        <a 
+          href={link.link} 
+          class={link.external ? "nav-link external" : "nav-link"} 
+          {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
+          <span class="icon">{icons[link.icon]}</span>
+          <span class="text">{link.text}</span>
+        </a>
+      ))}
+    </nav>
+  </div>
+
+  {/* En version desktop, affiche le profil en dehors de panel-container */}
+  {displayClass === "desktop-only" && (
+    <div class="profile">
+      <img src={opts.profile.avatar} alt={opts.profile.name} class="avatar"/>
+      <h2 class="name">{opts.profile.name}</h2>
+      <p class="bio">{opts.profile.bio}</p>
+    </div>
+  )}
+
+</div>
+
     )
   }
 
@@ -150,27 +158,34 @@ export default ((opts: PanelProps) => {
 }
 }
 
-/* Styles Mobile */
-.drawer-container.mobile-only {
-  .panel-container {
-    position: fixed;
-    top: 0;
-    right: 0; /* Aligne à droite pour les mobiles */
-    width: 250px;
-    height: 100vh;
-    background: var(--light);
-    border-left: 1px solid var(--lightgray);
-    transform: translateX(100%); /* Hors de l'écran à droite */
-    transition: transform 0.3s ease;
-    z-index: 99;
-    padding: 2rem 1.5rem;
-    overflow-y: auto;
-  }
-
-  .panel-container.open {
-    transform: translateX(0); /* Affiche le panneau */
-  }
+    /* Mobile styles */
+  .drawer-container.mobile-only .panel-container .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
 }
+    .drawer-container.mobile-only {
+      .panel-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        background: var(--light);
+        border-right: 1px solid var(--lightgray);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 99;
+        padding: 2rem 1.5rem;
+        overflow-y: auto;
+      }
+
+      .panel-container.open {
+        transform: translateX(0);
+      }
+    }
+
 
 /* Contenu du panneau */
 .panel-content {
