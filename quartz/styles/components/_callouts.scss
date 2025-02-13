@@ -13,7 +13,6 @@
   box-sizing: border-box;
 
   & > .callout-content > :first-child {
-   
     margin-top: 0;
     line-height: 1.5;
     font-size: 0.9em;
@@ -27,26 +26,59 @@
 
   // Define unique colors for different callout types
   &[data-callout="note"] {
-    --color: #00b0ff;
-    --border: #0094ff;
-    --bg: #0a3963;
+    
+    --border: #1f8ec3;
+    --bg: #98dfff;
+   
   }
+  
+
   &[data-callout="question"] {
-    --color: #cacecf;
-    --border: #7a43b5;
-    --bg: #221a2b;
+    --color: #f7fdff;
+    --border: #110221;;
+    --bg: #7a43b5;
+    
+  }
+  &[data-callout="question"] .callout-content p,
+  &[data-callout="question"] .callout-content ul,
+  &[data-callout="question"] .callout-content text,
+  &[data-callout="question"] .callout-content a,
+  &[data-callout="question"] .callout-content tr,
+  &[data-callout="question"] .callout-content td,
+  &[data-callout="question"] .callout-content li,
+  &[data-callout="question"] .callout-content ol,
+  &[data-callout="question"] .callout-content .katex,
+  &[data-callout="question"] .callout-content .math {
+    font-size: .93em;
+    color: #ffffff;
   }
 
+  &[data-callout="question"] .callout-content :not(pre) > code {
+    font-size: 0.9em;
+    background: transparent;
+    color: #010508;
+  }
+
+  &[data-callout="warning"] .callout-content :not(pre) > code {
+
+    color: #010508;
+  }
+  &[data-callout="tip"] .callout-content :not(pre) > code {
+
+    color: #010508;
+  }
+
+
   &[data-callout="warning"] {
-    --color: #cacecf;
-    --border: #b5910c;
-    --bg: #735b0d
+    --color: #fff;
+    --border: #f1aa23;
+    --bg: #ffb324;
   }
 
   &[data-callout="tip"] {
-    --color: #09ad71;
-    --border: #09ad71;
-    --bg: #245543;
+    --color: #e5e5e5;
+    --border: #14a36f;
+    --bg: #00b773;
   }
 
   // Hide title and styles for topics callout
@@ -54,7 +86,6 @@
     --color: transparent;
     --border: unset;
     --bg: unset;
-   
 
     .callout-title {
       display: none;
@@ -84,8 +115,7 @@
           padding: .5rem 1rem;
           text-decoration: none;
           transition: all .2s;
-          display: inline-flex
-      
+          display: inline-flex;
         }
 
         li > a.internal {
@@ -126,122 +156,71 @@
   }
 }
 
+// Mode nuit
 
-// styles/components/_callouts.scss 
-// Add this to your existing callouts styling or create a new section
-//
-// .callout[data-callout="topics"] {
-//   border: none;
-//   background: none;
-//   margin: 2rem 0;
-//   padding: 0;
-//
-//   // Hide the default callout title
-//   .callout-title {
-//     display: none;
-//   }
-//
-//   .callout-content {
-//     position: relative;
-//     padding: 0;
-//     width: 100%;
-//     
-//     // Style the list container
-//     ul {
-//       display: flex;
-//       flex-wrap: nowrap; // Prevent wrapping on mobile
-//       gap: 0.75rem;
-//       margin: 0;
-//       padding: 0.5rem;
-//       list-style: none;
-//       overflow-x: auto;
-//       -webkit-overflow-scrolling: touch;
-//       scrollbar-width: none;
-//       -ms-overflow-style: none;
-//       scroll-behavior: smooth;
-//       mask-image: linear-gradient(
-//         to right,
-//         transparent,
-//         black 2%,
-//         black 98%,
-//         transparent
-//       );
-//       
-//       // Hide scrollbar
-//       &::-webkit-scrollbar {
-//         display: none;
-//       }
-//
-//       // Remove default list item styles and ensure horizontal layout
-//       li {
-//         margin: 0;
-//         padding: 0;
-//         flex-shrink: 0; // Prevent shrinking on mobile
-//       }
-//
-//       // Style the topic links
-//       a.internal {
-//         display: inline-flex;
-//         align-items: center;
-//         padding: 0.5rem 1.25rem;
-//         background: color-mix(in srgb, var(--light) 4%, transparent);
-//         border: 1px solid color-mix(in srgb, var(--lightgray) 50%, transparent);
-//         border-radius: 2rem;
-//         color: var(--gray);
-//         font-size: 0.95rem;
-//         white-space: nowrap;
-//         text-decoration: none;
-//         backdrop-filter: blur(8px);
-//         transition: all 0.2s ease;
-//         
-//         &:hover {
-//           background: var(--highlight);
-//           color: var(--tertiary);
-//           border-color: var(--tertiary);
-//           transform: translateY(-1px);
-//         }
-//
-//         // Remove default internal link styling
-//         &.alias {
-//           background: color-mix(in srgb, var(--light) 4%, transparent);
-//           padding: 0.5rem 1.25rem;
-//         }
-//       }
-//     }
-//   }
-// }
-//
-// // Dark mode specific adjustments
-// :root[saved-theme="dark"] .callout[data-callout="topics"] {
-//   .callout-content {
-//     ul {
-//       a.internal {
-//         background: color-mix(in srgb, var(--light) 8%, transparent);
-//         border-color: color-mix(in srgb, var(--lightgray) 15%, transparent);
-//         color: var(--gray);
-//         
-//         &:hover {
-//           background: color-mix(in srgb, var(--tertiary) 15%, transparent);
-//           border-color: var(--tertiary);
-//           color: var(--tertiary);
-//         }
-//       }
-//     }
-//   }
-// }
-//
-// // Mobile optimizations
-// @media (max-width: 800px) {
-//   .callout[data-callout="topics"] {
-//     .callout-content {
-//       ul {
-//         padding: 0.5rem 0; // Reduce padding on mobile
-//         
-//         a.internal {
-//           padding: 0.4rem 1rem; // Slightly smaller padding on mobile
-//           font-size: 0.9rem; // Slightly smaller font on mobile
-//         }
-//       }
-//     }
-//   }
-// }
+:root[saved-theme="dark"] {
+  .callout[data-callout="question"] {
+    --color: #cacecf;
+    --border: #7a43b5; // Couleur pour le mode nuit
+    --bg: #221a2b; // Couleur pour le mode nuit
+  }
+}
+
+// dark-mode
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="note"] {
+    --color: #00b0ff;
+    --border: #0094ff;
+    --bg: #0a3963;
+  }
+}
+:root[saved-theme="dark"] {
+  .callout[data-callout="warning"] {
+    --color: #cacecf;
+    --border: #b5910c;
+    --bg: #735b0d;
+  }
+}
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="tip"] {
+    --color: #09ad71;
+    --border: #09ad71;
+    --bg: #245543;
+  }
+}
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="question"] .callout-content :not(pre) > code {
+    font-size: 0.9em;
+    background: transparent;
+    color: var(--gray); 
+  }
+}
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="warning"] .callout-content :not(pre) > code {
+    font-size: 0.9em;
+    background: transparent;
+    color: var(--gray); 
+  }
+}
+:root[saved-theme="dark"] {
+  .callout[data-callout="tip"] .callout-content :not(pre) > code {
+    font-size: 0.9em;
+    background: transparent;
+    color: var(--gray); 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
