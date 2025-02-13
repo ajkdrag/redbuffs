@@ -335,6 +335,7 @@ ul, ol {
 
 // For internal links that appear in lists (like your Topics, Articles, etc)
 li > a.internal {
+ 
   display: inline-block;
   padding: 0.2em 0.6em;
   margin: 0.2em 0;

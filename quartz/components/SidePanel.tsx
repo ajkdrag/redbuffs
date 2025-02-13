@@ -30,50 +30,64 @@ const icons = {
   contact: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
 }
 
+
+
 export default ((opts: PanelProps) => {
   function SidePanel(props: QuartzComponentProps) {
     const { displayClass } = props
 
     return (
-      <div class={classNames(displayClass, "drawer-container")}>
-        {/* Only show button for mobile */}
-        {displayClass === "mobile-only" && (
-          <button 
-            class="drawer-button"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-        )}
+<div class={classNames(displayClass, "drawer-container")}>
+  {displayClass === "mobile-only" && (
+    <button 
+      class="drawer-button"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  )}
 
-        <div class="panel-container">
-          <div class="panel-content">
-            <div class="profile">
-              <img src={opts.profile.avatar} alt={opts.profile.name} class="avatar"/>
-              <h2 class="name">{opts.profile.name}</h2>
-              <p class="bio">{opts.profile.bio}</p>
-            </div>
-            
-            <nav class="navigation">
-              {opts.navigation.links.map((link) => (
-                <a 
-                  href={link.link} 
-                  class={link.external ? "nav-link external" : "nav-link internal"}
-                  {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                >
-                  <span class="icon">{icons[link.icon]}</span>
-                  <span class="text">{link.text}</span>
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
+  <div class="panel-container">
+    
+    {/* En version mobile, affiche le profil DANS panel-container */}
+    {displayClass === "mobile-only" && (
+      <div class="profile">
+        <img src={opts.profile.avatar} alt={opts.profile.name} class="avatar"/>
+        <h2 class="name">{opts.profile.name}</h2>
+        <p class="bio">{opts.profile.bio}</p>
       </div>
+    )}
+
+    <nav class="navigation">
+      {opts.navigation.links.map((link) => (
+        <a 
+          href={link.link} 
+          class={link.external ? "nav-link external" : "nav-link"} 
+          {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        >
+          <span class="icon">{icons[link.icon]}</span>
+          <span class="text">{link.text}</span>
+        </a>
+      ))}
+    </nav>
+  </div>
+
+  {/* En version desktop, affiche le profil en dehors de panel-container */}
+  {displayClass === "desktop-only" && (
+    <div class="profile">
+      <img src={opts.profile.avatar} alt={opts.profile.name} class="avatar"/>
+      <h2 class="name">{opts.profile.name}</h2>
+      <p class="bio">{opts.profile.bio}</p>
+    </div>
+  )}
+
+</div>
+
     )
   }
 
@@ -112,39 +126,45 @@ export default ((opts: PanelProps) => {
 
   SidePanel.css = `
     .drawer-container {
-      display: flex;
-      flex-direction: column;
-    }
+  display: flex;
+  flex-direction: column;
+}
 
-    .drawer-button {
-      background: none;
-      border: none;
-      padding: 0.4rem;
-      border-radius: 4px;
-      color: var(--dark);
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-      z-index: 100;
-    }
+.drawer-button:hover {
+  background: var(--highlight);
+}
 
-    .drawer-button:hover {
-      background: var(--highlight);
-    }
+/* Styles Desktop */
+.drawer-container.desktop-only {
+  margin-left: auto; /* Alignement à droite sur les grands écrans */
 
-    /* Desktop styles */
-    .drawer-container.desktop-only {
-      margin-right: 2rem;
+  .panel-container {
+    position: fixed; /* Fixe le panneau à droite */
+    top: 0;
+    right: 0; /* Aligne à droite */
+    width: 250px;
+    height: 100vh;
+    background: var(--light);
+    border-left: 1px solid var(--lightgray);
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+  }
 
-      .panel-container {
-        position: static;
-        transform: none;
-        padding: 0;
-        background: none;
-        border: none;
-      }
-    }
+  .panel-containerr {
+  display: flex;
+  flex-direction: column;
+  background: var(--light);
+  padding: 20px; /* Ajoute un peu de padding pour espacer le contenu */
+}
+}
 
     /* Mobile styles */
+  .drawer-container.mobile-only .panel-container .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
     .drawer-container.mobile-only {
       .panel-container {
         position: fixed;
@@ -166,69 +186,74 @@ export default ((opts: PanelProps) => {
       }
     }
 
-    .panel-content {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
 
-    .profile {
-      text-align: center;
-    }
+/* Contenu du panneau */
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin: 0 auto 1rem;
-      object-fit: cover;
-    }
+/* Profil */
+.profile {
+  text-align: center;
+}
 
-    .name {
-      font-family: var(--headerFont);
-      font-size: 1.5rem;
-      margin: 1rem 0 0.5rem;
-      color: var(--dark);
-    }
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
 
-    .bio {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      color: var(--gray);
-      margin: 0;
-    }
+.name {
+  font-family: var(--headerFont);
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--dark);
+}
 
-    .navigation {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
+.bio {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--gray);
+  margin: 0;
+}
 
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.75rem;
-      border-radius: 6px;
-      color: var(--dark);
-      font-family: var(--headerFont);
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
+/* Navigation */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-    .nav-link:hover {
-      background: var(--highlight);
-      color: var(--secondary);
-    }
+.nav-link {
+background: color-mix(in srgb, var(--secondary) 4%, transparent);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: var(--dark);
+  font-family: var(--headerFont);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
 
-    .nav-link .icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      color: inherit;
-    }
+.nav-link:hover {
+  background: var(--highlight);
+  color: var(--secondary);
+}
+
+.nav-link .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  color: inherit;
+}
   `
 
   return SidePanel
