@@ -13,15 +13,15 @@ A function is **tail recursive** if the **recursive call is the last statement**
 
 A classic example is computing the factorial of `n`:
 ```cpp
-ll factorial_recursive(ll n) {
-  if (n <= 1)
-    return 1;
-
-  return n * factorial_recursive(n - 1);
+ll factorial_tail_recursive(ll n, ll accumulator) {
+  if (n <= 1) {
+    return accumulator;
+  }
+  return factorial_tail_recursive(n - 1, n * accumulator);
 }
 ```
 
-Here, the function calls itself with `n-1` and multiplies the return value by `n`.
+Here, the function calls itself with `n-1` and accumulates the result at each recursive call.
 
 > [!Tip]
 > You can [[2 Zettels/replace tail-recursion with a loop\|replace tail-recursion with a loop]]. The loop essentially tracks the same parameters you would have passed to the recursive call.

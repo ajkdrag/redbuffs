@@ -48,7 +48,7 @@ int countSubarraysWithSumAtMostK(const vector<int>& A, int K) {
     
     // right goes from 1 to n (index in prefix sums)
     for(int right = 1; right <= n; right++) {
-        // Move left pointer while sum of subarray [left..(right-1)] > K
+            // Move left pointer while sum of subarray [left..(right-1)] > K
         // subarray sum is P[right] - P[left]
         while(P[right] - P[left] > K) {
             left++;

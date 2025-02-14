@@ -15,6 +15,13 @@ General Approach to replace [[2 Zettels/tail recursion\|tail recursion]] with a 
 
 Classic example of computing factorial of a number `n`:
 ```cpp
+ll factorial_tail_recursive(ll n, ll accumulator) {
+  if (n <= 1) {
+    return accumulator;
+  }
+  return factorial_tail_recursive(n - 1, n * accumulator);
+}
+
 ll factorial_iterative(ll n) {
   ll res = 1;
   while (n > 1) {
@@ -22,13 +29,6 @@ ll factorial_iterative(ll n) {
     n--;
   }
   return res;
-}
-
-ll factorial_recursive(ll n) {
-  if (n <= 1)
-    return 1;
-
-  return n * factorial_recursive(n - 1);
 }
 ```
 
@@ -55,5 +55,5 @@ def fib_iter(n):
     return b
 ```
 
-Note how we converted `fib_naive` to `fib_tail`:  a **tail-optimized** version by keeping track of the last two computed values. After that it's straightforward to create the iterative version.
+Note how we converted `fib_naive` (non-tail recursive) to `fib_tail`:  a **tail-optimized** version by keeping track of the last two computed values. After that it's straightforward to create the iterative version.
 ## Related

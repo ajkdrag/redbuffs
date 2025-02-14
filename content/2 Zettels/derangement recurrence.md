@@ -10,7 +10,9 @@
 We need to count the number of ways to permute `n` elements such that no element appears in its original position.
 
 Using recurrence, we can get:
-$$D(n) = (n - 1) \times (D(n-1) + D(n-2))$$
+$$
+D(n) = (n - 1) \times (D(n-1) + D(n-2))
+$$
 where $D(0)=1$ (there's one way to arrange nothing - an empty permutation) and $D(1)=0$ (you can't arrange one element so it's not in its original spot).
 
 **Intuition Behind the Formula:**
@@ -50,5 +52,8 @@ int derangement(int n) {
     return c;
 }
 ```
+
+> [!Note]
+> There's another [[2 Zettels/derangement recurrence dervied from direct formula\|derangement recurrence dervied from direct formula]]. That is easier to implement in [[competitive programming\|competitive programming]]
 ## Related
 - [[2 Zettels/derangement direct formula\|derangement direct formula]]

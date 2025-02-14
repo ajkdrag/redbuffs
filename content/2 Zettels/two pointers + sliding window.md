@@ -24,7 +24,7 @@
 > - Time: $O(n)$ vs. brute-force $O(n^3)$ (checking all substrings).
 
 > [!Question]- Given two strings s1 and s2, return true if s2 contains a permutation of s1
-> - Use a sliding window of the size of `s1` over `s2`. Use [[frequency maps\|frequency maps]] (or [[arrays\|arrays]]) to check if the current window is a permutation of `s1`
+> - Use a sliding window of the size of `s1` over `s2`. Use [[2 Zettels/frequency arrays\|frequency arrays]] to check if the current window is a permutation of `s1`
 
 > [!Question]- Given two strings s and t, find the minimum window in s which will contain all the characters in t
 > - Use two pointers (`left` and `right`) to define a window in `s`

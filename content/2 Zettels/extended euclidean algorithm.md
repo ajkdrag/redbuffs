@@ -55,5 +55,8 @@ def extended_gcd(a, b):
 
 This recursive implementation captures the algorithm's essence: each step builds upon the solution of a simpler case until we reach the base case, then reconstructs the complete solution as we return through the call stack.
 
+**Time complexity:** $O(\log (\min(a, b)))$
+**Space complexity:** $O(1)$
+
 ## Related
 - [[2 Zettels/iterative version of extended euclidean algorithm\|iterative version of extended euclidean algorithm]]

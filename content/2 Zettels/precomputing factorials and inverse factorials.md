@@ -7,7 +7,7 @@
 > - [[precomputation techniques\|precomputation techniques]]
 > - [[combinatorics\|combinatorics]]
 
-Calculating combinations (nCr) efficiently often requires factorials and their [[2 Zettels/modular multiplicative inverse\|modular multiplicative inverse]]. Precomputation comes handy when dealing with many queries.
+Calculating [[binomial coefficient\|binomial coefficient]] (nCr) efficiently often requires factorials and their [[2 Zettels/modular multiplicative inverse\|modular multiplicative inverse]]. Precomputation comes handy when dealing with many queries.
 
 The provided C++ code precomputes factorials and inverse factorials modulo a prime number (MOD).
 
@@ -42,10 +42,13 @@ ll modPow(ll a, ll b, ll mod) {
 
 void precomputeFactorials() {
     fact[0] = 1;
+    // O(n)
     for (int i = 1; i <= MAX; i++)
         fact[i] = (fact[i-1] * i) % MOD;
 
-    invFact[MAX] = modPow(fact[MAX], MOD - 2, MOD);  // Fermat's Little Theorem
+    invFact[MAX] = modPow(fact[MAX], MOD - 2, MOD);  // O(log MOD) Fermat's Little Theorem
+
+    // O(n)
     for (int i = MAX; i >= 0; i--)
         invFact[i-1] = (invFact[i] * i) % MOD;
 }
@@ -55,5 +58,8 @@ After calling `precomputeFactorials()`, you can calculate nCr % MOD as:
 ```cpp
 ll nCr = ((fact[n] * invFact[r]) % MOD * invFact[n-r]) % MOD;
 ```
+
+T.C: Factorials -> O(n), Inverse factorials -> O(n + log MOD)
+S.C: O(n)
 
 ## Related
