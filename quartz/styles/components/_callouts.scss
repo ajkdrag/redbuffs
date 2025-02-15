@@ -24,62 +24,98 @@
     --bg: var(--lightgray);
   }
 
-  // Define unique colors for different callout types
-  &[data-callout="note"] {
-    
-    --border: #1f8ec3;
-    --bg: #98dfff;
-   
-  }
-  
+
 
   &[data-callout="question"] {
-    --color: #f7fdff;
-    --border: #110221;;
-    --bg: #7a43b5;
+    --color: #445155;
+    --border: #8d67b7;
+    --bg: #d8c8eb;;
     
   }
-  &[data-callout="question"] .callout-content p,
-  &[data-callout="question"] .callout-content ul,
-  &[data-callout="question"] .callout-content text,
-  &[data-callout="question"] .callout-content a,
-  &[data-callout="question"] .callout-content tr,
-  &[data-callout="question"] .callout-content td,
+
+ 
   &[data-callout="question"] .callout-content li,
-  &[data-callout="question"] .callout-content ol,
-  &[data-callout="question"] .callout-content .katex,
-  &[data-callout="question"] .callout-content .math {
+  &[data-callout="question"] .callout-content .ol {
     font-size: .93em;
-    color: #ffffff;
+    color: #445155;
   }
 
   &[data-callout="question"] .callout-content :not(pre) > code {
-    font-size: 0.9em;
+    font-size: .93em;
     background: transparent;
-    color: #010508;
-  }
-
-  &[data-callout="warning"] .callout-content :not(pre) > code {
-
-    color: #010508;
-  }
-  &[data-callout="tip"] .callout-content :not(pre) > code {
-
-    color: #010508;
-  }
-
-
-  &[data-callout="warning"] {
-    --color: #fff;
-    --border: #f1aa23;
-    --bg: #ffb324;
+    color: #b8001f;
   }
 
   &[data-callout="tip"] {
-    --color: #e5e5e5;
-    --border: #14a36f;
-    --bg: #00b773;
+    --color: #445155;
+    --border: #09ad71;
+    --bg: #92ffd6;
   }
+ 
+  &[data-callout="tip"] .callout-content li,
+  &[data-callout="tip"] .callout-content .ol {
+    
+    font-size: .93em;
+    color: #445155;
+  }
+
+  &[data-callout="tip"] .callout-content :not(pre) > code {
+
+    font-size: .93em;
+    background: transparent;
+    color: #b8001f;
+  }
+
+
+ 
+
+  &[data-callout="note"] {
+    
+    --border: #507687;;
+    --bg: #b4d7e7;
+   
+  }
+ 
+  &[data-callout="note"] .callout-content li,
+  &[data-callout="note"] .callout-content .ol {
+    font-size: .93em;
+    color: #2a394f;
+  }
+  &[data-callout="note"] .callout-content a,
+  &[data-callout="note"] .callout-content :not(pre) > code {
+
+    color: #b8001f;
+  }
+  
+  &[data-callout="question"] .callout-content :not(pre) > code {
+    font-size: .93em;
+    background: transparent;
+    color: #b8001f;
+  }
+
+  &[data-callout="warning"] {
+    --color: #2a394f;
+    --border: #dba642;
+    --bg: #ffe3ad
+  }
+ 
+  &[data-callout="warning"] .callout-content li,
+  &[data-callout="warning"] .callout-content .ol {
+    font-size: .93em;
+    color: #2a394f;
+  }
+  &[data-callout="warning"] .callout-content :not(pre) > code {
+
+    color: #b8001f;
+  }
+
+
+
+
+
+ 
+
+
 
   // Hide title and styles for topics callout
   &[data-callout="topics"] {
@@ -275,40 +311,73 @@
   }
 }
 
-// Mode nuit
+// dark-mode
 
 :root[saved-theme="dark"] {
   .callout[data-callout="question"] {
     --color: #cacecf;
-    --border: #7a43b5; // Couleur pour le mode nuit
-    --bg: #221a2b; // Couleur pour le mode nuit
+    --border: #7a43b5; 
+    --bg: #221a2b; 
   }
 }
+:root[saved-theme="dark"] [data-callout="question"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="question"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
 
-// dark-mode
+
+
+
+
 
 :root[saved-theme="dark"] {
   .callout[data-callout="note"] {
-    --color: #00b0ff;
+    --color: #dde6eb;
     --border: #0094ff;
     --bg: #0a3963;
   }
 }
+
+
+
+
+:root[saved-theme="dark"] [data-callout="note"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="note"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
+
+
 :root[saved-theme="dark"] {
   .callout[data-callout="warning"] {
-    --color: #cacecf;
+    --color: #fff;
     --border: #b5910c;
     --bg: #735b0d;
   }
 }
 
+:root[saved-theme="dark"] [data-callout="warning"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="warning"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
+
+
 :root[saved-theme="dark"] {
   .callout[data-callout="tip"] {
-    --color: #09ad71;
+    --color: #fff;
     --border: #09ad71;
     --bg: #245543;
   }
 }
+:root[saved-theme="dark"] [data-callout="tip"] .callout-content :first-child,
+:root[saved-theme="dark"] [data-callout="tip"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="tip"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
+
 
 :root[saved-theme="dark"] {
   .callout[data-callout="question"] .callout-content :not(pre) > code {
@@ -325,6 +394,7 @@
     color: var(--gray); 
   }
 }
+
 :root[saved-theme="dark"] {
   .callout[data-callout="tip"] .callout-content :not(pre) > code {
     font-size: 0.9em;
