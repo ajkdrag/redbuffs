@@ -19,7 +19,7 @@
 // Card style mixin used by multiple components
 @mixin card-base {
   display: inline-flex;
-  white-space: nowrap;
+  white-space: normal;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   background: theme.$bg-light-mix;

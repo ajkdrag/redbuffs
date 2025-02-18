@@ -13,7 +13,6 @@
   box-sizing: border-box;
 
   & > .callout-content > :first-child {
-   
     margin-top: 0;
     line-height: 1.5;
     font-size: 0.9em;
@@ -25,36 +24,104 @@
     --bg: var(--lightgray);
   }
 
-  // Define unique colors for different callout types
-  &[data-callout="note"] {
-    --color: #00b0ff;
-    --border: #0094ff;
-    --bg: #0a3963;
-  }
+
+
   &[data-callout="question"] {
-    --color: #cacecf;
-    --border: #7a43b5;
-    --bg: #221a2b;
+    --color: #445155;
+    --border: #8d67b7;
+    --bg: #d8c8eb;;
+    
   }
 
-  &[data-callout="warning"] {
-    --color: #cacecf;
-    --border: #b5910c;
-    --bg: #735b0d
+ 
+  &[data-callout="question"] .callout-content li,
+  &[data-callout="question"] .callout-content .ol {
+    font-size: .93em;
+    color: #445155;
+  }
+
+  &[data-callout="question"] .callout-content :not(pre) > code {
+    font-size: .93em;
+    background: transparent;
+    color: #b8001f;
   }
 
   &[data-callout="tip"] {
-    --color: #09ad71;
+    --color: #445155;
     --border: #09ad71;
-    --bg: #245543;
+    --bg: #92ffd6;
   }
+ 
+  &[data-callout="tip"] .callout-content li,
+  &[data-callout="tip"] .callout-content .ol {
+    
+    font-size: .93em;
+    color: #445155;
+  }
+
+  &[data-callout="tip"] .callout-content :not(pre) > code {
+
+    font-size: .93em;
+    background: transparent;
+    color: #b8001f;
+  }
+
+
+ 
+
+  &[data-callout="note"] {
+    
+    --border: #507687;;
+    --bg: #b4d7e7;
+   
+  }
+ 
+  &[data-callout="note"] .callout-content li,
+  &[data-callout="note"] .callout-content .ol {
+    font-size: .93em;
+    color: #2a394f;
+  }
+  &[data-callout="note"] .callout-content a,
+  &[data-callout="note"] .callout-content :not(pre) > code {
+
+    color: #b8001f;
+  }
+  
+  &[data-callout="question"] .callout-content :not(pre) > code {
+    font-size: .93em;
+    background: transparent;
+    color: #b8001f;
+  }
+
+  &[data-callout="warning"] {
+    --color: #2a394f;
+    --border: #dba642;
+    --bg: #ffe3ad
+  }
+ 
+  &[data-callout="warning"] .callout-content li,
+  &[data-callout="warning"] .callout-content .ol {
+    font-size: .93em;
+    color: #2a394f;
+  }
+  &[data-callout="warning"] .callout-content :not(pre) > code {
+
+    color: #b8001f;
+  }
+
+
+
+
+
+ 
+
+
 
   // Hide title and styles for topics callout
   &[data-callout="topics"] {
     --color: transparent;
     --border: unset;
     --bg: unset;
-   
 
     .callout-title {
       display: none;
@@ -84,8 +151,7 @@
           padding: .5rem 1rem;
           text-decoration: none;
           transition: all .2s;
-          display: inline-flex
-      
+          display: inline-flex;
         }
 
         li > a.internal {
@@ -97,37 +163,7 @@
     }
   }
 
-  // Collapsible functionality
-  &.is-collapsed {
-    & > .callout-title > .fold-callout-icon {
-      transform: rotateZ(-90deg);
-    }
-  }
-}
-
-.callout-title {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 1rem 0;
-  color: var(--color);
-
-  & .fold-callout-icon {
-    transition: transform theme.$transition-fast ease;
-    opacity: 0.8;
-    cursor: pointer;
-  }
-
-  & > .callout-title-inner > p {
-    color: var(--color);
-    margin: 0;
-    line-height: 1.2;
-    font-size: 0.9em;
-  }
-}
-
-
-// styles/components/_callouts.scss 
+  // styles/components/_callouts.scss 
 // Add this to your existing callouts styling or create a new section
 //
 // .callout[data-callout="topics"] {
@@ -245,3 +281,135 @@
 //     }
 //   }
 // }
+
+  // Collapsible functionality
+  &.is-collapsed {
+    & > .callout-title > .fold-callout-icon {
+      transform: rotateZ(-90deg);
+    }
+  }
+}
+
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1rem 0;
+  color: var(--color);
+
+  & .fold-callout-icon {
+    transition: transform theme.$transition-fast ease;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  & > .callout-title-inner > p {
+    color: var(--color);
+    margin: 0;
+    line-height: 1.2;
+    font-size: 0.9em;
+  }
+}
+
+// dark-mode
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="question"] {
+    --color: #cacecf;
+    --border: #7a43b5; 
+    --bg: #221a2b; 
+  }
+}
+:root[saved-theme="dark"] [data-callout="question"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="question"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
+
+
+
+
+
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="note"] {
+    --color: #dde6eb;
+    --border: #0094ff;
+    --bg: #0a3963;
+  }
+}
+
+
+
+
+:root[saved-theme="dark"] [data-callout="note"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="note"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
+
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="warning"] {
+    --color: #fff;
+    --border: #b5910c;
+    --bg: #735b0d;
+  }
+}
+
+:root[saved-theme="dark"] [data-callout="warning"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="warning"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
+
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="tip"] {
+    --color: #fff;
+    --border: #09ad71;
+    --bg: #245543;
+  }
+}
+:root[saved-theme="dark"] [data-callout="tip"] .callout-content :first-child,
+:root[saved-theme="dark"] [data-callout="tip"] .callout-content li,
+:root[saved-theme="dark"] [data-callout="tip"] .callout-content .ol {
+    font-size: 0.93em;
+    color: #fff;
+}
+
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="question"] .callout-content :not(pre) > code {
+    font-size: 0.9em;
+    background: transparent;
+    color: var(--gray); 
+  }
+}
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="warning"] .callout-content :not(pre) > code {
+    font-size: 0.9em;
+    background: transparent;
+    color: var(--gray); 
+  }
+}
+
+:root[saved-theme="dark"] {
+  .callout[data-callout="tip"] .callout-content :not(pre) > code {
+    font-size: 0.9em;
+    background: transparent;
+    color: var(--gray); 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -156,7 +156,7 @@ export default ((opts: PanelProps) => {
   background: var(--light);
   padding: 20px; /* Ajoute un peu de padding pour espacer le contenu */
 }
-}
+} 
 
     /* Mobile styles */
   .drawer-container.mobile-only .panel-container .profile {
