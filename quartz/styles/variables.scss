@@ -5,6 +5,64 @@
  * Screen width between $mobile and $desktop width will use the tablet layout.
  * assuming mobile < desktop
  */
+
+// light mode
+:root {
+  // Couleurs générales
+  --color-light: #445155;
+  --color-dark: #cacecf;
+
+  // Question
+  --question-border-light: #8d67b7;
+  --question-bg-light: #d8c8eb;
+  --question-border-dark: #7a43b5;
+  --question-bg-dark: #221a2b;
+
+  // Note
+  --note-border-light: #507687;
+  --note-bg-light: #b4d7e7;
+  --note-border-dark: #0094ff;
+  --note-bg-dark: #0a3963;
+
+  // Warning
+  --warning-border-light: #dba642;
+  --warning-bg-light: #ffe3ad;
+  --warning-border-dark: #b5910c;
+  --warning-bg-dark: #735b0d;
+
+  // Tip
+  --tip-border-light: #09ad71;
+  --tip-bg-light: #92ffd6;
+  --tip-border-dark: #09ad71;
+  --tip-bg-dark: #245543;
+}
+
+// dark mode
+:root[saved-theme="dark"] {
+  // Question
+  --question-border-light: #7a43b5;
+  --question-bg-light: #221a2b;
+  --question-border-dark: #7a43b5;
+  --question-bg-dark: #221a2b;
+
+  // Note
+  --note-border-light: #0094ff;
+  --note-bg-light: #0a3963;
+  --note-border-dark: #0094ff;
+  --note-bg-dark: #0a3963;
+
+  // Warning
+  --warning-border-light: #b5910c;
+  --warning-bg-light: #735b0d;
+  --warning-border-dark: #b5910c;
+  --warning-bg-dark: #735b0d;
+
+  // Tip
+  --tip-border-light: #09ad71;
+  --tip-bg-light: #245543;
+  --tip-border-dark: #09ad71;
+  --tip-bg-dark: #245543;
+}
 $breakpoints: (
   mobile: 800px,
   desktop: 1200px,
