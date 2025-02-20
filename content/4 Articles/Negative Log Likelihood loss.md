@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["topic/cross-entropy","topic/nll-loss","type/post"],"PassFrontmatter":true}
+{"publish":true,"tags":["topic/cross-entropy","topic/nll-loss","type/post"],"PassFrontmatter":true,"created":"2024-10-20T14:35:23.606+05:30"}
 ---
 
 

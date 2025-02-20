@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/post","topic/linear-algebra"],"PassFrontmatter":true}
+{"publish":true,"tags":["type/post","topic/linear-algebra"],"PassFrontmatter":true,"created":"2024-10-20T14:35:23.606+05:30"}
 ---
 
 

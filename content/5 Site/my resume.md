@@ -1,5 +1,5 @@
 ---
-{"tags":["type/page","status/done"],"publish":true,"title":"Altamash Khan","PassFrontmatter":true}
+{"tags":["type/page","status/done"],"publish":true,"title":"Altamash Khan","PassFrontmatter":true,"created":"2024-10-22T15:32:37.347+05:30"}
 ---
 
 I like AI, coding and tech. Contact me at [altukhan43@gmail.com](mailto:altukhan43@gmail.com). Also, check out my [site](https://ajkdrag.in)and [GitHub](https://github.com/ajkdrag)
