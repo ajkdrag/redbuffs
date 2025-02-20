@@ -11,7 +11,7 @@ Most binary search problems can be reframed as finding the first `true` in a con
 
 1. **Set up the search space.**  
    - Typically, `lo = 0` and `hi = n - 1` for an array of size `n`
-   - Search on answer space: (e.g., `lo = 0`, `hi = 10^9`)
+   - Many problems require search on *answer space*: (e.g., `lo = 0`, `hi = 10^9`)
 2. **Binary Search Loop.**  
    - While `lo <= hi`, compute `mid = lo + (hi - lo) / 2` (tackles overflow)  
    - If `check(mid) == true`, *record* `mid` as a candidate (e.g., `ans = mid`) and move `hi` left to search for an earlier `true`.  

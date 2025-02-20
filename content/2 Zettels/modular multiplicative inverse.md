@@ -8,7 +8,7 @@
 > - [[exponentiation\|exponentiation]]
 
 **Problem**: Find `x` (aka $a^{-1}$) such that `a*x ≡ 1 (mod m)`.
-**Solution**: Use [[2 Zettels/extended euclidean algorithm\|extended euclidean algorithm]]. [[2 Zettels/modular multiplicative inverse existence condition\|Inverse exists]] iff `gcd(a, m) = 1` (coprime)
+**Solution**: Use [[2 Zettels/extended euclidean algorithm\|extended euclidean algorithm]]. [[2 Zettels/modular multiplicative inverse existence condition\|Inverse exists]] iff `gcd(a, m) = 1` (coprime). If `m` is prime, simply use [[2 Zettels/fermat's little theorem\|fermat's little theorem]] to get inverse as: $a^{m-2} \bmod m$ .
 
 > [!Note]
 > The problem of finding a modular inverse is a special case of solving a **linear congruence** of the form `ax ≡ b (mod m)`. When `b = 1`, we have the modular inverse problem.

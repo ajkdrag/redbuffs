@@ -5,7 +5,7 @@
 
 > [!Topics]
 > - [[2 Zettels/two pointers technique\|two pointers technique]]
-> - [[prefix sums\|prefix sums]]
+> - [[2 Zettels/prefix sums\|prefix sums]]
 
 The 2-pointer + prefix sums array technique is another powerful strategy, especially for problems involving subarrays or subsequences in arrays. Useful when the array is non-negative (i.e prefix array is monotonic or sorted) and you need to find a subarray with specific properties (e.g. sum <= `k`).
 ### Classic Problem: Number of Subarrays with Sum at most K
