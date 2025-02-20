@@ -18,7 +18,7 @@
   & > .callout-content > :first-child {
     margin-top: 0;
     line-height: 1.5;
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 
   &[data-callout] {
@@ -36,14 +36,14 @@
 
   &[data-callout="question"] .callout-content li,
   &[data-callout="question"] .callout-content .ol {
-    font-size: 0.9em;
-    color: var(--color-light);
+    font-size: 0.98em;
+    color: var(--darkgray);
   }
 
   &[data-callout="question"] .callout-content :not(pre) > code {
-    font-size: 0.9em;
+    font-size: 0.95em;
     background: transparent;
-    color: var(--tertiary);
+    color: var(--gray);
   }
 
   // Note
@@ -54,7 +54,7 @@
 
   &[data-callout="note"] .callout-content li,
   &[data-callout="note"] .callout-content .ol {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: var(--color-light);
   }
 
@@ -72,12 +72,12 @@
 
   &[data-callout="warning"] .callout-content li,
   &[data-callout="warning"] .callout-content .ol {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: var(--color-light);
   }
 
   &[data-callout="warning"] .callout-content :not(pre) > code {
-    color: var(--tertiary);
+    color: var(--gray);
   }
 
   // Tip
@@ -89,14 +89,14 @@
 
   &[data-callout="tip"] .callout-content li,
   &[data-callout="tip"] .callout-content .ol {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: var(--color-light);
   }
 
   &[data-callout="tip"] .callout-content :not(pre) > code {
-    font-size: 0.9em;
+    font-size: 0.95em;
     background: transparent;
-    color: var(--tertiary);
+    color: var(--gray);
   }
 
   // Topics (exemple spécifique)
@@ -170,7 +170,7 @@
     color: var(--color);
     margin: 0;
     line-height: 1.2;
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 }
 
@@ -208,14 +208,14 @@
   .callout[data-callout="warning"] .callout-content .ol,
   .callout[data-callout="tip"] .callout-content li,
   .callout[data-callout="tip"] .callout-content .ol {
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: var(--dark);
   }
 
   .callout[data-callout="question"] .callout-content :not(pre) > code,
   .callout[data-callout="warning"] .callout-content :not(pre) > code,
   .callout[data-callout="tip"] .callout-content :not(pre) > code {
-    font-size: 0.9em;
+    font-size: 0.95em;
     background: transparent;
     color: var(--gray);
   }
