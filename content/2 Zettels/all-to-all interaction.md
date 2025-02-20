@@ -1,0 +1,21 @@
+---
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true,"created":"2024-10-22T15:38:29.310+05:30"}
+---
+
+
+> [!Topics]
+> - [[neural information retrieval\|neural information retrieval]] 
+> - [[cross-encoders\|cross-encoders]] 
+
+Comprehensive interaction between all elements of query and document
+
+In this kind of Neural IR, the model takes all query and document terms, and gives a score. This is more accurate than [[bi-encoders\|bi-encoders]]. The [[BERT\|BERT]] model can be trained for such modelling, by feeding in query-document pairs. Such models are also called as [[cross-encoders\|cross-encoders]].
+
+- **Advantages**:
+    - Captures complex relationships between query and document
+- **Disadvantages**:
+    - High computational cost
+    - Difficult to use in production
+
+## Related
+- [[2 Zettels/cross-encoders for reranking in RAG\|cross-encoders for reranking in RAG]]

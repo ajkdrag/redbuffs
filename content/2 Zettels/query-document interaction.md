@@ -1,0 +1,23 @@
+---
+{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true,"created":"2024-10-22T15:38:29.143+05:30"}
+---
+
+
+
+> [!Topics]
+> - [[neural information retrieval\|neural information retrieval]]
+
+This is another approach in Neural IR, where there is direct interaction with query terms and document terms. When we say *terms*, we mean their tokenized representations which can be word or subword level.
+> [!example]
+> Each query term interacts with every document term, producing a matrix which can be fed to some MLP to get a score.
+- **Example**: `monoBERT`
+- **Advantages**:
+    - Can selectively focus on relevant information
+    - More effective than [[2 Zettels/representation-based similarity\|representation-based similarity]] 
+- **Disadvantages**:
+    - Computationally expensive during inference
+    - Hard to use in production
+
+
+
+## Related
