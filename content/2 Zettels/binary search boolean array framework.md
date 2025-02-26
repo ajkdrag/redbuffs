@@ -60,6 +60,6 @@ In some problems (like searching for a floating-point answer), you do repeated h
 
 
 > [!Example]
-> If we are asked to find index of minimum number in a rotated sorted array, our check function would look like: `bool check(int mid) { return (v[mid] <= v[n-1]); }`
+> If we are asked to find index of [[6 Problems/min element in a rotated sorted array\|min element in a rotated sorted array]], our check function would look like: `bool check(int mid) { return (v[mid] <= v[n-1]); }`
 
 ## Related
