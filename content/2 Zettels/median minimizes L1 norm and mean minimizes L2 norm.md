@@ -62,6 +62,9 @@ f''(x) = 2n > 0 \quad \text{(for $n \geq 1$)},
 $$
 which ensures convexity. Hence, $x = \text{mean}(S)$ uniquely minimizes the L2 norm.
 
+> [!Warning]
+> If we are asked integer solution only, and mean is say, `7.6`, then we need to **round** it to the nearest int. [Example problem](https://atcoder.jp/contests/abc156/tasks/abc156_c), where we do `mean = round(sum / n)`.
+
 ## Comparison
 
 1. **Robustness vs. Sensitivity**:
