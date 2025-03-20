@@ -7,7 +7,7 @@
 > - [[2 Zettels/stacks\|stacks]]
 > - [[sorting algorithms\|sorting algorithms]]
 
-The idea is similar to [[insertion sort\|insertion sort]] where we take element and find the right place to insert. Using stacks, we keep one stack to store the sorted result, while use another to hold intermediate values.
+The idea is similar to [[2 Zettels/insertion sort\|insertion sort]] where we take element and find the right place to insert. Using stacks, we keep one stack to store the sorted result, while use another to hold intermediate values.
 
 ```cpp
 stack<int> sortStack(stack<int> &input) {

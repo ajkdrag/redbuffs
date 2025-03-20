@@ -20,7 +20,7 @@ vector<int> computeFrequency(const vector<int>& arr, int max_val) {
 ```
 
 ### Applications and Usages
-- [[counting sort\|counting sort]]
+- [[2 Zettels/counting sort\|counting sort]]
 - finding majority elements (occurring more than `n/2` times, etc.)
 - string algorithms (checking anagrams)
 - tracking frequencies in [[sliding window\|sliding window]]
