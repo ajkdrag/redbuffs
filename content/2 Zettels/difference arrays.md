@@ -12,7 +12,7 @@ Useful for efficiently applying multiple [[range updates\|range updates]] (e.g.,
 - To update `[l, r]` by `x`: `diff[l] += x`, `diff[r+1] -= x`
 - Reconstruct array via prefix sums of `diff`
 
-Say, we update `[1, 2]` by `x`. Our difference array: `[A[0], (A[1] - A[0] + x), (A[2] - A[1]), (A[3] - A[2] - x),  ...]`. When we do prefix sum, due to the [[telescope effect\|telescope effect]], we get: `[A[0], A[1]+x, A[2]+x, A[3], ...]` which is as desired.
+Say, we update `[1, 2]` by `x`. Our difference array: `[A[0], (A[1] - A[0] + x), (A[2] - A[1]), (A[3] - A[2] - x),  ...]`. When we do prefix sum, due to the [[2 Zettels/telescope effect\|telescope effect]], we get: `[A[0], A[1]+x, A[2]+x, A[3], ...]` which is as desired.
 
 **Time Complexity:** Range update: O(1), Reconstruction: O(n), query : O(1).
 

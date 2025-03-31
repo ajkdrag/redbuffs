@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[precomputation techniques\|precomputation techniques]]
+> - [[2 Zettels/precomputation techniques\|precomputation techniques]]
 > - [[combinatorics\|combinatorics]]
 
 Calculating [[binomial coefficient\|binomial coefficient]] (nCr) efficiently often requires factorials and their [[2 Zettels/modular multiplicative inverse\|modular multiplicative inverse]]. Precomputation comes handy when dealing with many queries.

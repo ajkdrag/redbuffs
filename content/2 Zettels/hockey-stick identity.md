@@ -58,7 +58,7 @@ $$
 C(n, k) = C(n-1, k-1) + C(n-1, k)
 $$
 
-When you sum along a diagonal, this additive property ensures that the sum [[telescope effect\|telescopes]] to a single binomial coefficient. For example:
+When you sum along a diagonal, this additive property ensures that the sum [[2 Zettels/telescope effect\|telescopes]] to a single binomial coefficient. For example:
     
 $$
 \begin{align*}
