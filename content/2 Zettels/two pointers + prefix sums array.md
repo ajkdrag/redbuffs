@@ -65,7 +65,7 @@ int countSubarraysWithSumAtMostK(const vector<int>& A, int K) {
 ```
 
 **Adaptations:**
-- **Exact Sum = k:** Use simple [[2 Zettels/two pointers + sliding window\|two pointers + sliding window]]. Alternatively, count subarrays with sum <= k and subtract those with sum <= (k-1).
+- **Exact Sum = k:** Use simple [[2 Zettels/sliding window with variable window size\|sliding window with variable window size]]. Alternatively, count subarrays with sum <= k and subtract those with sum <= (k-1).
 - **Sum >= k:** Total number of subarrays - count of subarrays with sum <= (k-1)
 - **Negative Numbers:** More complex; since P is no longer guaranteed to be monotonic, so a simple two-pointer approach on the prefix array doesn't work directly. Use different strategies (hashing prefix sums or [[segment trees\|segment trees]])
 ## Related
