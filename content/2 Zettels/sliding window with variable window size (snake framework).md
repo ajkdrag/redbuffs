@@ -41,7 +41,7 @@ If a window `[L, R]` (representing the subarray from index L to R, inclusiv
     - `check_condition`: Function determining if adding `nums[head + 1]` keeps the window valid.
     - `update_state`: Function to update the `state` after adding `nums[head + 1]`.
 
-- **Process Answer:** The window `[tail, head]` is now the largest valid window starting at the current `tail`. Update the overall answer based on this window.
+- **Process Answer:** The window `[tail, head]` is now the largest valid window starting at the current `tail`. Update the overall answer based on this window, but check first if window is valid, i.e. `if (head - tail + 1 != 0)`
 
     ```cpp
     // Example: Find maximum length
@@ -118,7 +118,9 @@ void solve() {
       update_state(state, arr[head]);
     }
 
-    answer = max(answer, head - tail + 1);
+    if (head - tail + 1 != 0)
+        answer = max(answer, head - tail + 1);
+        
     if (tail <= head) {
       undo_update_state(state, arr[tail]);
     }

@@ -8,7 +8,8 @@
 
 This technique uses a dynamic window `[left, right]` (often termed `[tail, head]`) that expands and contracts to find optimal subarrays or substrings satisfying certain conditions. Unlike [[2 Zettels/sliding window with fixed window size\|sliding window with fixed window size]], the size isn't fixed.
 
-**Core Idea:**
+### Core Idea
+
 1.  **Expansion (head pointer):** For a given `tail` position, the `head` pointer expands the window (`head++`) as far as possible, adding elements one by one, *as long as* some condition is satisfied for the window `[tail, head+1]`
 2.  **Processing:** Once the `head` pointer cannot expand further (either reaching the end or violating the condition), the current window `[tail, head]` represents the largest valid window starting at `tail`. Process this window to update the answer (e.g., find max length, count valid windows)
 3.  **Contraction (tail pointer):** The `tail` pointer moves one step forward (`tail++`) to explore the next potential starting position. Before the next expansion phase begins, we need to undo the "effect" of the *old* `tail` position (since it's not part of current window)
@@ -18,6 +19,8 @@ This process repeats, iterating through all possible start positions and finding
 > [!Implementation Framework]
 >
 > For a structured approach to implementing variable window sliding window, especially in competitive programming, consider using the [[2 Zettels/sliding window with variable window size (snake framework)\|snake framework]]. This framework provides a template with `check_condition`, `update_state`, and `undo_update_state` functions to systematically handle window expansion and contraction.
+
+### Classic Examples
 
 > [!Question]- Given an array, find the longest subarray where the sum is less than or equal to k
 > - Use `tail = 0, head = -1` and `current_sum = 0`

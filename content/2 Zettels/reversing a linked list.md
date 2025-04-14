@@ -25,7 +25,8 @@ Reversing a singly linked list can be solved both **recursively** and **iterativ
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1738140329/reversing%20a%20linked%20list-176t03.webp)
 
-### Implementation
+## Implementation
+
 ```cpp
 ListNode *reverseRecursive(ListNode *head) {
   if (!head || !head->next)

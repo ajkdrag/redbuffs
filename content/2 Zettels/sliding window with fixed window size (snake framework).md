@@ -108,7 +108,7 @@ void solve() {
       update_state(count, arr[head]);
     }
 
-    // Process Window & Update Answer: If window is exactly size k
+    // Process Window & Update Answer: If window is valid (i.e. size k)
     if (head - tail + 1 == k) {
       ans = max(ans, count);
     }

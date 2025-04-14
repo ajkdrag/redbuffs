@@ -4,9 +4,11 @@
 
 
 > [!Topics]
-> - [[sorting algorithms\|sorting algorithms]]
 > - [[merge sort\|merge sort]]
 > - [[divide and conquer\|divide and conquer]]
+> - [[recursion\|recursion]]
+
+The merge sort algorithm follows a divide and conquer approach by recursively splitting the array into halves until single elements are obtained, then merging them back in sorted order. The key step is the merge operation which uses a two-pointer technique to efficiently combine two sorted arrays. This involves comparing elements from both arrays and placing the smaller one in the correct position, then advancing the corresponding pointer.
 
 ```cpp
 #include <iostream>
@@ -26,6 +28,7 @@ public:
 
             int i = 0, j = 0, k = 0;
 
+            // 2 pointers for merging sorted arrays
             while (i < left.size() && j < right.size()) {
                 if (left[i] < right[j]) {
                     arr[k++] = left[i++];
@@ -85,3 +88,4 @@ Total = n space
 Level 2 (four calls): Similar pattern, still total $n$ space. 
 And this continues until we reach single elements, with depth $\log(n)$.
 ## Related
+- [[in-place merge sort implementation\|in-place merge sort implementation]]

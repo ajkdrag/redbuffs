@@ -11,7 +11,7 @@
 - Focuses on meeting conditions or comparing values at two specific positions in an iterable
 - The elements between the pointers are not directly considered
 - Useful for finding pairs or comparing elements
-- Variations include [[slow and fast pointers\|slow and fast pointers]]
+- Variations include [[2 Zettels/slow and fast pointers\|slow and fast pointers]]
 
 **Sliding Window:**
 - Analyzes subarrays (windows) within an iterable

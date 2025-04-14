@@ -14,7 +14,7 @@ Precomputation techniques are a powerful [[algorithmic paradigm\|algorithmic par
 
 - When the same calculations are needed multiple times
 - When multiple queries need to be processed on the same dataset
-- When a [[2 Zettels/brute force\|brute force]] approach leads to TLE (Time Limit Exceeded) errors
+- When a [[2 Zettels/complete search\|complete search]] approach leads to TLE (Time Limit Exceeded) errors
 
 ## Common Precomputation Techniques
 
@@ -50,4 +50,4 @@ Precomputation techniques are a powerful [[algorithmic paradigm\|algorithmic par
 
 ## Related
 - [[dynamic programming\|dynamic programming]]
-- [[2 Zettels/brute force\|brute force]]
+- [[2 Zettels/complete search\|complete search]]
