@@ -15,6 +15,7 @@ export const sharedPageComponents: SharedLayout = {
         navigation: {
           links: [
             { text: "Zettels", link: "/2-Zettels/index", icon: "articles" },
+            { text: "ProblemSets", link: "/6-Problems/index", icon: "articles" },
             { text: "Contact", link: "mailto:altukhan43@gmail.com", icon: "contact" },
           ],
         },
@@ -60,6 +61,7 @@ export const defaultContentPageLayout: PageLayout = {
         navigation: {
           links: [
             { text: "Zettels", link: "/2-Zettels/index", icon: "articles" },
+            { text: "ProblemSets", link: "/6-Problems/index", icon: "articles" },
             { text: "Contact", link: "mailto:altukhan43@gmail.com", icon: "contact" },
           ],
         },
