@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/transformer\|transformer]]
+> - [[transformer\|transformer]]
 
 Vanilla transformers have the Encoder and the Decoder blocks. Both elements harness the power of [[self-attention\|self-attention]] mechanisms to intricately process data, significantly enhancing the model's proficiency in handling sequential information. The encoder's primary function is to encode input sequences, transforming raw data into context-aware representations.
 

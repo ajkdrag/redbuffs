@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]
+> - [[2 Zettels/encoder-decoder architecture\|encoder-decoder architecture]]
 
 The encoder takes variable-length sequences as input `X`. The implementation will be provided by any model that inherits this base `Encoder` class.
 

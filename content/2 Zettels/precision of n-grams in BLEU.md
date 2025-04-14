@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/BLEU score\|BLEU score]]
+> - [[2 Zettels/BLEU score\|BLEU score]]
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1728369357/jdklgdnl9monuosjeeua.png)
 

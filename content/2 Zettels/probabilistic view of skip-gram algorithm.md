@@ -5,9 +5,9 @@
 
 
 > [!Topics]
-> - [[3 Topics/skip-gram\|skip-gram]]
+> - [[2 Zettels/skip-gram\|skip-gram]]
 
-The skip-gram model in [[3 Topics/word2vec\|word2vec]] is fundamentally based on a probabilistic view of word-context relationships. Let's build this view from the ground up with few basic assumptions: 
+The skip-gram model in [[word2vec\|word2vec]] is fundamentally based on a probabilistic view of word-context relationships. Let's build this view from the ground up with few basic assumptions: 
 
 - [[2 Zettels/distributional hypothesis\|distributional hypothesis]]: Words that appear in similar contexts have similar meanings
 - If we know a center word (like "loves"), we can predict its surrounding words (like "the", "man", "his", and "son")

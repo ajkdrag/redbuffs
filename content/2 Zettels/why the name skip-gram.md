@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/skip-gram\|skip-gram]]
+> - [[2 Zettels/skip-gram\|skip-gram]]
 
 It's like a traditional n-gram model but with the key difference that it skips words rather than using continuous sequences.
 

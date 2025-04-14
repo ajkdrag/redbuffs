@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]
+> - [[2 Zettels/encoder-decoder architecture\|encoder-decoder architecture]]
 
 The encoder takes variable length inputs and creates encoded representations aka *hidden states* for them. Mathematically, we can write a recurrence as:
 $$

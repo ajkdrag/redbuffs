@@ -7,7 +7,7 @@
 > - [[quantization\|quantization]]
 > - [[activation functions\|activation functions]]
 
-Activations are quantized to a specified bit-width (8-bit, in the case of [[3 Topics/BitNet b1.58\|BitNet b1.58]]) using **absmax per token quantization**. This involves scaling the activations into the range `[−128, 127]` for an 8-bit bit-width. The quantization formula is:
+Activations are quantized to a specified bit-width (8-bit, in the case of [[2 Zettels/BitNet b1.58\|BitNet b1.58]]) using **absmax per token quantization**. This involves scaling the activations into the range `[−128, 127]` for an 8-bit bit-width. The quantization formula is:
 
 $$
 \begin{align*}

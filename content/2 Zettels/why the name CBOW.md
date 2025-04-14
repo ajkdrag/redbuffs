@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/CBOW\|CBOW]]
+> - [[2 Zettels/CBOW\|CBOW]]
 
 In CBOW (Continuous Bag of Words), we condition the probability of center word based on contedx words. The nomenclature can be broken down as :
 

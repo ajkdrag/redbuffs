@@ -11,7 +11,7 @@ In the context of interpretability of experts in MoE, we can observe:
 - **Non-transformer**: More interpretable, clearer specialization
 - **Transformer**: More diffuse, harder to characterize expert roles
 
-If we dive deeper into [[3 Topics/transformer\|transformer]] architectures specifically, we can observe (based on [[2 Zettels/switch-transformer MoE\|switch-transformer MoE]] authors):
+If we dive deeper into [[transformer\|transformer]] architectures specifically, we can observe (based on [[2 Zettels/switch-transformer MoE\|switch-transformer MoE]] authors):
 - **Encoder** expert specializes in shallow concepts
 - **Decoder** expert has less specialization
 

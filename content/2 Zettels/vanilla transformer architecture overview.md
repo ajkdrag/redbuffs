@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/transformer\|transformer]]
+> - [[transformer\|transformer]]
 
 Transformers use a network architecture that relies on [[attention mechanism\|attention mechanism]] to *weigh the influence of different input parts on each output part*. The original paper designed the architecture as:
 
@@ -15,7 +15,7 @@ The key components are:
 - [[attention mechanism\|attention mechanism]]: Enables the model to selectively focus on different parts of the input sequence
 	- Includes the concept of [[self-attention\|self-attention]] and [[multi-head attention\|multi-head attention]]
 - **Parallelization**: Model can process all elements in the sequence simultaneously.
-- [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]: Model was originally used for seq-seq tasks, e.g. machine translation and has 2 blocks: 
+- [[2 Zettels/encoder-decoder architecture\|encoder-decoder architecture]]: Model was originally used for seq-seq tasks, e.g. machine translation and has 2 blocks: 
 	- [[2 Zettels/transformer encoder block\|transformer encoder block]]
 	- [[2 Zettels/transformer decoder block\|transformer decoder block]]
 - [[positional encoding\|positional encoding]]: Incorporated to account for the sequential nature of input data.

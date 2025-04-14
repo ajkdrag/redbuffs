@@ -6,7 +6,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/BLEU score\|BLEU score]]
+> - [[2 Zettels/BLEU score\|BLEU score]]
 
 Here's the formula for BLEU:
 $$

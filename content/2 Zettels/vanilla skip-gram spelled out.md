@@ -6,9 +6,9 @@
 
 
 > [!Topics]
-> - [[3 Topics/skip-gram\|skip-gram]]
+> - [[2 Zettels/skip-gram\|skip-gram]]
 
-In [[3 Topics/word2vec\|word2vec]], we aim to get good [[word embeddings\|word embeddings]] by using local contextual information in sentences. The prior here is: words close to each other in sentences have similar meanings, and are also close in the vector space compared to other words. Let's take a sentence:
+In [[word2vec\|word2vec]], we aim to get good [[word embeddings\|word embeddings]] by using local contextual information in sentences. The prior here is: words close to each other in sentences have similar meanings, and are also close in the vector space compared to other words. Let's take a sentence:
 $$
 \text{The \textcolor{orange}{cat} \textcolor{skyblue}{sat} \textcolor{orange}{on} the mat}
 $$

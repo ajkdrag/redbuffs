@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/skip-gram\|skip-gram]]
+> - [[2 Zettels/skip-gram\|skip-gram]]
 
 In the [[2 Zettels/vanilla skip-gram spelled out\|standard skip-gram]] model, for each center word $w_c$, the model needs to **classify** which word from the entire vocabulary is the correct context word $w_o$. This is analogous to typical classification tasks where the model has multiple classes (the words in the vocabulary), and it needs to pick one correct class (the context word). The model uses a softmax function to assign probabilities to all the words in the vocabulary. The word with the highest probability is considered the model’s prediction. This is similar to how a classifier assigns probabilities to classes and picks the class with the highest score.
 

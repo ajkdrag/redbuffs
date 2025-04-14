@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/transformer\|transformer]]
+> - [[transformer\|transformer]]
 
 Responsible for generating output sequences based on the *encoded inputs* and *previously generated outputs*.
 
@@ -35,4 +35,4 @@ Responsible for generating output sequences based on the *encoded inputs* and *p
 
 ## Related
 - [[2 Zettels/transformer encoder block\|transformer encoder block]]
-- [[3 Topics/GPT\|GPT]]
+- [[GPT\|GPT]]

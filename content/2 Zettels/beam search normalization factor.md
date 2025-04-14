@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/beam search\|beam search]]
+> - [[2 Zettels/beam search\|beam search]]
 
 In beam search with beam size $k$, we finally get $k$ sequences, out of which we pick one which maximizes the following score:
 $$

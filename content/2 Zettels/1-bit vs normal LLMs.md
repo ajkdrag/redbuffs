@@ -4,7 +4,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/1-bit LLMs\|1-bit LLMs]]
+> - [[2 Zettels/1-bit LLMs\|1-bit LLMs]]
 
 In normal case, LLMs are represented in 16-bit or 32-bit precision. 1-bit LLMs use 1-bit to store weights. This results in a significant reduction in `total memory size = size of 1 weight * num weights` .
 

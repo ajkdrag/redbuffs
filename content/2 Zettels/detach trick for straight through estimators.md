@@ -19,7 +19,7 @@ y = x + (f(x).detach() - x.detach())
 y = x + (f(x) - x).detach()
 ```
 
-where $f(x)$ is a **discrete function**. Something like this is commonly seen during quantization and more recently in [[3 Topics/1-bit LLMs\|1-bit LLMs]] such as [[3 Topics/BitNet b1.58\|BitNet b1.58]] which discretizes weights to `[-1, 0, 1]`.
+where $f(x)$ is a **discrete function**. Something like this is commonly seen during quantization and more recently in [[2 Zettels/1-bit LLMs\|1-bit LLMs]] such as [[2 Zettels/BitNet b1.58\|BitNet b1.58]] which discretizes weights to `[-1, 0, 1]`.
 
 In the forward pass, `y` value comes out to be `f(x)` as we want. The beauty of this comes during the backward pass, where we have 
 

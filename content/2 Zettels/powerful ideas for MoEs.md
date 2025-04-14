@@ -10,7 +10,7 @@
     - Extracted model will be smaller, and inference will be faster
 - [[knowledge distillation\|knowledge distillation]]: distil into a dense model
 - [[aggregation of experts\|aggregation of experts]]: merge weights of experts
-- Extreme [[quantization\|quantization]], such as ones seen in [[3 Topics/1-bit LLMs\|1-bit LLMs]]
+- Extreme [[quantization\|quantization]], such as ones seen in [[2 Zettels/1-bit LLMs\|1-bit LLMs]]
 
 ## Related
 - [[2 Zettels/popular MoE models\|popular MoE models]]

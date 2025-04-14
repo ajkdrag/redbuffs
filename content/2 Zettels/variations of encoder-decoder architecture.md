@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/encoder-decoder architecture\|encoder-decoder architecture]]
+> - [[2 Zettels/encoder-decoder architecture\|encoder-decoder architecture]]
 
 Several variations of the standard architecture exist and can be categorized as:
 
@@ -17,7 +17,7 @@ Several variations of the standard architecture exist and can be categorized as:
 - Use of [[2 Zettels/teacher forcing\|teacher forcing]] technique, where insead of feeding the predicted output, feed the ground truth as input to the decoder for next timestep
 
 **Inference variations**
-- We can't do teacher forcing during inference since we don't have ground truth, so we have to feed the predicted output to decoder for next timestep. But here, instead of taking `argmax` over the output distribution (aka the vanilla [[3 Topics/greedy decoding\|greedy decoding]]), we can apply some other sampling technique such as [[3 Topics/beam search\|beam search]]
+- We can't do teacher forcing during inference since we don't have ground truth, so we have to feed the predicted output to decoder for next timestep. But here, instead of taking `argmax` over the output distribution (aka the vanilla [[2 Zettels/greedy decoding\|greedy decoding]]), we can apply some other sampling technique such as [[2 Zettels/beam search\|beam search]]
 
 **Condition on encoder output**
 - Pass the encoder output through an MLP layer, before connecting with decoder

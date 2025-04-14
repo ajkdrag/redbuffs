@@ -20,7 +20,7 @@ Step 2: The cat sits on the → mat
 ```
 
 **Common Applications**
-- Language Models (like [[3 Topics/GPT\|GPT]])
+- Language Models (like [[GPT\|GPT]])
 - Time Series Prediction
 - Speech Generation
 - Music Generation

@@ -6,7 +6,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/BLEU score\|BLEU score]]
+> - [[2 Zettels/BLEU score\|BLEU score]]
 
 The brevity penalty (BP) is a factor that penalizes translations that are too short. Recall that we calculate the [[2 Zettels/precision of n-grams in BLEU\|precision of n-grams in BLEU]]. Short translations can *artificially give high precision scores* without conveying complete meaning. If LR is the length ratio of predicted sentence to ground truth sentence, then the BP is defined as follows:
 $$

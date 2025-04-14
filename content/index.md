@@ -3,7 +3,4 @@
 ---
 
 
-Hi, I am Altamash. This is my little digital garden — make yourself at home! This site is constantly shifting, but do checkout my second brain collections. They are organized as:
-- [[2 Zettels/\|Zettelkasten notes]] 
-- [[3 Topics/\|Topics]]
-- [[4 Articles/\|Articles]]
+Hi, I am Altamash. This is my little digital garden — make yourself at home! This site is constantly shifting, but do checkout my [[2 Zettels/\|knowledge base]]. You can use the search option to search for a topic. 

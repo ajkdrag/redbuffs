@@ -18,5 +18,5 @@
 ## Related
 - [[cross-encoders\|cross-encoders]]
 - [[ColBERT\|ColBERT]]
-- [[3 Topics/GPT\|GPT]]
+- [[GPT\|GPT]]
 - [[2 Zettels/reranking concept in RAG\|reranking concept in RAG]]

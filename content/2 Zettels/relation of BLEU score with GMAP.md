@@ -5,7 +5,7 @@
 
 
 > [!Topics]
-> - [[3 Topics/BLEU score\|BLEU score]]
+> - [[2 Zettels/BLEU score\|BLEU score]]
 
 In [[2 Zettels/BLEU formula explained\|BLEU formula]], we have a weighting term $w_n$ whose value is kept $1/n$ to reward higher n-grams more if they match with ground truth. Let's ignore the [[2 Zettels/brevity penalty term in BLEU score\|brevity penalty]] and just expand the `exp` term:
 $$
