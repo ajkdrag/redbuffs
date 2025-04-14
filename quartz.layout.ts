@@ -14,9 +14,7 @@ export const sharedPageComponents: SharedLayout = {
         },
         navigation: {
           links: [
-            { text: "Articles", link: "/4-Articles/index", icon: "articles" },
             { text: "Zettels", link: "/2-Zettels/index", icon: "articles" },
-            { text: "Resume", link: "/5-Site/my-resume", icon: "resume" },
             { text: "Contact", link: "mailto:altukhan43@gmail.com", icon: "contact" },
           ],
         },
@@ -61,9 +59,7 @@ export const defaultContentPageLayout: PageLayout = {
         },
         navigation: {
           links: [
-            { text: "Articles", link: "/4-Articles/index", icon: "articles" },
             { text: "Zettels", link: "/2-Zettels/index", icon: "articles" },
-            { text: "Resume", link: "/5-Site/my-resume", icon: "resume" },
             { text: "Contact", link: "mailto:altukhan43@gmail.com", icon: "contact" },
           ],
         },
