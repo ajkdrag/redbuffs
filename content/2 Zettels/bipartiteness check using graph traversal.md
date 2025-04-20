@@ -14,7 +14,7 @@ A [[bipartite graph\|bipartite graph]] is one where vertices can be divided int
 
 1. Initialize color array with -1 (uncolored)
 2. Start [[2 Zettels/BFS\|BFS]] from any node, assign color 0
-3. For each node, color its neighbors with *opposite* color
+3. For each node, color its neighbors with _opposite_ color
 4. If neighbor already colored with same color → graph not bipartite
 5. Repeat until all nodes colored or conflict found
 
@@ -29,19 +29,19 @@ bool isBipartiteBFS(const vector<vector<int>>& graph) {
 
     for (int i = 0; i < n; ++i) {
         if (color[i] != -1) continue; // already colored
-        
+
         q.push(i);
         color[i] = 0;
-        
+
         while (!q.empty()) {
             int u = q.front();
             q.pop();
-            
+
             for (int v : graph[u]) {
                 if (color[v] == -1) {
                     color[v] = color[u] ^ 1; // alternate color
                     q.push(v);
-                } 
+                }
                 else if (color[v] == color[u]) {
                     return false; // same color adjacent
                 }
@@ -60,20 +60,20 @@ Same logic as BFS but implemented recursively:
 bool isBipartiteDFS(const vector<vector<int>>& graph) {
     int n = graph.size();
     vector<int> color(n, -1);
-    
+
     function<bool(int)> dfs = [&](int u) {
         for (int v : graph[u]) {
             if (color[v] == -1) {
                 color[v] = color[u] ^ 1;
                 if (!dfs(v)) return false;
-            } 
+            }
             else if (color[v] == color[u]) {
                 return false;
             }
         }
         return true;
     };
-    
+
     for (int i = 0; i < n; ++i) {
         if (color[i] == -1) {
             color[i] = 0;
@@ -84,8 +84,8 @@ bool isBipartiteDFS(const vector<vector<int>>& graph) {
 }
 ```
 
-> [!Note] 
-> 
+> [!Note]
+>
 > Both approaches handle disconnected graphs by checking all components. The BFS method is generally preferred for its non-recursive nature and better cache performance
 
 ## Related

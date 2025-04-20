@@ -1,16 +1,13 @@
 ---
-publish: true
-tags:
-  - type/problem
-platform: AtCoder
-link: https://atcoder.jp/contests/abc143/tasks/abc143_d
+{"publish":true,"tags":["type/problem"],"platform":"AtCoder","link":"https://atcoder.jp/contests/abc143/tasks/abc143_d","PassFrontmatter":true,"created":"2025-03-16T17:07:06.434+05:30"}
 ---
+
 
 > [!Topics]
 >
-> - [[binary search]]
-> - [[range queries]]
-> - [[combinatorics]]
+> - [[binary search\|binary search]]
+> - [[range queries\|range queries]]
+> - [[combinatorics\|combinatorics]]
 
 Given a set of stick lengths, count the number of distinct triangles that can be formed. A valid triangle must satisfy the triangle inequality: the sum of any two sides must be greater than the third side (a + b > c, a + c > b, b + c > a).
 
@@ -44,7 +41,7 @@ Given a set of stick lengths, count the number of distinct triangles that can be
     - **Iterate over Longest Side:** Iterate through each possible length `i` from the maximum possible length down to 1, considering `i` as the longest side 'c' of the triangle
     - **Case A: Two or Three Sides Equal to 'c':**
         - If `freq[i]` (which we'll call `cnt_i`) is greater than or equal to 2, we can form triangles of the form (i, i, x) where `x < i`. We need to count the number of sticks with length `x` such that `x + i > i` (triangle inequality), which simplifies to `x > 0`. Since stick lengths are positive, _any_ `x < i` will work
-        - The number of such triangles is `C(cnt_i, 2) * (number of sticks with length < i)`. We can find the "number of sticks with length < i" by summing the frequencies from 1 to `i-1`. This is a [[range query on frequency array]]
+        - The number of such triangles is `C(cnt_i, 2) * (number of sticks with length < i)`. We can find the "number of sticks with length < i" by summing the frequencies from 1 to `i-1`. This is a [[range query on frequency array\|range query on frequency array]]
         - If `cnt_i >= 3`, we can also form a triangle with all sides equal to 'i': (i, i, i). The number of such triangles is `C(cnt_i, 3)`
     - **Case B: One Side Equal to 'c', Two Other Sides 'j':**
         - Iterate through possible lengths 'j' from `i - 1` down to `i // 2 + 1` (we need `j + j > i` (triangle inequality), which simplifies to `j > i / 2`)

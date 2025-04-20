@@ -4,6 +4,7 @@
 
 
 > [!Topics]
+>
 > - [[matrices\|matrices]]
 > - [[2 Zettels/prefix sums\|prefix sums]]
 
@@ -25,10 +26,10 @@ Once prefix sum array is constructed, we are usually asked to answer [[range que
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1739797129/2D%20prefix%20sums-ngcvn0.webp)
 
 Explanation:
+
 1. `PS[r2][c2]` includes the sum of the entire rectangle from `(0, 0)` to `(r2, c2)`.
 2. `PS[r1-1][c2]` (if `r1 > 0`) removes the sum of the rectangle above our target rectangle (from `(0, 0)` to `(r1-1, c2)`).
 3. `PS[r2][c1-1]` (if `c1 > 0`) removes the sum of the rectangle to the left of our target rectangle (from `(0, 0)` to `(r2, c1-1)`).
 4. `PS[r1-1][c1-1]` (if `r1 > 0` and `c1 > 0`) was subtracted twice (once in step 2 and once in step 3), so we need to add it back to correct for the over-subtraction. This rectangle represents the area that was removed twice.
-
 
 ## Related

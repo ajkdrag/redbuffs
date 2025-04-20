@@ -4,6 +4,7 @@
 
 
 > [!Topics]
+>
 > - [[algorithmic paradigm\|algorithmic paradigm]]
 
 > Try out all the possibilities to find the one that satisfies the problem's criteria.

@@ -4,8 +4,9 @@
 
 
 > [!Topics]
-> - [[neural information retrieval\|neural information retrieval]] 
-> - [[cross-encoders\|cross-encoders]] 
+>
+> - [[neural information retrieval\|neural information retrieval]]
+> - [[cross-encoders\|cross-encoders]]
 
 Comprehensive interaction between all elements of query and document
 
@@ -18,4 +19,5 @@ In this kind of Neural IR, the model takes all query and document terms, and giv
     - Difficult to use in production
 
 ## Related
+
 - [[2 Zettels/cross-encoders for reranking in RAG\|cross-encoders for reranking in RAG]]
