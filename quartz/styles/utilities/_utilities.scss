@@ -1,0 +1,22 @@
+.text-highlight {
+  background-color: var(--textHighlight);
+  padding: 0 0.1rem;
+  border-radius: 5px;
+}
+::selection {
+  background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
+  color: var(--darkgray);
+}
+
+.footnotes {
+  margin-top: 2rem;
+  border-top: 1px solid var(--lightgray);
+}
+
+.external-embed.youtube,
+iframe.pdf {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}

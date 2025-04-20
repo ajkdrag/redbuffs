@@ -1,0 +1,56 @@
+// components/_tables.scss
+// Table styles
+
+@use "../abstracts/variables" as vars;
+
+.table-container {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+
+  & > table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: var(--radius, 4px);
+    overflow: hidden;
+    border: 1px solid var(--lightgray);
+
+    th,
+    td {
+      min-width: 75px;
+      padding: 0.5rem 0.75rem;
+      line-height: 1.7;
+    }
+
+    & > * {
+      line-height: 2rem;
+    }
+  }
+}
+
+th {
+  text-align: left;
+  font-weight: vars.$semiBoldWeight;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid var(--gray);
+  color: var(--dark);
+  background-color: var(--lightgray);
+}
+
+td {
+  padding: 0.5rem 0.75rem;
+}
+
+tr {
+  border-bottom: 1px solid var(--lightgray);
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  &:nth-child(even) {
+    background-color: color-mix(in srgb, var(--lightgray) 30%, transparent);
+  }
+}

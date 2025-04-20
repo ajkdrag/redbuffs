@@ -1,0 +1,54 @@
+// base/_base.scss
+// Base element styles
+
+@use "../abstracts/variables" as vars;
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: none;
+  overflow-x: hidden;
+  width: 100vw;
+  font-size: 16px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--light);
+  font-family: var(--bodyFont);
+  color: var(--darkgray);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+}
+
+section,
+article {
+  background-color: transparent;
+  max-width: var(--max-w, 680px);
+  width: 100%;
+  padding: 2rem;
+  border: none;
+
+  /* Ensure images can be centered */
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--darkgray);
+}
+
+// Add smooth transitions when theme changes
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}

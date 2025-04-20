@@ -1,0 +1,47 @@
+// abstracts/_functions.scss
+// Utility functions for use in SCSS
+
+// Convert px to rem
+@function rem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
+
+// Calculate fluid typography size
+@function fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    @return calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+  }
+}
+
+// Remove unit from a number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+// Get color from a palette
+@function color($color, $shade: 'base') {
+  @if map-has-key($colors, $color) {
+    $color-map: map-get($colors, $color);
+    @if map-has-key($color-map, $shade) {
+      @return map-get($color-map, $shade);
+    }
+    @error "Unknown shade `#{$shade}` in color `#{$color}`.";
+  }
+  @error "Unknown color `#{$color}` in $colors map.";
+}
+
+// Get spacing value
+@function spacing($key) {
+  @if map-has-key($spacing-map, $key) {
+    @return map-get($spacing-map, $key);
+  }
+  @error "Unknown spacing key `#{$key}` in $spacing-map.";
+}

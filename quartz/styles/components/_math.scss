@@ -1,0 +1,41 @@
+// components/_math.scss
+// Math formula styles
+
+@use "../abstracts/variables" as vars;
+
+.katex,
+.math {
+  color: var(--darkgray);
+  fill: var(--darkgray);
+  hyphens: auto;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.math {
+  &.math-display {
+    text-align: center;
+  }
+}
+
+.page article li .katex-display {
+  margin-top: 1em;
+}
+
+.katex-display > .katex {
+  font-size: clamp(1.15rem, 1vw + 0.75rem, 1.35rem);
+  padding: 0.5rem;
+  overflow-x: auto;
+}
+
+// Scrollbar styling for math formulas
+.katex::-webkit-scrollbar {
+  height: map-get(vars.$spacing-map, "xxs");
+}
+
+.katex::-webkit-scrollbar-thumb {
+  border-radius: map-get(vars.$spacing-map, "xxs");
+  background: var(--lightgray);
+}

@@ -1,137 +1,112 @@
-@use "../variables.scss" as quartz;
-@use "../abstracts/spacing";
+@use "../abstracts/variables" as vars;
 @use "../abstracts/mixins";
-@use "../abstracts/theme";
 
-// Inline code
+// Inline code - simple and clean styling
 :not(pre) > code {
-  font-size: 0.9em;
-  background: transparent;
-  color: var(--gray);
+  font-size: 0.85em;
+  background: var(--lightgray);
+  color: var(--dark);
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radius, 4px);
+  font-weight: normal;
+  letter-spacing: normal;
 }
 
-// Code blocks
+// Code blocks - improved styling
 pre {
-  background: color-mix(in srgb, var(--light) 96%, var(--dark));
-  border: 1px solid var(--lightgray);
-  border-radius: 8px;
+  background: var(--shiki-light-bg, #f8f9fb);
+  color: var(--shiki-light, #2e3440);
+  border: 1px solid var(--border, var(--lightgray));
+  border-radius: var(--radius, 4px);
   margin: 1.5rem 0;
   position: relative;
-  overflow: hidden;
-  box-shadow: theme.$shadow-sm, theme.$shadow-md;
-  transition: all theme.$transition-fast ease;
-  
-  &:hover {
-    box-shadow: theme.$shadow-md, theme.$shadow-lg;
+  overflow: auto;
+  box-shadow: none;
+  font-family: var(--codeFont);
+  padding: 0;
+  transition: all 0.2s ease;
+  max-height: 400px; // Default max height
+
+  // Expanded state
+  &.expanded {
+    max-height: 800px;
   }
 
-  .code-icon {
-    position: absolute;
-    top: 8px;
-    left: 12px;
-    z-index: 1;
-    height: 16px;
-    width: 16px;
-    color: var(--gray);
-    opacity: 0.8;
-  }
-  
-  // Title bar
-  &::before {
-    content: '';
-    height: 32px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: color-mix(in srgb, var(--light) 92%, var(--dark));
-    border-bottom: 1px solid var(--lightgray);
-    z-index: 0;
+  &:hover {
+    box-shadow: var(--card-shadow);
   }
 
   // Code content
   & > code {
     display: block;
     margin: 0;
-    padding: 2.5rem 1rem 1rem;
-    font-size: 0.85rem;
+    padding: 1rem 0.5rem 1rem 0.75rem;
+    font-size: 0.95rem;
     line-height: 1.6;
     overflow-x: auto;
-    position: relative; // Important for proper scrolling
-    
-    & > [data-line] {
-      padding: 0 0.25rem;
-      border-left: 3px solid transparent;
-      min-height: 1.5rem;
-      width: max-content;
-      min-width: 100%;
+    position: relative;
+    counter-reset: line;
+    background: transparent;
+    border-radius: 0;
 
+    // Line styling
+    & > [data-line] {
+      display: flex;
+      align-items: flex-start;
+      min-height: 1.6em;
+      width: 100%;
+      padding: 0;
+      background: none;
+      border-left: 3px solid transparent;
+      position: relative;
+      padding-left: 2.5em; // Add padding for line numbers
+      padding-right: 1em; // Add right padding to prevent text from touching the edge
+
+      // Line numbers - improved gutter positioning
       &::before {
         content: counter(line);
         counter-increment: line;
-        margin-right: 1.5rem;
         display: inline-block;
-        text-align: right;
+        width: 2.5em;
+        text-align: left;
         color: var(--gray);
+        user-select: none;
+        opacity: 0.7;
+        font-size: 0.9em;
+        font-family: var(--codeFont);
+        position: absolute;
+        left: 0.5em;
+        top: 0;
+        background: transparent;
+        z-index: 1;
       }
 
+      // Highlighted line
       &[data-highlighted-line] {
-        background-color: color-mix(in srgb, var(--highlight) 15%, transparent);
+        background-color: color-mix(in srgb, var(--highlight) 20%, transparent);
         border-left: 3px solid var(--secondary);
       }
 
+      // Highlighted characters
       &[data-highlighted-chars] {
         background-color: color-mix(in srgb, var(--highlight) 40%, transparent);
         border-radius: 4px;
         padding: 0.2rem 0.1rem;
+        font-weight: 500;
       }
     }
   }
 
-  // Copy button
-  .clipboard-button {
-    @include mixins.flex-center;
-    position: absolute;
-    right: 8px;
-    z-index: 1;
-    padding: 0 12px;
-    height: 24px;
-    gap: 6px;
-    border: 1px solid var(--lightgray);
-    border-radius: 4px;
-    background: color-mix(in srgb, var(--light) 98%, var(--dark));
-    opacity: 1;
-    transition: all theme.$transition-fast ease;
-
-    &::after {
-      content: 'Copy';
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-
-    &:hover {
-      background: var(--lightgray);
-      border-color: var(--secondary);
-      
-      svg {
-        fill: var(--secondary);
-      }
-    }
-
-    svg {
-      width: 14px;
-      height: 14px;
-      fill: var(--darkgray);
-      transition: fill theme.$transition-fast ease;
-    }
-  }
+  // Copy button styling is now in _clipboard.scss
 
   // Dark mode adjustments
   :root[saved-theme="dark"] & {
-    box-shadow: theme.$shadow-sm-dark, theme.$shadow-md-dark;
-    
-    &:hover {
-      box-shadow: theme.$shadow-md-dark, theme.$shadow-lg-dark;
+    background: var(--shiki-dark-bg, #2e3440);
+    color: var(--shiki-dark, #eceff4);
+    border-color: var(--border);
+
+    [data-line]::before {
+      color: var(--gray);
     }
   }
 }

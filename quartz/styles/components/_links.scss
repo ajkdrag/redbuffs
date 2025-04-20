@@ -1,32 +1,86 @@
-@use "../variables.scss" as quartz;
+@use "../abstracts/variables" as quartz;
 @use "../abstracts/spacing";
 @use "../abstracts/mixins";
 @use "../abstracts/theme";
 
 a {
+  font-weight: normal;
   color: var(--secondary);
-  transition: all theme.$transition-fast ease;
+  transition: all 0.2s ease;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: auto;
 
   &:hover {
     color: var(--tertiary);
+    text-decoration-thickness: 2px;
   }
 
   &.external {
     text-decoration: underline;
     -webkit-text-decoration: underline;
-    text-decoration-thickness: 0.1rem;
-    text-underline-offset: 0.2em;
-    text-decoration-skip-ink: auto;
+
+    .external-icon {
+      height: 1ex;
+      margin: 0 0.15em;
+      opacity: 0.6;
+
+      > path {
+        fill: var(--secondary);
+      }
+    }
+
+    &:hover .external-icon {
+      opacity: 1;
+
+      > path {
+        fill: var(--tertiary);
+      }
+    }
   }
 
   &.internal {
-    background: theme.$bg-light-mix;
-    padding: 0.1em 0.3em;
-    border-radius: 4px;
+    text-decoration: underline;
+    background-color: transparent;
+    padding: 0;
+    line-height: inherit;
 
     &:hover {
-      background: var(--highlight);
       color: var(--tertiary);
+    }
+
+    &:has(> img) {
+      background-color: transparent;
+      border-radius: 0;
+      padding: 0;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+    }
+
+    &.tag-link {
+      border-radius: 8px;
+      background-color: var(--highlight);
+      padding: 0.2rem 0.4rem;
+      margin: 0 0.1rem;
+      text-decoration: none;
+
+      &::before {
+        content: "#";
+      }
+    }
+
+    &.non-existent {
+      color: var(--gray);
+      text-decoration-style: dotted;
+      pointer-events: none;
+      cursor: default;
+
+      &:hover {
+        color: var(--gray);
+        text-decoration-thickness: 1px;
+      }
     }
   }
 }
@@ -35,7 +89,7 @@ a {
 .external-icon {
   height: 1ex;
   margin: 0 0.15em;
-  
+
   h2 & {
     display: none;
   }

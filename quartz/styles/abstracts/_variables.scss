@@ -1,0 +1,67 @@
+// abstracts/_variables.scss
+// This file contains all the variables used throughout the application
+// It serves as a single source of truth for theme variables, spacing, breakpoints, etc.
+
+@use "sass:color";
+
+// ==============================
+// TRANSITIONS
+// ==============================
+$transition-fast: 0.2s;
+$transition-medium: 0.3s;
+$transition-slow: 0.4s;
+
+// ==============================
+// COLORS & EFFECTS
+// ==============================
+$bg-light-mix: color-mix(in srgb, var(--secondary) 4%, transparent);
+$bg-hover-mix: color-mix(in srgb, var(--light) 40%, transparent);
+$selection-mix: color-mix(in srgb, var(--tertiary) 50%, transparent);
+
+// ==============================
+// SHADOWS
+// ==============================
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 2px 4px rgba(0, 0, 0, 0.05);
+$shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+$shadow-sm-dark: 0 1px 2px rgba(0, 0, 0, 0.2);
+$shadow-md-dark: 0 2px 4px rgba(0, 0, 0, 0.15);
+$shadow-lg-dark: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+// ==============================
+// BREAKPOINTS
+// ==============================
+$breakpoints: (
+  mobile: 800px,
+  desktop: 1200px,
+);
+
+$mobile: "(max-width: #{map-get($breakpoints, mobile)})";
+$tablet: "(min-width: #{map-get($breakpoints, mobile)}) and (max-width: #{map-get($breakpoints, desktop)})";
+$desktop: "(max-width: #{map-get($breakpoints, desktop)})";
+
+// ==============================
+// SPACING
+// ==============================
+$pageWidth: #{map-get($breakpoints, mobile)};
+$sidePanelWidth: 320px;
+$topSpacing: 3rem;
+
+$spacing-map: (
+  "xxs": 0.25rem,
+  "xs": 0.5rem,
+  "sm": 0.75rem,
+  "md": 1rem,
+  "lg": 1.5rem,
+  "xl": 2rem,
+  "xxl": 3rem
+);
+
+// ==============================
+// FONT WEIGHTS
+// ==============================
+$regularWeight: 400;
+$mediumWeight: 500;
+$semiBoldWeight: 600;
+$boldWeight: 700;

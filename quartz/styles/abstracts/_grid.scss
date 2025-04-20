@@ -1,0 +1,29 @@
+// abstracts/_grid.scss
+// Grid layout variables and mixins
+
+// Desktop grid configuration
+$desktopGrid: (
+  templateColumns: "260px minmax(0, 1fr) 260px",
+  templateRows: "auto 1fr auto",
+  columnGap: "40px",
+  rowGap: "32px",
+  templateAreas: '"grid-sidebar-left grid-header grid-sidebar-right" "grid-sidebar-left grid-center grid-sidebar-right" "grid-sidebar-left grid-footer grid-sidebar-right"'
+);
+
+// Tablet grid configuration
+$tabletGrid: (
+  templateColumns: "minmax(0, 1fr) 1fr",
+  templateRows: "auto auto 1fr auto",
+  columnGap: "24px",
+  rowGap: "24px",
+  templateAreas: '"grid-header grid-header" "grid-sidebar-left grid-sidebar-left" "grid-center grid-center" "grid-footer grid-footer"'
+);
+
+// Mobile grid configuration
+$mobileGrid: (
+  templateColumns: "minmax(0, 1fr)",
+  templateRows: "auto auto 1fr auto",
+  columnGap: "0",
+  rowGap: "16px",
+  templateAreas: '"grid-header" "grid-sidebar-left" "grid-center" "grid-footer"'
+);

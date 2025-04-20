@@ -1,0 +1,27 @@
+// base/_typography.scss
+// Typography rules
+
+@use "../abstracts/variables" as vars;
+
+p,
+text {
+  color: var(--darkgray);
+  fill: var(--darkgray);
+  hyphens: auto;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+strong {
+  font-weight: vars.$semiBoldWeight;
+  color: var(--dark);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+

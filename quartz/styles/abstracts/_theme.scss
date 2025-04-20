@@ -1,19 +1,23 @@
 // abstracts/_theme.scss
-@use "sass:color";
+// Theme-related variables and mixins
 
-// Export our variables
-$transition-fast: 0.2s;
-$transition-medium: 0.3s;
-$transition-slow: 0.4s;
+@use "variables" as vars;
 
-$bg-light-mix: color-mix(in srgb, var(--secondary) 4%, transparent);
-$bg-hover-mix: color-mix(in srgb, var(--light) 40%, transparent);
-$selection-mix: color-mix(in srgb, var(--tertiary) 50%, transparent);
+// Transitions
+$transition-fast: vars.$transition-fast;
+$transition-medium: vars.$transition-medium;
+$transition-slow: vars.$transition-slow;
 
-$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
-$shadow-md: 0 2px 4px rgba(0, 0, 0, 0.05);
-$shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.1);
+// Background effects
+$bg-light-mix: vars.$bg-light-mix;
+$bg-hover-mix: vars.$bg-hover-mix;
+$selection-mix: vars.$selection-mix;
 
-$shadow-sm-dark: 0 1px 2px rgba(0, 0, 0, 0.2);
-$shadow-md-dark: 0 2px 4px rgba(0, 0, 0, 0.15);
-$shadow-lg-dark: 0 4px 8px rgba(0, 0, 0, 0.25);
+// Shadows
+$shadow-sm: vars.$shadow-sm;
+$shadow-md: vars.$shadow-md;
+$shadow-lg: vars.$shadow-lg;
+
+$shadow-sm-dark: vars.$shadow-sm-dark;
+$shadow-md-dark: vars.$shadow-md-dark;
+$shadow-lg-dark: vars.$shadow-lg-dark;

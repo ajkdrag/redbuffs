@@ -1,0 +1,152 @@
+@use "../abstracts/breakpoints" as breakpoints;
+@use "../abstracts/spacing" as spacing;
+@use "../abstracts/grid" as grid;
+
+.page {
+  max-width: calc(#{map-get(breakpoints.$breakpoints, desktop)} + 300px);
+  margin: 0 auto;
+  & article {
+    & > h1 {
+      font-size: 2rem;
+    }
+
+    & li:has(> input[type="checkbox"]) {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    & li:has(> input[type="checkbox"]:checked) {
+      text-decoration: line-through;
+      text-decoration-color: var(--gray);
+      color: var(--gray);
+    }
+
+    & li > * {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p > strong {
+      color: var(--dark);
+    }
+  }
+
+  & > #quartz-body {
+    display: grid;
+    grid-template-columns: #{map-get(grid.$desktopGrid, templateColumns)};
+    grid-template-rows: #{map-get(grid.$desktopGrid, templateRows)};
+    column-gap: #{map-get(grid.$desktopGrid, columnGap)};
+    row-gap: #{map-get(grid.$desktopGrid, rowGap)};
+    grid-template-areas: #{map-get(grid.$desktopGrid, templateAreas)};
+    @media all and (breakpoints.$desktop) {
+      grid-template-columns: #{map-get(grid.$tabletGrid, templateColumns)};
+      grid-template-rows: #{map-get(grid.$tabletGrid, templateRows)};
+      column-gap: #{map-get(grid.$tabletGrid, columnGap)};
+      row-gap: #{map-get(grid.$tabletGrid, rowGap)};
+      grid-template-areas: #{map-get(grid.$tabletGrid, templateAreas)};
+    }
+    @media all and (breakpoints.$mobile) {
+      grid-template-columns: #{map-get(grid.$mobileGrid, templateColumns)};
+      grid-template-rows: #{map-get(grid.$mobileGrid, templateRows)};
+      column-gap: #{map-get(grid.$mobileGrid, columnGap)};
+      row-gap: #{map-get(grid.$mobileGrid, rowGap)};
+      grid-template-areas: #{map-get(grid.$mobileGrid, templateAreas)};
+    }
+
+    @media all and (breakpoints.$desktop) {
+      padding: 0 1rem;
+    }
+    @media all and (breakpoints.$mobile) {
+      margin: 0 auto;
+    }
+
+    & .sidebar {
+      gap: 2rem;
+      top: 0;
+      box-sizing: border-box;
+      padding: 3rem 2rem 2rem 2rem;
+      display: flex;
+      height: 100vh;
+      position: sticky;
+    }
+
+    & .sidebar.left {
+      z-index: 1;
+      grid-area: grid-sidebar-left;
+      flex-direction: column;
+      border-right: 1px solid var(--lightgray);
+      @media all and (breakpoints.$mobile) {
+        gap: 0;
+        align-items: center;
+        position: initial;
+        display: flex;
+        height: unset;
+        flex-direction: row;
+        padding: 0;
+        padding-top: 2rem;
+      }
+    }
+
+    & .sidebar.right {
+      grid-area: grid-sidebar-right;
+      margin-right: 0;
+      flex-direction: column;
+      @media all and (breakpoints.$mobile) {
+        margin-left: inherit;
+        margin-right: inherit;
+      }
+      @media all and (breakpoints.$desktop) {
+        position: initial;
+        height: unset;
+        width: 100%;
+        flex-direction: row;
+        padding: 0;
+        & > * {
+          flex: 1;
+        }
+        & > .toc {
+          display: none;
+        }
+      }
+    }
+    & .page-header,
+    & .page-footer {
+      margin-top: 1rem;
+    }
+
+    & .page-header {
+      grid-area: grid-header;
+      margin: 3rem 0 0 0;
+      @media all and (breakpoints.$mobile) {
+        margin-top: 0;
+        padding: 0;
+      }
+    }
+
+    & .center > article {
+      grid-area: grid-center;
+    }
+
+    & footer {
+      grid-area: grid-footer;
+    }
+
+    & .center,
+    & footer {
+      max-width: 100%;
+      min-width: max(60ch, 100%);
+      margin-left: auto;
+      margin-right: auto;
+      @media all and (breakpoints.$desktop) {
+        margin-right: 0;
+      }
+      @media all and (breakpoints.$mobile) {
+        margin-left: 0;
+        min-width: 100%;
+      }
+    }
+    & footer {
+      margin-left: 0;
+    }
+  }
+}

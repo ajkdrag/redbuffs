@@ -4,7 +4,7 @@ const svgCopy =
 const svgCheck =
   '<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"><path fill-rule="evenodd" fill="rgb(63, 185, 80)" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"></path></svg>'
 
-const svgCode = 
+const svgCode =
   '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>'
 
 document.addEventListener("nav", () => {
@@ -12,35 +12,34 @@ document.addEventListener("nav", () => {
   for (let i = 0; i < els.length; i++) {
     const codeBlock = els[i].getElementsByTagName("code")[0]
     if (codeBlock) {
-      // Add code icon
-      const codeIcon = document.createElement("div")
-      codeIcon.className = "code-icon"
-      codeIcon.innerHTML = svgCode
-      els[i].appendChild(codeIcon)
+      // Create toolbar container for buttons
+      const toolbar = document.createElement("div")
+      toolbar.className = "code-toolbar"
+      els[i].prepend(toolbar)
 
       // Add copy button
       const source = codeBlock.innerText.replace(/\n\n/g, "\n")
-      const button = document.createElement("button")
-      button.className = "clipboard-button"
-      button.type = "button"
-      button.innerHTML = svgCopy
-      button.ariaLabel = "Copy source"
+      const copyButton = document.createElement("button")
+      copyButton.className = "clipboard-button"
+      copyButton.type = "button"
+      copyButton.innerHTML = svgCopy
+      copyButton.ariaLabel = "Copy source"
       function onClick() {
         navigator.clipboard.writeText(source).then(
           () => {
-            button.blur()
-            button.innerHTML = svgCheck
+            copyButton.blur()
+            copyButton.innerHTML = svgCheck
             setTimeout(() => {
-              button.innerHTML = svgCopy
-              button.style.borderColor = ""
+              copyButton.innerHTML = svgCopy
+              copyButton.style.borderColor = ""
             }, 2000)
           },
           (error) => console.error(error),
         )
       }
-      button.addEventListener("click", onClick)
-      window.addCleanup(() => button.removeEventListener("click", onClick))
-      els[i].prepend(button)
+      copyButton.addEventListener("click", onClick)
+      window.addCleanup(() => copyButton.removeEventListener("click", onClick))
+      toolbar.appendChild(copyButton)
     }
   }
 })

@@ -1,109 +1,229 @@
-@use "../variables.scss" as quartz;
-@use "../abstracts/spacing";
+// components/_callouts.scss
+// Callout component styles
+
+@use "../abstracts/variables" as vars;
 @use "../abstracts/mixins";
-@use "../abstracts/theme";
+@use "./callout-icons";
 
-
-
-
+// Main callout styles
 .callout {
-  border: 2px solid var(--border);
-  background-color: var(--bg);
-  border-radius: 5px;
-  padding: 0 1rem;
-  overflow-y: hidden;
-  transition: max-height theme.$transition-medium ease;
-  box-sizing: border-box;
+  @include mixins.callout-base;
 
-  & > .callout-content > :first-child {
-    margin-top: 0;
-    line-height: 1.5;
-    font-size: 0.95em;
-  }
-
+  // Default callout style
   &[data-callout] {
     --color: var(--dark);
     --border: var(--secondary);
     --bg: var(--lightgray);
+
+    .callout-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background-color: var(--border);
+        mask-image: var(--callout-icon-info);
+        -webkit-mask-image: var(--callout-icon-info);
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-position: center;
+      }
+    }
   }
 
-  // Question
+  // Specific callout types
   &[data-callout="question"] {
-    --color: var(--color-light);
+    --color: var(--dark);
     --border: var(--question-border-light);
     --bg: var(--question-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-question);
+      -webkit-mask-image: var(--callout-icon-question);
+    }
   }
 
-  &[data-callout="question"] .callout-content li,
-  &[data-callout="question"] .callout-content .ol {
-    font-size: 0.98em;
-    color: var(--darkgray);
-  }
-
-  &[data-callout="question"] .callout-content :not(pre) > code {
-    font-size: 0.95em;
-    background: transparent;
-    color: var(--gray);
-  }
-
-  // Note
   &[data-callout="note"] {
+    --color: var(--dark);
     --border: var(--note-border-light);
     --bg: var(--note-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-note);
+      -webkit-mask-image: var(--callout-icon-note);
+    }
   }
 
-  &[data-callout="note"] .callout-content li,
-  &[data-callout="note"] .callout-content .ol {
-    font-size: 0.95em;
-    color: var(--color-light);
-  }
-
-  &[data-callout="note"] .callout-content a,
-  &[data-callout="note"] .callout-content :not(pre) > code {
-    color: var(--gray);
-  }
-
-  // Warning
   &[data-callout="warning"] {
-    --color: var(--color-light);
+    --color: var(--dark);
     --border: var(--warning-border-light);
     --bg: var(--warning-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-warning);
+      -webkit-mask-image: var(--callout-icon-warning);
+    }
   }
 
-  &[data-callout="warning"] .callout-content li,
-  &[data-callout="warning"] .callout-content .ol {
-    font-size: 0.95em;
-    color: var(--color-light);
-  }
-
-  &[data-callout="warning"] .callout-content :not(pre) > code {
-    color: var(--gray);
-  }
-
-  // Tip
   &[data-callout="tip"] {
-    --color: var(--color-light);
+    --color: var(--dark);
     --border: var(--tip-border-light);
     --bg: var(--tip-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-tip);
+      -webkit-mask-image: var(--callout-icon-tip);
+    }
   }
 
-  &[data-callout="tip"] .callout-content li,
-  &[data-callout="tip"] .callout-content .ol {
-    font-size: 0.95em;
-    color: var(--color-light);
+  &[data-callout="abstract"],
+  &[data-callout="summary"],
+  &[data-callout="tldr"] {
+    --color: var(--dark);
+    --border: var(--note-border-light);
+    --bg: var(--note-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-abstract);
+      -webkit-mask-image: var(--callout-icon-abstract);
+    }
   }
 
-  &[data-callout="tip"] .callout-content :not(pre) > code {
-    font-size: 0.95em;
-    background: transparent;
-    color: var(--gray);
+  &[data-callout="info"] {
+    --color: var(--dark);
+    --border: var(--note-border-light);
+    --bg: var(--note-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-info);
+      -webkit-mask-image: var(--callout-icon-info);
+      mask-mode: alpha;
+      -webkit-mask-mode: alpha;
+      background-color: currentColor;
+    }
   }
 
-  // Topics (exemple spécifique)
+  &[data-callout="todo"] {
+    --color: var(--dark);
+    --border: var(--note-border-light);
+    --bg: var(--note-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-todo);
+      -webkit-mask-image: var(--callout-icon-todo);
+    }
+  }
+
+  &[data-callout="success"],
+  &[data-callout="check"],
+  &[data-callout="done"] {
+    --color: var(--dark);
+    --border: var(--tip-border-light);
+    --bg: var(--tip-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-success);
+      -webkit-mask-image: var(--callout-icon-success);
+    }
+  }
+
+  &[data-callout="failure"],
+  &[data-callout="fail"],
+  &[data-callout="missing"] {
+    --color: var(--dark);
+    --border: var(--warning-border-light);
+    --bg: var(--warning-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-failure);
+      -webkit-mask-image: var(--callout-icon-failure);
+    }
+  }
+
+  &[data-callout="danger"],
+  &[data-callout="error"] {
+    --color: var(--dark);
+    --border: var(--warning-border-light);
+    --bg: var(--warning-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-danger);
+      -webkit-mask-image: var(--callout-icon-danger);
+    }
+  }
+
+  &[data-callout="bug"] {
+    --color: var(--dark);
+    --border: var(--warning-border-light);
+    --bg: var(--warning-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-bug);
+      -webkit-mask-image: var(--callout-icon-bug);
+    }
+  }
+
+  &[data-callout="example"] {
+    --color: var(--dark);
+    --border: var(--note-border-light);
+    --bg: var(--note-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-example);
+      -webkit-mask-image: var(--callout-icon-example);
+    }
+  }
+
+  &[data-callout="quote"],
+  &[data-callout="cite"] {
+    --color: var(--dark);
+    --border: var(--note-border-light);
+    --bg: var(--note-bg-light);
+
+    .callout-icon:before {
+      background-color: var(--border);
+      mask-image: var(--callout-icon-quote);
+      -webkit-mask-image: var(--callout-icon-quote);
+    }
+  }
+
+  // Callout content styling
+  .callout-content {
+    @include mixins.callout-content-base;
+    color: var(--dark);
+  }
+
+  // Topics badges - special styling
   &[data-callout="topics"] {
     --color: transparent;
-    --border: unset;
-    --bg: unset;
+    --border: none;
+    --bg: transparent;
+    padding: 0;
+    margin: 1.5rem 0;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
 
     .callout-title {
       display: none;
@@ -112,13 +232,12 @@
     .callout-content {
       ul {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 0.75rem;
         list-style: none;
-        padding: 0;
+        padding: 0.5rem 0;
         justify-content: center;
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         -ms-overflow-style: none;
         scroll-behavior: smooth;
@@ -128,95 +247,303 @@
         }
 
         li {
-          white-space: nowrap;
-          border-radius: 6px;
-          padding: .5rem 1rem;
-          text-decoration: none;
-          transition: all .2s;
+          margin: 0;
+          padding: 0;
           display: inline-flex;
         }
 
         li > a.internal {
-          @include mixins.card-base;
+          display: inline-block;
+          white-space: nowrap;
+          padding: 0.35rem 0.75rem;
+          font-size: 0.85rem;
+          font-weight: 500;
+          color: var(--secondary);
+          background-color: rgba(0, 116, 217, 0.06);
+          border-radius: 16px;
           text-decoration: none;
-          background: theme.$bg-light-mix;
+          transition: all 0.2s ease;
+          border: 1px solid rgba(0, 116, 217, 0.1);
+
+          &:hover {
+            color: white;
+            background-color: var(--secondary);
+            transform: translateY(-1px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+          }
+
+          &.non-existent {
+            color: var(--gray);
+            background-color: rgba(128, 128, 128, 0.06);
+            border: 1px solid rgba(128, 128, 128, 0.1);
+            pointer-events: none;
+            cursor: default;
+
+            &:hover {
+              color: var(--gray);
+              background-color: rgba(128, 128, 128, 0.06);
+              transform: none;
+              box-shadow: none;
+            }
+          }
         }
       }
     }
   }
 
   // Collapsible functionality
-  &.is-collapsed {
-    & > .callout-title > .fold-callout-icon {
-      transform: rotateZ(-90deg);
+  &.is-collapsible > .callout-title {
+    cursor: pointer;
+  }
+
+  &.is-collapsed > .callout-title > .fold-callout-icon {
+    transform: rotateZ(-90deg);
+  }
+
+  .fold-callout-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    opacity: 0.8;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--color);
     }
   }
 }
 
+// Callout title styling
 .callout-title {
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 1rem 0;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
   color: var(--color);
+  font-weight: 600;
+  line-height: 1.3;
 
-  & .fold-callout-icon {
-    transition: transform theme.$transition-fast ease;
-    opacity: 0.8;
-    cursor: pointer;
+  .callout-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.25rem;
+
+    &:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
-  & > .callout-title-inner > p {
-    color: var(--color);
-    margin: 0;
-    line-height: 1.2;
-    font-size: 0.95em;
+  .callout-title-inner {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    > p {
+      color: var(--color);
+      margin: 0;
+      line-height: 1.3;
+      font-size: 0.97em;
+      letter-spacing: 0.01em;
+      font-weight: 600;
+      white-space: pre-line;
+      word-break: break-word;
+    }
+  }
+
+  .fold-callout-icon {
+    margin-left: 0.25rem;
+    transition: transform vars.$transition-fast ease;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--color);
+    }
   }
 }
 
 // Dark mode specific adjustments
 :root[saved-theme="dark"] {
-  .callout[data-callout="question"] {
-    --color: var(--color-dark);
-    --border: var(--question-border-dark);
-    --bg: var(--question-bg-dark);
-  }
+  .callout {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-color: var(--border);
 
-  .callout[data-callout="note"] {
-    --color: var(--dark);
-    --border: var(--note-border-dark);
-    --bg: var(--note-bg-dark);
-  }
+    // Default callout style in dark mode
+    &[data-callout] {
+      --color: var(--dark);
 
-  .callout[data-callout="warning"] {
-    --color: var(--dark);
-    --border: var(--warning-border-dark);
-    --bg: var(--warning-bg-dark);
-  }
+      .callout-icon:before {
+        background-color: var(--border);
+      }
 
-  .callout[data-callout="tip"] {
-    --color: var(--dark);
-    --border: var(--tip-border-dark);
-    --bg: var(--tip-bg-dark);
-  }
+      .fold-callout-icon:before {
+        border-top-color: var(--dark);
+      }
+    }
 
-  .callout[data-callout="question"] .callout-content li,
-  .callout[data-callout="question"] .callout-content .ol,
-  .callout[data-callout="note"] .callout-content li,
-  .callout[data-callout="note"] .callout-content .ol,
-  .callout[data-callout="warning"] .callout-content li,
-  .callout[data-callout="warning"] .callout-content .ol,
-  .callout[data-callout="tip"] .callout-content li,
-  .callout[data-callout="tip"] .callout-content .ol {
-    font-size: 0.95em;
-    color: var(--dark);
-  }
+    &[data-callout="question"] {
+      --color: var(--dark);
+      --border: var(--question-border-dark);
+      --bg: var(--question-bg-dark);
+    }
 
-  .callout[data-callout="question"] .callout-content :not(pre) > code,
-  .callout[data-callout="warning"] .callout-content :not(pre) > code,
-  .callout[data-callout="tip"] .callout-content :not(pre) > code {
-    font-size: 0.95em;
-    background: transparent;
-    color: var(--gray);
+    &[data-callout="note"] {
+      --color: var(--dark);
+      --border: var(--note-border-dark);
+      --bg: var(--note-bg-dark);
+    }
+
+    &[data-callout="warning"] {
+      --color: var(--dark);
+      --border: var(--warning-border-dark);
+      --bg: var(--warning-bg-dark);
+    }
+
+    &[data-callout="tip"] {
+      --color: var(--dark);
+      --border: var(--tip-border-dark);
+      --bg: var(--tip-bg-dark);
+    }
+
+    &[data-callout="abstract"],
+    &[data-callout="summary"],
+    &[data-callout="tldr"] {
+      --color: var(--dark);
+      --border: var(--note-border-dark);
+      --bg: var(--note-bg-dark);
+    }
+
+    &[data-callout="info"] {
+      --color: var(--dark);
+      --border: var(--note-border-dark);
+      --bg: var(--note-bg-dark);
+
+      .callout-icon:before {
+        background-color: var(--border);
+        mask-image: var(--callout-icon-info);
+        -webkit-mask-image: var(--callout-icon-info);
+        mask-mode: alpha;
+        -webkit-mask-mode: alpha;
+        background-color: currentColor;
+      }
+    }
+
+    &[data-callout="todo"] {
+      --color: var(--dark);
+      --border: var(--note-border-dark);
+      --bg: var(--note-bg-dark);
+    }
+
+    &[data-callout="success"],
+    &[data-callout="check"],
+    &[data-callout="done"] {
+      --color: var(--dark);
+      --border: var(--tip-border-dark);
+      --bg: var(--tip-bg-dark);
+    }
+
+    &[data-callout="failure"],
+    &[data-callout="fail"],
+    &[data-callout="missing"] {
+      --color: var(--dark);
+      --border: var(--warning-border-dark);
+      --bg: var(--warning-bg-dark);
+    }
+
+    &[data-callout="danger"],
+    &[data-callout="error"] {
+      --color: var(--dark);
+      --border: var(--warning-border-dark);
+      --bg: var(--warning-bg-dark);
+    }
+
+    &[data-callout="bug"] {
+      --color: var(--dark);
+      --border: var(--warning-border-dark);
+      --bg: var(--warning-bg-dark);
+    }
+
+    &[data-callout="example"] {
+      --color: var(--dark);
+      --border: var(--note-border-dark);
+      --bg: var(--note-bg-dark);
+    }
+
+    &[data-callout="quote"],
+    &[data-callout="cite"] {
+      --color: var(--dark);
+      --border: var(--note-border-dark);
+      --bg: var(--note-bg-dark);
+    }
+
+    // Dark mode topics badges
+    &[data-callout="topics"] .callout-content ul li > a.internal {
+      color: var(--secondary);
+      background-color: rgba(127, 219, 255, 0.06);
+      border: 1px solid rgba(127, 219, 255, 0.12);
+
+      &:hover {
+        color: var(--dark);
+        background-color: var(--secondary);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+      }
+
+      &.non-existent {
+        color: var(--gray);
+        background-color: rgba(128, 128, 128, 0.06);
+        border: 1px solid rgba(128, 128, 128, 0.1);
+        pointer-events: none;
+        cursor: default;
+
+        &:hover {
+          color: var(--gray);
+          background-color: rgba(128, 128, 128, 0.06);
+          transform: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    // Improve callout content in dark mode
+    .callout-content {
+      color: var(--dark);
+
+      a {
+        color: var(--secondary);
+      }
+
+      code {
+        color: var(--gray);
+      }
+    }
   }
 }

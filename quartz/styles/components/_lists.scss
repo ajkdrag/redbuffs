@@ -1,0 +1,92 @@
+// components/_lists.scss
+// List styles for ordered and unordered lists
+
+@use "../abstracts/variables" as vars;
+
+// Content lists (not navigation or UI lists)
+article {
+  ul, ol {
+    padding-left: 1.8rem;
+    margin: 1.5rem 0;
+    list-style-position: inside;
+    
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.7;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      // Nested lists
+      ul, ol {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+  
+  // Restore proper list styles that were removed in reset
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+      
+      ul {
+        list-style-type: square;
+        list-style-position: inside;
+      }
+    }
+  }
+  
+  ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    
+    ol {
+      list-style-type: lower-alpha;
+      list-style-position: inside;
+      
+      ol {
+        list-style-type: lower-roman;
+        list-style-position: inside;
+      }
+    }
+  }
+  
+  // Task lists (checkboxes)
+  li:has(> input[type="checkbox"]) {
+    list-style-type: none;
+    position: relative;
+    padding-left: 0.5rem;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1.5rem;
+      top: 0.25rem;
+    }
+  }
+  
+  // Checked items
+  li:has(> input[type="checkbox"]:checked) {
+    text-decoration: line-through;
+    text-decoration-color: var(--gray);
+    color: var(--gray);
+  }
+  
+  // Fix: Prevent <li><p>...</p></li> from breaking lines or adding extra margin
+  li > p,
+  ul li > p,
+  ol li > p {
+    margin: 0;
+    display: inline;
+  }
+}
+
+// Ensure list items in other contexts don't have bottom margin
+li:not(article li) {
+  margin-bottom: 0;
+}

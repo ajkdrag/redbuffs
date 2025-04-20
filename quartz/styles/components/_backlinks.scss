@@ -1,54 +1,81 @@
 // components/_backlinks.scss
-@use "../variables.scss" as quartz;
-@use "../abstracts/spacing";
+@use "../abstracts/variables" as vars;
 @use "../abstracts/mixins";
-@use "../abstracts/theme";
 
 .backlinks {
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 1px solid var(--lightgray);
-  
+  background: transparent;
+  margin-bottom: 2rem;
+  display: block;
+  width: 100%;
+
   h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--dark);
-    margin: 0;
-    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--header-fg);
+    margin: 0 0 1.2rem 0;
+    letter-spacing: 0.01em;
+    text-align: left;
+    display: block;
+    width: 100%;
   }
-  
+
+  .backlinks-container {
+    display: block;
+    width: 100%;
+    clear: both;
+  }
+
+  .overflow {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+
+    /* Subtle scrollbar styling */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--lightgray);
+      border-radius: 3px;
+    }
+  }
+
   ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 0.75rem;
-    padding: 0;
+    list-style: disc;
+    column-width: 250px;
+    column-gap: 2rem;
+    padding: 0 0 0 1.5rem;
     margin: 0.5rem 0;
 
     li {
-      margin: 0;
+      margin: 0 0 0.5rem 0;
       padding: 0;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
 
     a {
-      @include mixins.card-base;
-      width: 100%;
-      box-sizing: border-box;
       text-decoration: none;
-      display: block;
-      background: theme.$bg-light-mix;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      
+      display: inline;
+      font-size: 1rem;
+      color: var(--secondary);
+      transition: color 0.2s;
+      line-height: 1.4;
+
       &:hover {
-        background: var(--highlight);
         color: var(--tertiary);
       }
 
-      // External link icon style
       .external-icon {
-        display: none;  // Hide external icon in backlinks
+        display: none;
       }
     }
   }

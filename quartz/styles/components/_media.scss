@@ -4,35 +4,48 @@
 @use "../abstracts/mixins";
 @use "../abstracts/theme";
 
+// Base styles for all media elements
 img, video, audio {
   display: block;
-  max-width: 85%;
-  margin: 2rem auto;
-  border-radius: 8px;
-  box-shadow: theme.$shadow-sm, theme.$shadow-md;
-  border: 1px solid var(--lightgray);
-  transition: all theme.$transition-fast ease;
+  max-width: 100%;
+  margin: 1.5rem auto; // Auto margins for horizontal centering
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transition: none;
+}
 
-  &:hover {
-    box-shadow: theme.$shadow-md, theme.$shadow-lg;
-  }
+// Ensure parent containers don't restrict centering
+article p:has(> img), article div:has(> img), article a:has(> img) {
+  text-align: center; /* Center only containers with images */
+}
+
+// Ensure images are always centered in all contexts
+img, a > img, figure > img, p > img, article img, [src^="https://"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* For older browsers */
 }
 
 // Full-width PDF embeds
 iframe.pdf {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
-  border: 1px solid var(--lightgray);
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
 }
 
 // YouTube embeds
 .external-embed.youtube {
   aspect-ratio: 16 / 9;
   width: 100%;
-  border-radius: 5px;
-  margin: 1rem 0;
-  box-shadow: theme.$shadow-sm;
+  border-radius: 0;
+  margin: 1.5rem auto; // Center YouTube embeds
+  box-shadow: none;
+  overflow: hidden;
+  border: none;
 }
 
 // Dark mode adjustments
@@ -50,9 +63,12 @@ iframe.pdf {
 p > img + em {
   display: block;
   text-align: center;
-  transform: translateY(-1rem);
+  transform: translateY(-0.5rem);
   color: var(--gray);
   font-size: 0.9em;
+  max-width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 // Buy me a coffee embed (if you use it)
@@ -60,7 +76,7 @@ p > img + em {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
+  margin: 2rem auto; // Already centered
   max-width: 85%;
 
   iframe {
@@ -72,10 +88,11 @@ p > img + em {
 @media all and (#{quartz.$mobile}) {
   img, video, audio {
     max-width: 95%;
-    margin: 1.5rem auto;
+    margin: 1rem auto; // Slightly reduced margins on mobile
   }
 
   .external-embed.youtube {
-    margin: 0.75rem 0;
+    margin: 0.75rem auto; // Center YouTube embeds on mobile
+    width: 95%;
   }
 }

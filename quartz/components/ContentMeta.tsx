@@ -4,7 +4,7 @@ import readingTime from "reading-time"
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 import { JSX } from "preact"
-import style from "./styles/contentMeta.scss"
+import style from "../styles/components/_contentMeta.scss"
 
 interface ContentMetaOptions {
   /**

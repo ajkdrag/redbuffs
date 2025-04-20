@@ -1,0 +1,54 @@
+// components/_clipboard.scss
+// Code toolbar and button styles
+
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+
+// Code toolbar container
+.code-toolbar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  display: flex;
+  gap: 6px;
+  opacity: 0; // Hidden by default, shown on hover
+  transition: opacity 0.2s ease;
+}
+
+// Base button styles for code toolbar buttons
+%code-button {
+  @include mixins.flex-center;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  background: var(--lightgray);
+  color: var(--dark);
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: opacity 0.2s, border-color 0.2s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+
+  &:hover {
+    border-color: var(--darkgray);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Show toolbar on hover
+pre:hover .code-toolbar {
+  opacity: 1;
+}
+
+// Dark mode adjustments
+:root[saved-theme="dark"] {
+  .clipboard-button {
+    background: var(--lightgray);
+    color: var(--dark);
+    border-color: var(--gray);
+  }
+}

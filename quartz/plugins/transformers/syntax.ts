@@ -20,8 +20,16 @@ const defaultOptions: Options = {
 }
 
 export const SyntaxHighlighting: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
-  const opts: CodeOptions = { ...defaultOptions, ...userOpts }
-
+  // Deep merge theme to avoid overwriting the whole theme object
+  const mergedTheme = {
+    ...defaultOptions.theme,
+    ...(userOpts?.theme || {})
+  }
+  const opts: CodeOptions = {
+    ...defaultOptions,
+    ...userOpts,
+    theme: mergedTheme
+  }
   return {
     name: "SyntaxHighlighting",
     htmlPlugins() {

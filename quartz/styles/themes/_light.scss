@@ -1,0 +1,98 @@
+// themes/_light.scss
+// Light theme variables and styles
+
+@use "../abstracts/variables" as vars;
+
+:root {
+  color-scheme: light;
+
+  // Custom scrollbar for light mode
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--lightgray);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--darkgray);
+    }
+  }
+
+  // Custom properties for light mode
+  --surface: transparent;  // Surface color for cards, code blocks
+  --radius: 0;       // Border radius for elements
+  --max-w: 720px;      // Max width for content
+  --shadow-color: transparent;
+  --card-shadow: none;
+  --card-border: none;
+
+  --header-bg: #fff;
+  --header-fg: #222;
+  --header-shadow: none;
+  --header-border: none;
+  --header-height: 64px;
+  --header-font-weight: 700;
+  --header-font-size: 2rem;
+  --header-padding: 2rem 0 1.5rem 0;
+  --header-letter-spacing: -0.01em;
+  --header-line-height: 1.1;
+  --header-radius: 0;
+  --header-margin-bottom: 2.5rem;
+
+  // General colors
+  --color-light: #ffffff;
+  --color-dark: #2e3440;
+
+  // Code block variables for light mode
+  --lightgray: #f5f7fa; // Background for inline code
+  --dark: #222;
+  --gray: #b0b8c1;
+  --darkgray: #6c7680;
+  --light: #fff;
+  --codeFont: 'Source Code Pro', 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  --highlight: #ffe9b3;
+  --secondary: #0074d9;
+  --border: #e0e0e0;
+
+  // Shiki syntax highlighting variables for Nord theme
+  --shiki-light: #2e3440; // Nord dark text color
+  --shiki-light-bg: #f8f9fb; // Light background
+
+  // Question callout
+  --question-border-light: #0074d9;
+  --question-bg-light: rgba(0, 116, 217, 0.07);
+  --question-border-dark: #88c0d0;
+  --question-bg-dark: rgba(136, 192, 208, 0.1);
+
+  // Note callout
+  --note-border-light: #b48ead;
+  --note-bg-light: rgba(180, 142, 173, 0.07);
+  --note-border-dark: #81a1c1;
+  --note-bg-dark: rgba(129, 161, 193, 0.1);
+
+  // Warning callout
+  --warning-border-light: #ffb347;
+  --warning-bg-light: rgba(255, 179, 71, 0.07);
+  --warning-border-dark: #ebcb8b;
+  --warning-bg-dark: rgba(235, 203, 139, 0.1);
+
+  // Tip callout
+  --tip-border-light: #2ecc40;
+  --tip-bg-light: rgba(46, 204, 64, 0.07);
+  --tip-border-dark: #a3be8c;
+  --tip-bg-dark: rgba(163, 190, 140, 0.1);
+
+  * {
+    transition:
+      background-color #{vars.$transition-fast} ease,
+      border-color #{vars.$transition-fast} ease,
+      color #{vars.$transition-fast} ease;
+  }
+}

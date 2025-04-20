@@ -1,5 +1,4 @@
-@use "theme";
-@use "spacing";
+@use "variables" as vars;
 
 // Layout mixins
 @mixin flex-center {
@@ -13,7 +12,7 @@
   max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 map-get(#{spacing.$spacing-map}, "md");
+  padding: 0 map-get(#{vars.$spacing-map}, "md");
 }
 
 // Card style mixin used by multiple components
@@ -21,23 +20,19 @@
   display: inline-flex;
   white-space: normal;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
-  background: theme.$bg-light-mix;
-  transition: all #{theme.$transition-fast} ease;
-  
+  background: transparent;
+  transition: color #{vars.$transition-fast} ease;
+
   &:hover {
-    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem 1.15rem; 
-    background: var(--highlight);
     color: var(--tertiary);
   }
 }
 
 // Common header styles
 @mixin header-base {
-  transition: all #{theme.$transition-fast} ease;
+  transition: all #{vars.$transition-fast} ease;
   color: var(--dark);
-  
+
   &:hover {
     cursor: pointer;
     color: var(--tertiary);
@@ -46,12 +41,55 @@
   &[id] > a[href^="#"] {
     opacity: 0;
     background: none;
-    transition: opacity #{theme.$transition-fast} ease;
+    transition: opacity #{vars.$transition-fast} ease;
     padding: 0 0.5rem;
-    
+
     &:hover {
       opacity: 1;
       color: var(--secondary);
     }
+  }
+}
+
+// Callout mixins
+@mixin callout-base {
+  border: 1px solid var(--border);
+  background-color: var(--bg);
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  overflow-y: hidden;
+  transition: all vars.$transition-medium ease;
+  box-sizing: border-box;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+@mixin callout-content-base {
+  font-size: 0.95em;
+  line-height: 1.5;
+
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  li, ol {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  :not(pre) > code {
+    font-size: 0.95em;
+    background: transparent;
+    color: var(--gray);
+  }
+
+  a {
+    color: var(--secondary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 }

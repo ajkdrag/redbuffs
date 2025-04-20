@@ -1,16 +1,19 @@
-@import "../variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/breakpoints" as breakpoints;
 
 // Main content width control
 .popover-hint {
-  max-width: 65ch;
+  max-width: var(--max-w, 65ch);
   margin: 0 auto;
-  padding: 0 1rem;
-  
-  @media all and ($mobile) {
-    padding: 0 0.25rem;
+  padding: 0 0.7rem; // reduced horizontal padding
+  background: none;
+  border-radius: var(--radius);
+  box-shadow: none;
+
+  @media all and (breakpoints.$mobile) {
+    padding: 0 0.3rem;
   }
 }
-
 
 .drawer-container {
   &.desktop-only {
@@ -21,7 +24,7 @@
       height: auto;
       border: none;
       overflow: visible;
-      
+
       .drawer-content {
         padding: 0;
       }
@@ -32,7 +35,28 @@
     }
 
     .navigation {
-      margin-top: 2rem;
+      margin-top: 1rem; // reduced from 2rem
     }
+  }
+}
+
+// Main content area
+main, .main-content, .content {
+  max-width: var(--max-w, 720px);
+  margin: 0 auto;
+  padding: 1.2rem 1rem 2rem 1rem; // reduced top/bottom padding
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  min-height: 60vh;
+}
+
+// Remove box-shadow and border for mobile for extra minimalism
+@media all and (breakpoints.$mobile) {
+  main, .main-content, .content {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 1.25rem 0.5rem 2rem 0.5rem;
   }
 }

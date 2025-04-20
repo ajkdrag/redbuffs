@@ -1,0 +1,57 @@
+// Main stylesheet that imports all other stylesheets
+
+// 1. Abstracts - variables, mixins, functions
+@use "abstracts/variables" as vars;
+@use "abstracts/mixins";
+@use "abstracts/functions";
+
+// 2. Base styles
+@use "base/reset";
+@use "base/base";
+@use "base/typography";
+@use "base/headings";
+@use "base/hr";
+@use "base/syntax";
+@use "base/responsive";
+
+// 3. Themes - theme definitions
+@use "themes/light";
+@use "themes/dark";
+
+// 4. Layout styles
+@use "./layout/_grid.scss";
+@use "./layout/_page.scss";
+@use "./layout/_overflow.scss";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/content";
+
+// 5. Component styles
+@use "./components/_buttons.scss";
+@use "./components/_checkbox.scss";
+@use "./components/_blockquote.scss";
+@use "./components/_lists.scss";
+@use "./components/_tables.scss";
+@use "./components/code";
+@use "./components/links";
+@use "./components/toc";
+@use "./components/backlinks";
+@use "./components/side-panel";
+@use "./components/graph";
+@use "./components/explorer";
+@use "./components/search";
+@use "./components/popover";
+@use "./components/darkmode";
+@use "./components/callouts";
+@use "./components/math";
+@use "./components/breadcrumbs";
+@use "./components/clipboard";
+@use "./components/contentMeta";
+@use "./components/footer" as componentFooter;
+@use "./components/legacyToc";
+@use "./components/listPage";
+@use "./components/recentNotes";
+
+// 6. Utilities
+@use "./utilities/_utilities.scss";
+@use "./utilities/_responsive.scss" as utilitiesResponsive;

@@ -122,6 +122,14 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   const simple = simplifySlug(full)
                   outgoing.add(simple)
                   node.properties["data-slug"] = full
+
+                  // Check if the link target exists and add a class for non-existent links
+                  const linkExists = ctx.allSlugs.some(slug =>
+                    simplifySlug(slug) === simple || slug === full
+                  )
+                  if (!linkExists) {
+                    classes.push("non-existent")
+                  }
                 }
 
                 // rewrite link internals if prettylinks is on

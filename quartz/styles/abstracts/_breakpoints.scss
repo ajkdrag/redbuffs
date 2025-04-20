@@ -1,0 +1,41 @@
+// abstracts/_breakpoints.scss
+// Breakpoint variables and mixins
+
+@use "variables" as vars;
+
+// Breakpoint map
+$breakpoints: vars.$breakpoints;
+
+// Media query variables
+$mobile: vars.$mobile;
+$tablet: vars.$tablet;
+$desktop: vars.$desktop;
+
+// Breakpoint mixins
+@mixin mobile {
+  @media #{$mobile} {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$desktop} {
+    @content;
+  }
+}
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint: #{$breakpoint}.";
+  }
+}

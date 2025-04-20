@@ -1,0 +1,40 @@
+// layout/_grid.scss
+// Grid layout definitions
+
+@use "../abstracts/variables" as vars;
+
+$mobileGrid: (
+  templateRows: "auto auto auto auto auto",
+  templateColumns: "auto",
+  rowGap: "5px",
+  columnGap: "5px",
+  templateAreas:
+    '"grid-sidebar-left"\
+      "grid-header"\
+      "grid-center"\
+      "grid-sidebar-right"\
+      "grid-footer"',
+);
+
+$tabletGrid: (
+  templateRows: "auto auto auto auto",
+  templateColumns: "#{vars.$sidePanelWidth} auto",
+  rowGap: "5px",
+  columnGap: "5px",
+  templateAreas:
+    '"grid-sidebar-left grid-header"\
+      "grid-sidebar-left grid-center"\
+      "grid-sidebar-left grid-sidebar-right"\
+      "grid-sidebar-left grid-footer"',
+);
+
+$desktopGrid: (
+  templateRows: "auto auto auto",
+  templateColumns: "#{vars.$sidePanelWidth} minmax(0, 1fr) #{vars.$sidePanelWidth}",
+  rowGap: "5px",
+  columnGap: "5px",
+  templateAreas:
+    '"grid-sidebar-left grid-header grid-sidebar-right"\
+      "grid-sidebar-left grid-center grid-sidebar-right"\
+      "grid-sidebar-left grid-footer grid-sidebar-right"',
+);

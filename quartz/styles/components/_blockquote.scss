@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/theme";
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.2rem;
+  background: color-mix(in srgb, var(--secondary) 5%, transparent);
+  border-left: 4px solid var(--secondary);
+  color: var(--darkgray);
+  border-radius: var(--radius, 4px);
+
+  p {
+    margin-bottom: 0.5rem;
+    font-style: normal;
+    color: var(--darkgray);
+    line-height: 1.7;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: var(--dark);
+  }
+
+  cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.9em;
+    color: var(--gray);
+    font-style: normal;
+
+    &:before {
+      content: '— ';
+    }
+  }
+}

@@ -1,6 +1,6 @@
 // @ts-ignore
 import clipboardScript from "./scripts/clipboard.inline"
-import clipboardStyle from "./styles/clipboard.scss"
+import clipboardStyle from "../styles/components/_clipboard.scss"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 const Body: QuartzComponent = ({ children }: QuartzComponentProps) => {

@@ -1,47 +1,58 @@
 main {
   /* Comment text colors */
-  --color-fg-default: #384B70;
+  --color-fg-default: #384b70;
   --color-fg-muted: #788896;
-  --color-fg-subtle: #2A394F;
+  --color-fg-subtle: #2a394f;
 
   /* Background colors */
-  --color-canvas-default: #FCFAEE;
-  --color-canvas-overlay: #F7F5E9;
-  --color-canvas-inset: #F9F7EC;
-  --color-canvas-subtle: #F5F3E7;
+  --color-canvas-default: #fcfaee;
+  --color-canvas-overlay: #f7f5e9;
+  --color-canvas-inset: #f9f7ec;
+  --color-canvas-subtle: #f5f3e7;
 
   /* Borders */
-  --color-border-default: #E8E6D7;
+  --color-border-default: #e8e6d7;
   --color-border-muted: rgba(232, 230, 215, 0.8);
 
   /* Button colors */
-  --color-btn-text: #384B70;
-  --color-btn-bg: #FCFAEE;
-  --color-btn-border: #E8E6D7;
+  --color-btn-text: #384b70;
+  --color-btn-bg: #fcfaee;
+  --color-btn-border: #e8e6d7;
   --color-btn-shadow: 0 1px 2px rgba(42, 57, 79, 0.05);
   --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  --color-btn-hover-bg: #F7F5E9;
-  --color-btn-hover-border: #507687;
-  --color-btn-active-bg: #F5F3E7;
-  --color-btn-active-border: #B8001F;
+  --color-btn-hover-bg: #f7f5e9;
+  --color-btn-hover-border: #14b8a6;
+  --color-btn-active-bg: #f5f3e7;
+  --color-btn-active-border: #14b8a6;
   --color-btn-selected-bg: rgba(184, 0, 31, 0.15);
 
   /* Primary button */
-  --color-btn-primary-text: #FCFAEE;
-  --color-btn-primary-bg: #507687;
+  --color-btn-primary-text: #fcfaee;
+  --color-btn-primary-bg: #14b8a6;
   --color-btn-primary-border: transparent;
   --color-btn-primary-shadow: 0 1px 2px rgba(42, 57, 79, 0.1);
-  --color-btn-primary-hover-bg: #B8001F;
+  --color-btn-primary-hover-bg: #0d9488;
   --color-btn-primary-hover-border: transparent;
-  --color-btn-primary-selected-bg: #B8001F;
+  --color-btn-primary-selected-bg: #0d9488;
   --color-btn-primary-disabled-bg: rgba(80, 118, 135, 0.6);
   --color-btn-primary-disabled-text: rgba(252, 250, 238, 0.5);
 
   /* Accents and states */
-  --color-accent-fg: #507687;
-  --color-accent-emphasis: #B8001F;
-  --color-accent-muted: rgba(80, 118, 135, 0.4);
-  --color-accent-subtle: rgba(184, 0, 31, 0.15);
+  --color-accent-fg: #14b8a6;
+  --color-accent-emphasis: #0d9488;
+  --color-accent-muted: rgba(20, 184, 166, 0.4);
+  --color-accent-subtle: rgba(20, 184, 166, 0.15);
+
+  font-family:
+    "Inter",
+    "Merriweather",
+    "Source Code Pro",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 
 .gsc-timeline {

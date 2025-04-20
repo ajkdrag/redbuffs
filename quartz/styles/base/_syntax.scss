@@ -1,0 +1,30 @@
+// base/_syntax.scss
+// Syntax highlighting styles - minimal version
+
+@use "../abstracts/variables" as vars;
+
+:root {
+  --shiki-light: #2e3440;
+  --shiki-light-bg: #f8f9fb;
+  --shiki-dark: #eceff4;
+  --shiki-dark-bg: #2e3440;
+}
+
+:root[saved-theme="dark"] {
+  --shiki-light: #2e3440;
+  --shiki-light-bg: #f8f9fb;
+  --shiki-dark: #eceff4;
+  --shiki-dark-bg: #2e3440;
+}
+
+// Base styles for syntax highlighting
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+// Dark mode syntax highlighting
+[saved-theme="dark"] code[data-theme*=" "] span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}

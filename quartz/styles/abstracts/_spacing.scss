@@ -1,12 +1,17 @@
-@forward "../variables.scss" as quartz-*; 
+// abstracts/_spacing.scss
+// Spacing variables and functions
 
-$spacing-unit: 1rem;
-$spacing-map: (
-  "xxs": $spacing-unit * 0.25,
-  "xs": $spacing-unit * 0.5,
-  "sm": $spacing-unit,
-  "md": $spacing-unit * 1.5,
-  "lg": $spacing-unit * 2,
-  "xl": $spacing-unit * 3,
-  "xxl": $spacing-unit * 4,
-);
+@use "variables" as vars;
+
+// Spacing function to get values from the spacing map
+@function spacing($key) {
+  @if map-has-key(vars.$spacing-map, $key) {
+    @return map-get(vars.$spacing-map, $key);
+  }
+  @error "Unknown spacing key `#{$key}` in $spacing-map.";
+}
+
+// Common spacing variables
+$page-width: vars.$pageWidth;
+$side-panel-width: vars.$sidePanelWidth;
+$top-spacing: vars.$topSpacing;

@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins";
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "𖤍 ",
+    pageTitle: "redbuffs",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -22,38 +22,35 @@ const config: QuartzConfig = {
 
     // in quartz.config.ts
     theme: {
-      // ... other theme options like typography ...
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Nunito",
-        // body: "AR One Sans",
-        body: "Nunito Sans",
-        code: "Fira Code",
+        header: "Inter",
+        body: "Merriweather",
+        code: "Source Code Pro",
       },
-
       colors: {
         lightMode: {
-          light: "#FCFAEE",          // Base background
-          lightgray: "#E8E6D7",      // Borders, code block backgrounds
-          gray: "#788896",           // Subtle text, icons
-          darkgray: "#384B70",       // Main text color
-          dark: "#2A394F",          // Headings, bold text
-          secondary: "#507687",      // Links, accents
-          tertiary: "#B8001F",       // Highlights, special elements
-          highlight: "rgba(184, 0, 31, 0.15)", // Link hovers, selections
-          textHighlight: "rgb(220, 20, 60)",
+          light: "#fff",
+          lightgray: "#f6f8fa",
+          gray: "#888",
+          darkgray: "#222",
+          dark: "#111",
+          secondary: "#0074d9",
+          tertiary: "#14b8a6", // changed from purple to teal
+          highlight: "rgba(0, 116, 217, 0.07)",
+          textHighlight: "rgba(0,0,0,0.7)",
         },
         darkMode: {
-          light: "#1A1E23",
-          lightgray: "#2F4158",
-          gray: "#9DC2D5",
-          dark: "#ECEADD",
-          darkgray: "#FCFAEE",
-          secondary: "#A2D6F0",
-          tertiary: "#FF4D6B",
-          highlight: "rgba(255, 77, 107, 0.12)",
-          textHighlight: "rgba(220, 20, 60, 0.85)",
+          light: "#181a1b",
+          lightgray: "#252525",
+          gray: "#888",
+          dark: "#f8f8f8",
+          darkgray: "#eee",
+          secondary: "#7fdbff",
+          tertiary: "#14b8a6", // changed from purple to teal
+          highlight: "rgba(127, 219, 255, 0.08)",
+          textHighlight: "rgba(255,255,255,0.7)",
         }
       },
     },

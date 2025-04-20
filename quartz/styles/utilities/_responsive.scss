@@ -1,0 +1,18 @@
+// utilities/_responsive.scss
+// Responsive utility classes
+
+@use "../abstracts/variables" as vars;
+
+.desktop-only {
+  display: initial;
+  @media all and (#{vars.$mobile}) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+  @media all and (#{vars.$mobile}) {
+    display: initial;
+  }
+}
