@@ -7,7 +7,7 @@
 > - [[mixture of experts\|mixture of experts]]
 > - [[mixtral 8x7b\|mixtral 8x7b]]
 
-"8x7B" name is a bit misleading because it is not all 7B params that are being 8x'd, only the FeedForward blocks in the [[transformer\|transformer]] are 8x'd, everything else stays the same. Hence also why total number of params is not 56B but only 46.7B ~ 47B.
+"8x7B" name is a bit misleading because it is not all 7B params that are being 8x'd, only the FeedForward blocks in the [[2 Zettels/transformer\|transformer]] are 8x'd, everything else stays the same. Hence also why total number of params is not 56B but only 46.7B ~ 47B.
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1733157942/56B%20or%2047B%20in%20Mixtral%208x7B%20MoE-3bp1fg.webp)
 

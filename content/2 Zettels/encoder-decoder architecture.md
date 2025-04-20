@@ -3,16 +3,15 @@
 ---
 
 
+> [!Note] Topics
+> [[neural network architectures\|neural network architectures]]
 
-> Composed of an encoder (which compresses the input) and a decoder (which decompresses the compressed input). 
-
-Encoder-decoder architectures can handle inputs and outputs that both consist of **variable-length sequences** and thus are suitable for sequence-to-sequence problems such as machine translation. The encoder takes a variable-length sequence as input and transforms it into a state with a fixed shape. The decoder maps the encoded state of a fixed shape to a variable-length sequence.
+Encoder-decoder architectures handle variable-length input/output sequences, making them suitable for [[seq2seq modeling\|seq2seq modeling]] tasks like machine translation. The encoder compresses input into a fixed-shape representation (memory), while the decoder generates output from this memory.
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1729777337/encoder-decoder%20architecture-xy18od.webp)
 
+In [[2 Zettels/transformer\|transformer]] (a specific implementation), both components are stacks of identical layers. The encoder processes the full input using [[2 Zettels/self-attention\|self-attention]] and produces contextualized representations. The decoder generates output [[2 Zettels/auto-regressive property\|autoregressively]] using [[masked self-attention\|masked self-attention]] (for past tokens) and [[2 Zettels/cross-attention\|cross-attention]] (to reference encoder memory).
 
-> [!note]
-> This architecture is not just used for *sequence transduction* tasks (i.e. language translation, summarization, image captioning etc). Example: [[variational autoencoder\|variational autoencoder]] which is used in computer vision, but has an encoder-decoder architecture.
+The architecture isn't limited to sequence tasks - [[variational autoencoder\|variational autoencoder]] uses it for image generation. The separation of encoding/decoding allows handling varying sequence lengths and complexities.
 
 ## Related
-- [[seq2seq modelling\|seq2seq modelling]]

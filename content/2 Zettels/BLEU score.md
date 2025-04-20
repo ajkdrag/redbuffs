@@ -2,7 +2,6 @@
 {"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true,"created":"2024-10-22T15:38:33.520+05:30"}
 ---
 
-
 Bilingual Evaluation Understudy (BLEU) is a metric for evaluating Machine translation, with value in range 0 to 1. The higher the BLEU score, the closer the computer-generated text is to the human-translated reference text. It uses a **weighted sum of precisions of n-grams** $p_n$ at its core along with a [[2 Zettels/brevity penalty term in BLEU score\|brevity penalty]] (BP) to penalize translations that are too short. The [[2 Zettels/BLEU formula explained\|BLEU formula]] is:
 $$
 \text{BLEU} = \text{BP} \cdot \exp\left(\sum_{n=1}^{N} w_n \log(p_n)\right)

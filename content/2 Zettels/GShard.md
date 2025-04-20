@@ -5,7 +5,7 @@
 
 > [!Topics]
 > - [[mixture of experts\|mixture of experts]]
-> - [[transformer\|transformer]]
+> - [[2 Zettels/transformer\|transformer]]
 
 GShard from Google (2020) is a system which allows for scaling LLMs with MoEs. They were able to train **600 billion parameters** efficiently on 2048 TPU v3 cores in 4 days.
 

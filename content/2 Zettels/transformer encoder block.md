@@ -3,35 +3,38 @@
 ---
 
 
-
 > [!Topics]
-> - [[transformer\|transformer]]
+> - [[2 Zettels/transformer\|transformer]]
 
-Vanilla transformers have the Encoder and the Decoder blocks. Both elements harness the power of [[self-attention\|self-attention]] mechanisms to intricately process data, significantly enhancing the model's proficiency in handling sequential information. The encoder's primary function is to encode input sequences, transforming raw data into context-aware representations.
+A standard **Transformer encoder block** is a fundamental component of the Transformer's encoder. It takes an input sequence and processes it through 2 main sub-layers, each followed by a [[residual connection\|residual connection]] and [[layer normalization\|layer normalization]] step. The encoder's primary function is to encode input sequences, transforming raw data into context-aware representations. The structure of an encoder block is as follows:
 
-**Structure**:
-- Stack of identical layers (typically 6-12)
-- Each layer contains (with [[residual connections\|residual connections]]):
-    - [[multi-head attention\|multi-head attention]] sublayer
-    - Feed-forward network
+1. [[multi-head self-attention\|multi-head self-attention]]: The input to the encoder block first goes through a [[2 Zettels/multi-head attention\|multi-head attention]] sub-layer. In this [[2 Zettels/self-attention\|self-attention]] mechanism, the queries, keys, and values are all derived from the output of the previous encoder layer (or the input embeddings with positional encoding in the first layer). This allows each position in the input sequence to attend to all other positions, capturing contextual dependencies. A padding mask is typically used to ignore padding tokens (which are used for sequence alignment)
+
+2. **Add & Norm:** A [[residual connection\|residual connection]] is applied around the multi-head attention sub-layer, meaning the original input to the sub-layer is added to its output. This sum is then passed through a [[layer normalization\|layer normalization]] layer, i.e. $x_{out}=\text{LayerNorm}(x + \text{Sublayer}(x))$
+
+3. **Position-wise FFN:** The output of the normalization step is then fed into a [[2 Zettels/position wise feed forward networks\|position wise feed forward networks]] sub-layer (2 linear layers with [[2 Zettels/ReLU activation\|ReLU activation]], dim expansion then compression 512 -> 2048 -> 512).
+
+4. **Second Add & Norm:** Same as step 2, and provides final output for *this* encoder block
+
+
+The data flow can be summarized as: Input $\rightarrow$ Multi-Head Attention $\rightarrow$ Add & Norm $\rightarrow$ Position-wise FFN $\rightarrow$ Add & Norm $\rightarrow$ Output. The stacking of multiple such encoder layers 
+ (6-12x) allows the model to learn increasingly complex representations of the input sequence.
 
 ![|360](https://res.cloudinary.com/dcameztw9/image/upload/v1727798563/b0bjims0kfrq4br8yvcx.png)
 
 
 **Key features**:
-- Parallel processing: Unlike [[RNN\|RNN]]s, encoders process entire sequences simultaneously, improving efficiency.
-- Context awareness: Self-attention allows each token to attend to all other tokens, capturing long-range dependencies.
-- [[positional encoding\|positional encoding]] is added to input embeddings to retain sequence order information.
+- Input: [[2 Zettels/token embedding for sequence models\|token embedding for sequence models]] + [[2 Zettels/encoding sequence position without recurrence\|positional encoding]]
+- Parallel processing: Unlike [[RNN\|RNN]]s, encoders process entire sequences simultaneously 
+- All sub-layers maintain same dimension
 
-> [!example]
-> In machine translation, the encoder might process the sentence `The cat sat on the mat` by: 
-> - Embedding each word
-> - Applying positional encoding
-> - Using self-attention to understand relationships (e.g., "sat" relates to "cat")
-> - Passing through feed-forward layers for further processing
+> [!example] Translation
+> Encodes `The cat sat on the mat` by: 
+> - Embedding words + positional info
+> - Computing attention scores to understand relationships (e.g. "sat" -> "cat")
+> - Outputs contextual embeddings for the decoder or other downstream tasks
 > 
-> The output of the encoder is a series of context-rich representations that can be used by a [[2 Zettels/transformer decoder block\|transformer decoder block]] or for other downstream tasks.
 
 ## Related
 - [[2 Zettels/transformer decoder block\|transformer decoder block]]
-- [[BERT\|BERT]]
+- [[BERT\|BERT]] (encoder-only architecture)
