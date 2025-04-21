@@ -3,4 +3,4 @@
 ---
 
 
-Hi, I am Altamash. This is my little digital garden — make yourself at home! This site is constantly shifting, but do checkout my [[2 Zettels/\|knowledge base]]. You can use the search option to search for a topic. 
+Hi, I am Altamash. This is my little digital garden — make yourself at home! This site is constantly shifting, but do checkout my [[2 Zettels/\|knowledge base]]. You can use the search option to search for a topic.

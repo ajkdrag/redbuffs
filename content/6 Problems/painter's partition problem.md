@@ -39,7 +39,7 @@ The `check` function verifies if a given **mid** (candidate **T**) is feasible. 
 **Space Complexity:** $O(1)$
 
 > [!Tip]
-> Alternative way to think about binary search: check if for each `mid` (candidate time), how many painters are required to paint **all** the boards. If this count is <= `k`, then we set `ans` to `mid` and try to find a smaller time T; otherwise we increase T. In our original solution, we were trying to check if within time `mid`, _can we_ paint all the boards using atmost `k` painters. Same thing but different POV.
+> Alternative way to think about binary search: check if for each `mid` (candidate time), how many painters are required to paint **all** the boards. If this count is ≤ `k`, then we set `ans` to `mid` and try to find a smaller time T; otherwise we increase T. In our original solution, we were trying to check if within time `mid`, _can we_ paint all the boards using atmost `k` painters. Same thing but different POV.
 
 ## Code
 

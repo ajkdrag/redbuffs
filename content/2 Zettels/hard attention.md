@@ -8,6 +8,7 @@
 > - [[2 Zettels/attention mechanism\|attention mechanism]]
 
 Hard attention differs fundamentally from [[2 Zettels/global attention\|soft attention]] by making a **discrete** choice rather than computing a weighted average. Instead of soft weights, attention scores define a probability distribution over input elements, from which one or a small subset is sampled. The output relies solely on the selected element(s), making the selection process stochastic and discrete.
+
 This discrete nature offers advantages:
 
 - improved interpretability by revealing the specific element(s) attended to
