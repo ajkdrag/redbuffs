@@ -12,7 +12,7 @@
 @use "base/headings";
 @use "base/hr";
 @use "base/syntax";
-@use "base/responsive";
+// Responsive styles are now in utilities/_responsive.scss
 
 // 3. Themes - theme definitions
 @use "themes/light";
@@ -47,11 +47,11 @@
 @use "./components/breadcrumbs";
 @use "./components/clipboard";
 @use "./components/contentMeta";
-@use "./components/footer" as componentFooter;
+// Footer styles are now in layout/footer
 @use "./components/legacyToc";
 @use "./components/listPage";
 @use "./components/recentNotes";
 
 // 6. Utilities
 @use "./utilities/_utilities.scss";
-@use "./utilities/_responsive.scss" as utilitiesResponsive;
+@use "./utilities/_responsive.scss"; // All responsive styles consolidated here

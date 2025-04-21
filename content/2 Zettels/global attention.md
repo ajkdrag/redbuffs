@@ -1,9 +1,12 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"aliases":["soft attention"],"PassFrontmatter":true,"created":"2025-04-19T10:40:25.942+05:30"}
+{
+  "publish": true,
+  "tags": ["type/zettel", "status/done"],
+  "aliases": ["soft attention"],
+  "PassFrontmatter": true,
+  "created": "2025-04-19T10:40:25.942+05:30",
+}
 ---
-
-
-[]()
 
 > [!Topics]
 >

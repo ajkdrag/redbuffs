@@ -7,7 +7,7 @@
     cursor: pointer;
     background: none;
     border: none;
-    padding: 0.75rem;
+    padding: 0 0.75rem 0 0;
     margin-right: 0.5rem;
     color: var(--dark);
     border-radius: 6px;
@@ -26,7 +26,7 @@
 
   .panel-container {
     background: var(--light);
-    
+
     // Desktop specific styles
     &.desktop-only {
       position: static;
@@ -167,4 +167,113 @@
 
 .drawer-container.desktop-only .navigation {
   margin-top: 0;
+}
+
+// Desktop drawer styles
+.drawer-container.desktop-only {
+  margin-left: auto;
+
+  .panel-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: var(--light);
+    border-left: 1px solid var(--lightgray);
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+  }
+}
+
+// Mobile drawer panel profile override
+.drawer-container.mobile-only .panel-container .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+// Mobile drawer panel
+.drawer-container.mobile-only {
+  .panel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: var(--light);
+    border-right: 1px solid var(--lightgray);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+    overflow-y: auto;
+  }
+  .panel-container.open {
+    transform: translateX(0);
+  }
+}
+
+// Panel content (if used)
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+// Profile (override for avatar size)
+.profile .avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+// Name override
+.profile .name {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--dark);
+}
+
+// Bio override
+.profile .bio {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--gray);
+  margin: 0;
+}
+
+// Navigation link overrides
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  background: color-mix(in srgb, var(--secondary) 4%, transparent);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: var(--dark);
+  font-family: var(--headerFont);
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: var(--highlight);
+  color: var(--secondary);
+}
+
+.nav-link .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  color: inherit;
 }

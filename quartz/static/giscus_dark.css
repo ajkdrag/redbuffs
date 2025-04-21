@@ -5,37 +5,37 @@ main {
   --color-fg-subtle: #eceadd;
 
   /* Background colors */
-  --color-canvas-default: #1a1e23;
-  --color-canvas-overlay: #1f242a;
-  --color-canvas-inset: #1d2227;
-  --color-canvas-subtle: #212529;
+  --color-canvas-default: #181a1b;
+  --color-canvas-overlay: #1f2122;
+  --color-canvas-inset: #1c1e1f;
+  --color-canvas-subtle: #252525;
 
   /* Borders */
-  --color-border-default: #2f4158;
-  --color-border-muted: rgba(47, 65, 88, 0.8);
+  --color-border-default: #2f3133;
+  --color-border-muted: rgba(47, 49, 51, 0.8);
 
   /* Button colors */
-  --color-btn-text: #fcfaee;
-  --color-btn-bg: #1a1e23;
-  --color-btn-border: #2f4158;
+  --color-btn-text: #f8f8f8;
+  --color-btn-bg: #181a1b;
+  --color-btn-border: #2f3133;
   --color-btn-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  --color-btn-hover-bg: #212529;
+  --color-btn-hover-bg: #252525;
   --color-btn-hover-border: #14b8a6;
-  --color-btn-active-bg: #1f242a;
+  --color-btn-active-bg: #1f2122;
   --color-btn-active-border: #14b8a6;
-  --color-btn-selected-bg: rgba(255, 77, 107, 0.12);
+  --color-btn-selected-bg: rgba(127, 219, 255, 0.08);
 
   /* Primary button */
-  --color-btn-primary-text: #1a1e23;
+  --color-btn-primary-text: #181a1b;
   --color-btn-primary-bg: #14b8a6;
   --color-btn-primary-border: transparent;
   --color-btn-primary-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   --color-btn-primary-hover-bg: #0d9488;
   --color-btn-primary-hover-border: transparent;
   --color-btn-primary-selected-bg: #0d9488;
-  --color-btn-primary-disabled-bg: rgba(162, 214, 240, 0.6);
-  --color-btn-primary-disabled-text: rgba(26, 30, 35, 0.5);
+  --color-btn-primary-disabled-bg: rgba(127, 219, 255, 0.6);
+  --color-btn-primary-disabled-text: rgba(24, 26, 27, 0.5);
 
   /* Accents and states */
   --color-accent-fg: #14b8a6;

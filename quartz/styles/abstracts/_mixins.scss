@@ -76,7 +76,8 @@
     margin-bottom: 0;
   }
 
-  li, ol {
+  li,
+  ol {
     font-size: inherit;
     color: inherit;
   }
@@ -85,11 +86,5 @@
     font-size: 0.95em;
     background: transparent;
     color: var(--gray);
-  }
-
-  a {
-    color: var(--secondary);
-    text-decoration: underline;
-    text-underline-offset: 2px;
   }
 }

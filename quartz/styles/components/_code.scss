@@ -10,6 +10,11 @@
   border-radius: var(--radius, 4px);
   font-weight: normal;
   letter-spacing: normal;
+
+  @media all and (#{vars.$mobile}) {
+    font-size: 0.8em;
+    padding: 0.15rem 0.35rem;
+  }
 }
 
 // Code blocks - improved styling
@@ -49,6 +54,11 @@ pre {
     background: transparent;
     border-radius: 0;
 
+    @media all and (#{vars.$mobile}) {
+      font-size: 0.85rem;
+      padding: 0.75rem 0.25rem 0.75rem 0.5rem;
+    }
+
     // Line styling
     & > [data-line] {
       display: flex;
@@ -61,6 +71,12 @@ pre {
       position: relative;
       padding-left: 2.5em; // Add padding for line numbers
       padding-right: 1em; // Add right padding to prevent text from touching the edge
+
+      @media all and (#{vars.$mobile}) {
+        min-height: 1.5em;
+        padding-left: 2em; // Reduced padding for line numbers on mobile
+        padding-right: 0.5em; // Reduced right padding on mobile
+      }
 
       // Line numbers - improved gutter positioning
       &::before {
@@ -79,6 +95,12 @@ pre {
         top: 0;
         background: transparent;
         z-index: 1;
+
+        @media all and (#{vars.$mobile}) {
+          font-size: 0.8em;
+          width: 2em;
+          left: 0.3em;
+        }
       }
 
       // Highlighted line
@@ -93,6 +115,10 @@ pre {
         border-radius: 4px;
         padding: 0.2rem 0.1rem;
         font-weight: 500;
+
+        @media all and (#{vars.$mobile}) {
+          padding: 0.15rem 0.1rem;
+        }
       }
     }
   }
@@ -108,5 +134,12 @@ pre {
     [data-line]::before {
       color: var(--gray);
     }
+  }
+
+  // Mobile adjustments for code blocks
+  @media all and (#{vars.$mobile}) {
+    margin: 1.25rem 0;
+    max-width: 100%;
+    font-size: 0.9rem;
   }
 }

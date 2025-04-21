@@ -1,7 +1,11 @@
 // utilities/_responsive.scss
-// Responsive utility classes
+// Consolidated responsive styles and utility classes
 
 @use "../abstracts/variables" as vars;
+
+// ==============================
+// RESPONSIVE UTILITY CLASSES
+// ==============================
 
 .desktop-only {
   display: initial;
@@ -14,5 +18,228 @@
   display: none;
   @media all and (#{vars.$mobile}) {
     display: initial;
+  }
+}
+
+// ==============================
+// RESPONSIVE STYLES
+// ==============================
+
+// Heading adjustments for mobile
+@media all and (#{vars.$mobile}) {
+  h1 {
+    font-size: 1.75rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .article-title {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin: 1.25rem 0 0.75rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+    margin: 1.25rem 0 0.5rem;
+  }
+}
+
+// Layout adjustments for mobile
+// Remove top padding on mobile
+.page > #quartz-body .sidebar.left {
+  @media all and (#{vars.$mobile}) {
+    padding: 0;
+  }
+}
+
+// Fix drawer button margin and alignment on mobile
+@media all and (#{vars.$mobile}) {
+  .drawer-button {
+    padding-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    height: var(--header-height, 56px);
+  }
+}
+
+// Adjust header spacing
+.page {
+  #quartz-body {
+    @media all and (#{vars.$mobile}) {
+      .page-header {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+// Optimize article title and meta spacing
+.article-title {
+  @media all and (#{vars.$mobile}) {
+    margin: 1rem 0 0.25rem;
+  }
+}
+
+.content-meta {
+  @media all and (#{vars.$mobile}) {
+    margin: 0 auto 1rem;
+    font-size: 0.85rem;
+
+    span {
+      &:not(:last-child)::after {
+        margin: 0 0.25rem;
+      }
+    }
+  }
+}
+
+// Fix backlinks layout
+@media (max-width: 1200px) {
+  .backlinks > .overflow {
+    height: auto;
+  }
+}
+
+.backlinks {
+  @media all and (#{vars.$mobile}) {
+    margin-top: 2rem;
+    padding: 1rem;
+
+    h3 {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .backlinks-container {
+      display: block;
+      width: 100%;
+    }
+
+    .overflow {
+      max-height: 250px;
+    }
+
+    ul {
+      column-width: auto;
+      column-count: 1;
+      gap: 0.5rem;
+
+      li {
+        margin: 0 0 0.5rem 0;
+
+        a {
+          font-size: 0.9rem;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+
+// Fix page list items
+.section-li {
+  @media all and (#{vars.$mobile}) {
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      .meta {
+        font-size: 0.85rem;
+        order: 1;
+      }
+
+      .desc {
+        order: 2;
+
+        h3 {
+          font-size: 1rem;
+          line-height: 1.4;
+          margin: 0;
+
+          a {
+            display: inline-block;
+            white-space: normal;
+          }
+        }
+      }
+
+      .tags {
+        order: 3;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+// Content spacing and readability improvements for mobile
+@media all and (#{vars.$mobile}) {
+  article {
+    // Increase spacing between text blocks
+    p,
+    ul,
+    ol {
+      margin-block: 1.2em;
+
+      & + p,
+      & + ul,
+      & + ol {
+        margin-top: 1.5em; // Extra space between consecutive text blocks
+      }
+    }
+
+    // Improve list styling
+    ul,
+    ol {
+      padding-left: 1.2rem; // Reduce left padding on mobile
+
+      li {
+        margin-block: 0.8em; // Space between list items
+        padding-left: 0; // Remove extra padding after bullet/number
+
+        // Nested lists
+        ul,
+        ol {
+          margin-top: 0.8em;
+          margin-bottom: 0.8em;
+          padding-left: 1rem; // Reduce padding for nested lists on mobile
+        }
+      }
+    }
+  }
+
+  // Improve readability of dense text
+  p,
+  li {
+    line-height: 1.7; // Slightly increased line height
+    letter-spacing: 0.01em; // Subtle letter spacing
+
+    // Better text measure for mobile
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Add visual grouping for large text sections
+  h1,
+  h2,
+  h3,
+  h4 {
+    & + p,
+    & + ul,
+    & + ol {
+      margin-top: 1em; // Less space after headings
+    }
+
+    // Add more space before new sections
+    & + h2,
+    & + h3 {
+      margin-top: 1.4em;
+    }
   }
 }

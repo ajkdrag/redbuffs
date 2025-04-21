@@ -1,18 +1,21 @@
+// Footer styles - consolidated from layout and component files
 @use "../abstracts/variables" as quartz;
 @use "../abstracts/spacing";
 @use "../abstracts/mixins";
 @use "../abstracts/theme";
 
 footer {
-  margin: 4rem 0 2rem;
-  padding: 2.5rem 0 1.5rem 0;
+  margin: 2rem 0 1rem;
+  padding: 1.5rem 0 0.5rem 0;
   border-top: 1px solid var(--lightgray);
   background: transparent;
+  text-align: left;
+  opacity: 0.7;
 
   p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--gray);
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.3rem 0;
     text-align: center;
     letter-spacing: 0.01em;
 
@@ -35,15 +38,18 @@ footer {
     gap: 1.2rem;
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0 0 0;
+    margin: 0.3rem 0 0 0;
+    flex-direction: row;
+    margin-top: -0.5rem;
 
     li a {
       color: var(--gray);
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       font-weight: 600;
-      padding: 0.3rem 0.7rem;
+      padding: 0.2rem 0.5rem;
       transition: color theme.$transition-fast ease;
-      text-decoration: none;
+      text-decoration: underline;
+      text-underline-offset: 2px;
       &:hover {
         color: var(--tertiary);
       }
@@ -52,7 +58,12 @@ footer {
 
   @media (max-width: 600px) {
     border-radius: 0;
-    p, ul { font-size: 0.95rem; }
-    ul { gap: 0.7rem; }
+    p,
+    ul {
+      font-size: 0.95rem;
+    }
+    ul {
+      gap: 0.7rem;
+    }
   }
 }
