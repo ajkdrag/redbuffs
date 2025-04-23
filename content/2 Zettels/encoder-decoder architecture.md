@@ -10,7 +10,7 @@ Encoder-decoder architectures handle variable-length input/output sequences, mak
 
 ![](https://res.cloudinary.com/dcameztw9/image/upload/v1729777337/encoder-decoder%20architecture-xy18od.webp)
 
-In [[2 Zettels/transformer\|transformer]] (a specific implementation), both components are stacks of identical layers. The encoder processes the full input using [[2 Zettels/self-attention\|self-attention]] and produces contextualized representations. The decoder generates output [[2 Zettels/auto-regressive property\|autoregressively]] using [[masked self-attention\|masked self-attention]] (for past tokens) and [[2 Zettels/cross-attention\|cross-attention]] (to reference encoder memory).
+In [[2 Zettels/transformer\|transformer]] (a specific implementation), both components are stacks of identical layers. The encoder processes the full input using [[2 Zettels/self-attention\|self-attention]] and produces contextualized representations. The decoder generates output [[2 Zettels/auto-regressive property\|autoregressively]] using [[2 Zettels/masked self-attention\|masked self-attention]] (for past tokens) and [[2 Zettels/cross-attention\|cross-attention]] (to reference encoder memory).
 
 The architecture isn't limited to sequence tasks - [[variational autoencoder\|variational autoencoder]] uses it for image generation. The separation of encoding/decoding allows handling varying sequence lengths and complexities.
 

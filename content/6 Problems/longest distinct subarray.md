@@ -12,7 +12,7 @@
 
 ### Approach 1 (Sliding Window)
 
-Straightforward application of the [[2 Zettels/sliding window with variable window size (snake framework)\|sliding window with variable window size (snake framework)]]. Our state is maintained using [[2 Zettels/frequency arrays\|frequency arrays]] (or hashmap in this case). For each start position (`tail`), the `head` moves forward, expanding the window, as long as the element at `arr[head + 1]` is not already present in the current window (tracked by `freq`). The longest valid window length is tracked in `ans`. Process `ans` as the snake length and step the tail forward, updating the freq table as we go.
+Straightforward application of the [[2 Zettels/sliding window with variable window size (snake framework)\|sliding window with variable window size (snake framework)]]. Our state is maintained using [[2 Zettels/frequency array\|frequency array]] (or hashmap in this case). For each start position (`tail`), the `head` moves forward, expanding the window, as long as the element at `arr[head + 1]` is not already present in the current window (tracked by `freq`). The longest valid window length is tracked in `ans`. Process `ans` as the snake length and step the tail forward, updating the freq table as we go.
 
 **Time Complexity:** $O(n)$ - each element is visited at most twice (`head` and `tail`). Although a hashmap is used, in the worst case, each element will be inserted and deleted at most once, thus the amortized time complexity is still linear.
 **Space Complexity:** $O(n)$ - in the worst case, the hashmap `freq` might contain all the distinct elements of the array.

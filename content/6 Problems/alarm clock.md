@@ -21,7 +21,7 @@ Given:
 
 This problem can be solved using the [[2 Zettels/sliding window with fixed window size\|sliding window with fixed window size]] technique. The core idea is to maintain a window of size $m$ and greedily turn off alarms within that window to ensure that at most $k-1$ alarms are active. The "window" expands by one minute at a time, and at each step, we update the count of active alarms. If the number of alarms within the current window exceeds $k-1$, we turn off the necessary number of alarms at the current minute (`head`) to satisfy the condition. This greedy approach ensures that we minimize the total number of alarms turned off. The [[2 Zettels/sliding window with fixed window size (snake framework)\|sliding window with fixed window size (snake framework)]] provides a structured way to implement this.
 
-The code maintains a `current_alarms` vector representing the number of alarms starting at each minute (like [[2 Zettels/frequency arrays\|frequency arrays]]). The `update_state` function greedily turns off alarms at the current minute (`head`) if the count of active alarms in the window exceeds $k-1$. The `undo_update_state` function simply undoes the count from the tail as the snake retreats.
+The code maintains a `current_alarms` vector representing the number of alarms starting at each minute (like [[2 Zettels/frequency array\|frequency array]]). The `update_state` function greedily turns off alarms at the current minute (`head`) if the count of active alarms in the window exceeds $k-1$. The `undo_update_state` function simply undoes the count from the tail as the snake retreats.
 
 **Time Complexity:** $O(\text{max\_time})$ where $\text{max\_time} \approx 10^6$
 **Space Complexity:** $O(\text{max\_time})$ (freq arr)

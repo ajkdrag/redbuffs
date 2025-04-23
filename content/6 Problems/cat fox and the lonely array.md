@@ -30,7 +30,7 @@ The problem asks for the smallest window size `k` such that the bitwise OR of al
 
 ### Approach 1: Sliding Window
 
-We can use a [[sliding window\|sliding window]] of size `k` to iterate through all subarrays of length `k`. Since [[2 Zettels/bitwise OR is not invertible\|bitwise OR is not invertible]], we can't directly subtract elements when the window slides. Instead, we maintain a `bitCount` array, which acts like a [[2 Zettels/frequency arrays\|frequency array]] but for bits. `bitCount[b]` stores the number of elements in the current window that have the $b^{th}$ bit set.
+We can use a [[sliding window\|sliding window]] of size `k` to iterate through all subarrays of length `k`. Since [[2 Zettels/bitwise OR is not invertible\|bitwise OR is not invertible]], we can't directly subtract elements when the window slides. Instead, we maintain a `bitCount` array, which acts like a [[2 Zettels/frequency array\|frequency array]] but for bits. `bitCount[b]` stores the number of elements in the current window that have the $b^{th}$ bit set.
 
 For each window:
 

@@ -26,5 +26,5 @@ Self-attention, like any standard dot product attention, can be **global** or **
 ## Related
 
 - [[2 Zettels/cross-attention\|cross-attention]] (attending between different sequences)
-- [[masked self-attention\|masked self-attention]] (masking of future positions in autoregressive models)
+- [[2 Zettels/masked self-attention\|masked self-attention]] (masking of future positions in autoregressive models)
 - [[multi-head self-attention\|multi-head self-attention]] (multiple attention heads for capturing different types of dependencies)

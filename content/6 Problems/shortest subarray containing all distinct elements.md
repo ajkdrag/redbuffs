@@ -11,7 +11,7 @@ Given an array of N integers, find the length of the smallest sub-array that c
 
 ## Idea
 
-Straightforward application of the [[2 Zettels/sliding window with variable window size (snake framework)\|sliding window with variable window size (snake framework)]]. Our state is maintained using [[2 Zettels/frequency arrays\|frequency arrays]]. For each start position (`tail`), the `head` moves forward, expanding the window, as long as the window does not contain all the distinct elements of the array. Once the window contains all distinct elements, we record the window length, we process `ans` as the snake length and step the tail forward, updating the freq table as we go.
+Straightforward application of the [[2 Zettels/sliding window with variable window size (snake framework)\|sliding window with variable window size (snake framework)]]. Our state is maintained using [[2 Zettels/frequency array\|frequency array]]. For each start position (`tail`), the `head` moves forward, expanding the window, as long as the window does not contain all the distinct elements of the array. Once the window contains all distinct elements, we record the window length, we process `ans` as the snake length and step the tail forward, updating the freq table as we go.
 
 **Time Complexity:** $O(n)$ - each element is visited at most twice (`head` and `tail`). 
 **Space Complexity:** $O(\text{max\_range})$ (freq array of size $\text{max\_range}\approx10^5$)

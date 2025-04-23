@@ -23,7 +23,10 @@ For example, with array $[1,2,3,4,5]$ and query $l=2,r=4,k=2$:
 - Sum = $(2+3) + (3+4) = 12$
 
 The mathematical expression is:
-$\sum_{i=l}^{r-k+1} \sum_{j=0}^{k-1} A_{i+j}$
+
+$$
+\sum_{i=l}^{r-k+1} \sum_{j=0}^{k-1} A_{i+j}
+$$
 
 ### Input
 
@@ -58,7 +61,7 @@ Output:
 1
 ```
 
-#### Explanation
+**Explanation:**
 
 Query 1: $(2+3) + (3+4) = 12$
 Query 2: Single element sum: $1$
@@ -72,7 +75,10 @@ Use two levels of prefix sums to transform each query into O(1) operation.
 Let $P[i] = \sum_{j=1}^i A_j$ with $P[0] = 0$
 
 This allows computing any subarray sum in O(1):
-$\sum_{j=i}^{i+k-1} A_j = P[i+k-1] - P[i-1]$
+
+$$
+\sum_{j=i}^{i+k-1} A_j = P[i+k-1] - P[i-1]
+$$
 
 ### 2. Query Expression
 
@@ -87,7 +93,10 @@ For query $(l,r,k)$:
 Let $PP[i] = \sum_{j=0}^i P[j]$ with $PP[0] = P[0]$
 
 This transforms range sums of P into O(1):
-$\sum_{j=a}^b P[j] = PP[b] - (a-1 \geq 0 ? PP[a-1] : 0)$
+
+$$
+\sum_{j=a}^b P[j] = PP[b] - (a-1 \geq 0 ? PP[a-1] : 0)
+$$
 
 ### 4. Final Query Formula
 
@@ -95,8 +104,8 @@ $\sum_{j=a}^b P[j] = PP[b] - (a-1 \geq 0 ? PP[a-1] : 0)$
 Answer = (PP[r] - PP[l+k-2]) - (PP[r-k] - (l-2 ≥ 0 ? PP[l-2] : 0))
 ```
 
-- **Time Complexity**: O(N) preprocessing + O(Q) queries
-- **Space Complexity**: O(N)
+- **Time Complexity**: $O(N)$ preprocessing + $O(Q)$ queries
+- **Space Complexity**: $O(N)$
 
 ## Code
 

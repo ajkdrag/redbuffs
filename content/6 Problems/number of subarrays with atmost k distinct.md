@@ -11,7 +11,7 @@ Given an array of N integers, find the number of subarrays with at most K di
 
 ## Idea
 
-Straightforward application of [[2 Zettels/sliding window with variable window size (snake framework)\|sliding window with variable window size (snake framework)]]. The state is managed using [[2 Zettels/frequency arrays\|frequency arrays]].
+Straightforward application of [[2 Zettels/sliding window with variable window size (snake framework)\|sliding window with variable window size (snake framework)]]. The state is managed using [[2 Zettels/frequency array\|frequency array]].
 
 **Time Complexity:** $O(n)$
 **Space Complexity:** $O(\max(A))$ due to the frequency array

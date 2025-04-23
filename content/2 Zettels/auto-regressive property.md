@@ -4,6 +4,7 @@
 
 
 > [!Topics]
+>
 > - [[sequence modeling\|sequence modeling]]
 
 The auto-regressive property refers to a model's ability to make predictions based on its own previous outputs or historical values. More specifically, an auto-regressive model predicts the current value based on past values in a sequence.
@@ -15,11 +16,12 @@ $$
 ```
 Input: The cat sits on
 
-Step 1: The cat sits on → the 
+Step 1: The cat sits on → the
 Step 2: The cat sits on the → mat
 ```
 
 **Common Applications**
+
 - Language Models (like [[GPT\|GPT]])
 - Time Series Prediction
 - Speech Generation
@@ -28,4 +30,5 @@ Step 2: The cat sits on the → mat
 This property is well suited for generative tasks, but can be slow (one output at a time) and suffer from error accumulation.
 
 ## Related
+
 - [[2 Zettels/teacher forcing\|teacher forcing]]

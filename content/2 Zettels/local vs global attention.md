@@ -12,7 +12,7 @@ Choice between [[2 Zettels/local attention\|local attention]] and [[2 Zettels/gl
 
 Global attention provides richest contextual info, but computationally prohibitive for long sequences. Local attention offers linear scalability, feasible for long inputs, but fixed window limits capturing long-range dependencies directly.
 
-This trade-off motivates research into [[sparse attention\|sparse attention]] mechanisms: attempt to balance capturing relevant long-range dependencies while maintaining sub-quadratic complexity.
+This trade-off motivates research into [[2 Zettels/sparse attention\|sparse attention]] mechanisms: attempt to balance capturing relevant long-range dependencies while maintaining sub-quadratic complexity.
 
 | Feature                       | Local Attention (Fixed Window)                                | Global Attention                                       |
 | ----------------------------- | ------------------------------------------------------------- | ------------------------------------------------------ |

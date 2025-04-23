@@ -14,9 +14,9 @@ Given an array A of N integers and an integer _target_, find three integers in A
 - **Sort first**
 - **Fix one element**: For each `arr[i]`, apply [[2 Zettels/two pointers at opposite ends\|two pointers at opposite ends]] technique on remaining elements
 - **Adjust pointers**:
-  - If sum < target → move left pointer right (for larger values)
-  - If sum > target → move right pointer left (for smaller values)
-  - If sum == target → answer is 0 (optimal)
+    - If sum < target → move left pointer right (for larger values)
+    - If sum > target → move right pointer left (for smaller values)
+    - If sum == target → answer is 0 (optimal)
 - Track minimal `abs(sum - target)` at each step
 
 **Time Complexity:** $O(n\log n)$ (sorting) + $O(n^2)$ (2 pointers)

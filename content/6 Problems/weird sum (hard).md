@@ -84,15 +84,8 @@ The main challenge is handling the two distinct cases based on the relation betw
 
 In this case, the window of $k$ elements fits completely for many starting indices. The sum is divided into two parts:
 
-- **Full Window Sums:**  
-   For indices $i$ from $l$ to $r-k+1$, the window covers exactly $k$ elements.  
-   Each sum is $\sum_{j=i}^{i+k-1} A_j$
-  Using the prefix sum arrays, these sums can be computed quickly and then summed over $i$ (refer [[6 Problems/weird sum (easy)\|weird sum (easy)]] for formula derivation)
-- **Decreasing Window Sums:**  
-   For indices $i$ from $r-k+2$ to $r$, the window would naturally extend past $r$, so we only take up to $r$.  
-   The sum for these indices is $\sum_{j=i}^{r} A_j$,  
-   which forms a decreasing sequence of window lengths (from $k-1$ elements down to $1$).  
-   Here, the right prefix sums come into play to compute the total sum efficiently.
+- **Full Window Sums:** For indices $i$ from $l$ to $r-k+1$, the window covers exactly $k$ elements. Each sum is $\sum_{j=i}^{i+k-1} A_j$. Using the prefix sum arrays, these sums can be computed quickly and then summed over $i$ (refer [[6 Problems/weird sum (easy)\|weird sum (easy)]] for formula derivation)
+- **Decreasing Window Sums:** For indices $i$ from $r-k+2$ to $r$, the window would naturally extend past $r$, so we only take up to $r$. The sum for these indices is $\sum_{j=i}^{r} A_j$, which forms a decreasing sequence of window lengths (from $k-1$ elements down to $1$). Here, the right prefix sums come into play to compute the total sum efficiently.
 
 Combining these two parts gives the answer when $k$ is small enough.
 

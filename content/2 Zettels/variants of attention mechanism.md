@@ -32,9 +32,9 @@ Most modern attention mechanisms build on the [[2 Zettels/key-query-value KQV fr
 |    Architecture    | [[2 Zettels/cross-attention\|cross-attention]]                     | Queries from decoder, keys from encoder | [[2 Zettels/encoder-decoder architecture\|encoder-decoder architecture]] (e.g [[2 Zettels/transformer\|transformer]]) |
 |                    | [[2 Zettels/self-attention\|self-attention]]                      | Q, K, V from same sequence              | [[2 Zettels/transformer\|transformer]]                                        |
 |                    | [[2 Zettels/multi-head attention\|multi-head attention]]                | Multiple parallel attention heads       | [[2 Zettels/transformer\|transformer]]                                        |
-|     Efficiency     | [[sparse attention\|sparse attention]]                    | Attends to subset of positions          | Long sequences                                         |
+|     Efficiency     | [[2 Zettels/sparse attention\|sparse attention]]                    | Attends to subset of positions          | Long sequences                                         |
 |                    | [[flash attention\|flash attention]]                     | Optimized computation/memory            | Speeding up transformers                               |
-| Special Properties | [[masked attention\|masked attention]]                    | Blocks future positions                 | [[2 Zettels/auto-regressive property\|auto-regressive property]] models                    |
+| Special Properties | [[2 Zettels/masked attention\|masked attention]]                    | Blocks future positions                 | [[2 Zettels/auto-regressive property\|auto-regressive property]] models                    |
 |                    | [[2 Zettels/hard attention\|hard attention]]                      | Selects one position                    | Interpretability                                       |
 
 ## Related

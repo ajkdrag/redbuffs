@@ -5,7 +5,7 @@
 
 > [!Topics]
 >
-> - [[2 Zettels/frequency arrays\|frequency arrays]]
+> - [[2 Zettels/frequency array\|frequency array]]
 > - [[c++ STL\|c++ STL]]
 
 Given an array `arr`, return true if there is a **triplet (a, b, c)** from the array (where a, b, and c are on different indexes) that satisfies $a^2+b^2=c^2$, otherwise return false.

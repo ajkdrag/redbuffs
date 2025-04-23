@@ -12,11 +12,11 @@ BFS is a graph traversal algorithm that explores nodes **level by level**. It st
 
 1. Enqueue source node `s` and mark as visited
 2. While queue is not empty:
-   a. Dequeue node `u`
-   b. Process `u`
-   c. For unvisited neighbors `v` of `u`:
-    - Mark `v` as visited
-    - Enqueue `v`
+    - Dequeue node `u`
+    - Process `u`
+    - For unvisited neighbors `v` of `u`:
+        - Mark `v` as visited
+        - Enqueue `v`
 
 BFS guarantees [[level-order traversal\|level-order traversal]] and finds the **shortest path in unweighted graphs**.
 

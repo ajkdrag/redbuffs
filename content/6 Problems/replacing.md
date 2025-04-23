@@ -5,7 +5,7 @@
 
 > [!Topics]
 >
-> - [[2 Zettels/frequency arrays\|frequency arrays]]
+> - [[2 Zettels/frequency array\|frequency array]]
 
 For each query `q`, you are provided numbers `a` and `b`. Replace all occurrences of `a` with `b` and print the total sum.
 
