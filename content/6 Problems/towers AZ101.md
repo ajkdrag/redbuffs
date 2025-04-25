@@ -7,7 +7,7 @@
 >
 > - [[c++ STL\|c++ STL]]
 > - [[binary search\|binary search]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 You are given N blocks. You have to build towers by placing blocks on top of each other with the condition that the upper block must be smaller than the lower block. You have to process the blocks in the given order. Find the minimum possible number of towers you can create.
 

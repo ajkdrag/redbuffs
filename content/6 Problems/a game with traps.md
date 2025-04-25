@@ -14,7 +14,7 @@ We are given a level represented as a line segment from point $0$ to point $n+1$
 
 The core idea is to perform a binary search on the minimum agility threshold required for the soldiers. For any given candidate threshold $\theta$, only traps with $d_i > \theta$ pose a threat. In the provided implementation, which is based on the [[2 Zettels/binary search boolean array framework\|binary search boolean array framework]], the check function filters out the traps that are dangerous for soldiers with agility at least $\theta$, i.e., traps where $d_i > \theta$. The dangerous traps are then represented as intervals $\left[l_i, r_i\right]$.
 
-Once these intervals are collected, they are sorted by their starting positions. We then [[merge overlapping intervals\|merge overlapping intervals]] to avoid counting extra time more than once. The reason is that if two traps' danger zones overlap, we can disarm them with one detour rather than two separate ones (this is a [[2 Zettels/greedy algorithms\|greedy step]]).
+Once these intervals are collected, they are sorted by their starting positions. We then [[merge overlapping intervals\|merge overlapping intervals]] to avoid counting extra time more than once. The reason is that if two traps' danger zones overlap, we can disarm them with one detour rather than two separate ones (this is a [[2 Zettels/greedy algorithm\|greedy step]]).
 
 For each merged interval $[L, R]$, we must:
 

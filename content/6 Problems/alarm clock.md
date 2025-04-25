@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[2 Zettels/sliding window with fixed window size\|sliding window with fixed window size]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 Find the minimum number of alarm clocks to remove so that no $m$ consecutive minutes contain $k$ or more alarm clock start times.
 

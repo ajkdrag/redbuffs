@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[2 Zettels/two pointers technique\|two pointers technique]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 > - [[combinatorics\|combinatorics]]
 
 ## Idea

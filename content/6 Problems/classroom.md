@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[binary search\|binary search]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 Vivek has built a new classroom with $N$ seats. The seats are located along a straight line at positions $x_1, x_2, \dots, x_N$. Vivek has to assign seats to $K$ students such that a seat can be assigned to at most 1 student and the minimum distance between any two students is as large as possible. Find the largest minimum distance possible.
 

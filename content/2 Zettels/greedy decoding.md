@@ -6,7 +6,7 @@
 
 > [!Topics]
 > - [[decoding strategies\|decoding strategies]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
  The simplest decoding method which selects the most probable token at each step $t$.
 In an [[2 Zettels/encoder-decoder architecture\|encoder-decoder architecture]] where we condition on input $X$ and previous token outputs $\hat{y}_1,\ldots,\hat{y}_{t-1}$

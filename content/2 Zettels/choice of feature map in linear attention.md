@@ -20,7 +20,7 @@ The choice of the feature map $\phi$ is critical. It must satisfy two potentiall
 - **Approximation Quality:** $\phi(q)\cdot\phi(k)$ should be a reasonably good approximation of the original similarity score, which is typically related to $\exp(q\cdot k / \sqrt{d_k})$. If the approximation is poor, the performance of the resulting attention mechanism may degrade significantly
 - **Computational Feasibility:** The feature map $\phi$ must be efficiently computable, and its dimension $c$ should not be excessively large
 
-Common choices for ϕ include simple activations like $\phi(x)=\text{elu}(x)+1$, the identity function $\phi(x)=x$ (leading to unnormalized linear attention), random features designed to approximate Gaussian or [[softmax\|softmax]] kernels (as in [[performer architecture\|performer architecture]]), or polynomial features.
+Common choices for ϕ include simple activations like $\phi(x)=\text{elu}(x)+1$, the identity function $\phi(x)=x$ (leading to unnormalized linear attention), random features designed to approximate Gaussian or [[softmax\|softmax]] kernels (as in [[performer\|performer]]), or polynomial features.
 
 An important question is how to handle the normalization inherent in the softmax function. Standard softmax ensures attention weights sum to 1 for each query, acting as a probability distribution over the value vectors. The denominator term in [[2 Zettels/linear attention math formulation\|linear attention math formulation]]: $\phi(Q)Z$ is an approximation which if very small, can lead to numerical instability. Few methods to address this:
 

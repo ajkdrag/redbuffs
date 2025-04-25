@@ -11,7 +11,7 @@ Hard attention differs fundamentally from [[2 Zettels/global attention\|soft att
 
 This discrete nature offers advantages:
 
-- improved interpretability by revealing the specific element(s) attended to
+- improved [[model explainability\|model explainability]] by revealing the specific element(s) attended to
 - potential computational efficiency during inference as only selected elements are processed, unlike soft attention which processes all inputs
 
 Major challenge is **non-differentiability**. The discrete sampling step blocks standard gradient flow for [[backpropagation\|backpropagation]]. Training requires specialized methods:

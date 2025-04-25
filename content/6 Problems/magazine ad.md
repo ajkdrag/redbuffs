@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[binary search\|binary search]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 The problem asks us to minimize the width of an advertisement text, given a maximum line count $k$. We can wrap lines at spaces or hyphens within words.
 

@@ -8,7 +8,7 @@
 
 A **Transformer decoder block** is a key component of the Transformer's decoder, responsible for generating the output sequence. Similar to the encoder, the decoder consists of a stack of identical layers. Each decoder layer has 3 main sub-layers, each followed by a [[residual connection\|residual connection]] and [[layer normalization\|layer normalization]] step. Primary job is to generate output sequences based on the *encoded inputs* and *previously generated outputs*. The structure is:
 
-1.  [[masked multi-head self-attention\|masked multi-head self-attention]]: The mask prevents the decoder from attending to subsequent tokens in the target sequence, ensuring that the prediction for the current position only depends on the tokens generated so far. This is essential for [[2 Zettels/auto-regressive property\|auto-regressive property]]. Padding masks are also used here
+1.  [[2 Zettels/masked multi-head self-attention\|masked multi-head self-attention]]: The mask prevents the decoder from attending to subsequent tokens in the target sequence, ensuring that the prediction for the current position only depends on the tokens generated so far. This is essential for [[2 Zettels/auto-regressive property\|auto-regressive property]]. Padding masks are also used here
 2.  **Add & Norm:** A [[residual connection\|residual connection]] and [[layer normalization\|layer normalization]] are applied around the masked multi-head self-attention sub-layer
 3.  **Encoder-Decoder Multi-Head Attention:** The second sub-layer is another [[2 Zettels/multi-head attention\|multi-head attention]] mechanism, but this time, the queries ($Q$) come from the output of the previous decoder sub-layer, while the keys ($K$) and values ($V$) come from the output of the final [[2 Zettels/transformer encoder block\|transformer encoder block]] (often referred to as the "memory"). This type of attention is also called as [[2 Zettels/cross-attention\|cross-attention]]. It allows the decoder to attend to the encoded input sequence and draw relevant information for generating the target sequence. Padding masks for the encoder output are applied here.
 4.  **Second Add & Norm:** Another residual connection and layer normalization are applied around the encoder-decoder attention sub-layer.
@@ -22,7 +22,7 @@ The data flow in a decoder layer is: Input $\rightarrow$ Masked Multi-Head Self-
 **Key features**:
 - Input: [[2 Zettels/token embedding for sequence models\|token embedding for sequence models]] + [[2 Zettels/encoding sequence position without recurrence\|positional encoding]] (for the output generated so far)
 - applies [[2 Zettels/teacher forcing\|teacher forcing]] during training
-- [[masked multi-head self-attention\|masked multi-head self-attention]]: Prevents *attending* to future positions, maintaining the [[2 Zettels/auto-regressive property\|auto-regressive property]]. 
+- [[2 Zettels/masked multi-head self-attention\|masked multi-head self-attention]]: Prevents *attending* to future positions, maintaining the [[2 Zettels/auto-regressive property\|auto-regressive property]]. 
 	- During training, we have access to future generations as well, but by masking those indices, we prevent the model from *cheating*
 - [[2 Zettels/cross-attention\|cross-attention]]: Allows the decoder to focus on relevant parts of the encoded inputs.
 

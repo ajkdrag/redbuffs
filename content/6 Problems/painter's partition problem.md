@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[binary search\|binary search]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 We need to paint `n` boards of lengths `{A₁, A₂, ..., Aₙ}` using `k` painters. Each painter can paint a contiguous segment of boards and takes 1 unit time per unit length. Determine the minimum time required to paint all boards under the constraints:
 

@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[binary search\|binary search]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 Given a sorted array of `n` (odd) elements and `k` operations where each op can increment any element by 1, find the maximum possible median after applying at most `k` operations.
 

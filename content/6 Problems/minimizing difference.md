@@ -7,7 +7,7 @@
 >
 > - [[binary search\|binary search]]
 > - [[2 Zettels/prefix sums\|prefix sums]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 Given an array `a` of `n` integers and a budget `k`. You can perform an operation at most `k` times: choose an element and increase or decrease it by 1. Find the minimum possible difference between the maximum and minimum elements in the final array.
 
@@ -31,13 +31,13 @@ $$
 Thus, we can iterate through each `a[i]` in the sorted array and:
 
 - **Case 1: Assume `min_val = a[i]`.** The target range is `[a[i], a[i] + d]`.
-  - Calculate cost to increase elements `a[0...i-1]` to `a[i]`: `cost_inc = i * a[i] - pref[i]`.
-  - Calculate cost to decrease elements `a[q...n-1]` to `a[i] + d`, where `a[q]` is the first element `> a[i] + d`. Find `q` using `upper_bound`. `cost_dec = (pref[n] - pref[q]) - (n - q) * (a[i] + d)`.
-  - If `cost_inc + cost_dec <= k`, then difference `d` is possible. Return `true`.
+    - Calculate cost to increase elements `a[0...i-1]` to `a[i]`: `cost_inc = i * a[i] - pref[i]`.
+    - Calculate cost to decrease elements `a[q...n-1]` to `a[i] + d`, where `a[q]` is the first element `> a[i] + d`. Find `q` using `upper_bound`. `cost_dec = (pref[n] - pref[q]) - (n - q) * (a[i] + d)`.
+    - If `cost_inc + cost_dec <= k`, then difference `d` is possible. Return `true`.
 - **Case 2: Assume `max_val = a[i]`.** The target range is `[a[i] - d, a[i]]`.
-  - Calculate cost to increase elements `a[0...p-1]` to `a[i] - d`, where `a[p]` is the first element `>= a[i] - d`. Find `p` using `lower_bound`. `cost_inc = p * (a[i] - d) - pref[p]`.
-  - Calculate cost to decrease elements `a[q...n-1]` to `a[i]`, where `a[q]` is the first element `> a[i]`. Find `q` using `upper_bound`. `cost_dec = (pref[n] - pref[q]) - (n - q) * a[i]`.
-  - If `cost_inc + cost_dec <= k`, then difference `d` is possible. Return `true`.
+    - Calculate cost to increase elements `a[0...p-1]` to `a[i] - d`, where `a[p]` is the first element `>= a[i] - d`. Find `p` using `lower_bound`. `cost_inc = p * (a[i] - d) - pref[p]`.
+    - Calculate cost to decrease elements `a[q...n-1]` to `a[i]`, where `a[q]` is the first element `> a[i]`. Find `q` using `upper_bound`. `cost_dec = (pref[n] - pref[q]) - (n - q) * a[i]`.
+    - If `cost_inc + cost_dec <= k`, then difference `d` is possible. Return `true`.
 - If the loop completes without finding a suitable range, return `false`.
 
 **Time Complexity:** $O(n \log n \cdot \log \text{D})$ where $D$ is range of binary search which's $\approx 10^9$ for given problem.

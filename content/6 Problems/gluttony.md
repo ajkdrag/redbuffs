@@ -5,7 +5,7 @@
 
 > [!Topics]
 >
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 > - [[binary search\|binary search]]
 
 Given $N$ members with consumption coefficients $A_i$ and $N$ foods with difficulties $F_i$, find the minimum possible score of the team. The score is the maximum time it takes a member to finish their assigned food ($time = A_i * F_i$). You can train members to reduce their consumption coefficient by 1 (but not below 0), with a total of $K$ training sets available. Assign any one member to each food, and each member to only one food.
@@ -18,7 +18,7 @@ To **check feasibility** for a given time $t$, we iterate through each member an
 
 The **greedy approach** of sorting `coeffs` in ascending order and `foods` in descending order (or vice versa) is crucial for optimality. Consider two members with coefficients $A_1 < A_2$ and two foods with difficulties $F_1 > F_2$. We want to minimize $\max(A_1F_{p_1}, A_2F_{p_2})$ where $(p_1, p_2)$ is a permutation of $(1, 2)$.
 
-If we pair them as $(A_1, F_1)$ and $(A_2, F_2)$, the times are $A_1F_1$ and $A_2F_2$. If we pair them as $(A_1, F_2)$ and $(A_2, F_1)$, the times are $A_1F_2$ and $A_2F_1$. Since $A_1 < A_2$ and $F_2 < F_1$, it's generally better to pair the smaller coefficient with the larger food difficulty and the larger coefficient with the smaller food difficulty to balance out the times and reduce the maximum. Therefore, sorting the consumption coefficients in ascending order and food difficulties in descending order (or vice versa) and pairing them up is a [[2 Zettels/greedy algorithms\|greedy strategy]] that leads to the optimal assignment before applying training.
+If we pair them as $(A_1, F_1)$ and $(A_2, F_2)$, the times are $A_1F_1$ and $A_2F_2$. If we pair them as $(A_1, F_2)$ and $(A_2, F_1)$, the times are $A_1F_2$ and $A_2F_1$. Since $A_1 < A_2$ and $F_2 < F_1$, it's generally better to pair the smaller coefficient with the larger food difficulty and the larger coefficient with the smaller food difficulty to balance out the times and reduce the maximum. Therefore, sorting the consumption coefficients in ascending order and food difficulties in descending order (or vice versa) and pairing them up is a [[2 Zettels/greedy algorithm\|greedy strategy]] that leads to the optimal assignment before applying training.
 
 ### Complexity
 

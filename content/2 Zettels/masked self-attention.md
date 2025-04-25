@@ -26,4 +26,4 @@ where $M$ is the causal mask with $M_{ij} = -\infty$ when $i < j$.
 
 ## Related
 
-- [[masked multi-head self-attention\|masked multi-head self-attention]]
+- [[2 Zettels/masked multi-head self-attention\|masked multi-head self-attention]]

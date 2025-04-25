@@ -7,7 +7,7 @@
 >
 > - [[2 Zettels/two pointers + sorting\|two pointers + sorting]]
 > - [[2 Zettels/precomputation techniques\|precomputation techniques]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 We are given N diamonds (with sizes) and a parameter K. Our goal is to split the diamonds between two display cases so that in each case the difference between the smallest and largest diamond is at most K, and we maximize the total number of diamonds displayed.
 

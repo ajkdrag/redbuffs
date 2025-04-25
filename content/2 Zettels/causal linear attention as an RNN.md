@@ -35,4 +35,20 @@ $$
 
 Standard [[2 Zettels/masked attention\|causal attention]] with [[kv-caching\|kv-caching]] (storing all previous keys/values) needs $O(N)$ memory. Causal linear attention with RNN formulation only needs $O(1)$ memory (specifically $O(cd_v​+c))$ per step during inference) for fixed-size states $(S_t, Z_t)$, making it efficient for long sequences.
 
+**Pros:**
+
+- $O(N)$ time complexity and $O(1)$ space complexity per step during inference
+- Good for long sequences
+
+**Cons:**
+
+- Sequential nature of the RNN formulation hinders parallelization during training
+- The kernel function is still an _approximation_, so performance < standard attn
+
+**Trends:**
+
+- To mitigate training slowdown, use _chunkwise processing_: input sequence is divided into non-overlapping chunks. Within each chunk, computations can be parallelized. The recurrent state update is performed sequentially _between_ chunks. Nice balance between parallelization and sequential nature required for causal modeling across chunks
+- Hardware-aware implementations of linear attention using tools like Triton
+- Gaining traction through libraries like `flash-linear-attention`
+
 ## Related

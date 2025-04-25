@@ -56,3 +56,5 @@ This final projection integrates the information learned across the different he
 > Research explores methods encouraging diversity among heads, e.g., regularization or dynamic head selection like Mixture-of-Head attention.
 
 ## Related
+
+- [[2 Zettels/masked multi-head self-attention\|masked multi-head self-attention]]

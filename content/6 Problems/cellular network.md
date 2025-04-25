@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[binary search\|binary search]]
-> - [[2 Zettels/greedy algorithms\|greedy algorithms]]
+> - [[2 Zettels/greedy algorithm\|greedy algorithm]]
 
 - You are given **n** cities at positions on a line
 - You are given **m** towers at specified positions

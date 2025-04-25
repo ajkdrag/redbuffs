@@ -3,9 +3,8 @@
 ---
 
 
-
-
 > [!Topics]
+>
 > - [[loss functions\|loss functions]]
 > - [[cross-entropy\|cross-entropy]]
 

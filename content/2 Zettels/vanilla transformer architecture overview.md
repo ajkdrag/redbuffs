@@ -25,7 +25,7 @@ It follows the [[2 Zettels/encoder-decoder architecture\|encoder-decoder archite
 
 The [[2 Zettels/transformer decoder block\|transformer decoder block]] has similar components but adds:
 
-- [[masked multi-head self-attention\|masked multi-head self-attention]] (masking to prevent positions from attending to subsequent positions)
+- [[2 Zettels/masked multi-head self-attention\|masked multi-head self-attention]] (masking to prevent positions from attending to subsequent positions)
 - [[2 Zettels/cross-attention\|cross-attention]] (via [[2 Zettels/multi-head attention\|multi-head attention]]) to incorporate the encoder's output: (K, V) come from encoder output, Q comes from decoder
 
 Input processing involves:
