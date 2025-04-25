@@ -3,8 +3,8 @@
 ---
 
 
-AI and tech enthusiast. Contact: [altukhan43@gmail.com](mailto:altukhan43@gmail.com)  
-Site: [ajkdrag.in](https://ajkdrag.in) | GitHub: [github.com/ajkdrag](https://github.com/ajkdrag)
+AI and tech enthusiast, who loves to code.
+Links: [Gmail](mailto:altukhan43@gmail.com), [Site](https://ajkdrag.in), [GitHub](https://github.com/ajkdrag)
 
 ## Work Experience
 
@@ -17,14 +17,16 @@ _Senior Software Engineer (ML)_ | Mar 2023 - Present | Bengaluru
 - Multilingual chatbot using Dialogflow CX with live agent handoffs, authentication
 - LLM applications: chat summarization, document QA, RAG pipelines for FAQs
 
-### Paytm  
+### Paytm
+
 _Senior Software Engineer (ML)_ | Dec 2022 - Mar 2023 | Bengaluru
 
 - ML orchestration framework using Azkaban and AWS EMR
 - Model performance improvements via feature engineering and class imbalance handling
 - Transient EMR cluster design for cost-efficient Spark jobs
 
-### Capgemini  
+### Capgemini
+
 _ML Tech Lead_ | Apr 2021 - Dec 2022 | Bengaluru
 
 - Deployed DL models (CNNs, YOLO, Transformers) for Disney park safety monitoring
@@ -45,11 +47,13 @@ NIT Silchar : _M.Tech, Computer Science_ | Assam, India
 ## Projects
 
 ### Libraries / Frameworks
+
 - [ocrtoolkit](https://github.com/ajkdrag/ocrtoolkit): ibrary for document intelligence to experiment and integrate with different OCR frameworks
 - [visionlab](https://github.com/ajkdrag/visionlab): repo that modularizes several vision model innovations allowing one to (for example) slap a Ghostnet backbone with ViT style patching
 - [ocrorchestrator](https://github.com/ajkdrag/ocrorchestrator): document key information extraction using LLMs along with support for custom APIs and a Gradio UI
 
 ### ML Recipes
+
 - [real-time video analytics recipe](https://github.com/ajkdrag/real-time-video-analytics-recipe): doing small and large scale object detection from modeling to deployment using TorchServe
 - [end-to-end-ml-recipe](https://github.com/ajkdrag/end-to-end-ml-recipe/tree/main): End to End ML showcasing project layout, MLFlow tracking, persistent storage with Sqlite3 and Minio, containerization with Docker and industry coding standards.
 
