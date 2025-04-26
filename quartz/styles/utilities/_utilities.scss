@@ -1,7 +1,11 @@
 .text-highlight {
   background-color: var(--textHighlight);
-  padding: 0 0.1rem;
-  border-radius: 5px;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  color: inherit;
+  font-weight: normal;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 ::selection {
   background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));

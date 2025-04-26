@@ -39,7 +39,7 @@ const config: QuartzConfig = {
           secondary: "#0074d9",
           tertiary: "#14b8a6", // changed from purple to teal
           highlight: "rgba(0, 116, 217, 0.07)",
-          textHighlight: "rgba(0,0,0,0.7)",
+          textHighlight: "rgba(20, 184, 166, 0.2)",
         },
         darkMode: {
           light: "#181a1b",
@@ -50,7 +50,7 @@ const config: QuartzConfig = {
           secondary: "#7fdbff",
           tertiary: "#14b8a6", // changed from purple to teal
           highlight: "rgba(127, 219, 255, 0.08)",
-          textHighlight: "rgba(255,255,255,0.7)",
+          textHighlight: "rgba(20, 184, 166, 0.25)",
         }
       },
     },
