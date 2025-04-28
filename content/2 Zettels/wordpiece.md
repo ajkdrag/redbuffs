@@ -17,13 +17,18 @@ $$
 
 where subword units $w_a$ and $w_b$ are merge candidates. $f(w_a, w_b)$ is the merged unit's frequency, while $f(w_a)$ and $f(w_b)$ are the individual frequencies.
 
-> Formula is related to pointwise mutual information. This tends to merge pairs that co-occur more than you'd expect by chance, rather than just absolute frequency.
+> Formula is related to [[pointwise mutual information\|pointwise mutual information]] (PMI). This tends to merge pairs that co-occur more than you'd expect by chance.
 
 ### Algorithm (Training)
 
-- Start with individual characters (like vanilla BPE; [[2 Zettels/byte-level BPE\|byte-level BPE]] uses bytes)
-    - Iteratively add the subword that maximizes the likelihood of the training corpus (using the scoring func) until vocab size is reached (similar to BPE)
-- This tends to merge frequent pairs first anyway, but frequency is measured in terms of contributions to overall likelihood.
+1. Initialize Vocabulary: Vocab consists of unique characters in training data. Each character initially its own token (standard WordPiece is not like [[2 Zettels/byte-level BPE\|byte-level BPE]])
+2. Count Pairs: Count occurrences of all adjacent pairs of tokens
+3. Apply scoring func on pairs: Find the pair of tokens that have highest score
+4. Merge Pair: Create new token by merging the most frequent pair, add to vocabulary
+5. Replace Pairs: Replace all occurrences of the most frequent pair with the new merged token
+6. Repeat: Repeat steps 2-5 for some $n$ steps, or until desired vocabulary size is reached
+
+Most of the steps are same as in BPE, only the scoring func is different here. Additionally, any subword that's added to the vocab is prefixed with `##` if it's a "continuation". Example: for "hug", we initially have: `['h', '##u', '##g']` in the vocab, then say we end up merging `##u` and `##g`, our updated vocab will be: `['h', '##u', '##g', '##ug']` and so on. This is nice because it indicates if a subword is prefix or suffix of any word: `predict` (prefix) and `##predict` (suffix) are different subwords.
 
 ### Algorithm (Encoding)
 
@@ -63,3 +68,5 @@ tokenizer.tokenize("unpredictably")
 ```
 
 ## Related
+
+- [[simplified wordpiece implementation\|simplified wordpiece implementation]]

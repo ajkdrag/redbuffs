@@ -52,4 +52,4 @@ The merge operations can be stored as rules in order. Tokenization of new text (
 
 - [[2 Zettels/byte-level BPE\|byte-level BPE]]
 - [[2 Zettels/wordpiece\|wordpiece]]
-- [[unigram tokenization\|unigram tokenization]]
+- [[2 Zettels/unigram tokenization\|unigram tokenization]]

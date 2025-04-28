@@ -8,7 +8,7 @@
 > - [[competitive programming\|competitive programming]]
 > - [[modular arithmetic\|modular arithmetic]]
 
-**Why 10^9+7 ?**
+Why ans modulo $10^9+7$ often asked in competitive programming?
 
 - It's prime and primes have least "collision"
     - Chances for 2 numbers to have same value after mod, when $m$ is prime is lower than when $m$ is non-prime
