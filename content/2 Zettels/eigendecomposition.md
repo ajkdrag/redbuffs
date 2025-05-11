@@ -7,7 +7,7 @@
 >
 > - [[matrix decomposition\|matrix decomposition]]
 
-Eigendecomposition decomposes square matrix into [[eigenvectors and eigenvalues\|eigenvectors and eigenvalues]]. Key operation in linear algebra with applications in machine learning like [[PCA\|PCA]].
+Eigendecomposition decomposes square matrix into [[eigenvectors and eigenvalues\|eigenvectors and eigenvalues]]. Key operation in linear algebra with applications in machine learning like [[2 Zettels/PCA\|PCA]].
 
 For square matrix $A$, eigenvector $v$ satisfies:
 

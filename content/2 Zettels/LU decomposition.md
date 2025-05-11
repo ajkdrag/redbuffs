@@ -13,10 +13,7 @@ $$
 A = LU
 $$
 
-The LU decomposition is found using an iterative numerical process and can fail for those
-matrices that cannot be decomposed or decomposed easily. A variation of this decomposition
-that is numerically more stable to solve in practice is called the **LUP decomposition**, or the LU
-decomposition with _partial pivoting_:
+The LU decomposition is found using an iterative numerical process and can fail for those matrices that cannot be decomposed or decomposed easily. A variation of this decomposition that is numerically more stable to solve in practice is called the **LUP decomposition**, or the LU decomposition with _partial pivoting_:
 
 $$
 PA = LU

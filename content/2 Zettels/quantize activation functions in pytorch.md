@@ -5,7 +5,7 @@
 
 > [!Topics]
 > - [[quantization\|quantization]]
-> - [[activation functions\|activation functions]]
+> - [[activation function\|activation function]]
 
 In [[2 Zettels/BitNet b1.58\|BitNet b1.58]], we [[2 Zettels/quantize activation functions\|quantize activation functions]] to reduce memory comsumption and improve speed. A concise implementation in PyTorch will look something like:
 

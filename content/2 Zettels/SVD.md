@@ -15,7 +15,7 @@ $$
 
 - $U$: $m \times m$ orthogonal matrix (cols are called left singular vectors)
 - $\Sigma$: $m \times n$ diagonal matrix (non-negative singular values $\sigma_i$ in descending order)
-- $V$: $n \times n$ orthogonal matrix (rows are called right singular vectors) 
+- $V$: $n \times n$ orthogonal matrix (rows are called right singular vectors)
 
 > Intuitively, $V^T$ rotates (or reflects) the input space into a "principal" coordinate system; $\Sigma$ scales each coordinate by $\sigma_i$; and $U$ rotates it to the output space.
 
@@ -47,7 +47,7 @@ print(np.allclose(A, B))
 
 Applications:
 
-- Dimensionality reduction ([[PCA\|PCA]])
+- Dimensionality reduction ([[2 Zettels/PCA\|PCA]])
 - Data compression (low-rank approximation)
 - Solving linear systems (pseudoinverse)
 - Recommender systems ([[collaborative filtering\|collaborative filtering]])
