@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/count-unique-characters-of-all-substrings-of-a-given-string/description/","PassFrontmatter":true,"created":"2025-03-02T14:43:55.829+05:30"}
+{"publish":true,"created":"2025-03-02T14:43:55.829+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

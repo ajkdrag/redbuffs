@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/palindrome-linked-list/description/","PassFrontmatter":true,"created":"2025-04-14T11:53:31.390+05:30"}
+{"publish":true,"created":"2025-04-14T11:53:31.390+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

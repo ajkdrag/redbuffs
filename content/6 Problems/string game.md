@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Codeforces","link":"https://codeforces.com/problemset/problem/778/A","PassFrontmatter":true,"created":"2025-03-13T13:06:53.222+05:30"}
+{"publish":true,"created":"2025-03-13T13:06:53.222+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

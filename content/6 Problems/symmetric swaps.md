@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Codechef","link":"https://www.codechef.com/practice/course/5-star-and-above-problems/DIFF2500/problems/SYMARRSWAP?tab=statement","PassFrontmatter":true,"created":"2025-04-07T14:37:42.145+05:30"}
+{"publish":true,"created":"2025-04-07T14:37:42.145+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

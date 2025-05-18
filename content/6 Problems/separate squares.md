@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/separate-squares-i/description/","PassFrontmatter":true,"created":"2025-03-17T14:38:53.628+05:30"}
+{"publish":true,"created":"2025-03-17T14:38:53.628+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

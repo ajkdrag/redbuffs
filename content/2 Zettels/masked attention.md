@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"aliases":["causal attention"],"PassFrontmatter":true,"created":"2025-04-21T14:47:19.814+05:30"}
+{"publish":true,"created":"2025-04-21T14:47:19.814+05:30","tags":["type/zettel","status/done"],"cssclasses":""}
 ---
 
 

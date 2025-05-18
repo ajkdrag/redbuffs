@@ -1,5 +1,5 @@
 ---
-{"tags":["type/page","status/done"],"publish":true,"title":"Resume","PassFrontmatter":true,"created":"2024-10-22T15:32:37.347+05:30"}
+{"publish":true,"title":"Resume","created":"2024-10-22T15:32:37.347+05:30","tags":["type/page","status/done"],"cssclasses":""}
 ---
 
 

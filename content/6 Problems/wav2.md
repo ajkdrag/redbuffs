@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Codechef","link":"https://www.codechef.com/problems/WAV2","PassFrontmatter":true,"created":"2025-03-28T20:48:29.691+05:30"}
+{"publish":true,"created":"2025-03-28T20:48:29.691+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

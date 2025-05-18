@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/total-appeal-of-a-string/description/","PassFrontmatter":true,"created":"2025-02-24T11:29:56.070+05:30"}
+{"publish":true,"created":"2025-02-24T11:29:56.070+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

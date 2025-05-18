@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["status/done","type/zettel"],"PassFrontmatter":true,"created":"2025-04-19T18:13:29.213+05:30"}
+{"publish":true,"created":"2025-04-19T18:13:29.213+05:30","tags":["status/done","type/zettel"],"cssclasses":""}
 ---
 
 

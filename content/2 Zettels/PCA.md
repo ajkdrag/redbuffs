@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"aliases":["principal component analysis"],"PassFrontmatter":true,"created":"2025-04-30T13:01:37.481+05:30"}
+{"publish":true,"created":"2025-04-30T13:01:37.481+05:30","tags":["type/zettel","status/done"],"cssclasses":""}
 ---
 
 
@@ -8,7 +8,9 @@
 > - [[dimensionality reduction\|dimensionality reduction]]
 > - [[linear algebra\|linear algebra]]
 
-Principal component analysis is a fundamental technique for reducing dimensionality in data while preserving its structure. It transforms correlated variables into linearly uncorrelated principal components through orthogonal transformation. Useful for: data visualization, feature extraction etc.
+> PCA is used to remove correlation from features and perform dimensionality reduction.
+
+Principal component analysis is a fundamental technique for reducing dimensionality in data while preserving its structure. It transforms correlated variables into linearly uncorrelated **principal components** that encompass most of the information from the original dataset. Useful for: data visualization, feature extraction etc.
 
 ### Core idea
 
@@ -40,7 +42,7 @@ print(P.T)
 # Using scikit-learn
 from sklearn.decomposition import PCA
 pca = PCA(n_components=2)
-X_transformed = pca.fit_transform(X)
+X_transformed = pca.fit_transform(X) # dimensionality reduced
 
 # access values and vectors
 print(pca.components_)

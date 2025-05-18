@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/container-with-most-water/description/","PassFrontmatter":true,"created":"2025-04-06T08:49:07.486+05:30"}
+{"publish":true,"created":"2025-04-06T08:49:07.486+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

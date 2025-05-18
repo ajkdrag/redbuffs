@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Naukri","link":"https://www.naukri.com/code360/problems/painter-s-partition-problem_1089557?leftPanelTabValue=PROBLEM","PassFrontmatter":true,"created":"2025-03-11T13:20:11.061+05:30"}
+{"publish":true,"created":"2025-03-11T13:20:11.061+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

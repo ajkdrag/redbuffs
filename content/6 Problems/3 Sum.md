@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"CSES","link":"https://cses.fi/problemset/task/1641/","PassFrontmatter":true,"created":"2025-01-31T10:52:11.702+05:30"}
+{"publish":true,"created":"2025-01-31T10:52:11.702+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

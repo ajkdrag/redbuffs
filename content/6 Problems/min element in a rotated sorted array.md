@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/","PassFrontmatter":true,"created":"2025-02-22T13:25:53.672+05:30"}
+{"publish":true,"created":"2025-02-22T13:25:53.672+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

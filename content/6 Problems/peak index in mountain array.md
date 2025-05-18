@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/peak-index-in-a-mountain-array/description/","PassFrontmatter":true,"created":"2025-03-02T11:19:12.973+05:30"}
+{"publish":true,"created":"2025-03-02T11:19:12.973+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"AtCoder","link":"https://atcoder.jp/contests/abc186/tasks/abc186_d","PassFrontmatter":true,"created":"2025-02-23T18:52:27.219+05:30"}
+{"publish":true,"created":"2025-02-23T18:52:27.219+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

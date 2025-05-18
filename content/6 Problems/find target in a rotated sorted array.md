@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/search-in-rotated-sorted-array/description/","PassFrontmatter":true,"created":"2025-02-23T10:35:40.765+05:30"}
+{"publish":true,"created":"2025-02-23T10:35:40.765+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

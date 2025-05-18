@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"USACO","link":"https://usaco.org/index.php?page=viewproblem2&cpid=643","PassFrontmatter":true,"created":"2025-01-31T18:05:48.500+05:30"}
+{"publish":true,"created":"2025-01-31T18:05:48.500+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

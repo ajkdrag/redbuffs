@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"PassFrontmatter":true,"created":"2025-04-30T17:33:39.126+05:30"}
+{"publish":true,"created":"2025-04-30T17:33:39.126+05:30","tags":["type/zettel","status/done"],"cssclasses":""}
 ---
 
 
@@ -7,14 +7,14 @@
 >
 > - [[classical machine learning\|classical machine learning]]
 
-Logistic Regression: [[2 Zettels/supervised learning\|supervised learning]] algorithm primarily for [[binary classification\|binary classification]] problems. Goal is to predict the probability that an input sample belongs to a particular class (commonly labeled 1 or 0).
+Logistic Regression: [[2 Zettels/supervised learning\|supervised learning]] algorithm primarily for [[binary classification\|binary classification]] problems. Goal is to predict the probability that an input sample belongs to a particular class (commonly labeled 1 or 0). It is called logistic regression because it performs regression on [[logits\|logits]], which then allows us to classify the data based on model probability predictions.
 
 > [!Note]
 >
-> Despite 'regression' in name, it predicts probability of categorical outcome, not a continuous value. Core idea: model probability $P(y=1 | x)$ using a _transformation_ of a linear combination of input features.
+> Despite 'regression' in name, it predicts probability of categorical outcome, not a continuous value. Core idea: model probability $P(y=1\mid x)$ using a _transformation_ of a linear combination of input features.
 
 $$
-P(y=1 | x) = \sigma(w^T x + b)
+P(y=1 \mid x) = \sigma(w^T x + b)
 $$
 
 - $x$: input feature vector
@@ -28,7 +28,7 @@ $$
 
 It maps any real number $z$ to a value between 0 and 1, making it suitable for representing probabilities. The term $z = w^T x + b$ is a linear score or _evidence_ for the positive class. A large positive $z$ results in a probability close to 1, a large negative $z$ in a probability close to 0, and $z=0$ results in $P=0.5$.
 
-> Logistic Regression models the linear relationship between input features and the **log-odds** of the positive outcome. The odds of an event are:
+> Logistic Regression models the linear relationship between input features and the **log-odds** ([[logits\|logits]]) of the positive outcome. The odds of an event are:
 
 $$
 \frac{P(y=1|x)}{P(y=0|x)} = \frac{P}{1-P}

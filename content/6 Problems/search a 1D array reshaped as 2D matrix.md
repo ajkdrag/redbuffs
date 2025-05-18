@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/search-a-2d-matrix/description/","PassFrontmatter":true,"created":"2025-01-28T11:56:06.033+05:30"}
+{"publish":true,"created":"2025-01-28T11:56:06.033+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

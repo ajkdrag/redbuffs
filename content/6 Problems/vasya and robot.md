@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Codeforces","link":"https://codeforces.com/contest/1073/problem/C","PassFrontmatter":true,"created":"2025-04-08T08:06:52.625+05:30"}
+{"publish":true,"created":"2025-04-08T08:06:52.625+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

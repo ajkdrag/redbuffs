@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/rotate-array/description/","PassFrontmatter":true,"created":"2025-02-22T11:06:18.192+05:30"}
+{"publish":true,"created":"2025-02-22T11:06:18.192+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

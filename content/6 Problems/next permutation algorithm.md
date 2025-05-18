@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/next-permutation/description/","PassFrontmatter":true,"created":"2025-01-30T12:54:40.965+05:30"}
+{"publish":true,"created":"2025-01-30T12:54:40.965+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"title":"⾕","publish":true,"tags":null,"PassFrontmatter":true,"created":"2024-10-20T14:35:23.607+05:30"}
+{"publish":true,"title":"⾕","created":"2024-10-20T14:35:23.607+05:30","cssclasses":""}
 ---
 
 

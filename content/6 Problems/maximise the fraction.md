@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"AlgoZenith","link":null,"PassFrontmatter":true,"created":"2025-03-22T21:55:07.022+05:30"}
+{"publish":true,"created":"2025-03-22T21:55:07.022+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

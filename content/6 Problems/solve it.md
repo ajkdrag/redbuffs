@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"UVa","link":"https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1282","PassFrontmatter":true,"created":"2025-03-26T09:55:13.207+05:30"}
+{"publish":true,"created":"2025-03-26T09:55:13.207+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

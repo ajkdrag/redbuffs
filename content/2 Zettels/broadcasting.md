@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/zettel","status/done"],"PassFrontmatter":true,"created":"2025-04-28T10:43:50.405+05:30"}
+{"publish":true,"created":"2025-04-28T10:43:50.405+05:30","tags":["type/zettel","status/done"],"cssclasses":""}
 ---
 
 
@@ -35,6 +35,8 @@ C = A + b
 > [!Note]
 >
 > **How it works (conceptually):** When performing an operation between two arrays of different shapes that satisfy the broadcasting rules, the smaller array is conceptually "stretched" or "replicated" to match the shape of the larger array. This stretching happens automatically and efficiently without actually creating copies of the data in memory. The operation is then performed element-wise on the expanded shapes.
+
+![](https://res.cloudinary.com/dcameztw9/image/upload/v1747382632/broadcasting-7vpjrc.webp)
 
 | Operation                   | Example shapes      | What happens                                                                     |
 | --------------------------- | ------------------- | -------------------------------------------------------------------------------- |

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"GeekforGeeks","link":"https://www.geeksforgeeks.org/problems/pythagorean-triplet3018/1","PassFrontmatter":true,"created":"2025-02-16T09:58:16.170+05:30"}
+{"publish":true,"created":"2025-02-16T09:58:16.170+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

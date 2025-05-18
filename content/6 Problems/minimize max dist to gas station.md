@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Naukri","link":"https://www.naukri.com/code360/problems/minimise-max-distance_7541449?leftPanelTabValue=PROBLEM","PassFrontmatter":true,"created":"2025-03-12T12:21:51.138+05:30"}
+{"publish":true,"created":"2025-03-12T12:21:51.138+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

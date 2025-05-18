@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/heaters/description/","PassFrontmatter":true,"created":"2025-01-27T14:15:16.114+05:30"}
+{"publish":true,"created":"2025-01-27T14:15:16.114+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

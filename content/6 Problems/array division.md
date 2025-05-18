@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"CSES","link":"https://cses.fi/alon/task/1085","PassFrontmatter":true,"created":"2025-03-28T10:54:15.755+05:30"}
+{"publish":true,"created":"2025-03-28T10:54:15.755+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"tags":["type/problem"],"platform":"Leetcode","link":"https://leetcode.com/problems/trapping-rain-water/description/","PassFrontmatter":true,"created":"2025-01-30T14:01:17.736+05:30"}
+{"publish":true,"created":"2025-01-30T14:01:17.736+05:30","tags":["type/problem"],"cssclasses":""}
 ---
 
 
