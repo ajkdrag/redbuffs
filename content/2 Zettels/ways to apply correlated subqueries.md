@@ -7,7 +7,7 @@
 >
 > - [[sql\|sql]]
 
-The [[correlated subqueries\|correlated subqueries]] can be applied in several ways within SQL queries, enabling the inner query to reference and depend on values from the outer query. This dependency means the inner query is typically executed once for each row processed by the outer query.
+The [[2 Zettels/correlated subqueries\|correlated subqueries]] can be applied in several ways within SQL queries, enabling the inner query to reference and depend on values from the outer query. This dependency means the inner query is typically executed once for each row processed by the outer query.
 
 ### 1. Inside `select`
 

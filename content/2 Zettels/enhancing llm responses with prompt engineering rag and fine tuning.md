@@ -41,7 +41,7 @@ RAG enhances LLM responses by providing relevant, _up-to-date external knowledge
     - **Filtering**: After initial retrieval, use an LLM to assess which retrieved chunks are most applicable to the specific query
     - **Self-Reflection**: After generation, ask the LLM (can be same or different) to evaluate its own answer for accuracy and helpfulness, potentially rewriting it if needed
 
-## Fine Tuning LLMs
+### Fine Tuning LLMs
 
 Fine-tuning involves further training a pre-trained foundational LLM on a dataset of specific prompt-completion examples relevant to a particular task or domain.
 

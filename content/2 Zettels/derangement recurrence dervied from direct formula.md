@@ -4,35 +4,36 @@
 
 
 > [!Topics]
+>
 > - [[2 Zettels/derangements\|derangements]]
 > - [[recursion\|recursion]]
 
 A derangement is a permutation with no fixed points. We can derive a recurrence as follows:
 
-   - Consider the [[2 Zettels/derangement direct formula\|derangement direct formula]], i.e. $D(n)$:
-     $$
-     D(n) = n! \sum_{k=0}^n \frac{(-1)^k}{k!}
-     $$
-   - Multiply $D(n-1)$ by $n$:
-     $$
-     n D(n-1) = n \cdot (n-1)! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} = n! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!}
-     $$
-   - Adding $(-1)^n$ to both sides:
-     $$
-     n D(n-1) + (-1)^n = n! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} + (-1)^n
-     $$
-   - Notice that:
-     $$
-     D(n) = n! \sum_{k=0}^n \frac{(-1)^k}{k!} = n! \left( \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} + \frac{(-1)^n}{n!} \right)
-     $$
-   - Simplifying the right-hand side:
-     $$
-     D(n) = n! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} + (-1)^n
-     $$
-   - Therefore, we have:
-     $$
-     \boxed{D(n) = n D(n-1) + (-1)^n}
-     $$
+- Consider the [[2 Zettels/derangement direct formula\|derangement direct formula]], i.e. $D(n)$:
+    $$
+    D(n) = n! \sum_{k=0}^n \frac{(-1)^k}{k!}
+    $$
+- Multiply $D(n-1)$ by $n$:
+    $$
+    n D(n-1) = n \cdot (n-1)! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} = n! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!}
+    $$
+- Adding $(-1)^n$ to both sides:
+    $$
+    n D(n-1) + (-1)^n = n! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} + (-1)^n
+    $$
+- Notice that:
+    $$
+    D(n) = n! \sum_{k=0}^n \frac{(-1)^k}{k!} = n! \left( \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} + \frac{(-1)^n}{n!} \right)
+    $$
+- Simplifying the right-hand side:
+    $$
+    D(n) = n! \sum_{k=0}^{n-1} \frac{(-1)^k}{k!} + (-1)^n
+    $$
+- Therefore, we have:
+    $$
+    \boxed{D(n) = n D(n-1) + (-1)^n}
+    $$
 
 Below code is what's preferred to use in [[competitive programming\|competitive programming]]
 
@@ -55,6 +56,5 @@ int derangement_iterative(int n, long long mod) {
     return c;
 }
 ```
-
 
 ## Related
