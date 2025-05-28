@@ -13,17 +13,7 @@
   box-shadow:
     0 2px 8px rgba(0, 0, 0, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.06);
-  border-width: 1px;
-  border-style: solid;
   background: linear-gradient(135deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 98%, white) 100%);
-
-  // Add hover effect for better interactivity
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.12),
-      0 2px 6px rgba(0, 0, 0, 0.08);
-  }
 
   // Default callout style
   &[data-callout] {
@@ -514,21 +504,11 @@
     box-shadow:
       0 2px 8px rgba(0, 0, 0, 0.3),
       0 1px 3px rgba(0, 0, 0, 0.2);
-    border-width: 1px;
-    border-style: solid;
     background: linear-gradient(
       135deg,
       var(--bg) 0%,
       color-mix(in srgb, var(--bg) 95%, transparent) 100%
     );
-
-    // Add hover effect for better interactivity
-    &:hover {
-      transform: translateY(-1px);
-      box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.4),
-        0 2px 6px rgba(0, 0, 0, 0.3);
-    }
 
     // Default callout style in dark mode
     &[data-callout] {
@@ -704,18 +684,11 @@
     &[data-callout="topics"] .callout-content ul li > a.internal {
       color: var(--secondary);
       background-color: rgba(127, 219, 255, 0.06);
-      border: 1px solid rgba(127, 219, 255, 0.12);
-
-      &:hover {
-        color: var(--dark);
-        background-color: var(--secondary);
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-      }
+      border: none;
 
       &.non-existent {
         color: var(--gray);
         background-color: rgba(128, 128, 128, 0.06);
-        border: 1px solid rgba(128, 128, 128, 0.1);
         pointer-events: none;
         cursor: default;
 
@@ -749,13 +722,13 @@
         color: #cbd5e0;
       }
 
-      code {
-        background-color: rgba(0, 0, 0, 0.3);
-        color: #fbb6ce;
-        padding: 0.2rem 0.4rem;
-        border-radius: 3px;
-        font-size: 0.9em;
-      }
+      // code {
+      //   background-color: rgba(0, 0, 0, 0.3);
+      //   color: #fbb6ce;
+      //   padding: 0.2rem 0.4rem;
+      //   border-radius: 3px;
+      //   font-size: 0.9em;
+      // }
 
       a {
         color: var(--secondary);
