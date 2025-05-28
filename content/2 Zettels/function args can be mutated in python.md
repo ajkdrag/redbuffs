@@ -25,3 +25,5 @@ User-defined classes can also be modified by callers. Any of their internal prop
 > When calling a function, be careful about passing mutable args since your data might get modified by the function, causing bugs. If you are passing objects, expose helper methods that work on copies of the data, or use immutable objects (dataclasses with `frozen=True`) and pure functions.
 
 ## Related
+
+- [[2 Zettels/avoid mutable default args\|avoid mutable default args]]

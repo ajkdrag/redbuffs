@@ -3,7 +3,7 @@
 ---
 
 
-> [!Topic]
+> [!Topics]
 >
 > - [[load balancing\|load balancing]]
 

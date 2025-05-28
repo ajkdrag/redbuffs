@@ -3,7 +3,7 @@
 ---
 
 
-> [!Topic]
+> [!Topics]
 >
 > - [[2 Zettels/load balancing algorithms\|load balancing algorithms]]
 

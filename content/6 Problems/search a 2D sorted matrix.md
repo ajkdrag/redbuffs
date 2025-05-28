@@ -15,9 +15,9 @@ Straightforward application of the staircase algorithm, leveraging the sorted na
 
 1. **Start at Top-Right:** Begin at the top-right element of the matrix (`row = 0`, `col = n - 1`).
 2. **Comparison and Movement:**
-   - If `matrix[row][col] == target`: You've found the target; return `True`.
-   - If `matrix[row][col] > target`: Move one column to the left (`col -= 1`). Because the row is sorted, all elements to the right are greater than the target.
-   - If `matrix[row][col] < target`: Move one row down (`row += 1`). Because the column is sorted, all elements above are smaller than the target.
+    - If `matrix[row][col] == target`: You've found the target; return `True`.
+    - If `matrix[row][col] > target`: Move one column to the left (`col -= 1`). Because the row is sorted, all elements to the right are greater than the target.
+    - If `matrix[row][col] < target`: Move one row down (`row += 1`). Because the column is sorted, all elements above are smaller than the target.
 3. **Out of Bounds:** If at any point `row` goes out of bounds (becomes `>= m`) or `col` goes out of bounds (becomes `< 0`), the target is not in the matrix; return `False`.
 
 ## Code

@@ -64,11 +64,14 @@ df = pd.DataFrame({
 })
 # Using pivot_table with duplicate date/city ('2023-01-01', 'New York')
 # Default aggfunc='mean'
-pivot_table_df = df.pivot_table(index='date', columns='city', values='temperature')
+pivot_table_df = df.pivot_table(index='date', columns='city',
+                                values='temperature')
 print(pivot_table_df)
 
 # Using multiple values and different aggfunc
-pivot_table_multi = df.pivot_table(index='date', columns='city', values=['temperature', 'humidity'], aggfunc={'temperature': np.mean, 'humidity': np.max})
+pivot_table_multi = df.pivot_table(index='date', columns='city',
+                    values=['temperature', 'humidity'],
+                    aggfunc={'temperature': np.mean, 'humidity': np.max})
 print(pivot_table_multi)
 ```
 

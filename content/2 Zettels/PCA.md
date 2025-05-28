@@ -3,7 +3,7 @@
 ---
 
 
-> [!Topic]
+> [!Topics]
 >
 > - [[dimensionality reduction\|dimensionality reduction]]
 > - [[linear algebra\|linear algebra]]

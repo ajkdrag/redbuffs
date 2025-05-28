@@ -11,9 +11,13 @@ Unlike recurrent neural networks ([[RNN\|RNN]]s) that inherently process sequenc
 
 The original Transformer paper introduced [[sinusoidal positional encoding\|sinusoidal positional encoding]] as a way to address this. This method uses sine and cosine functions of different frequencies to create a unique vector representation for each position in the sequence. The formulas for calculating these positional encodings ($PE$) for a given position $pos$ and dimension $i$ are:
 
-$$PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
+$$
+PE_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right)
+$$
 
-$$PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
+$$
+PE_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)
+$$
 
 where $pos$ is the position of the token in the sequence (starting from 0), $d_{model}$ is the dimensionality of the embedding vectors, and $i$ ranges from 0 to $d_{model}/2 - 1$. The different frequencies of the sine and cosine functions across the dimensions allow for a _unique_ encoding of each position.
 

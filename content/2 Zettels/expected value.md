@@ -3,7 +3,7 @@
 ---
 
 
-> [!Topic]
+> [!Topics]
 >
 > - [[probability\|probability]]
 > - [[descriptive statistics\|descriptive statistics]]

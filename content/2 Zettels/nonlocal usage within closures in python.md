@@ -30,25 +30,24 @@ Above workds because Python supports closures—that is, functions that refer to
 The use of `nonlocal` is necessary to modify a variable in the enclosing scope: var `found` in this case.
 
 > [!Tip]
-> 
-> Avoid using `nonlocal` statements for anything beyond simple functions. Define a class that can be called like a func:
-> 
+>
+> Avoid using `nonlocal` statements for anything beyond simple functions. Define a class that can be called like a func, i.e. by [[2 Zettels/using __call__ for stateful hooks in python\|using __call__ for stateful hooks in python]]:
+>
 > ```python
 > class Sorter:
 >     def __init__(self, group):
 >         self.group = group
 >         self.found = False
-> 
+>
 >     def __call__(self, x):
 >         if x in self.group:
 >             self.found = True
 >             return (0, x)
 >         return (1, x)
-> 
+>
 > sorter = Sorter(group)
 > numbers.sort(key=sorter)
 > print("Found:", sorter.found)
 > ```
-> 
 
 ## Related
