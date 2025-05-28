@@ -5,8 +5,8 @@
 $desktopGrid: (
   templateColumns: "260px minmax(0, 1fr) 260px",
   templateRows: "auto 1fr auto",
-  columnGap: "40px",
-  rowGap: "32px",
+  columnGap: "0",
+  rowGap: "0",
   templateAreas: '"grid-sidebar-left grid-header grid-sidebar-right" "grid-sidebar-left grid-center grid-sidebar-right" "grid-sidebar-left grid-footer grid-sidebar-right"'
 );
 
@@ -14,8 +14,8 @@ $desktopGrid: (
 $tabletGrid: (
   templateColumns: "minmax(0, 1fr) 1fr",
   templateRows: "auto auto 1fr auto",
-  columnGap: "24px",
-  rowGap: "24px",
+  columnGap: "0",
+  rowGap: "0",
   templateAreas: '"grid-header grid-header" "grid-sidebar-left grid-sidebar-left" "grid-center grid-center" "grid-footer grid-footer"'
 );
 
@@ -24,6 +24,6 @@ $mobileGrid: (
   templateColumns: "minmax(0, 1fr)",
   templateRows: "auto auto 1fr auto",
   columnGap: "0",
-  rowGap: "16px",
+  rowGap: "0",
   templateAreas: '"grid-header" "grid-sidebar-left" "grid-center" "grid-footer"'
 );

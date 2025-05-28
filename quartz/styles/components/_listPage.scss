@@ -41,3 +41,10 @@ li.section-li {
     display: none;
   }
 }
+
+// Reduce gap between title and page listing on mobile
+.page-listing {
+  @media all and (#{vars.$mobile}) {
+    margin-top: 0.5rem; // Reduced from default spacing
+  }
+}

@@ -26,9 +26,9 @@
   }
 
   // Custom properties for light mode
-  --surface: transparent;  // Surface color for cards, code blocks
-  --radius: 0;       // Border radius for elements
-  --max-w: 720px;      // Max width for content
+  --surface: transparent; // Surface color for cards, code blocks
+  --radius: 0; // Border radius for elements
+  --max-w: 720px; // Max width for content
   --shadow-color: transparent;
   --card-shadow: none;
   --card-border: none;
@@ -50,13 +50,17 @@
   --color-light: #ffffff;
   --color-dark: #2e3440;
 
+  // Grid background
+  --grid-color: rgba(0, 0, 0, 0.05);
+  --grid-size: 20px;
+
   // Code block variables for light mode
   --lightgray: #f5f7fa; // Background for inline code
   --dark: #222;
   --gray: #b0b8c1;
   --darkgray: #6c7680;
   --light: #fff;
-  --codeFont: 'Source Code Pro', 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  --codeFont: "Source Code Pro", "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
   --highlight: #ffe9b3;
   --secondary: #0074d9;
   --border: #e0e0e0;

@@ -64,7 +64,7 @@
       gap: 2rem;
       top: 0;
       box-sizing: border-box;
-      padding: 3rem 2rem 2rem 2rem;
+      padding: 2rem 1rem 0rem 0.5rem;
       display: flex;
       height: 100vh;
       position: sticky;
@@ -134,9 +134,11 @@
     & .center,
     & footer {
       max-width: 100%;
-      min-width: max(60ch, 100%);
+      min-width: max(80ch, 100%);
       margin-left: auto;
       margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
       @media all and (breakpoints.$desktop) {
         margin-right: 0;
       }
@@ -144,6 +146,14 @@
         margin-left: 0;
         min-width: 100%;
       }
+    }
+
+    // Grid background only on center content area
+    & .center {
+      background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: var(--grid-size) var(--grid-size);
+      background-attachment: local;
     }
     & footer {
       margin-left: 0;

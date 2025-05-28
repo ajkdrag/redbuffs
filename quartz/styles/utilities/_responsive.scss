@@ -180,6 +180,7 @@
 // Content spacing and readability improvements for mobile
 @media all and (#{vars.$mobile}) {
   article {
+    padding: 0;
     // Increase spacing between text blocks
     p,
     ul,

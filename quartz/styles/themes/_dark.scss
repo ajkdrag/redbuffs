@@ -26,9 +26,9 @@
   }
 
   // Custom properties for dark mode
-  --surface: transparent;  // Surface color for cards, code blocks
-  --radius: 0;       // Border radius for elements
-  --max-w: 720px;      // Max width for content
+  --surface: transparent; // Surface color for cards, code blocks
+  --radius: 0; // Border radius for elements
+  --max-w: 720px; // Max width for content
   --shadow-color: transparent;
   --card-shadow: none;
   --card-border: none;
@@ -45,6 +45,10 @@
   --header-line-height: 1.1;
   --header-radius: 0;
   --header-margin-bottom: 2.5rem;
+
+  // Grid background
+  --grid-color: rgba(255, 255, 255, 0.08);
+  --grid-size: 20px;
 
   // Question callout
   --question-border-light: #7fdbff;
@@ -76,7 +80,7 @@
   --gray: #6c7680;
   --darkgray: #b0b8c1;
   --light: #181a1b;
-  --codeFont: 'Source Code Pro', 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
+  --codeFont: "Source Code Pro", "Fira Mono", "Menlo", "Monaco", "Consolas", monospace;
   --highlight: #3b4252;
   --secondary: #7fdbff;
   --border: #23272e;

@@ -50,5 +50,12 @@ article {
 
 // Add smooth transitions when theme changes
 body {
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+// Add smooth transitions for grid background on center content
+.center {
+  transition: background-image 0.2s ease;
 }

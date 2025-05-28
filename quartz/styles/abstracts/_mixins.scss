@@ -54,14 +54,27 @@
 // Callout mixins
 @mixin callout-base {
   border: 1px solid var(--border);
-  background-color: var(--bg);
-  border-radius: 6px;
-  padding: 0.75rem 1.25rem;
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
   margin: 1.5rem 0;
-  overflow-y: hidden;
+  overflow: visible;
   transition: all vars.$transition-medium ease;
   box-sizing: border-box;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  position: relative;
+
+  // Add subtle inner glow effect
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    border-radius: 8px 8px 0 0;
+  }
 }
 
 @mixin callout-content-base {

@@ -6,14 +6,22 @@
 
 // Code toolbar container
 .code-toolbar {
-  position: absolute;
+  position: sticky;
   top: 8px;
-  right: 8px;
   z-index: 10;
   display: flex;
   gap: 6px;
   opacity: 0; // Hidden by default, shown on hover
   transition: opacity 0.2s ease;
+  justify-content: flex-end;
+  padding: 8px;
+  margin-bottom: -44px; // Negative margin to overlay on code content
+  pointer-events: none; // Allow scrolling through the toolbar area
+
+  // Re-enable pointer events for the button itself
+  .clipboard-button {
+    pointer-events: auto;
+  }
 }
 
 // Base button styles for code toolbar buttons
@@ -27,8 +35,10 @@
   color: var(--dark);
   font-size: 0.85em;
   cursor: pointer;
-  transition: opacity 0.2s, border-color 0.2s;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition:
+    opacity 0.2s,
+    border-color 0.2s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 
   &:hover {
     border-color: var(--darkgray);
@@ -36,6 +46,18 @@
 
   &:focus {
     outline: 0;
+  }
+}
+
+// Clipboard button extends the base code button styles
+.clipboard-button {
+  @extend %code-button;
+
+  // Ensure SVG icons are properly styled
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
   }
 }
 
@@ -50,5 +72,15 @@ pre:hover .code-toolbar {
     background: var(--lightgray);
     color: var(--dark);
     border-color: var(--gray);
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.04);
+
+    &:hover {
+      border-color: var(--darkgray);
+      background: var(--gray);
+    }
+
+    svg {
+      fill: var(--dark);
+    }
   }
 }

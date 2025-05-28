@@ -70,10 +70,7 @@ export const defaultContentPageLayout: PageLayout = {
       })
     ),
   ],
-  right: [
-    Component.DesktopOnly(Component.Spacer()),
-    Component.DesktopOnly(Component.TableOfContents()),
-  ],
+  right: [],
 };
 
 // Components for pages that display lists of pages (e.g., tags or folders)
