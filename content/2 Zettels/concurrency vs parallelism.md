@@ -32,4 +32,6 @@ Parallelism is about performing multiple tasks _at the exact same time_. It requ
 
 > Parallelism implies concurrency (if you're doing multiple things at once, you're definitely dealing with multiple things at once). Concurrency does not imply parallelism (you can manage multiple tasks without doing them all at the same instant).
 
+Concurrency is more effective for I/O-bound tasks (waiting for external operations) than CPU-bound tasks (heavy computation on a single core). For CPU-bound tasks, parallelism (using multiple cores) is often needed for actual speedup.
+
 ## Related

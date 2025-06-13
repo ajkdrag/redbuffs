@@ -6,7 +6,7 @@
 > [!Topics]
 >
 > - [[clean code\|clean code]]
-> - [[functional programming\|functional programming]]
+> - [[functools\|functools]]
 
 In Python, we don't have function overloading and generic functions like in other languages such as Java. A way to achieve this is by using `functools.singledispatch` decorator. It enables writing functions that behave differently based on first arg type. Here's how it works:
 
@@ -37,7 +37,7 @@ process({"a": 1, "b": 2}) # [(a, 1), (b, 2)]
 process([1, 2]) # 3
 ```
 
-This works best when different types need fundamentally different processing. Say, you are implementing a calculator and want to add the feature of pretty-printing the expression. In [[oops\|oops]] style, we would have some abstractmethod named `pretty(...)` which needs to be _implemented_ in each of the classes`Integer, Add, Multiply` etc. This causes the code to be organized along with wrong axis because the implementations of pretty-printing have nothing to do with calculator functionality, so we can use single-dispatch to refactor our code so that we can have a separate module say `utils.py` where we can keep all the print related funcs:
+This works best when different types need fundamentally different processing. Say, you are implementing a [[2 Zettels/beauty of OOP illustrated with a basic calculator example\|calculator]] and want to add the feature of pretty-printing the expression. In [[oops\|oops]] style, we would have some abstractmethod named `pretty(...)` which needs to be _implemented_ in each of the classes`Integer, Add, Multiply` etc. This causes the code to be organized along with wrong axis because the implementations of pretty-printing have nothing to do with calculator functionality, so we can use single-dispatch to refactor our code so that we can have a separate module say `utils.py` where we can keep all the print related funcs:
 
 ```python
 @functools.singledispatch

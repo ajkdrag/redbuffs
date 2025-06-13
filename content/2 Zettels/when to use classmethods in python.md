@@ -31,7 +31,7 @@ class Color:
 color = Color.from_hex('#FF0000')  # Creates a red color
 ```
 
-Another practical use-case will be alongside `mixins`. Say I have a class A with some attributes and I need the ability to instantiate its object by reading/deserializing from JSON. We can create a `mixin` named `JsonMixin` that _implements_ the deserization classmethod as follows:
+Another practical use-case will be alongside [[2 Zettels/mixins in python\|mixins in python]]. Say I have a class A with some attributes and I need the ability to instantiate its object by reading/deserializing from JSON. We can create a `JsonMixin` that _implements_ the deserization classmethod as follows:
 
 ```python
 import json

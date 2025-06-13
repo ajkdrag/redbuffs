@@ -2,7 +2,9 @@
 {"publish":true,"created":"2025-03-22T21:08:11.437+05:30","tags":["type/zettel","status/done"],"cssclasses":""}
 ---
 
+
 > [!Topics]
+>
 > - [[arrays\|arrays]]
 > - [[sorting algorithms\|sorting algorithms]]
 > - [[priority queues\|priority queues]]
@@ -10,7 +12,12 @@
 
 Given an array, find the k largest (or smallest) elements in the array. There are few different ways of solving this:
 
+> [!Tip]
+>
+> Following approaches can also be used to solve: k-most frequent elements, k closest points to origin etc.
+
 ### 1. Sorting
+
 The most intuitive approach is to sort the array in descending order and then select the first `k` elements.
 
 ```cpp
@@ -46,6 +53,7 @@ int main() {
 > If the range of numbers in the array is small, [[2 Zettels/counting sort\|counting sort]] can be used to sort the array in $O(n + k)$ time, where $n$ is the number of elements and $k$ is the range of the numbers. In such cases, if $k$ is sufficiently smaller than $n$, `counting sort` can provide better time complexity. However, the space complexity of `counting sort` is $O(k)$.
 
 ### 2. Min-Heap (Priority Queue)
+
 First, we insert the initial `k` elements into the min-heap (`build_heap` -> $O(k)$). For each new element (total $n-k$ left), if it's larger than the heap's root (smallest of the `k` largest), replace the root and `heapify` -> $O(\log{k})$. After completing the entire traversal, the heap will contain exactly the `k` largest elements of the array.
 
 ```cpp
@@ -69,6 +77,7 @@ vector<int> kLargestUsingHeap(vector<int> arr, int k) {
     }
 
     vector<int> result;
+    # O(KlogK) to get results
     while (!minHeap.empty()) {
         result.push_back(minHeap.top());
         minHeap.pop();
@@ -96,6 +105,7 @@ int main() {
 **Space Complexity:** $O(k)$
 
 ### 3. QuickSelect (Partitioning)
+
 This approach uses the partitioning step of [[quick sort\|quick sort]] to find the kth largest element.
 
 **Algorithm:**
@@ -142,7 +152,7 @@ vector<int> kLargestUsingQuickSelect(vector<int>& arr, int k) {
     int n = arr.size();
     quickSelect(arr, 0, n - 1, k);
     vector<int> result(arr.begin(), arr.begin() + k);
-    sort(result.begin(), result.end(), greater<int>());
+    // sort(result.begin(), result.end(), greater<int>());
     return result;
 }
 
@@ -160,6 +170,10 @@ int main() {
 ```
 
 **Time Complexity:**
-* Worst Case: $O(n^2)$
-* Average Case: $O(n)$
+
+- Worst Case: $O(n^2)$
+- Average Case: $O(n)$
+
 **Space Complexity:** $O(1)$ if done in-place.
+
+## Related
